@@ -1,11 +1,14 @@
 package com.smartfren.instrat.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.entities.LoginResponse;
+import com.smartfren.instrat.services.LoginTask;
 
 public class LoginProgressActivity extends Activity {
 
@@ -29,10 +32,20 @@ public class LoginProgressActivity extends Activity {
 
             Log.d(TAG, "Logging In -- Username: " + _username + ", Password: " + _password);
 
-            // TODO: check if user name valid
-            // Nanti klo database dan web api untuk login udah pake source code contoh
-
-            // TODO: when not valid back to login page
+            new LoginTask(this).execute(_username, _password);
         }
+    }
+
+    public void OnLoginSuccess(LoginResponse response) {
+        Log.d(TAG, "Login success");
+        // TODO: save login information into local db, so later when open application no need to login anymore
+        // TODO: go to where ? with transition
+    }
+
+    public void OnLoginFailed() {
+        Log.d(TAG, "Login failed");
+        Intent intent = new Intent(LoginProgressActivity.this, LoginActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }
