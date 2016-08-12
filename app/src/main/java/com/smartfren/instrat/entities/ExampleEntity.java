@@ -4,7 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
-public class ExampleEntity {
+import io.realm.RealmObject;
+
+public class ExampleEntity extends RealmObject {
     @SerializedName("ExampleID")
     public long ExampleID;
     @SerializedName("StartDate")
