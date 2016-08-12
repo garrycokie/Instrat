@@ -2,27 +2,27 @@ package com.smartfren.instrat.data;
 
 import com.smartfren.instrat.entities.ExampleEntity;
 
+import java.util.Map;
+
 import io.realm.Realm;
+import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
-public class ExampleDao {
+public class ExampleDao extends BaseDao<ExampleEntity> {
 
     private static final String TAG = "ExampleDao";
     private Realm _realm;
 
     public ExampleDao() {
+        super(ExampleEntity.class);
         _realm = Realm.getDefaultInstance();
     }
 
-    public void InsertOrUpdateExample(ExampleEntity entity) {
-        _realm.beginTransaction();
-        _realm.copyToRealmOrUpdate(entity);
-        _realm.commitTransaction();
-    }
-
-    public RealmResults<ExampleEntity> RetrieveAllData() {
-        return _realm.where(ExampleEntity.class)
-                .equalTo("status", 1)
-                .findAll();
+    // Contoh klo mau override methodnya
+    @Override
+    public RealmResults<ExampleEntity> RetrieveAll(Map<String, String> params) {
+        RealmQuery<ExampleEntity> query = _realm.where(ExampleEntity.class);
+        query.equalTo("status", params.get("status"));
+        return query.findAll();
     }
 }
