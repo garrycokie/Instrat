@@ -27,6 +27,9 @@ public class LoginActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        // TODO: check local db if user already login
+        // if yes, go to main activity
+
         _btnLogin = (Button) findViewById(R.id.btnLogin);
         _txtUserName = (EditText) findViewById(R.id.txtUserName);
         _txtPassword = (EditText) findViewById(R.id.txtPassword);
