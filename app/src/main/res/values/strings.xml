@@ -7,4 +7,441 @@
     <string name="page_loginprog_title">Logging In</string>
     <string name="title_surveyaction_list">SurveyActions</string>
     <string name="title_surveyaction_detail">SurveyAction Detail</string>
+
+    <string name="page_blok3_q6_text">Pilih Scenario Advocacy</string>
+    <string name="page_blok3_q6_a1_text">SKENARIO ADVOCACY 1 (Harga dibawah Rp 500 ribu dan Rp 500 ribu-1 juta)</string>
+    <string name="page_blok3_q6_a2_text">SKENARIO ADVOCACY 2 (Harga Rp 1-1.5 juta dan Rp 1.5-2 juta)</string>
+    <string name="page_blok3_q6_a3_text">SKENARIO ADVOCACY 3 (Harga 2-3 juta dan Modem)</string>
+
+    <string-array name="page_blok3_phone_lower500_list">
+        <item>Smartfren</item>
+        <item>Samsung</item>
+        <item>Advan</item>
+        <item>Asiafone</item>
+        <item>Asus</item>
+        <item>Axioo</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>Huawei</item>
+        <item>IMO</item>
+        <item>Lenovo</item>
+        <item>LG</item>
+        <item>Maxtron</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Pixcom</item>
+        <item>Polytron</item>
+        <item>SPC</item>
+        <item>Venera</item>
+        <item>Xiaomi</item>
+        <item>ZTE</item>
+        <item>Zyrex</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok3_phone_500to1000k_list">
+        <item>Smartfren</item>
+        <item>Samsung</item>
+        <item>Advan</item>
+        <item>Asiafone</item>
+        <item>Asus</item>
+        <item>Axioo</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>Huawei</item>
+        <item>IMO</item>
+        <item>Lenovo</item>
+        <item>LG</item>
+        <item>Maxtron</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Pixcom</item>
+        <item>Polytron</item>
+        <item>SPC</item>
+        <item>Venera</item>
+        <item>Xiaomi</item>
+        <item>ZTE</item>
+        <item>Zyrex</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok3_phone_1000to1500k_list">
+        <item>Smartfren</item>
+        <item>Samsung</item>
+        <item>Acer</item>
+        <item>Advan</item>
+        <item>Asiafone</item>
+        <item>Asus</item>
+        <item>Axioo</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>Huawei</item>
+        <item>IMO</item>
+        <item>Lenovo</item>
+        <item>LG</item>
+        <item>Maxtron</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Oppo</item>
+        <item>Pixcom</item>
+        <item>Polytron</item>
+        <item>Sony</item>
+        <item>SPC</item>
+        <item>Venera</item>
+        <item>Xiaomi</item>
+        <item>ZTE</item>
+        <item>Zyrex</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok3_phone_1500to2000k_list">
+        <item>Smartfren</item>
+        <item>Samsung</item>
+        <item>Acer</item>
+        <item>Advan</item>
+        <item>Asiafone</item>
+        <item>Asus</item>
+        <item>Axioo</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>Huawei</item>
+        <item>IMO</item>
+        <item>Lenovo</item>
+        <item>LG</item>
+        <item>Maxtron</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Oppo</item>
+        <item>Pixcom</item>
+        <item>Polytron</item>
+        <item>Sony</item>
+        <item>SPC</item>
+        <item>Venera</item>
+        <item>Xiaomi</item>
+        <item>ZTE</item>
+        <item>Zyrex</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok3_phone_2000to3000k_list">
+        <item>Smartfren</item>
+        <item>Samsung</item>
+        <item>Acer</item>
+        <item>Advan</item>
+        <item>Asiafone</item>
+        <item>Asus</item>
+        <item>Axioo</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>HTC</item>
+        <item>Huawei</item>
+        <item>IMO</item>
+        <item>Lenovo</item>
+        <item>LG</item>
+        <item>Maxtron</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Oppo</item>
+        <item>Pixcom</item>
+        <item>Polytron</item>
+        <item>Sony</item>
+        <item>SPC</item>
+        <item>Venera</item>
+        <item>Xiaomi</item>
+        <item>ZTE</item>
+        <item>Zyrex</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok3_modem_list">
+        <item>Smartfren</item>
+        <item>Telkomsel Flash</item>
+        <item>Advan</item>
+        <item>AHA / Esia</item>
+        <item>Airflash</item>
+        <item>Bolt</item>
+        <item>Cyrus</item>
+        <item>Flexy</item>
+        <item>G Speed</item>
+        <item>Huawei</item>
+        <item>Movimax</item>
+        <item>Prolink</item>
+        <item>SPC</item>
+        <item>Speed Up</item>
+        <item>Venus</item>
+        <item>Wellcom</item>
+        <item>ZTE</item>
+        <item>Tidak Tahu</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string name="page_blok3_q7_text">Untuk Smartphone BARU yg harganya di bawah 500 Ribu, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q8_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q9_text">Sebutkan model dari merek Smartphone Baru tsb?</string>
+    <string name="page_blok3_q10_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q11_text">Mengapa Anda tidak merekomendasikan produk Smartfren yang harganya  dibawah 500 ribu ?</string>
+
+    <string name="page_blok3_q12_text">Untuk Smartphone BARU yg harganya 500 Ribu - 1 Juta, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q13_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q14_text">Sebutkan model dari merek Smartphone Baru tsb?</string>
+    <string name="page_blok3_q15_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q16_text">Mengapa Anda tidak merekomendasikan produk Smartfren yang harganya 500 Ribu - 1 Juta ?</string>
+
+    <string name="page_blok3_q17_text">Untuk Smartphone BARU yg harganya 1 - 1,5 Juta, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q18_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q19_text">Sebutkan model dari merek Smartphone Baru tsb?</string>
+    <string name="page_blok3_q20_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q21_text">Mengapa Anda tidak merekomendasikan produk Smartfren yang harganya 1 - 1,5 Juta ?</string>
+
+    <string name="page_blok3_q22_text">Untuk Smartphone BARU yg harganya 1,5 - 2 Juta, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q23_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q24_text">Sebutkan model dari merek Smartphone Baru tsb?</string>
+    <string name="page_blok3_q25_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q26_text">Mengapa Anda tidak merekomendasikan produk Smartfren yang harganya 1,5 - 2 Juta ?</string>
+
+    <string name="page_blok3_q27_text">Untuk Smartphone BARU yg harganya 2 - 3 Juta, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q28_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q29_text">Sebutkan model dari merek Smartphone Baru tsb?</string>
+    <string name="page_blok3_q30_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q31_text">Mengapa Anda tidak merekomendasikan produk Smartfren yang harganya 2 - 3 Juta ?</string>
+
+    <string name="page_blok3_q32_text">Untuk USB Modem / Router, yang paling bagus apa ya?</string>
+    <string name="page_blok3_q33_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
+    <string name="page_blok3_q34_text">Sebutkan model dari merek modem Baru tsb?</string>
+    <string name="page_blok3_q35_text">Mengapa Anda merekomendasikan merek tsb?</string>
+    <string name="page_blok3_q36_text">Mengapa Anda tidak merekomendasikan modem?</string>
+
+    <string-array name="page_blok4_poster_list">
+        <item>Smartfren</item>
+        <item>Advan</item>
+        <item>Asus</item>
+        <item>Blackberry</item>
+        <item>Evercoss / Cross</item>
+        <item>Indosat</item>
+        <item>Lenovo</item>
+        <item>Mito</item>
+        <item>Nokia / Microsoft</item>
+        <item>Oppo</item>
+        <item>Samsung</item>
+        <item>Sony</item>
+        <item>Telkomsel</item>
+        <item>Tri (3)</item>
+        <item>XL</item>
+        <item>Tidak Ada</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="page_blok4_dominasibranding_list">
+        <item>Dominasi Tinggi (3 sisi dinding toko)</item>
+        <item>Dominasi Sedang (2 sisi dinding toko)</item>
+        <item>Dominasi Rendah ( 1 sisi dinding toko/kurang)</item>
+    </string-array>
+
+    <string name="page_checkbox_smartfren_text">Smartfren</string>
+    <string name="page_checkbox_advan_text">Advan</string>
+    <string name="page_checkbox_asus_text">Asus</string>
+    <string name="page_checkbox_blackberry_text">Blackberry</string>
+    <string name="page_checkbox_evercoss_text">Evercoss / Cross</string>
+    <string name="page_checkbox_indosat_text">Indosat</string>
+    <string name="page_checkbox_lenovo_text">Lenovo</string>
+    <string name="page_checkbox_mito_text">Mito</string>
+    <string name="page_checkbox_nokia_text">Nokia / Microsoft</string>
+    <string name="page_checkbox_oppo_text">Oppo</string>
+    <string name="page_checkbox_samsung_text">Samsung</string>
+    <string name="page_checkbox_sony_text">Sony</string>
+    <string name="page_checkbox_telkomsel_text">Telkomsel</string>
+    <string name="page_checkbox_3_text">Tri (3)</string>
+    <string name="page_checkbox_xl_text">XL</string>
+    <string name="page_checkbox_tidakada_text">Tidak Ada</string>
+    <string name="page_checkbox_lainnya_text">Lainnya</string>
+
+    <string name="page_blok4_q38_text">Apakah ada Poster dari merek .... (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q39_text">Apakah ada Flyer/Brosur  dari merek .... (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q40_text">Apakah ada Sticker  dari .... (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q41_text">Apakah ada Shop Sign  dari .... (baik berupa Neon Box / nama toko) (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q42_text">Apakah ada Thin Plate / Thin Sign  (Neon Box yang biasa diletakkan di bawah papan nama toko) dari .... (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q43_text">Apakah ada etalase khusus (BUKAN etalase yang hanya ditempeli stiker) dari ............ (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q44_text">Apakah ada frontline merek smartphone yang ber-SERAGAM (tanyakan ke penjaga toko bila perlu) dari ............ (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok4_q45_text">Apakah ada box / kardus / kotak bungkus smartphone saja (tanpa isi, tanpa barcode)  dari .... (BISA LEBIH DARI 1 JAWABAN)?</string>
+    <string name="page_blok4_q46_text">Shop Branding yang dominan (wall paper, wall painting atau sekumpulan poster yang ditempel memenuhi dinding) (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok4_q47_text">OBSERVASI Tingkat dominasi Shop Branding (PILIH HANYA 1 JAWABAN)</string>
+
+    <string-array name="page_blok5_produkterlihat_list">
+        <item>Terlihat dan ada stok</item>
+        <item>Tidak terlihat tapi ada stok</item>
+        <item>Runner Stock / Ambil dari toko lain</item>
+        <item>Tidak ada stok / tidak jual sama sekali</item>
+    </string-array>
+
+    <string name="page_checkbox_blok5_q53_a1_text">Harga jualnya tidak stabil</string>
+    <string name="page_checkbox_blok5_q53_a2_text">Salesnya tidak enak diajak negosiasi</string>
+    <string name="page_checkbox_blok5_q53_a3_text">Sering Rugi</string>
+    <string name="page_checkbox_blok5_q53_a4_text">Pembelinya kurang</string>
+    <string name="page_checkbox_blok5_q53_a5_text">Cari produknya sulit</string>
+    <string name="page_checkbox_blok5_q53_a6_text">Produknya sering di komplain konsumen</string>
+    <string name="page_checkbox_blok5_q53_a7_text">Insentifnya kurang menarik</string>
+    <string name="page_checkbox_blok5_q53_a8_text">Produknya tidak tahan lama (cepat rusak)</string>
+    <string name="page_checkbox_blok5_q53_a9_text">Baterainya cepat rusak</string>
+    <string name="page_checkbox_blok5_q53_a10_text">Lainnya, sebutkan</string>
+
+    <string-array name="page_blok5_q54A_list">
+        <item>Smartphone: Andromax CDMA (apapun)</item>
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="page_blok5_q55A_list">
+        <item>Ecosystem Smartfren (apapun)</item>
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="page_blok5_q57A_list">
+        <item>USB Modem Smartfren CDMA Model Lama (apapun)</item>
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="page_blok5_q61A_list">
+        <item>Router CDMA Model Lama</item>
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string name="page_blok5_q48_text">Apakah produk-produk smartfren Andromax Q 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q49_text">Apakah produk-produk smartfren Andromax Qi 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q50_text">Apakah produk-produk smartfren Andromax R 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q51_text">Apakah produk-produk smartfren Andromax Ec 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q52_text">Apakah produk-produk smartfren Andromax Es 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q52B_text">Apakah produk-produk smartfren Andromax E2 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q52C_text">Apakah produk-produk smartfren Andromax R2 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q52D_text">Apakah produk-produk smartfren Andromax E2+ 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q52E_text">Apakah produk-produk smartfren Andromax A 4G berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q53_text">Mengapa tidak ada stock Smartfren Andromax 4G ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok5_q54_text">CATAT BILA TERLIHAT Smartfren Smartphone MODEL LAMA (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q55_text">CATAT BILA TERLIHAT Ecosystem Smartfren Smartphone (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q56_text">CATAT MEREKNYA Bila ada Produk Demo Smartphone (produk yang bisa ditest/coba) (BISA LEBIH DARI 1 JAWABAN)</string>
+
+    <string name="page_blok5_q57_text">CATAT BILA TERLIHAT USB Modem / Router Smartfren CDMA MODEL LAMA (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q58_text">Apakah produk-produk smartfren MiFi  4G - M2Y berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q59_text">Apakah produk-produk smartfren MiFi  4G - M2P berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q60_text">Apakah produk-produk smartfren MiFi  4G - M2S berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q60B_text">Apakah produk-produk smartfren MiFi  4G - M3Z berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q60C_text">Apakah produk-produk smartfren MiFi  4G - M3Y berikut TERLIHAT di toko ini? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok5_q61_text">CATAT BILA TERLIHAT Router CDMA Smartfren MODEL LAMA (PILIH HANYA 1 JAWABAN)</string>
+
+    <string-array name="page_blok7_q101A_list">
+        <item>Pemilik Toko</item>
+        <item>Penanggung jawab toko / store manager</item>
+        <item>Penjaga toko / frontliner</item>
+    </string-array>
+
+    <string-array name="page_blok7_samsung_supplier_list">
+        <item>Pemilik Toko</item>
+        <item>Penanggung jawab toko / store manager</item>
+        <item>Penjaga toko / frontliner</item>
+    </string-array>
+
+    <string-array name="page_blok7_nextorder_list">
+        <item>Akan order lagi</item>
+        <item>Lihat-lihat dulu</item>
+        <item>Tidak akan order lagi</item>
+    </string-array>
+
+    <string name="page_checkbox_blok7_supplier_distributor_samsung_text">Distributor SAMSUNG</string>
+    <string name="page_checkbox_blok7_supplier_distributor_smartfren_text">Distributor SMARTFREN</string>
+    <string name="page_checkbox_blok7_supplier_distributor_advan_text">Distributor ADVAN</string>
+    <string name="page_checkbox_blok7_supplier_distributor_lenovo_text">Distributor LENOVO</string>
+    <string name="page_checkbox_blok7_supplier_distributor_oppo_text">Distributor OPPO</string>
+    <string name="page_checkbox_blok7_supplier_distributor_asus_text">Distributor ASUS</string>
+    <string name="page_checkbox_blok7_supplier_wholesaler_text">Wholesaler</string>
+    <string name="page_checkbox_blok7_supplier_bandar_text">Bandar</string>
+    <string name="page_checkbox_blok7_supplier_toko_lain_text">Toko lain di mall ini</string>
+    <string name="page_checkbox_blok7_supplier_mall_lain_text">Toko di mall lain</string>
+
+    <string name="page_checkbox_blok7_alasan_ragu_1_text">Harga jualnya stabil</string>
+    <string name="page_checkbox_blok7_alasan_ragu_2_text">Salesnya enak negosiasinya</string>
+    <string name="page_checkbox_blok7_alasan_ragu_3_text">Untungnya lumayan</string>
+    <string name="page_checkbox_blok7_alasan_ragu_4_text">Pembelinya cukup banyak</string>
+    <string name="page_checkbox_blok7_alasan_ragu_5_text">Cari produknya mudah</string>
+    <string name="page_checkbox_blok7_alasan_ragu_6_text">Produknya jarang di komplain konsumen</string>
+    <string name="page_checkbox_blok7_alasan_ragu_7_text">Insentifnya menarik</string>
+    <string name="page_checkbox_blok7_alasan_ragu_8_text">Harga jualnya tidak stabil</string>
+    <string name="page_checkbox_blok7_alasan_ragu_9_text">Salesnya tidak enak negosiasinya</string>
+    <string name="page_checkbox_blok7_alasan_ragu_10_text">Sering rugi</string>
+    <string name="page_checkbox_blok7_alasan_ragu_11_text">Pembelinya kurang</string>
+    <string name="page_checkbox_blok7_alasan_ragu_12_text">Cari produknya sulit</string>
+    <string name="page_checkbox_blok7_alasan_ragu_13_text">Produknya sering di komplain konsumen</string>
+    <string name="page_checkbox_blok7_alasan_ragu_14_text">Insentifnya kurang menarik</string>
+    <string name="page_checkbox_blok7_alasan_ragu_15_text">Lainnya, Sebutkan</string>
+
+    <string name="page_blok7_q101_text">UNTUK BAGIAN INI, CATAT SIAPA YANG MENJAWAB PERTANYAAN  (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q102_text">Catat merek smartphone yang dijual di toko  (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q103_text">Anda order SAMSUNG paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q104_text">Apakah Anda akan order merek SAMSUNG lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q105_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek SAMSUNG? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q106_text">Anda order SMARTFREN paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q107_text">Apakah Anda akan order merek SMARTFREN lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q108_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek SMARTFREN? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q109_text">Anda order ADVAN paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q110_text">Apakah Anda akan order merek ADVAN lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q111_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek ADVAN? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q112_text">Anda order LENOVO paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q113_text">Apakah Anda akan order merek LENOVO lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q114_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek LENOVO? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q115_text">Anda order OPPO paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q116_text">Apakah Anda akan order merek OPPO lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q117_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek OPPO? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q118_text">Anda order ASUS paling sering ke siapa ? (BISA LEBIH DARI 1 JAWABAN)</string>
+    <string name="page_blok7_q119_text">Apakah Anda akan order merek ASUS lagi dalam sebulan mendatang ? (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok7_q120_text">Mengapa Anda mengatakan ... (jawaban sebelumnya) untuk merek ASUS? (BISA LEBIH DARI 1 JAWABAN)</string>
+
+
+    <string-array name="page_blok8_mall_list">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+
+    <string-array name="page_blok8_tipetoko_list">
+        <item>Permanent (ada papan nama, ada tembok ruangan)</item>
+        <item>Non Permanent (tidak ada tembok ruangan, island)</item>
+    </string-array>
+
+    <string name="page_blok8_q121_text">Nama Mall</string>
+    <string name="page_blok8_q122_text">Nama Toko</string>
+    <string name="page_blok8_q123_text">Lantai</string>
+    <string name="page_blok8_q124_text">Blok (bila ada)</string>
+    <string name="page_blok8_q125_text">No</string>
+    <string name="page_blok8_q126_text">Nomor Telepon Toko</string>
+    <string name="page_blok8_q127_text">Tipe Toko (PILIH HANYA 1 JAWABAN)</string>
+
+    <string-array name="page_blok9_kategoritoko_list">
+        <item>Besar (seluas minimal gabungan 3 kios/toko/island)</item>
+        <item>Sedang (seluas gabungan 2 kios/toko/island)</item>
+        <item>Kecil (1 kios/toko/island)</item>
+    </string-array>
+
+    <string name="page_checkbox_blok10_produkjual_1_text">Smartphone Baru / New</string>
+    <string name="page_checkbox_blok10_produkjual_2_text">Smartphone Bekas / Second</string>
+    <string name="page_checkbox_blok10_produkjual_3_text">Modem (USB)+C872+C38</string>
+    <string name="page_checkbox_blok10_produkjual_4_text">New Feature Phone / HP biasa</string>
+    <string name="page_checkbox_blok10_produkjual_5_text">HP Biasa Bekas</string>
+    <string name="page_checkbox_blok10_produkjual_6_text">Kartu Perdana / Kartu Voucher / Voucher Elektrik</string>
+    <string name="page_checkbox_blok10_produkjual_7_text">Aksesoris Handphone</string>
+    <string name="page_checkbox_blok10_produkjual_8_text">Komputer / laptop</string>
+    <string name="page_checkbox_blok10_produkjual_9_text">Game (konsol PS, Xbox, Nintendo dll)</string>
+    <string name="page_checkbox_blok10_produkjual_10_text">Printer / fax / alat elektronik lainnya</string>
+    <string name="page_checkbox_blok10_produkjual_11_text">Services HP tidak resmi</string>
+    <string name="page_checkbox_blok10_produkjual_12_text">Service HP resmi</string>
+
+    <string name="page_blok9_q128_text">PERKIRAKAN Luas Toko (Store Dimension) (PILIH HANYA 1 JAWABAN)</string>
+    <string name="page_blok10_q129_text">CATAT jenis barang / jasa yang dijual di toko ini? (BISA LEBIH DARI 1 JAWABAN)</string>
 </resources>

@@ -2,74 +2,11 @@
 <items version="2" >
 
     <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_dfdcba1db0405461b2c5fa436b11075ffc573102\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_ae2d2a6ba353e57267cda6a941973fb62953d66d\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_793d5065526dd37fbd935053c9c220a0ec3f2e07\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_3ac81182072cc8cf816efc87274ebe33a8e2a322\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_9e394eb8e5648d113289dce42c5561bd72db778f\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\FluffyBunny\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_9dea3061dafd5a22350ae9cbaa1400bbdd176aeb\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="efc9b0f77de93235d2087d4c7c55ae56607f7660">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e808bf6d8fbf25673da1b457be099d12684925bd\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_8f78c7f002c9bbfeca59156c2a17ac0b174b6881\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_4e0c78710aba6a7dbd65abe70064b1ca03b6c0b2\classes.dex" />
-    </item>
-    <item
-        jar="D:\Project\Development\Instrat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="25b7cf6f8e9ae2783684cf7369183c498310345c">
-        <dex dex="D:\Project\Development\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1d5944a6bc7b1678829b8e5c35fc0d1f3507357d\classes.dex" />
+        sha1="f25c8acd7f55de93e0865961a16aec0eb528d8fc">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_27ccddf0007b5641f998b723782d9504916b4adf\classes.dex" />
     </item>
 
 </items>

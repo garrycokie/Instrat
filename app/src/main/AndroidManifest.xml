@@ -22,7 +22,21 @@
             android:name=".activities.LoginProgressActivity"
             android:label="@string/page_loginprog_title"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.Blok3Activity" />
+        <activity android:name=".activities.Blok4Activity" />
+        <activity android:name=".activities.Blok5AActivity" />
+        <activity android:name=".activities.Blok5BActivity" />
+        <activity android:name=".activities.Blok7Activity" />
+        <activity android:name=".activities.Blok7AActivity" />
+        <activity android:name=".activities.Blok7BActivity" />
+        <activity android:name=".activities.Blok7CActivity" />
+        <activity android:name=".activities.Blok7DActivity" />
+        <activity android:name=".activities.Blok7EActivity" />
+        <activity android:name=".activities.Blok7FActivity" />
+        <activity android:name=".activities.Blok8Activity" />
+        <activity android:name=".activities.Blok9Activity" />
+        <activity android:name=".activities.Blok10Activity"></activity>
     </application>
 
 </manifest>

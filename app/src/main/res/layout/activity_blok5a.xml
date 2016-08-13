@@ -1,0 +1,312 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+    tools:context=".activities.Blok5AActivity">
+        <TextView
+            android:id="@+id/lblQ48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q48_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ48A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q49_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ49A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q50_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ50A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q51_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ51A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q52_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ52A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ52B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q52B_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ52BA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ52C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q52C_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ52CA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ52D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q52D_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ52DA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ52E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q52E_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ52EA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_produkterlihat_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q53_text"
+            android:layout_marginBottom="10dp"/>
+        <CheckBox android:id="@+id/cbQ53A1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a1_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a2_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a3_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a4_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a5_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a6_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a7_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a8_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a9_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ53A10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blok5_q53_a10_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <EditText
+            android:id="@+id/txtQ53A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q54_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ54A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_q54A_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q55_text"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spQ55A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/page_blok5_q55A_list"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/lblQ56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_blok5_q56_text"
+            android:layout_marginBottom="10dp"/>
+        <CheckBox android:id="@+id/cbQ56ASmartfren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_smartfren_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56AAsus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_asus_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ABlackberry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_blackberry_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56AEvercoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_evercoss_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ALenovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_lenovo_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56AMito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_mito_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ANokia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_nokia_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56AOppo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_oppo_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ASamsung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_samsung_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ASony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_sony_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ATidakAda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_tidakada_text"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/cbQ56ALainnya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_checkbox_lainnya_text"
+            android:layout_marginBottom="30dp"
+            android:onClick="onCheckboxClicked"/>
+        <EditText
+            android:id="@+id/txtQ56A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+</ScrollView>

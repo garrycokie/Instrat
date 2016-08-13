@@ -39,11 +39,17 @@ public class LoginActivity extends Activity {
 
                 Log.d(TAG, "Username: " + username + ", Password: " + password);
 
+/*
                 Intent intent = new Intent(LoginActivity.this, LoginProgressActivity.class);
                 intent.putExtra("LOGIN_USERNAME", username);
                 intent.putExtra("LOGIN_PASSWORD", password);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+*/
+                Intent intent2 = new Intent(LoginActivity.this, Blok3Activity.class);
+                startActivity(intent2);
+
             }
         });
     }
