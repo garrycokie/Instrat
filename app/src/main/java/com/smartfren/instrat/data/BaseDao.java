@@ -1,39 +1,36 @@
 package com.smartfren.instrat.data;
 
-import android.content.Context;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.Map;
 
-public class BaseDao {
+import io.realm.*;
 
-    DatabaseHelper dbHelper;
-    SQLiteDatabase database;
+public class BaseDao<T extends RealmObject> {
 
-    public BaseDao(Context context) {
-        dbHelper = new DatabaseHelper(context);
+    private Class<T> _genericType;
+
+    protected Realm _realm;
+
+    public BaseDao(Class<T> genericType) {
+        _genericType = genericType;
+        _realm = Realm.getDefaultInstance();
     }
 
-    public void open() throws SQLException {
-        open(false);
+    public void CopyOrUpdateEntity(T entity) {
+        _realm.beginTransaction();
+        // copy or update hanya bisa digunakan untuk entity yang ada anotasi @PrimaryKey
+        _realm.copyToRealmOrUpdate(entity);
+        _realm.commitTransaction();
     }
 
-    public void open(Boolean isReadOnly) throws SQLException {
-        database = dbHelper.getWritableDatabase();
+    public RealmResults<T> RetrieveAll(Map<String, String> params) {
+        RealmQuery<T> query = _realm.where(_genericType);
+        for(Map.Entry<String, String> entry : params.entrySet()) {
+            query.equalTo(entry.getKey(), entry.getValue());
+        }
+        return query.findAll();
     }
 
-    public void close() {
-        dbHelper.close();
-    }
-
-    public void beginTx(){
-        database.beginTransaction();
-    }
-
-    public void setTxSuccess(){
-        database.setTransactionSuccessful();
-    }
-
-    public void endTx(){
-        database.endTransaction();
+    public void closeDatabase() {
+        _realm.close();
     }
 }

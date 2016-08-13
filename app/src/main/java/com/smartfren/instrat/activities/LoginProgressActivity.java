@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.WindowManager;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.data.ExampleDao;
 import com.smartfren.instrat.entities.LoginResponse;
 import com.smartfren.instrat.services.LoginTask;
 
@@ -38,6 +39,9 @@ public class LoginProgressActivity extends Activity {
 
     public void OnLoginSuccess(LoginResponse response) {
         Log.d(TAG, "Login success");
+
+        /*ExampleDao dao = new ExampleDao();
+        dao.InsertOrUpdateExample(entity);*/
         // TODO: save login information into local db, so later when open application no need to login anymore
         // TODO: go to where ? with transition
     }
