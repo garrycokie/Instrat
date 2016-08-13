@@ -4,22 +4,47 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.smartfren.instrat.activities.ListPendingSurveyFragment;
+import com.smartfren.instrat.activities.NewSurveyFragment;
+
 /**
  * Created by Garry Cokie on 8/3/2016.
  */
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
+    private FragmentManager _fm;
+
     public TabsPagerAdapter(FragmentManager fm) {
         super(fm);
+        _fm = fm;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        switch (position) {
+            case 0:
+                return ListPendingSurveyFragment.newInstance(0, "List Pending Survey");
+            case 1:
+                return NewSurveyFragment.newInstance(1, "Create a New Survey");
+            default:
+                return null;
+        }
     }
 
     @Override
     public int getCount() {
         return 0;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return ((ListPendingSurveyFragment)_fm.getFragments().get(position)).getTitle();
+            case 1:
+                return ((NewSurveyFragment)_fm.getFragments().get(position)).getTitle();
+            default:
+                return "-";
+        }
     }
 }
