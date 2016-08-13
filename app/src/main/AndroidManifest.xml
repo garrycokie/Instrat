@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.smartfren.instrat">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +12,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.smartfren.instrat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"></meta-data>
+        </provider>
+
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/page_login_title"
@@ -38,7 +51,9 @@
         <activity android:name=".activities.Blok7FActivity" />
         <activity android:name=".activities.Blok8Activity" />
         <activity android:name=".activities.Blok9Activity" />
-        <activity android:name=".activities.Blok10Activity"></activity>
+        <activity android:name=".activities.Blok10Activity" />
+        <activity android:name=".activities.Block11Activity" />
+        <activity android:name=".activities.Block12Activity"></activity>
     </application>
 
 </manifest>
