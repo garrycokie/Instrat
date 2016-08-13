@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import com.smartfren.instrat.R;
 
 /**
@@ -39,6 +38,6 @@ public class Block2Activity extends Activity {
         Spinner spinnerOperator4G= (Spinner) findViewById(R.id.spinOperator4G);
         ArrayAdapter<String> adapter4G = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
-        spinnerOperator.setAdapter(adapter4G);
+        spinnerOperator4G.setAdapter(adapter4G);
     }
 }
