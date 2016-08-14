@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.smartfren.instrat">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -38,7 +38,10 @@
         <activity android:name=".activities.Blok7FActivity" />
         <activity android:name=".activities.Blok8Activity" />
         <activity android:name=".activities.Blok9Activity" />
-        <activity android:name=".activities.Blok10Activity"></activity>
+        <activity android:name=".activities.Blok10Activity" />
+        <activity android:name=".activities.Blok3AActivity" />
+        <activity android:name=".activities.Blok3BActivity" />
+        <activity android:name=".activities.Blok3CActivity"></activity>
     </application>
 
 </manifest>
