@@ -444,4 +444,7 @@
 
     <string name="page_blok9_q128_text">PERKIRAKAN Luas Toko (Store Dimension) (PILIH HANYA 1 JAWABAN)</string>
     <string name="page_blok10_q129_text">CATAT jenis barang / jasa yang dijual di toko ini? (BISA LEBIH DARI 1 JAWABAN)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
