@@ -82,6 +82,7 @@ public class LoginProgressActivity extends Activity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             error.printStackTrace();
+                            OnLoginFailed();
                         }
                     });
 
