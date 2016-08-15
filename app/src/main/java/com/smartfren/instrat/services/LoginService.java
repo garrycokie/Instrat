@@ -45,8 +45,6 @@ public class LoginService {
                     public void onResponse(JSONObject response) {
                         // the response is already constructed as a JSONObject!
                         try {
-                            response = response.getJSONObject("responseClassName");
-
                             // TODO: get other properties
                             // use example below
                             String userID = response.getString("UserID");
