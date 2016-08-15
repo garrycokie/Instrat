@@ -45,15 +45,12 @@ public class LoginService {
                     public void onResponse(JSONObject response) {
                         // the response is already constructed as a JSONObject!
                         try {
-                            // TODO: get other properties
-                            // use example below
                             String userID = response.getString("UserID");
-                            // int status = response.getInt("Status");
+                            int status = response.getInt("Status");
 
                             result[0] = new LoginResponse();
                             result[0].userID = userID;
-                            // TODO: set other properties
-                            // result.status = status;
+                            result[0].status = status;
 
                         } catch (JSONException e) {
                             e.printStackTrace();
