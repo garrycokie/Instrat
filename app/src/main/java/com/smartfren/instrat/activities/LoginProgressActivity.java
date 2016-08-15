@@ -6,10 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
 
-import com.smartfren.instrat.R;
-import com.smartfren.instrat.data.ExampleDao;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+import com.smartfren.instrat.entities.LoginRequest;
 import com.smartfren.instrat.entities.LoginResponse;
-import com.smartfren.instrat.services.LoginTask;
+
+import com.smartfren.instrat.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class LoginProgressActivity extends Activity {
 
@@ -33,11 +42,55 @@ public class LoginProgressActivity extends Activity {
 
             Log.d(TAG, "Logging In -- Username: " + _username + ", Password: " + _password);
 
-            new LoginTask(this).execute(_username, _password);
+            final LoginResponse[] result = new LoginResponse[1];
+
+            LoginRequest loginRequest = new LoginRequest();
+            loginRequest.username = _username;
+            loginRequest.password = _password;
+
+            Gson gson = new Gson();
+            String json = gson.toJson(loginRequest);
+
+            String url = "http://httpbin.org/get?site=code&network=tutsplus"; // change to api url
+            JSONObject param = null;
+            try {
+                param = new JSONObject(json);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            final JsonObjectRequest jsonRequest = new JsonObjectRequest
+                    (Request.Method.GET, url, param, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            // the response is already constructed as a JSONObject!
+                            try {
+                                String userID = response.getString("UserID");
+                                int status = response.getInt("Status");
+
+                                result[0] = new LoginResponse();
+                                result[0].userID = userID;
+                                result[0].status = status;
+
+                                OnLoginSuccess(result[0]);
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                OnLoginFailed();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            error.printStackTrace();
+                            OnLoginFailed();
+                        }
+                    });
+
+            Volley.newRequestQueue(getApplicationContext()).add(jsonRequest);
         }
     }
 
-    public void OnLoginSuccess(LoginResponse response) {
+    private void OnLoginSuccess(LoginResponse response) {
         Log.d(TAG, "Login success");
 
         /*ExampleDao dao = new ExampleDao();
@@ -46,7 +99,7 @@ public class LoginProgressActivity extends Activity {
         // TODO: go to where ? with transition
     }
 
-    public void OnLoginFailed() {
+    private void OnLoginFailed() {
         Log.d(TAG, "Login failed");
         Intent intent = new Intent(LoginProgressActivity.this, LoginActivity.class);
         startActivity(intent);
