@@ -15,6 +15,8 @@ import com.google.gson.Gson;
 import com.smartfren.instrat.entities.LoginRequest;
 import com.smartfren.instrat.entities.LoginResponse;
 
+import com.smartfren.instrat.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
