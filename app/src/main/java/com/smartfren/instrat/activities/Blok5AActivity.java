@@ -136,7 +136,7 @@ public class Blok5AActivity extends AppCompatActivity {
                 A56 = GetCheckBoxValue(_cbQ53A8, A56);
                 A56 = GetCheckBoxValue(_cbQ53A9, A56);
 
-                if(_cbQ53A10.isChecked())
+                if(_cbQ56A10.isChecked())
                 {
                     A53 = A53 + ";" + _txtQ53A.getText().toString();
                 }
