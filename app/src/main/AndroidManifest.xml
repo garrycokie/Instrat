@@ -25,18 +25,13 @@
 
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/page_login_title"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:label="@string/page_login_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.LoginProgressActivity"
-            android:label="@string/page_loginprog_title"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.Blok3Activity" />
         <activity android:name=".activities.Blok4Activity" />

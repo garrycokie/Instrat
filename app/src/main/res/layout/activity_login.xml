@@ -18,27 +18,41 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"/>
 
-    <EditText
-        android:id="@+id/txtUserName"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper"
         android:layout_below="@+id/appLogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/page_login_username_hint"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_below="@+id/txtUserName"
+        <EditText
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Username"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordWrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/page_login_password_hint"/>
+        android:layout_below="@id/usernameWrapper"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_below="@+id/txtPassword"
+        android:layout_below="@+id/passwordWrapper"
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/page_login_button_text"/>

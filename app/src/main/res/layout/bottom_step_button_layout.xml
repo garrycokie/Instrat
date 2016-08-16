@@ -7,6 +7,13 @@
     android:padding="10dp">
 
     <Button
+        android:id="@+id/btnStepContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Continue"></Button>
+
+    <Button
         android:id="@+id/btnStepBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,10 +21,4 @@
         android:layout_toLeftOf="@id/btnStepContinue"
         android:text="Back"></Button>
 
-    <Button
-        android:id="@+id/btnStepContinue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="Continue"></Button>
 </RelativeLayout>
