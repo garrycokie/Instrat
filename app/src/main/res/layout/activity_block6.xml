@@ -119,10 +119,10 @@
                 android:layout_height="wrap_content"
                 android:text="smartfren (CDMA)"/>
             <CheckBox
-                android:id="@+id/cbxCEsia"
+                android:id="@+id/cbxCBolt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Esia (CDMA)"/>
+                android:text="Bolt"/>
 
             <TextView
                 android:id="@+id/txtSmartphone"
@@ -407,7 +407,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lenovo A 7000"/>
             <CheckBox
-                android:id="@+id/cbxP7016GBLTE"
+                android:id="@+id/cbxLenovoP7016GBLTE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lenovo P70 16GB LTE"/>
@@ -551,7 +551,7 @@
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Iphone yang tersedia?"/>
             <EditText
-                android:id="@+id/txtTotaIphoneTypeValue"
+                android:id="@+id/txtTotalIphoneTypeValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -1086,6 +1086,12 @@
                     android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Next"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

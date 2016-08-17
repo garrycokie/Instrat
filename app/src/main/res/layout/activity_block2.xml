@@ -59,4 +59,12 @@
         android:layout_below="@+id/txtquestion4G"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_below="@+id/txtReason4G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Next"/>
 </RelativeLayout>
