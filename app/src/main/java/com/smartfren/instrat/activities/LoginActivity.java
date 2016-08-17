@@ -79,6 +79,7 @@ public class LoginActivity extends Activity {
     private ProgressDialog progress;
 
     private void doLogin(String username, String password) {
+        hideKeyboard();
         progress = new ProgressDialog(this);
         progress.setMessage("Logging in...");
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
