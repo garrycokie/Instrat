@@ -17,7 +17,7 @@ public class InstratApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        RealmConfiguration config = new RealmConfiguration.Builder(this).name("Instrat.DB").build();
+        RealmConfiguration config = new RealmConfiguration.Builder(this).name("Instrat.DB").deleteRealmIfMigrationNeeded().build();
         Realm.setDefaultConfiguration(config);
     }
 }

@@ -29,6 +29,9 @@ import com.smartfren.instrat.entities.LoginResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -46,7 +49,7 @@ public class LoginActivity extends Activity {
 
         Realm realm = Realm.getDefaultInstance();
         RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
-        if(loginData.size() > 0) {
+        if (loginData.size() > 0) {
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -101,13 +104,16 @@ public class LoginActivity extends Activity {
 
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.userID = username;
-        loginRequest.signature = "ca63206adb43724b4c7f92d2e0fd9d77";
+        //loginRequest.signature = "ca63206adb43724b4c7f92d2e0fd9d77";
         loginRequest.token = "token";
-        //loginRequest.signature = md5(_token + md5(_password)) ;
+        String passMD5 = md5(password).toLowerCase();
+        String passMD5token = loginRequest.token+passMD5;
+        loginRequest.signature = md5(passMD5token.toLowerCase()).toLowerCase() ;
+
         Gson gson = new Gson();
         String json = gson.toJson(loginRequest);
 
-        String url = "http://192.168.1.106/Instrat2/login.php"; // change to api url
+        String url = "http://instrat.asia/survey/login.php"; // change to api url
         JSONObject param = null;
         try {
             param = new JSONObject(json);
@@ -177,6 +183,27 @@ public class LoginActivity extends Activity {
             ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
                     hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
+    }
+
+    private static String md5(String s) {
+        try {
+
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuffer hexString = new StringBuffer();
+            for (int i = 0; i < messageDigest.length; i++)
+                hexString.append(String.format("%02X", (0xFF & messageDigest[ i ])));
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+
     }
 }
 
