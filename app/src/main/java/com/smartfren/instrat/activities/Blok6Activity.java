@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
@@ -173,6 +174,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private RadioGroup _rdgBlackBerryExist;
     private RadioGroup _rdgNokiaExist;
     private RadioGroup _rdgIphoneExist;
+    private RadioGroup _rdgMitoExist;
     private RadioGroup _rdgHTCExist;
     private RadioGroup _rdgPolytronExist;
     private RadioGroup _rdgTelFlashExist;
@@ -240,9 +242,36 @@ public class Blok6Activity extends BaseStepsActivity {
     private String _no_97Value;
     private String _no_98Value;
     private String _no_99Value;
-    private String _no_10Value;
+    private String _no_100Value;
 
     private Button _btnNext;
+
+    protected String GetCheckBoxValue(CheckBox cb, String result)
+    {
+        if(cb.isChecked())
+        {
+            result = result + ";"+ cb.getText().toString();
+        }
+        return result;
+    }
+
+    protected String GetEditTextValue(EditText edtxt, String result)
+    {
+        if(!edtxt.equals("") && edtxt!= null)
+        {
+            result = result + ";"+ edtxt.getText().toString();
+        }
+        return result;
+    }
+
+    protected String GetRedioGroupValue(RadioGroup rdg, String result)
+    {
+        int radioButtonID = rdg.getCheckedRadioButtonId();
+        RadioButton radioButton = (RadioButton) rdg.findViewById(radioButtonID);
+        result = radioButton.getText().toString();
+
+        return result;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -406,6 +435,7 @@ public class Blok6Activity extends BaseStepsActivity {
         _rdgBlackBerryExist = (RadioGroup) findViewById(R.id.radGrIsBlackBerryExist);
         _rdgNokiaExist = (RadioGroup) findViewById(R.id.radGrIsNokiaExist);
         _rdgIphoneExist = (RadioGroup) findViewById(R.id.radGrIsIphoneExist);
+        _rdgMitoExist = (RadioGroup) findViewById(R.id.radGrIsMitoExist);
         _rdgHTCExist = (RadioGroup) findViewById(R.id.radGrIsHTCExist);
         _rdgPolytronExist = (RadioGroup) findViewById(R.id.radGrIsPolytronExist);
         _rdgTelFlashExist = (RadioGroup) findViewById(R.id.radGrIsTelkomselFlashExist);
@@ -681,6 +711,258 @@ public class Blok6Activity extends BaseStepsActivity {
             @Override
             public void onClick(View v) {
 
+                //61b
+                _no_61BValue = GetCheckBoxValue(_cbxBSimpati,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBKartuAs,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBKartuLoop,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBBIM3,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBMentari,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBXL,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBAxis,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBTri,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBSmartfren,_no_61BValue);
+                _no_61BValue = GetCheckBoxValue(_cbxBEsia,_no_61BValue);
+
+                //61c
+                _no_61BValue = GetCheckBoxValue(_cbxCSimpati,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCKartuAs,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCKartuLoop,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCBIM3,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCMentari,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCXL,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCAxis,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCTri,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCSmartfren,_no_61CValue);
+                _no_61BValue = GetCheckBoxValue(_cbxCBolt,_no_61CValue);
+
+                //62
+                _no_62Value = GetCheckBoxValue(_cbxSamsung,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxBlackBerry,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxNokia,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxLenovo,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxAdvan,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxSony,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxIphone,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxMito,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxLG,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxHTC,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxPolytron,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxOppo,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxEvercross,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxAsus,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxAcer,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxXiaomi,_no_62Value);
+                _no_62Value = GetCheckBoxValue(_cbxHiSense,_no_62Value);
+
+                //63 Samsung
+                _no_63Value = GetCheckBoxValue(_cbxSamsung,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyYoung2,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ1,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ2,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ3,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ5,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ7,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyJ1Ace,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyA3,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyA5,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyA7,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyVPlus,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyNote5,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS6,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS5,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS7,_no_63Value);
+                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS7Edge,_no_63Value);
+
+                if(_cbxSamsungOther.isChecked())
+                {
+                    _no_63Value = GetEditTextValue(_txtSamsungOtherValue,_no_63Value);
+                }
+
+                //64
+                _no_64Value = GetEditTextValue(_txtTotalTypeSamsung,_no_64Value);
+
+                //65
+                _no_65Value = GetRedioGroupValue(_rdgBlackBerryExist, _no_65Value);
+
+                //66
+                _no_66Value = GetEditTextValue(_txtTotalTypeBlackBerry,_no_66Value);
+
+                //67
+                _no_67Value = GetRedioGroupValue(_rdgNokiaExist, _no_67Value);
+
+                //68
+                _no_68Value = GetEditTextValue(_txtTotalTypeNokia,_no_68Value);
+
+                //69 Lenovo
+                _no_69Value = GetCheckBoxValue(_cbxLenovoA6000,_no_69Value);
+                _no_69Value = GetCheckBoxValue(_cbxLenovoA6000Plus,_no_69Value);
+                _no_69Value = GetCheckBoxValue(_cbxLenovoA7000,_no_69Value);
+                _no_69Value = GetCheckBoxValue(_cbxLenovoP70,_no_69Value);
+
+                if(_cbxLenovoOther.isChecked())
+                {
+                    _no_69Value = GetEditTextValue(_txtLenovoOtherValue,_no_69Value);
+                }
+
+                //70
+                _no_70Value = GetEditTextValue(_txtTotalTypeLenovo,_no_70Value);
+
+                //71 Advan
+                _no_71Value = GetCheckBoxValue(_cbxAdvanS35H,_no_71Value);
+                _no_71Value = GetCheckBoxValue(_cbxAdvanS35D,_no_71Value);
+                _no_71Value = GetCheckBoxValue(_cbxAdvanS35E,_no_71Value);
+
+                if(_cbxAdvanOther.isChecked())
+                {
+                    _no_71Value = GetEditTextValue(_txtAdvanOtherValue,_no_71Value);
+                }
+
+                //72
+                _no_72Value = GetEditTextValue(_txtTotalTypeAdvan,_no_72Value);
+
+                //73 SONY
+                _no_73Value = GetCheckBoxValue(_cbxXperiaC5,_no_73Value);
+                _no_73Value = GetCheckBoxValue(_cbxXperiaE4,_no_73Value);
+                _no_73Value = GetCheckBoxValue(_cbxXperiaM5,_no_73Value);
+                _no_73Value = GetCheckBoxValue(_cbxXperiaM4,_no_73Value);
+
+                if(_cbxXperiaOther.isChecked())
+                {
+                    _no_73Value = GetEditTextValue(_txtXperiaOtherValue,_no_73Value);
+                }
+
+                //74
+                _no_74Value = GetEditTextValue(_txtTotalTypeSony,_no_74Value);
+
+                //75
+                _no_75Value = GetRedioGroupValue(_rdgIphoneExist, _no_75Value);
+
+                //76
+                _no_76Value = GetEditTextValue(_txtTotalTypeIphone,_no_76Value);
+
+                //77
+                _no_77Value = GetRedioGroupValue(_rdgMitoExist, _no_77Value);
+
+                //78
+                _no_78Value = GetEditTextValue(_txtTotalTypeMito,_no_78Value);
+
+                //79 LG
+                _no_79Value = GetCheckBoxValue(_cbxLGG4Dual,_no_79Value);
+                _no_79Value = GetCheckBoxValue(_cbxLGMagna,_no_79Value);
+                _no_79Value = GetCheckBoxValue(_cbxLGG4Stylus,_no_79Value);
+
+                if(_cbxLGOther.isChecked())
+                {
+                    _no_79Value = GetEditTextValue(_txtLGOtherValue,_no_79Value);
+                }
+
+                //80
+                _no_80Value = GetEditTextValue(_txtTotalTypeLG,_no_80Value);
+
+                //81
+                _no_81Value = GetRedioGroupValue(_rdgHTCExist, _no_81Value);
+
+                //82
+                _no_82Value = GetEditTextValue(_txtTotalTypeHTC,_no_82Value);
+
+                //83
+                _no_83Value = GetRedioGroupValue(_rdgPolytronExist, _no_83Value);
+
+                //84
+                _no_84Value = GetEditTextValue(_txtTotalTypePolytron,_no_84Value);
+
+                //85 OPPO
+                _no_85Value = GetCheckBoxValue(_cbxOPPOMirror5,_no_85Value);
+                _no_85Value = GetCheckBoxValue(_cbxOPPOJoy3,_no_85Value);
+                _no_85Value = GetCheckBoxValue(_cbxOPPOJoyPlus,_no_85Value);
+                _no_85Value = GetCheckBoxValue(_cbxOPPONeo3,_no_85Value);
+                _no_85Value = GetCheckBoxValue(_cbxOPPONeo5,_no_85Value);
+
+                if(_cbxOPPOOther.isChecked())
+                {
+                    _no_85Value = GetEditTextValue(_txtOPPOOtherValue,_no_85Value);
+                }
+
+                //86
+                _no_86Value = GetEditTextValue(_txtTotalTypeOppo,_no_86Value);
+
+                //87 Evercross
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossA33A,_no_87Value);
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossA5P,_no_87Value);
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossA21B,_no_87Value);
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossA35B,_no_87Value);
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossWinner,_no_87Value);
+                _no_87Value = GetCheckBoxValue(_cbxEvercrossA54,_no_87Value);
+
+                if(_cbxEvercrossOther.isChecked())
+                {
+                    _no_87Value = GetEditTextValue(_txtEvercrossOtherValue,_no_87Value);
+                }
+
+                //88
+                _no_88Value = GetEditTextValue(_txtTotalTypeEvercross,_no_88Value);
+
+                //89 ASUS
+                _no_89Value = GetCheckBoxValue(_cbxAsusZenfone2Laser8,_no_89Value);
+                _no_89Value = GetCheckBoxValue(_cbxAsusZenfone2Laser16,_no_89Value);
+                _no_89Value = GetCheckBoxValue(_cbxAsusZenfoneGO,_no_89Value);
+                _no_89Value = GetCheckBoxValue(_cbxAsusZenfone4S,_no_89Value);
+                _no_89Value = GetCheckBoxValue(_cbxAsusNewZenfone4S,_no_89Value);
+                _no_89Value = GetCheckBoxValue(_cbxAsusZenfone2ZE551ML,_no_89Value);
+
+                if(_cbxAsusOther.isChecked())
+                {
+                    _no_89Value = GetEditTextValue(_txtAsusOtherValue,_no_89Value);
+                }
+
+                //90
+                _no_90Value = GetEditTextValue(_txtTotalTypeAsus,_no_90Value);
+
+                //91 ACER
+                _no_91Value = GetCheckBoxValue(_cbxAcerZ220,_no_91Value);
+                _no_91Value = GetCheckBoxValue(_cbxAcerZ520,_no_91Value);
+
+                if(_cbxAcerOther.isChecked())
+                {
+                    _no_91Value = GetEditTextValue(_txtAcerOtherValue,_no_91Value);
+                }
+
+                //92
+                _no_92Value = GetEditTextValue(_txtTotalTypeAcer,_no_92Value);
+
+                //93 XIAOMI
+                _no_93Value = GetCheckBoxValue(_cbxXiaomiREDMI2Prime,_no_93Value);
+                _no_93Value = GetCheckBoxValue(_cbxXiaomiREDMI28GB,_no_93Value);
+                _no_93Value = GetCheckBoxValue(_cbxXiaomiREDMI216GB,_no_93Value);
+                _no_93Value = GetCheckBoxValue(_cbxXiaomiMi4I,_no_93Value);
+
+                if(_cbxXiaomiOther.isChecked())
+                {
+                    _no_93Value = GetEditTextValue(_txtXiaomiValue,_no_93Value);
+                }
+
+                //94
+                _no_94Value = GetEditTextValue(_txtTotalTypeXiaomi,_no_94Value);
+
+                //95 Hi Sense
+                _no_96Value = GetCheckBoxValue(_cbxHiSensePureShot,_no_96Value);
+                _no_96Value = GetCheckBoxValue(_cbxHiSensePureShotPlus,_no_96Value);
+
+                if(_cbxHiSenseOther.isChecked())
+                {
+                    _no_96Value = GetEditTextValue(_txtHiSenseOtherValue,_no_96Value);
+                }
+
+                //96
+                _no_96Value = GetEditTextValue(_txtTotalTypeHiSense,_no_96Value);
+                //97
+                _no_97Value = GetRedioGroupValue(_rdgTelFlashExist,_no_97Value);
+                //98
+                _no_98Value = GetRedioGroupValue(_rdgHuwaweiExist,_no_98Value);
+                //99
+                _no_99Value = GetRedioGroupValue(_rdgZTEExist,_no_99Value);
+                //100
+                _no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
 
 
                 Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
@@ -724,7 +1006,7 @@ public class Blok6Activity extends BaseStepsActivity {
                 intent.putExtra("NO_97",_no_97Value);
                 intent.putExtra("NO_98",_no_98Value);
                 intent.putExtra("NO_99",_no_99Value);
-                intent.putExtra("NO_100", _no_10Value);
+                intent.putExtra("NO_100", _no_100Value);
             }
         });
 
