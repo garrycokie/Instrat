@@ -58,18 +58,18 @@ public class Blok10Activity extends AppCompatActivity {
 
         _btnNext = (Button) findViewById(R.id.btnNext);
 
-        _Q129Value = GetCheckBoxValue(_cbQ129A1, cbQ129A1Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A2, cbQ129A2Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A3, cbQ129A3Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A4, cbQ129A4Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A5, cbQ129A5Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A6, cbQ129A6Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A7, cbQ129A7Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A8, cbQ129A8Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A9, cbQ129A9Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A10, cbQ129A10Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A11, cbQ129A11Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A12, cbQ129A12Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A1, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A2, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A3, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A4, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A5, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A6, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A7, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A8, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A9, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A10, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A11, _Q129Value);
+        _Q129Value = GetCheckBoxValue(_cbQ129A12, _Q129Value);
 
         _btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
