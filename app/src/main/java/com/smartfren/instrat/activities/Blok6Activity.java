@@ -463,6 +463,8 @@ public class Blok6Activity extends BaseStepsActivity {
         _txtTotalTypeHiSense = (EditText) findViewById(R.id.txtTotalHiSenseTypeValue);
 
 
+        _btnNext = (Button) findViewById(R.id.btnNext);
+
         _cbxSamsung.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -1007,6 +1009,8 @@ public class Blok6Activity extends BaseStepsActivity {
                 intent.putExtra("NO_98",_no_98Value);
                 intent.putExtra("NO_99",_no_99Value);
                 intent.putExtra("NO_100", _no_100Value);
+
+                startActivity(intent);
             }
         });
 
