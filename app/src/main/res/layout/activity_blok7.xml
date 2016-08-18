@@ -65,5 +65,11 @@
             android:text="@string/page_checkbox_asus_text"
             android:layout_marginBottom="10dp"
             android:onClick="onCheckboxClicked"/>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Next"/>
     </LinearLayout>
 </ScrollView>

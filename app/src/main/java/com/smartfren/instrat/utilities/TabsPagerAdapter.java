@@ -33,16 +33,16 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return 2;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return ((ListPendingSurveyFragment)_fm.getFragments().get(position)).getTitle();
+                return "List Survey";
             case 1:
-                return ((NewSurveyFragment)_fm.getFragments().get(position)).getTitle();
+                return "New Survey";
             default:
                 return "-";
         }

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 
-public class Blok4Activity extends AppCompatActivity {
+public class Blok4Activity extends BaseStepsActivity {
 
     private CheckBox _cbQ38ASmartfren;
     private CheckBox _cbQ38AAdvan;
@@ -189,6 +189,18 @@ public class Blok4Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blok4);
+
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
+
+            @Override
+            public void onContinueClicked() {
+                // TODO: continue;
+            }
+        });
 
         _btnNext = (Button) findViewById(R.id.btnNext);
 

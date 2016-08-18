@@ -6,13 +6,15 @@ public class LoginResponse {
 
     // TODO: add more field based on need
 
-    @SerializedName("Status")
-    public int status;
-    @SerializedName("UserID")
+    @SerializedName("userID")
     public String userID;
+    @SerializedName("status")
+    public String status;
+    @SerializedName("accessToken")
+    public String accessToken;
 
     @Override
     public String toString() {
-        return "LoginResponse: [status=" + status + ", userID=" + userID + "]";
+        return "LoginResponse: [status=" + status + ", userID=" + userID + ", accessToken=" + accessToken+ "]";
     }
 }

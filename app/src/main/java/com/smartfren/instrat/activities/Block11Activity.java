@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Block11Activity extends AppCompatActivity {
+public class Block11Activity extends BaseStepsActivity {
 
     private ImageView _pic1;
     private ImageView _pic2;
@@ -60,6 +60,18 @@ public class Block11Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dispatchTakePictureIntent(R.id.pic_4);
+            }
+        });
+
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
+
+            @Override
+            public void onContinueClicked() {
+                // TODO: continue;
             }
         });
     }

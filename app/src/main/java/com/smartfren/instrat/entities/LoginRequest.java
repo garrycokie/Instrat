@@ -3,12 +3,14 @@ package com.smartfren.instrat.entities;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
-    @SerializedName("Username")
-    public String username;
-    @SerializedName("Password")
-    public String password;
+    @SerializedName("userID")
+    public String userID;
+    @SerializedName("signature")
+    public String signature;
+    @SerializedName("token")
+    public String token;
 
     public String toString() {
-        return "LoginRequest: [username=" + username + ", password=" + password + "]";
+        return "LoginRequest: [userID=" + userID + ", signature=" + signature +", token=" + token + "]";
     }
 }
