@@ -49,10 +49,18 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
-        android:id="@+id/spinStoreTypeExclusiveOther"
+        android:id="@+id/txtStoreTypeExclusiveOtherValue"
         android:layout_below="@id/spinStoreTypeExclusive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_below="@+id/txtStoreTypeExclusiveOtherValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Next"/>
 
 </RelativeLayout>

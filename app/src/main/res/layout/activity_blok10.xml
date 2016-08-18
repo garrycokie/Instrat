@@ -88,5 +88,12 @@
             android:text="@string/page_checkbox_blok10_produkjual_12_text"
             android:layout_marginBottom="10dp"
             android:onClick="onCheckboxClicked"/>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_below="@+id/txtStoreTypeExclusiveOtherValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Next"/>
     </LinearLayout>
 </ScrollView>
