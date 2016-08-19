@@ -14,7 +14,7 @@ import android.widget.SpinnerAdapter;
 
 import com.smartfren.instrat.R;
 
-public class Blok5AActivity extends AppCompatActivity {
+public class Blok5AActivity extends BaseStepsActivity {
 
     private Spinner _spQ48A;
     private Spinner _spQ49A;
@@ -54,8 +54,6 @@ public class Blok5AActivity extends AppCompatActivity {
 
     private EditText _txtQ53A;
     private EditText _txtQ56A;
-
-    private Button _btnNext;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -112,8 +110,6 @@ public class Blok5AActivity extends AppCompatActivity {
         _cbQ56ASony = (CheckBox) findViewById(R.id.cbQ56ASony);
         _cbQ56ATidakAda = (CheckBox) findViewById(R.id.cbQ56ATidakAda);
         _cbQ56ALainnya = (CheckBox) findViewById(R.id.cbQ56ALainnya);
-
-        _btnNext = (Button) findViewById(R.id.btnNext);
 
         _cbQ53A10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
@@ -192,9 +188,14 @@ public class Blok5AActivity extends AppCompatActivity {
             }
         });
 
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            @Override
+            public void onContinueClicked() {
                 String A48 = _spQ48A.getSelectedItem().toString();
                 String A49 = _spQ49A.getSelectedItem().toString();
                 String A50 = _spQ50A.getSelectedItem().toString();
@@ -249,6 +250,57 @@ public class Blok5AActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(Blok5AActivity.this, Blok5BActivity.class);
+                Bundle extras = intent.getExtras();
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
+                intent.putExtra("NO_3", extras.getString("NO_3"));
+                intent.putExtra("NO_4", extras.getString("NO_4"));
+                intent.putExtra("NO_5", extras.getString("NO_5"));
+                intent.putExtra("NO_6", extras.getString("NO_6"));
+                intent.putExtra("NO_7", extras.getString("NO_7"));
+                intent.putExtra("NO_8", extras.getString("NO_8"));
+                intent.putExtra("NO_9", extras.getString("NO_9"));
+                intent.putExtra("NO_10", extras.getString("NO_10"));
+                intent.putExtra("NO_11", extras.getString("NO_11"));
+                intent.putExtra("NO_12", extras.getString("NO_12"));
+                intent.putExtra("NO_13", extras.getString("NO_13"));
+                intent.putExtra("NO_14", extras.getString("NO_14"));
+                intent.putExtra("NO_15", extras.getString("NO_15"));
+                intent.putExtra("NO_16", extras.getString("NO_16"));
+                intent.putExtra("NO_17", extras.getString("NO_17"));
+                intent.putExtra("NO_18", extras.getString("NO_18"));
+                intent.putExtra("NO_19", extras.getString("NO_19"));
+                intent.putExtra("NO_20", extras.getString("NO_20"));
+                intent.putExtra("NO_21", extras.getString("NO_21"));
+                intent.putExtra("NO_22", extras.getString("NO_22"));
+                intent.putExtra("NO_23", extras.getString("NO_23"));
+                intent.putExtra("NO_24", extras.getString("NO_24"));
+                intent.putExtra("NO_25", extras.getString("NO_25"));
+                intent.putExtra("NO_26", extras.getString("NO_26"));
+                intent.putExtra("NO_27", extras.getString("NO_27"));
+                intent.putExtra("NO_28", extras.getString("NO_28"));
+                intent.putExtra("NO_29", extras.getString("NO_29"));
+                intent.putExtra("NO_30", extras.getString("NO_30"));
+                intent.putExtra("NO_31", extras.getString("NO_31"));
+                intent.putExtra("NO_32", extras.getString("NO_32"));
+                intent.putExtra("NO_33", extras.getString("NO_33"));
+                intent.putExtra("NO_34", extras.getString("NO_34"));
+                intent.putExtra("NO_35", extras.getString("NO_35"));
+                intent.putExtra("NO_36", extras.getString("NO_36"));
+                intent.putExtra("NO_38", extras.getString("NO_38"));
+                intent.putExtra("NO_39", extras.getString("NO_39"));
+                intent.putExtra("NO_40", extras.getString("NO_40"));
+                intent.putExtra("NO_41", extras.getString("NO_41"));
+                intent.putExtra("NO_42", extras.getString("NO_42"));
+                intent.putExtra("NO_43", extras.getString("NO_43"));
+                intent.putExtra("NO_44", extras.getString("NO_44"));
+                intent.putExtra("NO_45", extras.getString("NO_45"));
+                intent.putExtra("NO_46", extras.getString("NO_46"));
+                intent.putExtra("NO_47", extras.getString("NO_47"));
                 intent.putExtra("NO_48", A48);
                 intent.putExtra("NO_49", A49);
                 intent.putExtra("NO_50", A50);
@@ -262,9 +314,7 @@ public class Blok5AActivity extends AppCompatActivity {
                 intent.putExtra("NO_54", A54);
                 intent.putExtra("NO_55", A55);
                 intent.putExtra("NO_56", A56);
-                intent.putExtra("NO_52", A52);
                 startActivity(intent);
-
             }
         });
 

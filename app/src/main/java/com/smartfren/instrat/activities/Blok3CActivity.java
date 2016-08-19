@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 
-public class Blok3CActivity extends AppCompatActivity {
+public class Blok3CActivity extends BaseStepsActivity {
 
     private Spinner _spQ27A;
     private Spinner _spQ32A;
@@ -40,14 +40,11 @@ public class Blok3CActivity extends AppCompatActivity {
     private TextView _lblQ31;
     private TextView _lblQ36;
 
-    private Button _btnNext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blok3c);
 
-        _btnNext = (Button) findViewById((R.id.btnNext));
         _spQ27A = (Spinner) findViewById(R.id.spQ27A);
         _spQ32A = (Spinner) findViewById(R.id.spQ32A);
 
@@ -158,8 +155,14 @@ public class Blok3CActivity extends AppCompatActivity {
             }
         });
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
+
+            @Override
+            public void onContinueClicked() {
                 String A27 = "";
                 if(String.valueOf(_spQ27A.getSelectedItem()).equals("Lainnya"))
                 {
@@ -191,6 +194,37 @@ public class Blok3CActivity extends AppCompatActivity {
                 String A36 = _txtQ36A1.getText().toString() + ";" +_txtQ36A2.getText().toString() + ";" +_txtQ36A3.getText().toString();
 
                 Intent intent = new Intent(Blok3CActivity.this, Blok4Activity.class);
+                Bundle extras = intent.getExtras();
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
+                intent.putExtra("NO_3", extras.getString("NO_3"));
+                intent.putExtra("NO_4", extras.getString("NO_4"));
+                intent.putExtra("NO_5", extras.getString("NO_5"));
+                intent.putExtra("NO_6", extras.getString("NO_6"));
+                intent.putExtra("NO_7", "");
+                intent.putExtra("NO_8", "");
+                intent.putExtra("NO_9", "");
+                intent.putExtra("NO_10", "");
+                intent.putExtra("NO_11", "");
+                intent.putExtra("NO_12", "");
+                intent.putExtra("NO_13", "");
+                intent.putExtra("NO_14", "");
+                intent.putExtra("NO_15", "");
+                intent.putExtra("NO_16", "");
+                intent.putExtra("NO_17", "");
+                intent.putExtra("NO_18", "");
+                intent.putExtra("NO_19", "");
+                intent.putExtra("NO_20", "");
+                intent.putExtra("NO_21", "");
+                intent.putExtra("NO_22", "");
+                intent.putExtra("NO_23", "");
+                intent.putExtra("NO_24", "");
+                intent.putExtra("NO_25", "");
+                intent.putExtra("NO_26", "");
                 intent.putExtra("NO_27", A27);
                 intent.putExtra("NO_28", A28);
                 intent.putExtra("NO_29", A29);
@@ -202,9 +236,9 @@ public class Blok3CActivity extends AppCompatActivity {
                 intent.putExtra("NO_35", A35);
                 intent.putExtra("NO_36", A36);
                 startActivity(intent);
-
             }
         });
+
     }
 
 

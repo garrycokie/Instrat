@@ -167,6 +167,8 @@ public class LoginActivity extends Activity {
         realm.commitTransaction();
 
         Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("UserID", response.userID);
+        i.putExtra("AccessToken", response.accessToken);
         startActivity(i);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }

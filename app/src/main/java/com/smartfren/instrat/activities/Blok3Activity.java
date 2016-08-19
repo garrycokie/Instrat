@@ -10,9 +10,8 @@ import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
 
-public class Blok3Activity extends AppCompatActivity {
+public class Blok3Activity extends BaseStepsActivity {
 
-    private Button _btnNext;
     private RadioButton _rbQ6A1;
     private RadioButton _rbQ6A2;
     private RadioButton _rbQ6A3;
@@ -22,28 +21,63 @@ public class Blok3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blok3);
 
-        _btnNext = (Button) findViewById((R.id.btnNext));
         _rbQ6A1 = (RadioButton) findViewById((R.id.rbQ6A1));
         _rbQ6A2 = (RadioButton) findViewById((R.id.rbQ6A2));
         _rbQ6A3 = (RadioButton) findViewById((R.id.rbQ6A3));
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
+
+            @Override
+            public void onContinueClicked() {
                 if(_rbQ6A1.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3AActivity.class);
+                    Bundle extras = intent.getExtras();
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
                     intent.putExtra("NO_6", _rbQ6A1.getText());
                     startActivity(intent);
                 }
                 else if(_rbQ6A2.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3BActivity.class);
+                    Bundle extras = intent.getExtras();
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
                     intent.putExtra("NO_6", _rbQ6A2.getText());
                     startActivity(intent);
                 }
                 else if(_rbQ6A3.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3CActivity.class);
+                    Bundle extras = intent.getExtras();
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
                     intent.putExtra("NO_6", _rbQ6A3.getText().toString());
                     startActivity(intent);
                 }

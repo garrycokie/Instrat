@@ -12,7 +12,7 @@ import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
 
-public class Blok7DActivity extends AppCompatActivity {
+public class Blok7DActivity extends BaseStepsActivity {
     private Spinner _spQ113A;
 
     private CheckBox _cbQ112A1;
@@ -38,8 +38,6 @@ public class Blok7DActivity extends AppCompatActivity {
     private CheckBox _cbQ114A15;
 
     private EditText _txtQ114A;
-
-    private Button _btnNext;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -94,8 +92,6 @@ public class Blok7DActivity extends AppCompatActivity {
         _cbQ114A13.setVisibility(View.VISIBLE);
         _cbQ114A14.setVisibility(View.VISIBLE);
         _cbQ114A15.setVisibility(View.VISIBLE);
-
-        _btnNext = (Button) findViewById(R.id.btnNext);
 
         _txtQ114A = (EditText) findViewById(R.id.txtQ114A);
 
@@ -162,9 +158,14 @@ public class Blok7DActivity extends AppCompatActivity {
             }
         });
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        super.setStepEventListener(new OnStepEventListener() {
+            @Override
+            public void onBackClicked() {
+                // TODO: back;
+            }
 
+            @Override
+            public void onContinueClicked() {
                 String A112 = "";
                 A112 = GetCheckBoxValue(_cbQ112A1, A112);
                 A112 = GetCheckBoxValue(_cbQ112A2, A112);
@@ -222,8 +223,7 @@ public class Blok7DActivity extends AppCompatActivity {
                 intent.putExtra("NO_112", A112);
                 intent.putExtra("NO_113", A113);
                 intent.putExtra("NO_114", A114);
-
-
+                startActivity(intent);
             }
         });
     }

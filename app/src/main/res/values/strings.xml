@@ -8,6 +8,15 @@
     <string name="title_surveyaction_list">SurveyActions</string>
     <string name="title_surveyaction_detail">SurveyAction Detail</string>
 
+    <string name="page_blok0_tipe_survey_text">Tipe Survey</string>
+
+    <string-array name="page_blok0_tipe_survey_list">
+        <item>Full Audit Smartphone</item>
+        <item>Full Audit Modem</item>
+        <item>Listing</item>
+        <item>Advocacy Harga</item>
+    </string-array>
+
     <string name="page_blok3_q6_text">Pilih Scenario Advocacy</string>
     <string name="page_blok3_q6_a1_text">SKENARIO ADVOCACY 1 (Harga dibawah Rp 500 ribu dan Rp 500 ribu-1 juta)</string>
     <string name="page_blok3_q6_a2_text">SKENARIO ADVOCACY 2 (Harga Rp 1-1.5 juta dan Rp 1.5-2 juta)</string>

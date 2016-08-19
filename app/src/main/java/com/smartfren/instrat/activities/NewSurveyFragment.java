@@ -1,20 +1,29 @@
 package com.smartfren.instrat.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
+
+import java.util.UUID;
 
 public class NewSurveyFragment extends Fragment {
     private static final String TAG = "NewSurveyFragment";
 
     private String _title;
     private int _page;
+
+    private View fragmentView;
+    private Button _btnNext;
+    private Spinner _spQTipeSurvey;
 
     private static final String ARG_TITLE = "FRAGMENT_TITLE";
     private static final String ARG_PAGE = "FRAGMENT_PAGE";
@@ -35,19 +44,37 @@ public class NewSurveyFragment extends Fragment {
     }
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        fragmentView = inflater.inflate(R.layout.fragment_new_survey, container, false);
+        _btnNext = (Button) fragmentView.findViewById(R.id.btnNext);
+        _spQTipeSurvey = (Spinner) fragmentView.findViewById(R.id.spQTipeSurvey);
+
+        return fragmentView;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             _page = getArguments().getInt(ARG_PAGE);
             _title = getArguments().getString(ARG_TITLE);
-        }
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_survey, container, false);
+            _btnNext.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String tipeSurvey = _spQTipeSurvey.getSelectedItem().toString();
+                    Intent intent = new Intent(getActivity(), Block1Activity.class);
+                    Bundle extras = intent.getExtras();
+                    String deviceSurveyID = UUID.randomUUID().toString();
+                    intent.putExtra("DeviceSurveyID",deviceSurveyID);
+                    intent.putExtra("TipeSurvey", tipeSurvey);
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    startActivity(intent);
+
+                }
+            });
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event

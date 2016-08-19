@@ -6,8 +6,21 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/lblQTipeSurvey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page_blok0_tipe_survey_text"
+        android:layout_marginBottom="10dp"/>
+    <Spinner
+        android:id="@+id/spQTipeSurvey"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_height="wrap_content"
+        android:entries="@array/page_blok0_tipe_survey_list"
+        android:layout_marginBottom="30dp"/>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Next"/>
 </FrameLayout>

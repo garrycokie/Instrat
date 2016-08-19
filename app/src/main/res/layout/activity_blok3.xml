@@ -1,15 +1,21 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+    android:layout_height="match_parent"
+    tools:context="com.smartfren.instrat.activities.Blok3Activity">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:orientation="vertical"
-    tools:context=".activities.Blok3Activity">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
     <TextView
         android:id="@+id/lblQ6"
         android:layout_width="wrap_content"
@@ -41,5 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Next"/>
-</LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_step_button_layout" />
+</RelativeLayout>

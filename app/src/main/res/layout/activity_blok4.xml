@@ -15,8 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            tools:context=".activities.Blok4Activity">
+            android:paddingRight="16dp">
 
             <TextView
                 android:id="@+id/lblQ38"
