@@ -968,7 +968,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
 
                 Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

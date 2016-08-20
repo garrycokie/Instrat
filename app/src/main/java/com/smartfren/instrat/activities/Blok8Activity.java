@@ -87,7 +87,7 @@ public class Blok8Activity extends BaseStepsActivity {
                 _Q126AValue = _txtQ126A.getText().toString();
 
                 Intent intent = new Intent(Blok8Activity.this, Blok9Activity.class);
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

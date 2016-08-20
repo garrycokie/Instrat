@@ -195,7 +195,7 @@ public class Blok3BActivity extends BaseStepsActivity {
                 String A26 = _txtQ26A1.getText().toString() + ";" +_txtQ26A2.getText().toString() + ";" +_txtQ26A3.getText().toString();
 
                 Intent intent = new Intent(Blok3BActivity.this, Blok4Activity.class);
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

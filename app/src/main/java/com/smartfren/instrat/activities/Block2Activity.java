@@ -97,7 +97,7 @@ public class Block2Activity extends BaseStepsActivity {
                 _4GReasonValue = _txt4GReason.getText().toString();
                 Intent intent = new Intent(Block2Activity.this, Blok3AActivity.class);
 
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
 
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));

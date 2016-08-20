@@ -24,6 +24,7 @@ public class NewSurveyFragment extends Fragment {
     private View fragmentView;
     private Button _btnNext;
     private Spinner _spQTipeSurvey;
+    private Intent _currentIntent;
 
     private static final String ARG_TITLE = "FRAGMENT_TITLE";
     private static final String ARG_PAGE = "FRAGMENT_PAGE";
@@ -49,6 +50,22 @@ public class NewSurveyFragment extends Fragment {
         fragmentView = inflater.inflate(R.layout.fragment_new_survey, container, false);
         _btnNext = (Button) fragmentView.findViewById(R.id.btnNext);
         _spQTipeSurvey = (Spinner) fragmentView.findViewById(R.id.spQTipeSurvey);
+        _currentIntent = getActivity().getIntent();
+
+        _btnNext.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String tipeSurvey = _spQTipeSurvey.getSelectedItem().toString();
+                Intent intent = new Intent(getActivity(), Block1Activity.class);
+                Bundle extras = _currentIntent.getExtras();
+                String deviceSurveyID = UUID.randomUUID().toString();
+                intent.putExtra("DeviceSurveyID",deviceSurveyID);
+                intent.putExtra("TipeSurvey", tipeSurvey);
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                startActivity(intent);
+
+            }
+        });
 
         return fragmentView;
     }
@@ -60,20 +77,7 @@ public class NewSurveyFragment extends Fragment {
             _page = getArguments().getInt(ARG_PAGE);
             _title = getArguments().getString(ARG_TITLE);
 
-            _btnNext.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    String tipeSurvey = _spQTipeSurvey.getSelectedItem().toString();
-                    Intent intent = new Intent(getActivity(), Block1Activity.class);
-                    Bundle extras = intent.getExtras();
-                    String deviceSurveyID = UUID.randomUUID().toString();
-                    intent.putExtra("DeviceSurveyID",deviceSurveyID);
-                    intent.putExtra("TipeSurvey", tipeSurvey);
-                    intent.putExtra("UserID", extras.getString("UserID"));
-                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                    startActivity(intent);
 
-                }
-            });
         }
     }
 

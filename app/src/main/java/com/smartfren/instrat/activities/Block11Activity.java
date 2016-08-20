@@ -74,7 +74,7 @@ public class Block11Activity extends BaseStepsActivity {
                 // TODO: continue;
 
                 Intent intent = new Intent(Block11Activity.this, Block12Activity.class);
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

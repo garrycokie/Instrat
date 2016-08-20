@@ -60,7 +60,7 @@ public class Block12Activity extends BaseStepsActivity {
                 _Q134Value = _txtQ134.getText().toString();
 
                 Intent intent = new Intent(Block12Activity.this, Blok13Activity.class);
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

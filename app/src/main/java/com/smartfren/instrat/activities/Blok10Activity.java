@@ -77,7 +77,7 @@ public class Blok10Activity extends BaseStepsActivity {
             public void onContinueClicked() {
                 Intent intent = new Intent(Blok10Activity.this, Block11Activity.class);
 
-                Bundle extras = intent.getExtras();
+                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

@@ -33,10 +33,10 @@ public class Blok3Activity extends BaseStepsActivity {
 
             @Override
             public void onContinueClicked() {
+                Bundle extras = getIntent().getExtras();
                 if(_rbQ6A1.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3AActivity.class);
-                    Bundle extras = intent.getExtras();
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                     intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                     intent.putExtra("UserID", extras.getString("UserID"));
@@ -52,7 +52,6 @@ public class Blok3Activity extends BaseStepsActivity {
                 else if(_rbQ6A2.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3BActivity.class);
-                    Bundle extras = intent.getExtras();
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                     intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                     intent.putExtra("UserID", extras.getString("UserID"));
@@ -68,7 +67,6 @@ public class Blok3Activity extends BaseStepsActivity {
                 else if(_rbQ6A3.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3CActivity.class);
-                    Bundle extras = intent.getExtras();
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                     intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                     intent.putExtra("UserID", extras.getString("UserID"));

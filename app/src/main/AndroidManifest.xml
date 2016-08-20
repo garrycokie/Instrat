@@ -34,10 +34,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.Block1Activity" />
+        <activity android:name=".activities.Block2Activity" />
         <activity android:name=".activities.Blok3Activity" />
         <activity android:name=".activities.Blok4Activity" />
         <activity android:name=".activities.Blok5AActivity" />
         <activity android:name=".activities.Blok5BActivity" />
+        <activity android:name=".activities.Blok6Activity" />
         <activity android:name=".activities.Blok7Activity" />
         <activity android:name=".activities.Blok7AActivity" />
         <activity android:name=".activities.Blok7BActivity" />
@@ -50,9 +53,9 @@
         <activity android:name=".activities.Blok10Activity" />
         <activity android:name=".activities.Blok3AActivity" />
         <activity android:name=".activities.Blok3BActivity" />
-        <activity android:name=".activities.Blok3CActivity"></activity>
+        <activity android:name=".activities.Blok3CActivity" />
         <activity android:name=".activities.Block11Activity" />
-        <activity android:name=".activities.Block12Activity"></activity>
+        <activity android:name=".activities.Block12Activity" />
     </application>
 
 </manifest>
