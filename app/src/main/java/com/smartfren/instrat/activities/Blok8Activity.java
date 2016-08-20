@@ -13,7 +13,7 @@ import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
 
-public class Blok8Activity extends AppCompatActivity {
+public class Blok8Activity extends BaseStepsActivity {
 
     private Spinner _spQ121A;
     private EditText _txtQ122A;
@@ -23,7 +23,6 @@ public class Blok8Activity extends AppCompatActivity {
     private EditText _txtQ126A;
     private Spinner _spQ127A;
 
-    private Button _btnNext;
 
     private String _Q121AValue;
     private String _Q122AValue;
@@ -46,7 +45,6 @@ public class Blok8Activity extends AppCompatActivity {
         _txtQ125A = (EditText) findViewById(R.id.txtQ125A);
         _txtQ126A = (EditText) findViewById(R.id.txtQ126A);
         _spQ127A = (Spinner) findViewById(R.id.spQ127A);
-        _btnNext = (Button) findViewById(R.id.btnNext);
 
         _spQ121A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -74,10 +72,14 @@ public class Blok8Activity extends AppCompatActivity {
             }
         });
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
 
+            }
+
+            @Override
+            public void onContinueClicked() {
                 _Q122AValue = _txtQ122A.getText().toString();
                 _Q123AValue = _txtQ123A.getText().toString();
                 _Q1224Value = _txtQ1224.getText().toString();

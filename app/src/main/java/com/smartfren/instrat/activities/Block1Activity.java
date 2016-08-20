@@ -23,7 +23,6 @@ public class Block1Activity extends BaseStepsActivity {
     private Spinner _spStoreType;
     private Spinner _spStoreTypeExclusive;
     private EditText _txtStoreTypeExlusiveOtherText;
-    private Button _btnNext;
 
     private String _storeTypeValue;
     private String _storeTypeExclusiveValue;
@@ -65,7 +64,6 @@ public class Block1Activity extends BaseStepsActivity {
                 android.R.layout.simple_spinner_item, this._storeTypeExclusiveSpinnerItems);
         _spStoreTypeExclusive.setAdapter(adapterExclusive);
         _txtStoreTypeExlusiveOtherText = (EditText) findViewById(R.id.txtStoreTypeExclusiveOtherValue);
-        _btnNext = (Button) findViewById(R.id.btnNext);
         _spStoreTypeExclusive.setVisibility(View.GONE);
 
         _spStoreType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -108,9 +106,14 @@ public class Block1Activity extends BaseStepsActivity {
             }
         });
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
+
+            }
+
+            @Override
+            public void onContinueClicked() {
 
                 Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
 
@@ -124,7 +127,5 @@ public class Block1Activity extends BaseStepsActivity {
                 startActivity(intent);
             }
         });
-
-
-    }
+       }
 }

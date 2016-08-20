@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.smartfren.instrat.R;
 
-public class Blok10Activity extends AppCompatActivity {
+public class Blok10Activity extends BaseStepsActivity {
 
     private CheckBox _cbQ129A1;
     private CheckBox _cbQ129A2;
@@ -24,8 +24,6 @@ public class Blok10Activity extends AppCompatActivity {
     private CheckBox _cbQ129A10;
     private CheckBox _cbQ129A11;
     private CheckBox _cbQ129A12;
-
-    private Button _btnNext;
 
     private String _Q129Value;
 
@@ -56,8 +54,6 @@ public class Blok10Activity extends AppCompatActivity {
         _cbQ129A11 = (CheckBox) findViewById(R.id.cbQ129A11);
         _cbQ129A12 = (CheckBox) findViewById(R.id.cbQ129A12);
 
-        _btnNext = (Button) findViewById(R.id.btnNext);
-
         _Q129Value = GetCheckBoxValue(_cbQ129A1, _Q129Value);
         _Q129Value = GetCheckBoxValue(_cbQ129A2, _Q129Value);
         _Q129Value = GetCheckBoxValue(_cbQ129A3, _Q129Value);
@@ -71,9 +67,14 @@ public class Blok10Activity extends AppCompatActivity {
         _Q129Value = GetCheckBoxValue(_cbQ129A11, _Q129Value);
         _Q129Value = GetCheckBoxValue(_cbQ129A12, _Q129Value);
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
+
+            }
+
+            @Override
+            public void onContinueClicked() {
                 Intent intent = new Intent(Blok10Activity.this, Block11Activity.class);
                 intent.putExtra("NO_129", _Q129Value);
 

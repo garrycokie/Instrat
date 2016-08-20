@@ -244,8 +244,6 @@ public class Blok6Activity extends BaseStepsActivity {
     private String _no_99Value;
     private String _no_100Value;
 
-    private Button _btnNext;
-
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
         if(cb.isChecked())
@@ -462,8 +460,6 @@ public class Blok6Activity extends BaseStepsActivity {
         _txtTotalTypeXiaomi = (EditText) findViewById(R.id.txtTotalXiaomiTypeValue);
         _txtTotalTypeHiSense = (EditText) findViewById(R.id.txtTotalHiSenseTypeValue);
 
-
-        _btnNext = (Button) findViewById(R.id.btnNext);
 
         _cbxSamsung.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -709,11 +705,15 @@ public class Blok6Activity extends BaseStepsActivity {
         });
 
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
 
-                //61b
+            }
+
+            @Override
+            public void onContinueClicked() {
+//61b
                 _no_61BValue = GetCheckBoxValue(_cbxBSimpati,_no_61BValue);
                 _no_61BValue = GetCheckBoxValue(_cbxBKartuAs,_no_61BValue);
                 _no_61BValue = GetCheckBoxValue(_cbxBKartuLoop,_no_61BValue);
@@ -1013,7 +1013,5 @@ public class Blok6Activity extends BaseStepsActivity {
                 startActivity(intent);
             }
         });
-
-
-    }
+            }
 }

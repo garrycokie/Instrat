@@ -24,7 +24,6 @@ public class Block2Activity extends BaseStepsActivity {
     private String _spOperator4GValue;
     private EditText _txt4GReason;
     private String _4GReasonValue;
-    private Button _btnNext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,7 +50,6 @@ public class Block2Activity extends BaseStepsActivity {
         ArrayAdapter<String> adapter4G = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
         _spOperator4G.setAdapter(adapter4G);
-
         _txt4GReason = (EditText) findViewById(R.id.txtReason4G);
 
         //_spOperator4G.setVisibility(View.GONE);
@@ -86,12 +84,17 @@ public class Block2Activity extends BaseStepsActivity {
             }
         });
 
-        _4GReasonValue = _txt4GReason.getText().toString();
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
 
+            }
+
+            @Override
+            public void onContinueClicked() {
+                _4GReasonValue = _txt4GReason.getText().toString();
                 Intent intent = new Intent(Block2Activity.this, Blok3AActivity.class);
 
                 intent.putExtra("NO_3", _spOperatorValue);

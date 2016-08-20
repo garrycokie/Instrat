@@ -10,10 +10,9 @@ import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
 
-public class Blok9Activity extends AppCompatActivity {
+public class Blok9Activity extends BaseStepsActivity {
 
     private Spinner _spQ128A;
-    private Button _btnNext;
 
     private String _Q128AValue;
 
@@ -23,7 +22,6 @@ public class Blok9Activity extends AppCompatActivity {
         setContentView(R.layout.activity_blok9);
 
         _spQ128A = (Spinner) findViewById(R.id.spQ128A);
-        _btnNext = (Button) findViewById(R.id.btnNext);
 
         _spQ128A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -38,10 +36,14 @@ public class Blok9Activity extends AppCompatActivity {
             }
         });
 
-        _btnNext.setOnClickListener(new View.OnClickListener() {
+        super.setStepEventListener(new OnStepEventListener() {
             @Override
-            public void onClick(View v) {
+            public void onBackClicked() {
 
+            }
+
+            @Override
+            public void onContinueClicked() {
                 Intent intent = new Intent(Blok9Activity.this, Blok10Activity.class);
                 intent.putExtra("NO_128", _Q128AValue);
 
