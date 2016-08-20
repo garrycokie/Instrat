@@ -97,9 +97,18 @@ public class Block2Activity extends BaseStepsActivity {
                 _4GReasonValue = _txt4GReason.getText().toString();
                 Intent intent = new Intent(Block2Activity.this, Blok3AActivity.class);
 
+                Bundle extras = intent.getExtras();
+
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
                 intent.putExtra("NO_3", _spOperatorValue);
                 intent.putExtra("NO_4", _spOperator4GValue);
                 intent.putExtra("NO_5", _4GReasonValue);
+
                 startActivity(intent);
             }
         });

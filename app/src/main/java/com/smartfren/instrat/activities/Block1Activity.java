@@ -115,12 +115,18 @@ public class Block1Activity extends BaseStepsActivity {
             @Override
             public void onContinueClicked() {
 
-                Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
-
                 if (_storeTypeExclusiveValue.equals("Lainnya, Sebutkan")) {
                     _storeTypeExclusiveValue = _txtStoreTypeExlusiveOtherText.getText().toString();
                 }
 
+                Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
+
+                Bundle extras = intent.getExtras();
+
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
                 intent.putExtra("NO_1", _storeTypeValue);
                 intent.putExtra("NO_2", _storeTypeExclusiveValue);
 
