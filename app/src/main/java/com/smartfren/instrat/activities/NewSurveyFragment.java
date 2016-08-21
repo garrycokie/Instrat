@@ -59,13 +59,12 @@ public class NewSurveyFragment extends Fragment {
         _btnNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String tipeSurvey = _spQTipeSurvey.getSelectedItem().toString();
-                Intent intent = new Intent(getActivity(), Block1Activity.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), Block1Activity.class);
 
                 Realm realm = Realm.getDefaultInstance();
                 RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
                 LoginEntity loginEntity = loginData.first();
 
-                Bundle extras = _currentIntent.getExtras();
                 String deviceSurveyID = UUID.randomUUID().toString();
                 intent.putExtra("DeviceSurveyID",deviceSurveyID);
                 intent.putExtra("TipeSurvey", tipeSurvey);
@@ -85,8 +84,6 @@ public class NewSurveyFragment extends Fragment {
         if (getArguments() != null) {
             _page = getArguments().getInt(ARG_PAGE);
             _title = getArguments().getString(ARG_TITLE);
-
-
         }
     }
 

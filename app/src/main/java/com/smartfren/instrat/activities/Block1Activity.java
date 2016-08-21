@@ -3,6 +3,7 @@ package com.smartfren.instrat.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,6 +17,7 @@ import com.smartfren.instrat.R;
  * Created by FluffyBunny on 8/7/2016.
  */
 public class Block1Activity extends BaseStepsActivity {
+    private static final String TAG = "Block 1";
 
     private String[] _storeTypeSpinnerItems;
     private String[] _storeTypeExclusiveSpinnerItems;
@@ -27,11 +29,25 @@ public class Block1Activity extends BaseStepsActivity {
     private String _storeTypeValue;
     private String _storeTypeExclusiveValue;
 
+    // Extra Parameters
+    private String _paramDeviceSurveyID;
+    private String _paramTipeSurvey;
+    private String _paramUserID;
+    private String _paramAccessToken;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_block1);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_block1);
+        super.initActivity(R.layout.activity_block1);
+
+        // Get Extra Parameters from previous activity
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            _paramDeviceSurveyID = extras.getString("DeviceSurveyID");
+            _paramTipeSurvey = extras.getString("TipeSurvey");
+            _paramUserID = extras.getString("UserID");
+            _paramAccessToken = extras.getString("AccessToken");
+        }
 
         this._storeTypeSpinnerItems = new String[]{
                 "EXCLUSIVE SMARTFREN", "EXCLUSIVE MEREK LAINNYA", "NON EXCLUSIVE SMARTFREN", "NON EXCLUSIVE LAINNYA"
@@ -110,7 +126,8 @@ public class Block1Activity extends BaseStepsActivity {
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
-
+                Log.d(TAG, "Back clicked");
+                // TODO: handle back
             }
 
             @Override
@@ -122,17 +139,16 @@ public class Block1Activity extends BaseStepsActivity {
 
                 Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
 
-                Bundle extras = getIntent().getExtras();
+                intent.putExtra("DeviceSurveyID", _paramDeviceSurveyID);
+                intent.putExtra("TipeSurvey", _paramTipeSurvey);
+                intent.putExtra("UserID", _paramUserID);
+                intent.putExtra("AccessToken", _paramAccessToken);
 
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
                 intent.putExtra("NO_1", _storeTypeValue);
                 intent.putExtra("NO_2", _storeTypeExclusiveValue);
 
                 startActivity(intent);
             }
         });
-       }
+    }
 }
