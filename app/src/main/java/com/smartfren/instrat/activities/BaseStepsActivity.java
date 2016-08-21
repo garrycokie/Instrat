@@ -20,7 +20,10 @@ public abstract class BaseStepsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
 
+    protected void initActivity(int view) {
+        setContentView(view);
         _btnBack = (Button) findViewById(R.id.btnStepBack);
         _btnContinue = (Button) findViewById(R.id.btnStepContinue);
 
