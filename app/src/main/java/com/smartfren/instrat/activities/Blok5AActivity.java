@@ -54,6 +54,7 @@ public class Blok5AActivity extends BaseStepsActivity {
 
     private EditText _txtQ53A;
     private EditText _txtQ56A;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -66,9 +67,9 @@ public class Blok5AActivity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok5a);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok5a);
+        super.initActivity(R.layout.activity_blok5a);
+        extras = getIntent().getExtras();
 
         _spQ48A = (Spinner) findViewById(R.id.spQ48A);
         _spQ49A = (Spinner) findViewById(R.id.spQ49A);
@@ -251,7 +252,6 @@ public class Blok5AActivity extends BaseStepsActivity {
                 }
 
                 Intent intent = new Intent(Blok5AActivity.this, Blok5BActivity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

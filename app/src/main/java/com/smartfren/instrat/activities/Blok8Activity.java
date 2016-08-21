@@ -31,13 +31,14 @@ public class Blok8Activity extends BaseStepsActivity {
     private String _Q125AValue;
     private String _Q126AValue;
     private String _Q127AValue;
+    private Bundle extras;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok8);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok8);
+        super.initActivity(R.layout.activity_blok8);
+        extras = getIntent().getExtras();
 
         _spQ121A = (Spinner) findViewById(R.id.spQ121A);
         _txtQ122A = (EditText) findViewById(R.id.txtQ122A);
@@ -88,7 +89,6 @@ public class Blok8Activity extends BaseStepsActivity {
                 _Q126AValue = _txtQ126A.getText().toString();
 
                 Intent intent = new Intent(Blok8Activity.this, Blok9Activity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

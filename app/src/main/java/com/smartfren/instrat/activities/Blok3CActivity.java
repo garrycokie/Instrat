@@ -39,12 +39,13 @@ public class Blok3CActivity extends BaseStepsActivity {
 
     private TextView _lblQ31;
     private TextView _lblQ36;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok3c);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok3c);
+        super.initActivity(R.layout.activity_blok3c);
+        extras = getIntent().getExtras();
 
         _spQ27A = (Spinner) findViewById(R.id.spQ27A);
         _spQ32A = (Spinner) findViewById(R.id.spQ32A);
@@ -195,7 +196,6 @@ public class Blok3CActivity extends BaseStepsActivity {
                 String A36 = _txtQ36A1.getText().toString() + ";" +_txtQ36A2.getText().toString() + ";" +_txtQ36A3.getText().toString();
 
                 Intent intent = new Intent(Blok3CActivity.this, Blok4Activity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

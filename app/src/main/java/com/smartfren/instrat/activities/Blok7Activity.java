@@ -19,6 +19,7 @@ public class Blok7Activity extends BaseStepsActivity {
     private CheckBox _cbQ102ALenovo;
     private CheckBox _cbQ102AOppo;
     private CheckBox _cbQ102AAsus;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -31,9 +32,9 @@ public class Blok7Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok7);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok7);
+        super.initActivity(R.layout.activity_blok7);
+        extras = getIntent().getExtras();
 
         _spQ101A = (Spinner) findViewById(R.id.spQ101A);
 
@@ -62,7 +63,6 @@ public class Blok7Activity extends BaseStepsActivity {
                 A102 = GetCheckBoxValue(_cbQ102AOppo, A102);
                 A102 = GetCheckBoxValue(_cbQ102AAsus, A102);
 
-                Bundle extras = getIntent().getExtras();
 
                 if(_cbQ102ASamsung.isChecked())
                 {

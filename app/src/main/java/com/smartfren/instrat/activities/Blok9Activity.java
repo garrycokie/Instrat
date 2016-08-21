@@ -15,12 +15,13 @@ public class Blok9Activity extends BaseStepsActivity {
     private Spinner _spQ128A;
 
     private String _Q128AValue;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok9);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok9);
+        super.initActivity(R.layout.activity_blok9);
+        extras = getIntent().getExtras();
 
         _spQ128A = (Spinner) findViewById(R.id.spQ128A);
 
@@ -46,8 +47,6 @@ public class Blok9Activity extends BaseStepsActivity {
             @Override
             public void onContinueClicked() {
                 Intent intent = new Intent(Blok9Activity.this, Blok10Activity.class);
-
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

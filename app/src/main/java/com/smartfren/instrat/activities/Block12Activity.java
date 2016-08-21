@@ -8,7 +8,18 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.entities.SurveyRequest;
+import com.smartfren.instrat.entities.SurveyResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Block12Activity extends BaseStepsActivity {
 
@@ -20,11 +31,13 @@ public class Block12Activity extends BaseStepsActivity {
 
     private String[] _Q135ItemArray;
 
+    private Bundle extras;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_block12);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_block12);
+        super.initActivity(R.layout.activity_block12);
+        extras = getIntent().getExtras();
 
         _Q135ItemArray = new String[]{ "Outlet lama (ada dalam list)", "Outlet baru (tidak ada dalam list)" };
         _spQ135 = (Spinner) findViewById(R.id.spQ135);
@@ -60,6 +73,7 @@ public class Block12Activity extends BaseStepsActivity {
 
                 _Q134Value = _txtQ134.getText().toString();
 
+                /*
                 Intent intent = new Intent(Block12Activity.this, Blok13Activity.class);
                 Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
@@ -208,8 +222,193 @@ public class Block12Activity extends BaseStepsActivity {
                 intent.putExtra("NO_133", extras.getString("NO_133"));
                 intent.putExtra("NO_134", _Q134Value);
                 intent.putExtra("NO_135", _Q135Value);
+                */
 
-                startActivity(intent);
+                final SurveyResponse[] result = new SurveyResponse[1];
+
+                SurveyRequest surveyRequest = new SurveyRequest();
+                surveyRequest.userID = "BDG-001";
+                surveyRequest.accessToken = "D4FA7538-57EE-436A-A85F-A206C6D15105";
+                surveyRequest.kota = "Bandung" ;
+                surveyRequest.tipeSurvey = "Full Audit Smartphone" ;
+                surveyRequest.deviceSurveyID = "9C9E5710-7E94-46C2-B619-7F8FC0CD2CA1" ;
+                surveyRequest.b1no2 = "b1no2";
+                surveyRequest.b2no3 = "b1no2";
+                surveyRequest.b2no4 = "b1no2";
+                surveyRequest.b2no5 = "b1no2";
+                surveyRequest.b3no6 = "b1no2";
+                surveyRequest.b3no7 = "b1no2";
+                surveyRequest.b3no8 = "b1no2";
+                surveyRequest.b3no9 = "b1no2";
+                surveyRequest.b3no10 = "b1no2";
+                surveyRequest.b3no11 = "b1no2";
+                surveyRequest.b3no12 = "b1no2";
+                surveyRequest.b3no13 = "b1no2";
+                surveyRequest.b3no14 = "b1no2";
+                surveyRequest.b3no15 = "b1no2";
+                surveyRequest.b3no16 = "b1no2";
+                surveyRequest.b3no17 = "b1no2";
+                surveyRequest.b3no18 = "b1no2";
+                surveyRequest.b3no19 = "b1no2";
+                surveyRequest.b3no20 = "b1no2";
+                surveyRequest.b3no21 = "b1no2";
+                surveyRequest.b3no22 = "b1no2";
+                surveyRequest.b3no23 = "b1no2";
+                surveyRequest.b3no24 = "b1no2";
+                surveyRequest.b3no25 = "b1no2";
+                surveyRequest.b3no26 = "b1no2";
+                surveyRequest.b3no27 = "b1no2";
+                surveyRequest.b3no28 = "b1no2";
+                surveyRequest.b3no29 = "b1no2";
+                surveyRequest.b3no30 = "b1no2";
+                surveyRequest.b3no31 = "b1no2";
+                surveyRequest.b3no32 = "b1no2";
+                surveyRequest.b3no33 = "b1no2";
+                surveyRequest.b3no34 = "b1no2";
+                surveyRequest.b3no35 = "b1no2";
+                surveyRequest.b3no36 = "b1no2";
+                surveyRequest.b4no38 = "b1no2";
+                surveyRequest.b4no39 = "b1no2";
+                surveyRequest.b4no40 = "b1no2";
+                surveyRequest.b4no41 = "b1no2";
+                surveyRequest.b4no42 = "b1no2";
+                surveyRequest.b4no43 = "b1no2";
+                surveyRequest.b4no44 = "b1no2";
+                surveyRequest.b4no45 = "b1no2";
+                surveyRequest.b4no46 = "b1no2";
+                surveyRequest.b4no47 = "b1no2";
+                surveyRequest.b5no48 = "b1no2";
+                surveyRequest.b5no49 = "b1no2";
+                surveyRequest.b5no50 = "b1no2";
+                surveyRequest.b5no51 = "b1no2";
+                surveyRequest.b5no52 = "b1no2";
+                surveyRequest.b5no52B = "b1no2";
+                surveyRequest.b5no52C = "b1no2";
+                surveyRequest.b5no52D = "b1no2";
+                surveyRequest.b5no52E = "b1no2";
+                surveyRequest.b5no53 = "b1no2";
+                surveyRequest.b5no54 = "b1no2";
+                surveyRequest.b5no55 = "b1no2";
+                surveyRequest.b5no56 = "b1no2";
+                surveyRequest.b5no57 = "b1no2";
+                surveyRequest.b5no58 = "b1no2";
+                surveyRequest.b5no59 = "b1no2";
+                surveyRequest.b5no60 = "b1no2";
+                surveyRequest.b5no60B = "b1no2";
+                surveyRequest.b5no60C = "b1no2";
+                surveyRequest.b5no61 = "b1no2";
+                surveyRequest.b6no61B = "b1no2";
+                surveyRequest.b6no61C = "b1no2";
+                surveyRequest.b6no62 = "b1no2";
+                surveyRequest.b6no63 = "b1no2";
+                surveyRequest.b6no64 = "b1no2";
+                surveyRequest.b6no65 = "b1no2";
+                surveyRequest.b6no66 = "b1no2";
+                surveyRequest.b6no67 = "b1no2";
+                surveyRequest.b6no68 = "b1no2";
+                surveyRequest.b6no69 = "b1no2";
+                surveyRequest.b6no70 = "b1no2";
+                surveyRequest.b6no71 = "b1no2";
+                surveyRequest.b6no72 = "b1no2";
+                surveyRequest.b6no73 = "b1no2";
+                surveyRequest.b6no74 = "b1no2";
+                surveyRequest.b6no75 = "b1no2";
+                surveyRequest.b6no76 = "b1no2";
+                surveyRequest.b6no77 = "b1no2";
+                surveyRequest.b6no78 = "b1no2";
+                surveyRequest.b6no79 = "b1no2";
+                surveyRequest.b6no80 = "b1no2";
+                surveyRequest.b6no81 = "b1no2";
+                surveyRequest.b6no82 = "b1no2";
+                surveyRequest.b6no83 = "b1no2";
+                surveyRequest.b6no84 = "b1no2";
+                surveyRequest.b6no85 = "b1no2";
+                surveyRequest.b6no86 = "b1no2";
+                surveyRequest.b6no87 = "b1no2";
+                surveyRequest.b6no88 = "b1no2";
+                surveyRequest.b6no89 = "b1no2";
+                surveyRequest.b6no90 = "b1no2";
+                surveyRequest.b6no91 = "b1no2";
+                surveyRequest.b6no92 = "b1no2";
+                surveyRequest.b6no93 = "b1no2";
+                surveyRequest.b6no94 = "b1no2";
+                surveyRequest.b6no95 = "b1no2";
+                surveyRequest.b6no96 = "b1no2";
+                surveyRequest.b6no97 = "b1no2";
+                surveyRequest.b6no98 = "b1no2";
+                surveyRequest.b6no99 = "b1no2";
+                surveyRequest.b6no100 = "b1no2";
+                surveyRequest.b7no101 = "b1no2";
+                surveyRequest.b7no102 = "b1no2";
+                surveyRequest.b7no103 = "b1no2";
+                surveyRequest.b7no104 = "b1no2";
+                surveyRequest.b7no105 = "b1no2";
+                surveyRequest.b7no106 = "b1no2";
+                surveyRequest.b7no107 = "b1no2";
+                surveyRequest.b7no108 = "b1no2";
+                surveyRequest.b7no109 = "b1no2";
+                surveyRequest.b7no110 = "b1no2";
+                surveyRequest.b7no111 = "b1no2";
+                surveyRequest.b7no112 = "b1no2";
+                surveyRequest.b7no113 = "b1no2";
+                surveyRequest.b7no114 = "b1no2";
+                surveyRequest.b7no115 = "b1no2";
+                surveyRequest.b7no116 = "b1no2";
+                surveyRequest.b7no117 = "b1no2";
+                surveyRequest.b7no118 = "b1no2";
+                surveyRequest.b7no119 = "b1no2";
+                surveyRequest.b7no120 = "b1no2";
+                surveyRequest.b8no121 = "b1no2";
+                surveyRequest.b8no122 = "b1no2";
+                surveyRequest.b8no123 = "b1no2";
+                surveyRequest.b8no124 = "b1no2";
+                surveyRequest.b8no125 = "b1no2";
+                surveyRequest.b8no126 = "b1no2";
+                surveyRequest.b8no127 = "b1no2";
+                surveyRequest.b9no128 = "b1no2";
+                surveyRequest.b10no129 = "b1no2";
+                surveyRequest.b11no130 = "b1no2";
+                surveyRequest.b11no131 = "b1no2";
+                surveyRequest.b11no132 = "b1no2";
+                surveyRequest.b11no133 = "b1no2";
+                surveyRequest.b12no134 = "b1no2";
+                surveyRequest.b12no135 = "b1no2";
+
+                Gson gson2 = new Gson();
+                String json2 = gson2.toJson(surveyRequest);
+
+                String url2 = "http://192.168.1.106/Instrat2/survey.php"; // change to api url
+                JSONObject param2 = null;
+                try {
+                    param2 = new JSONObject(json2);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                final JsonObjectRequest jsonRequest2 = new JsonObjectRequest
+                        (Request.Method.POST, url2, param2, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                // the response is already constructed as a JSONObject!
+                                try {
+                                    String userID = response.getString("userID");
+                                    String status = response.getString("status");
+
+                                    result[0] = new SurveyResponse();
+                                    result[0].userID = userID;
+                                    result[0].status = status;
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                error.printStackTrace();
+                            }
+                        });
+
+                Volley.newRequestQueue(getApplicationContext()).add(jsonRequest2);
             }
         });
     }

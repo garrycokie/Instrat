@@ -18,12 +18,13 @@ public class Blok5BActivity extends BaseStepsActivity {
     private Spinner _spQ60BA;
     private Spinner _spQ60CA;
     private Spinner _spQ61A;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok5b);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok5b);
+        super.initActivity(R.layout.activity_blok5b);
+        extras = getIntent().getExtras();
 
         _spQ57A = (Spinner) findViewById(R.id.spQ57A);
         _spQ58A = (Spinner) findViewById(R.id.spQ58A);
@@ -50,7 +51,6 @@ public class Blok5BActivity extends BaseStepsActivity {
                 String A61 = _spQ61A.getSelectedItem().toString();
 
                 Intent intent = new Intent(Blok5BActivity.this, Blok5BActivity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

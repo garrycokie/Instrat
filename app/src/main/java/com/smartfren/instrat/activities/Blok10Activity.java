@@ -26,6 +26,7 @@ public class Blok10Activity extends BaseStepsActivity {
     private CheckBox _cbQ129A12;
 
     private String _Q129Value;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -38,9 +39,9 @@ public class Blok10Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok10);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok10);
+        super.initActivity(R.layout.activity_blok10);
+        extras = getIntent().getExtras();
 
         _cbQ129A1 = (CheckBox) findViewById(R.id.cbQ129A1);
         _cbQ129A2 = (CheckBox) findViewById(R.id.cbQ129A2);
@@ -78,7 +79,6 @@ public class Blok10Activity extends BaseStepsActivity {
             public void onContinueClicked() {
                 Intent intent = new Intent(Blok10Activity.this, Block11Activity.class);
 
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

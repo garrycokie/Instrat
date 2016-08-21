@@ -243,6 +243,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private String _no_98Value;
     private String _no_99Value;
     private String _no_100Value;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -273,9 +274,9 @@ public class Blok6Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_block6);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_block6);
+        super.initActivity(R.layout.activity_block6);
+        extras = getIntent().getExtras();
 
         //checkboxes
 
@@ -969,7 +970,6 @@ public class Blok6Activity extends BaseStepsActivity {
 
 
                 Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

@@ -173,6 +173,7 @@ public class Blok4Activity extends BaseStepsActivity {
     private Spinner _spQ47A;
 
     private TextView _txtQ46A;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -185,9 +186,9 @@ public class Blok4Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok4);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok4);
+        super.initActivity(R.layout.activity_blok4);
+        extras = getIntent().getExtras();
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override
@@ -610,7 +611,6 @@ public class Blok4Activity extends BaseStepsActivity {
                 String A47 = String.valueOf(_spQ47A.getSelectedItem());
 
                 Intent intent = new Intent(Blok4Activity.this, Blok5AActivity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

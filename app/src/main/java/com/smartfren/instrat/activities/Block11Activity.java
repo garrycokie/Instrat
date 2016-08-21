@@ -30,9 +30,8 @@ public class Block11Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_block11);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_block11);
+        super.initActivity(R.layout.activity_block11);
 
         _pic1 = (ImageView) findViewById(R.id.pic_1);
         _pic2 = (ImageView) findViewById(R.id.pic_2);

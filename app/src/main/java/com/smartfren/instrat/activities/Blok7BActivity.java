@@ -38,6 +38,7 @@ public class Blok7BActivity extends BaseStepsActivity {
     private CheckBox _cbQ108A15;
 
     private EditText _txtQ108A;
+    private Bundle extras;
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -50,9 +51,9 @@ public class Blok7BActivity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok7b);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok7b);
+        super.initActivity(R.layout.activity_blok7b);
+        extras = getIntent().getExtras();
 
         _cbQ106A1 = (CheckBox) findViewById(R.id.cbQ106A1);
         _cbQ106A2 = (CheckBox) findViewById(R.id.cbQ106A2);
@@ -220,7 +221,6 @@ public class Blok7BActivity extends BaseStepsActivity {
                     A108 = A108 + ";" + _txtQ108A.getText().toString();
                 }
 
-                Bundle extras = getIntent().getExtras();
                 String product = extras.getString("NO_102").toLowerCase();
                 if(product.contains("advan"))
                 {

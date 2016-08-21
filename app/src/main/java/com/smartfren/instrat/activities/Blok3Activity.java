@@ -15,12 +15,13 @@ public class Blok3Activity extends BaseStepsActivity {
     private RadioButton _rbQ6A1;
     private RadioButton _rbQ6A2;
     private RadioButton _rbQ6A3;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_blok3);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blok3);
+        super.initActivity(R.layout.activity_blok3);
+        extras = getIntent().getExtras();
 
         _rbQ6A1 = (RadioButton) findViewById((R.id.rbQ6A1));
         _rbQ6A2 = (RadioButton) findViewById((R.id.rbQ6A2));
@@ -34,7 +35,6 @@ public class Blok3Activity extends BaseStepsActivity {
 
             @Override
             public void onContinueClicked() {
-                Bundle extras = getIntent().getExtras();
                 if(_rbQ6A1.isChecked())
                 {
                     Intent intent = new Intent(Blok3Activity.this, Blok3AActivity.class);

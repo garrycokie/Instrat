@@ -24,12 +24,12 @@ public class Block2Activity extends BaseStepsActivity {
     private String _spOperator4GValue;
     private EditText _txt4GReason;
     private String _4GReasonValue;
-
+    private Bundle extras;
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.setContentView(R.layout.activity_block2);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_block2);
+        super.initActivity(R.layout.activity_block2);
+        extras = getIntent().getExtras();
 
         this._operatorSpinnerItems = new String[] {
                 "Smartfren",
@@ -96,9 +96,7 @@ public class Block2Activity extends BaseStepsActivity {
             @Override
             public void onContinueClicked() {
                 _4GReasonValue = _txt4GReason.getText().toString();
-                Intent intent = new Intent(Block2Activity.this, Blok3AActivity.class);
-
-                Bundle extras = getIntent().getExtras();
+                Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
 
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
