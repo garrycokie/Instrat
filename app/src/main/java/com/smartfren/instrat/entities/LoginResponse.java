@@ -12,6 +12,10 @@ public class LoginResponse {
     public String status;
     @SerializedName("accessToken")
     public String accessToken;
+    @SerializedName("idKota")
+    public String idKota;
+    @SerializedName("namaKota")
+    public String namaKota;
 
     @Override
     public String toString() {

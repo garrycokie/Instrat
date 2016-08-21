@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="@color/colorPrimaryDark"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:id="@+id/BaseStepPage">
 
     <Button
         android:id="@+id/btnStepContinue"

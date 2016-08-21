@@ -8,4 +8,6 @@ import io.realm.RealmObject;
 public class LoginEntity  extends RealmObject {
     public String userID;
     public String accessToken;
+    public String idKota;
+    public String namaKota;
 }

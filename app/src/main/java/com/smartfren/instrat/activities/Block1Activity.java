@@ -29,6 +29,7 @@ public class Block1Activity extends BaseStepsActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.setContentView(R.layout.activity_block1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block1);
 

@@ -4,7 +4,12 @@
     android:layout_height="match_parent"
     tools:context="com.smartfren.instrat.activities.NewSurveyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
     <TextView
         android:id="@+id/lblQTipeSurvey"
         android:layout_width="wrap_content"
@@ -23,4 +28,5 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Next"/>
+    </LinearLayout>
 </FrameLayout>

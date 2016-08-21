@@ -25,6 +25,8 @@ import com.smartfren.instrat.R;
 import com.smartfren.instrat.entities.LoginEntity;
 import com.smartfren.instrat.entities.LoginRequest;
 import com.smartfren.instrat.entities.LoginResponse;
+import com.smartfren.instrat.entities.SurveyRequest;
+import com.smartfren.instrat.entities.SurveyResponse;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -113,7 +115,7 @@ public class LoginActivity extends Activity {
         Gson gson = new Gson();
         String json = gson.toJson(loginRequest);
 
-        String url = "http://instrat.asia/survey/login.php"; // change to api url
+        String url = "http://192.168.1.106/Instrat2/login.php"; // change to api url
         JSONObject param = null;
         try {
             param = new JSONObject(json);
@@ -129,12 +131,15 @@ public class LoginActivity extends Activity {
                             String userID = response.getString("userID");
                             String status = response.getString("status");
                             String accessToken = response.getString("accessToken");
+                            String idKota = response.getString("idKota");
+                            String namaKota = response.getString("namaKota");
 
                             result[0] = new LoginResponse();
                             result[0].userID = userID;
                             result[0].status = status;
                             result[0].accessToken = accessToken;
-
+                            result[0].idKota = idKota;
+                            result[0].namaKota = namaKota;
                             OnLoginSuccess(result[0]);
 
                         } catch (JSONException e) {
@@ -160,6 +165,8 @@ public class LoginActivity extends Activity {
         LoginEntity entity = new LoginEntity();
         entity.userID = response.userID;
         entity.accessToken = response.accessToken;
+        entity.idKota = response.idKota;
+        entity.namaKota = response.namaKota;
 
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();

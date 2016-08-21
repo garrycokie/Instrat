@@ -12,8 +12,12 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.entities.LoginEntity;
 
 import java.util.UUID;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class NewSurveyFragment extends Fragment {
     private static final String TAG = "NewSurveyFragment";
@@ -56,12 +60,17 @@ public class NewSurveyFragment extends Fragment {
             public void onClick(View v) {
                 String tipeSurvey = _spQTipeSurvey.getSelectedItem().toString();
                 Intent intent = new Intent(getActivity(), Block1Activity.class);
+
+                Realm realm = Realm.getDefaultInstance();
+                RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
+                LoginEntity loginEntity = loginData.first();
+
                 Bundle extras = _currentIntent.getExtras();
                 String deviceSurveyID = UUID.randomUUID().toString();
                 intent.putExtra("DeviceSurveyID",deviceSurveyID);
                 intent.putExtra("TipeSurvey", tipeSurvey);
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("UserID", loginEntity.userID);
+                intent.putExtra("AccessToken", loginEntity.accessToken);
                 startActivity(intent);
 
             }

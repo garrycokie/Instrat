@@ -41,12 +41,6 @@
             android:layout_height="wrap_content"
             android:text="@string/page_blok3_q6_a3_text"/>
     </RadioGroup>
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Next"/>
         </LinearLayout>
     </ScrollView>
 

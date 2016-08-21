@@ -50,6 +50,7 @@ public class Blok7DActivity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.setContentView(R.layout.activity_blok7d);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blok7d);
 

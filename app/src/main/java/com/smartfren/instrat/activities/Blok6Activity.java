@@ -273,6 +273,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.setContentView(R.layout.activity_block6);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block6);
 
