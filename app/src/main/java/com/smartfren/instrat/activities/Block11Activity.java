@@ -1,16 +1,20 @@
 package com.smartfren.instrat.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.ActionMenuItemView;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -25,6 +29,8 @@ import java.util.Date;
 
 public class Block11Activity extends BaseStepsActivity {
 
+    private SharedPreferences _mPrefs;
+
     private ImageView _pic1;
     private ImageView _pic2;
     private ImageView _pic3;
@@ -33,9 +39,10 @@ public class Block11Activity extends BaseStepsActivity {
 
     protected String GetBase64(ImageView view)
     {
-        Bitmap bmap = view.getDrawingCache();
+        BitmapDrawable drawable = (BitmapDrawable) view.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
         byte[] b = baos.toByteArray();
         String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
         return encodedImage;
@@ -45,6 +52,13 @@ public class Block11Activity extends BaseStepsActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.initActivity(R.layout.activity_block11);
+
+        _mPrefs = PreferenceManager.getDefaultSharedPreferences(this);;
+
+        imagePath1 = _mPrefs.getString("pic_1", "");
+        imagePath2 = _mPrefs.getString("pic_2", "");
+        imagePath3 = _mPrefs.getString("pic_3", "");
+        imagePath4 = _mPrefs.getString("pic_4", "");
 
         extras = getIntent().getExtras();
 
@@ -78,6 +92,19 @@ public class Block11Activity extends BaseStepsActivity {
             }
         });
 
+        if(!imagePath1.equals("")) {
+            _pic1.setImageDrawable(Drawable.createFromPath(imagePath1));
+        }
+        if(!imagePath2.equals("")) {
+            _pic2.setImageDrawable(Drawable.createFromPath(imagePath2));
+        }
+        if(!imagePath3.equals("")) {
+            _pic3.setImageDrawable(Drawable.createFromPath(imagePath3));
+        }
+        if(!imagePath4.equals("")) {
+            _pic4.setImageDrawable(Drawable.createFromPath(imagePath4));
+        }
+
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
@@ -94,6 +121,10 @@ public class Block11Activity extends BaseStepsActivity {
                 String A132 = GetBase64(_pic3);
                 String A133 = GetBase64(_pic4);
 
+                Log.d("ImageView", "A130: " + A130);
+                Log.d("ImageView", "A131: " + A131);
+                Log.d("ImageView", "A132: " + A132);
+                Log.d("ImageView", "A133: " + A133);
 
                 /*
                 String A130 = "testpict";
@@ -282,23 +313,45 @@ public class Block11Activity extends BaseStepsActivity {
         }
     }
 
+    String imagePath1 = "";
+    String imagePath2 = "";
+    String imagePath3 = "";
+    String imagePath4 = "";
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode != RESULT_OK || _filePath.equals("")) return;
+
         String compressedImage = "";
         if (resultCode == RESULT_OK) {
             compressedImage = ImageViewHelper.compressImage(getApplicationContext(), _filePath);
         }
         if (requestCode == REQUEST_IMAGE_CAPTURE_1 && resultCode == RESULT_OK) {
+            imagePath1 = compressedImage;
             _pic1.setImageDrawable(Drawable.createFromPath(compressedImage));
         }
         if (requestCode == REQUEST_IMAGE_CAPTURE_2 && resultCode == RESULT_OK) {
+            imagePath2 = compressedImage;
             _pic2.setImageDrawable(Drawable.createFromPath(compressedImage));
         }
         if (requestCode == REQUEST_IMAGE_CAPTURE_3 && resultCode == RESULT_OK) {
+            imagePath3 = compressedImage;
             _pic3.setImageDrawable(Drawable.createFromPath(compressedImage));
         }
         if (requestCode == REQUEST_IMAGE_CAPTURE_4 && resultCode == RESULT_OK) {
+            imagePath4 = compressedImage;
             _pic4.setImageDrawable(Drawable.createFromPath(compressedImage));
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor ed = _mPrefs.edit();
+        ed.putString("pic_1", imagePath1);
+        ed.putString("pic_2", imagePath2);
+        ed.putString("pic_3", imagePath3);
+        ed.putString("pic_4", imagePath4);
+        ed.commit();
     }
 }

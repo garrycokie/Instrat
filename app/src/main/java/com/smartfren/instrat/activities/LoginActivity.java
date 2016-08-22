@@ -42,8 +42,6 @@ public class LoginActivity extends Activity {
     private String TAG = "LoginActivity";
 
     private Button _btnLogin;
-    /*private EditText _txtUserName;
-    private EditText _txtPassword;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +66,6 @@ public class LoginActivity extends Activity {
         passwordWrapper.setHint("Password");
 
         _btnLogin = (Button) findViewById(R.id.btnLogin);
-        /*_txtUserName = (EditText) findViewById(R.id.txtUserName);
-        _txtPassword = (EditText) findViewById(R.id.txtPassword);*/
 
         _btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
