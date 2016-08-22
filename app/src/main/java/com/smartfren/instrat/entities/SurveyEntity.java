@@ -10,6 +10,7 @@ public class SurveyEntity extends RealmObject {
     public String userID;
     public String kota;
     public String tipeSurvey;
+    public String b1no1;
     public String b1no2;
     public String b2no3;
     public String b2no4;

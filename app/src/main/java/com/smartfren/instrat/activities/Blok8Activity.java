@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,6 +13,13 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.entities.LoginEntity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class Blok8Activity extends BaseStepsActivity {
 
@@ -40,7 +48,102 @@ public class Blok8Activity extends BaseStepsActivity {
         super.initActivity(R.layout.activity_blok8);
         extras = getIntent().getExtras();
 
+        Realm realm = Realm.getDefaultInstance();
+        RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
+        LoginEntity loginEntity = loginData.first();
+
         _spQ121A = (Spinner) findViewById(R.id.spQ121A);
+
+        List<String> list = new ArrayList<String>();
+        if(loginEntity.namaKota.toLowerCase().equals("bandung"))
+        {
+            list.add("BEC BANDUNG");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("bekasi"))
+        {
+            list.add("BEKASI CYBER PARK");
+            list.add("MEGA BEKASI HYPERMALL");
+            list.add("SENTRA GROSIR CIKARANG");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("bogor"))
+        {
+            list.add("BOGOR TRADE MALL");
+            list.add("ITC CIBINONG");
+            list.add("PLAZA JAMBU DUA");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("cikampek"))
+        {
+            list.add("CIKAMPEK MALL");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("cirebon"))
+        {
+            list.add("GRAGE MALL CIREBON");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("depok"))
+        {
+            list.add("ITC DEPOK");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("dki jakarta"))
+        {
+            list.add("AMBASSADOR MALL");
+            list.add("HARCO MANGGA DUA");
+            list.add("ITC CEMPAKA MAS");
+            list.add("ITC FATMAWATI");
+            list.add("ITC KUNINGAN");
+            list.add("ITC MANGGA DUA");
+            list.add("ITC ROXY MAS");
+            list.add("LOKASARI SQUARE");
+            list.add("POIN SQUARE");
+            list.add("PULOGADUNG TRADE CENTRE");
+            list.add("PUSAT GROSIR CILILITAN");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("makassar"))
+        {
+            list.add("COMPUTER CITY MAKASSAR");
+            list.add("MAKASSAR TRADE CENTER");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("malang"))
+        {
+            list.add("MALANG PLAZA");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("medan"))
+        {
+            list.add("PLAZA MEDAN FAIR");
+            list.add("PLAZA MILLENIUM MEDAN");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("palembang"))
+        {
+            list.add("PALEMBANG SQUARE");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("semarang"))
+        {
+            list.add("SCTC/SCC SEMARANG");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("solo"))
+        {
+            list.add("PLAZA SINGOSAREN SOLO");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("surabaya"))
+        {
+            list.add("HI TECH MALL SURABAYA");
+            list.add("PLAZA MARINA SURABAYA");
+            list.add("WTC SURABAYA");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("tangerang"))
+        {
+            list.add("LIPPO MALL KARAWACI");
+            list.add("TANGERANG CITY");
+        }
+        else if(loginEntity.namaKota.toLowerCase().equals("yogyakarta"))
+        {
+            list.add("PHPC JOGJATRONIK");
+        }
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ121A.setAdapter(dataAdapter);
+
         _txtQ122A = (EditText) findViewById(R.id.txtQ122A);
         _txtQ123A = (EditText) findViewById(R.id.txtQ123A);
         _txtQ1224 = (EditText) findViewById(R.id.txtQ1224);

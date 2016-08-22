@@ -15,12 +15,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok0_tipe_survey_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
     <Spinner
         android:id="@+id/spQTipeSurvey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/page_blok0_tipe_survey_list"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"/>
     <Button
         android:id="@+id/btnNext"

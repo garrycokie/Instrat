@@ -14,6 +14,8 @@ public class SurveyRequest {
     @SerializedName("deviceSurveyID")
     public String deviceSurveyID;
 
+    @SerializedName("b1no1")
+    public String b1no1;
     @SerializedName("b1no2")
     public String b1no2;
     @SerializedName("b2no3")

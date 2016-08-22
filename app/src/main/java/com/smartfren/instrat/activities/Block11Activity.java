@@ -10,12 +10,14 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.ActionMenuItemView;
+import android.util.Base64;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.smartfren.instrat.R;
 import com.smartfren.instrat.utilities.ImageViewHelper;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -27,11 +29,24 @@ public class Block11Activity extends BaseStepsActivity {
     private ImageView _pic2;
     private ImageView _pic3;
     private ImageView _pic4;
+    private Bundle extras;
+
+    protected String GetBase64(ImageView view)
+    {
+        Bitmap bmap = view.getDrawingCache();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
+        byte[] b = baos.toByteArray();
+        String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+        return encodedImage;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.initActivity(R.layout.activity_block11);
+
+        extras = getIntent().getExtras();
 
         _pic1 = (ImageView) findViewById(R.id.pic_1);
         _pic2 = (ImageView) findViewById(R.id.pic_2);
@@ -73,8 +88,21 @@ public class Block11Activity extends BaseStepsActivity {
             public void onContinueClicked() {
                 // TODO: continue;
 
+
+                String A130 = GetBase64(_pic1);
+                String A131 = GetBase64(_pic2);
+                String A132 = GetBase64(_pic3);
+                String A133 = GetBase64(_pic4);
+
+
+                /*
+                String A130 = "testpict";
+                String A131 = "testpict";
+                String A132 = "testpict";
+                String A133 = "testpict";
+                */
+
                 Intent intent = new Intent(Block11Activity.this, Block12Activity.class);
-                Bundle extras = getIntent().getExtras();
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));
@@ -215,11 +243,11 @@ public class Block11Activity extends BaseStepsActivity {
                 intent.putExtra("NO_127", extras.getString("NO_127"));
                 intent.putExtra("NO_128", extras.getString("NO_128"));
                 intent.putExtra("NO_129", extras.getString("NO_129"));
-                //intent.putExtra("NO_130", _pic1);
-                //intent.putExtra("NO_131", _pic2);
-                //intent.putExtra("NO_132", _pic3);
-                //intent.putExtra("NO_133", _pic4);
-
+                intent.putExtra("NO_130", A130);
+                intent.putExtra("NO_131", A131);
+                intent.putExtra("NO_132", A132);
+                intent.putExtra("NO_133", A133);
+                startActivity(intent);
             }
         });
     }

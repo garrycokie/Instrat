@@ -74,7 +74,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private CheckBox _cbxSamsungGalaxyVPlus;
     private CheckBox _cbxSamsungGalaxyNote5;
     private CheckBox _cbxSamsungGalaxyS6;
-    private CheckBox _cbxSamsungGalaxyS5;
+    //private CheckBox _cbxSamsungGalaxyS5;
     private CheckBox _cbxSamsungGalaxyS7;
     private CheckBox _cbxSamsungGalaxyS7Edge;
     private CheckBox _cbxSamsungOther;
@@ -728,16 +728,16 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_61BValue = GetCheckBoxValue(_cbxBEsia,_no_61BValue);
 
                 //61c
-                _no_61BValue = GetCheckBoxValue(_cbxCSimpati,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCKartuAs,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCKartuLoop,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCBIM3,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCMentari,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCXL,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCAxis,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCTri,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCSmartfren,_no_61CValue);
-                _no_61BValue = GetCheckBoxValue(_cbxCBolt,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCSimpati,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCKartuAs,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCKartuLoop,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCBIM3,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCMentari,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCXL,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCAxis,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCTri,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCSmartfren,_no_61CValue);
+                _no_61CValue = GetCheckBoxValue(_cbxCBolt,_no_61CValue);
 
                 //62
                 _no_62Value = GetCheckBoxValue(_cbxSamsung,_no_62Value);
@@ -773,7 +773,7 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyVPlus,_no_63Value);
                 _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyNote5,_no_63Value);
                 _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS6,_no_63Value);
-                _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS5,_no_63Value);
+                //_no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS5,_no_63Value);
                 _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS7,_no_63Value);
                 _no_63Value = GetCheckBoxValue(_cbxSamsungGalaxyS7Edge,_no_63Value);
 
@@ -949,8 +949,8 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_94Value = GetEditTextValue(_txtTotalTypeXiaomi,_no_94Value);
 
                 //95 Hi Sense
-                _no_96Value = GetCheckBoxValue(_cbxHiSensePureShot,_no_96Value);
-                _no_96Value = GetCheckBoxValue(_cbxHiSensePureShotPlus,_no_96Value);
+                _no_95Value = GetCheckBoxValue(_cbxHiSensePureShot,_no_95Value);
+                _no_95Value = GetCheckBoxValue(_cbxHiSensePureShotPlus,_no_95Value);
 
                 if(_cbxHiSenseOther.isChecked())
                 {
@@ -966,8 +966,8 @@ public class Blok6Activity extends BaseStepsActivity {
                 //99
                 _no_99Value = GetRedioGroupValue(_rdgZTEExist,_no_99Value);
                 //100
-                _no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
-
+                //_no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
+                _no_100Value = "Ada";
 
                 Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));

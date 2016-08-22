@@ -50,7 +50,7 @@ public class Blok5BActivity extends BaseStepsActivity {
                 String A60C = _spQ60CA.getSelectedItem().toString();
                 String A61 = _spQ61A.getSelectedItem().toString();
 
-                Intent intent = new Intent(Blok5BActivity.this, Blok5BActivity.class);
+                Intent intent = new Intent(Blok5BActivity.this, Blok6Activity.class);
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                 intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                 intent.putExtra("UserID", extras.getString("UserID"));

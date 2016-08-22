@@ -190,18 +190,6 @@ public class Blok4Activity extends BaseStepsActivity {
         super.initActivity(R.layout.activity_blok4);
         extras = getIntent().getExtras();
 
-        super.setStepEventListener(new OnStepEventListener() {
-            @Override
-            public void onBackClicked() {
-                // TODO: back;
-            }
-
-            @Override
-            public void onContinueClicked() {
-                // TODO: continue;
-            }
-        });
-
         _cbQ38ASmartfren = (CheckBox) findViewById(R.id.cbQ38ASmartfren);
         _cbQ38AAdvan = (CheckBox) findViewById(R.id.cbQ38AAdvan);
         _cbQ38AAsus = (CheckBox) findViewById(R.id.cbQ38AAsus);

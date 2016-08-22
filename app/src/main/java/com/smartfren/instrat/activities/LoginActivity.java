@@ -115,7 +115,7 @@ public class LoginActivity extends Activity {
         Gson gson = new Gson();
         String json = gson.toJson(loginRequest);
 
-        String url = "http://192.168.1.106/Instrat2/login.php"; // change to api url
+        String url = "http://instrat.asia/survey/login.php"; // change to api url
         JSONObject param = null;
         try {
             param = new JSONObject(json);

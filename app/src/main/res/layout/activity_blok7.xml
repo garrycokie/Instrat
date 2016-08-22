@@ -16,63 +16,57 @@
             android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
-        <TextView
-            android:id="@+id/lblQ101"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_blok7_q101_text"
-            android:layout_marginBottom="10dp"/>
-        <Spinner
-            android:id="@+id/spQ101A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/page_blok7_q101A_list"
-            android:layout_marginBottom="30dp"/>
+            <TextView
+                android:id="@+id/lblQ101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_blok7_q101_text"
+                android:layout_marginBottom="10dp"/>
+            <Spinner
+                android:id="@+id/spQ101A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/page_blok7_q101A_list"
+                android:layout_marginBottom="30dp"/>
 
-        <TextView
-            android:id="@+id/lblQ102"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_blok7_q102_text"
-            android:layout_marginBottom="10dp"/>
-        <CheckBox android:id="@+id/cbQ102ASamsung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_samsung_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/cbQ102ASmartfren"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_smartfren_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/cbQ102AAdvan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_advan_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/cbQ102ALenovo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_lenovo_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/cbQ102AOppo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_oppo_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/cbQ102AAsus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/page_checkbox_asus_text"
-            android:layout_marginBottom="10dp"
-            android:onClick="onCheckboxClicked"/>
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/lblQ102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_blok7_q102_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102ASamsung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_samsung_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102ASmartfren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_smartfren_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102AAdvan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_advan_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102ALenovo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_lenovo_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102AOppo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_oppo_text"
+                android:layout_marginBottom="10dp"/>
+            <CheckBox android:id="@+id/cbQ102AAsus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_checkbox_asus_text"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
 
-<include layout="@layout/bottom_step_button_layout" />
-    </RelativeLayout>
+    <include layout="@layout/bottom_step_button_layout" />
+</RelativeLayout>

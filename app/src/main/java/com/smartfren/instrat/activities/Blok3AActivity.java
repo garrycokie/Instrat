@@ -44,7 +44,7 @@ public class Blok3AActivity extends BaseStepsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.initActivity(R.layout.activity_blok3);
+        super.initActivity(R.layout.activity_blok3a);
         extras = getIntent().getExtras();
 
         _spQ7A = (Spinner) findViewById(R.id.spQ7A);

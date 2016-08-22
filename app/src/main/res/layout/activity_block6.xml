@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.smartfren.instrat.activities.Blok5AActivity">
 
-    tools:context="com.smartfren.instrat.activities.Block2Activity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
         <LinearLayout
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
             <TextView
                 android:id="@+id/txtNonLteSell"
                 android:layout_marginTop="20dp"
@@ -364,7 +364,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Smartphone: Blackberry (PILIH HANYA 1 JAWABAN)"/>
+                android:text="Smartphone: Nokia (PILIH HANYA 1 JAWABAN)"/>
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsNokiaExist"
@@ -433,7 +433,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone BlackBerry yang tersedia?"/>
+                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Lenovo yang tersedia?"/>
             <EditText
                 android:id="@+id/txtTotalLenovoTypeValue"
                 android:layout_width="wrap_content"
@@ -476,7 +476,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone BlackBerry yang tersedia?"/>
+                android:text="Berapa jumlah TOTAL TIPE / MODEL  Advan yang tersedia?"/>
             <EditText
                 android:id="@+id/txtTotalAdvanTypeValue"
                 android:layout_width="wrap_content"
@@ -666,7 +666,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Mito yang tersedia?"/>
+                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone HTC yang tersedia?"/>
             <EditText
                 android:id="@+id/txtTotalHTCTypeValue"
                 android:layout_width="wrap_content"
@@ -700,7 +700,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Mito yang tersedia?"/>
+                android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Polytron yang tersedia?"/>
             <EditText
                 android:id="@+id/txtTotalPolytronTypeValue"
                 android:layout_width="wrap_content"
@@ -1098,4 +1098,4 @@
     </ScrollView>
     <include
         layout="@layout/bottom_step_button_layout" />
-</LinearLayout>
+</RelativeLayout>
