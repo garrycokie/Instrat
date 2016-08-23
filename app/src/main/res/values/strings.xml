@@ -229,7 +229,7 @@
     <string name="page_blok3_q33_text">Untuk merek lainnya, sebutkan merek yang dimaksud</string>
     <string name="page_blok3_q34_text">Sebutkan model dari merek modem Baru tsb?</string>
     <string name="page_blok3_q35_text">Mengapa Anda merekomendasikan merek tsb?</string>
-    <string name="page_blok3_q36_text">Mengapa Anda tidak merekomendasikan modem?</string>
+    <string name="page_blok3_q36_text">Mengapa Anda tidak merekomendasikan modem Smartfren?</string>
 
     <string-array name="page_blok4_poster_list">
         <item>Smartfren</item>

@@ -17,7 +17,7 @@ public class Blok3BActivity extends BaseStepsActivity {
     private Spinner _spQ17A;
     private Spinner _spQ22A;
 
-    private EditText _txtQ17A;
+    private TextView _lblQ18;
     private EditText _txtQ18A;
     private EditText _txtQ19A;
     private EditText _txtQ20A1;
@@ -27,7 +27,7 @@ public class Blok3BActivity extends BaseStepsActivity {
     private EditText _txtQ21A2;
     private EditText _txtQ21A3;
 
-    private EditText _txtQ22A;
+    private TextView _lblQ23;
     private EditText _txtQ23A;
     private EditText _txtQ24A;
     private EditText _txtQ25A1;
@@ -51,7 +51,7 @@ public class Blok3BActivity extends BaseStepsActivity {
         _spQ17A = (Spinner) findViewById(R.id.spQ17A);
         _spQ22A = (Spinner) findViewById(R.id.spQ22A);
 
-        _txtQ17A = (EditText) findViewById(R.id.txtQ17A);
+        _lblQ18 = (TextView) findViewById(R.id.lblQ18);
         _txtQ18A = (EditText) findViewById(R.id.txtQ18A);
         _txtQ19A = (EditText) findViewById(R.id.txtQ19A);
         _txtQ20A1 = (EditText) findViewById(R.id.txtQ20A1);
@@ -61,7 +61,7 @@ public class Blok3BActivity extends BaseStepsActivity {
         _txtQ21A2 = (EditText) findViewById(R.id.txtQ21A2);
         _txtQ21A3 = (EditText) findViewById(R.id.txtQ21A3);
 
-        _txtQ22A = (EditText) findViewById(R.id.txtQ22A);
+        _lblQ23 = (TextView) findViewById(R.id.lblQ23);
         _txtQ23A = (EditText) findViewById(R.id.txtQ23A);
         _txtQ24A = (EditText) findViewById(R.id.txtQ24A);
         _txtQ25A1 = (EditText) findViewById(R.id.txtQ25A1);
@@ -74,13 +74,15 @@ public class Blok3BActivity extends BaseStepsActivity {
         _lblQ21 = (TextView) findViewById(R.id.lblQ21);
         _lblQ26 = (TextView) findViewById(R.id.lblQ26);
 
-        _txtQ17A.setVisibility(View.GONE);
+        _lblQ18.setVisibility(View.GONE);
+        _txtQ18A.setVisibility(View.GONE);
         _txtQ21A1.setVisibility(View.GONE);
         _txtQ21A2.setVisibility(View.GONE);
         _txtQ21A3.setVisibility(View.GONE);
         _lblQ21.setVisibility(View.GONE);
 
-        _txtQ22A.setVisibility(View.GONE);
+        _lblQ23.setVisibility(View.GONE);
+        _txtQ23A.setVisibility(View.GONE);
         _txtQ26A1.setVisibility(View.GONE);
         _txtQ26A2.setVisibility(View.GONE);
         _txtQ26A3.setVisibility(View.GONE);
@@ -92,7 +94,8 @@ public class Blok3BActivity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Lainnya"))
                 {
-                    _txtQ17A.setVisibility(View.VISIBLE);
+                    _lblQ18.setVisibility(View.VISIBLE);
+                    _txtQ18A.setVisibility(View.VISIBLE);
                     _txtQ21A1.setVisibility(View.VISIBLE);
                     _txtQ21A2.setVisibility(View.VISIBLE);
                     _txtQ21A3.setVisibility(View.VISIBLE);
@@ -100,19 +103,28 @@ public class Blok3BActivity extends BaseStepsActivity {
                 }
                 else if(selectedItem.equals("Smartfren"))
                 {
-                    _txtQ17A.setVisibility(View.GONE);
+                    _lblQ18.setVisibility(View.GONE);
+                    _txtQ18A.setVisibility(View.GONE);
                     _txtQ21A1.setVisibility(View.GONE);
                     _txtQ21A2.setVisibility(View.GONE);
                     _txtQ21A3.setVisibility(View.GONE);
                     _lblQ21.setVisibility(View.GONE);
+
+                    _txtQ18A.setText("");
+                    _txtQ21A1.setText("");
+                    _txtQ21A2.setText("");
+                    _txtQ21A3.setText("");
                 }
                 else
                 {
-                    _txtQ17A.setVisibility(View.GONE);
+                    _lblQ18.setVisibility(View.GONE);
+                    _txtQ18A.setVisibility(View.GONE);
                     _txtQ21A1.setVisibility(View.VISIBLE);
                     _txtQ21A2.setVisibility(View.VISIBLE);
                     _txtQ21A3.setVisibility(View.VISIBLE);
                     _lblQ21.setVisibility(View.VISIBLE);
+
+                    _txtQ18A.setText("");
                 }
             }
 
@@ -128,7 +140,8 @@ public class Blok3BActivity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Lainnya"))
                 {
-                    _txtQ22A.setVisibility(View.VISIBLE);
+                    _lblQ23.setVisibility(View.VISIBLE);
+                    _txtQ23A.setVisibility(View.VISIBLE);
                     _txtQ26A1.setVisibility(View.VISIBLE);
                     _txtQ26A2.setVisibility(View.VISIBLE);
                     _txtQ26A3.setVisibility(View.VISIBLE);
@@ -136,19 +149,28 @@ public class Blok3BActivity extends BaseStepsActivity {
                 }
                 else if(selectedItem.equals("Smartfren"))
                 {
-                    _txtQ22A.setVisibility(View.GONE);
+                    _lblQ23.setVisibility(View.GONE);
+                    _txtQ23A.setVisibility(View.GONE);
                     _txtQ26A1.setVisibility(View.GONE);
                     _txtQ26A2.setVisibility(View.GONE);
                     _txtQ26A3.setVisibility(View.GONE);
                     _lblQ26.setVisibility(View.GONE);
+
+                    _txtQ23A.setText("");
+                    _txtQ26A1.setText("");
+                    _txtQ26A2.setText("");
+                    _txtQ26A3.setText("");
                 }
                 else
                 {
-                    _txtQ22A.setVisibility(View.GONE);
+                    _lblQ23.setVisibility(View.GONE);
+                    _txtQ23A.setVisibility(View.GONE);
                     _txtQ26A1.setVisibility(View.VISIBLE);
                     _txtQ26A2.setVisibility(View.VISIBLE);
                     _txtQ26A3.setVisibility(View.VISIBLE);
                     _lblQ26.setVisibility(View.VISIBLE);
+
+                    _txtQ23A.setText("");
                 }
             }
 
@@ -166,30 +188,14 @@ public class Blok3BActivity extends BaseStepsActivity {
 
             @Override
             public void onContinueClicked() {
-                String A17 = "";
-                if(String.valueOf(_spQ17A.getSelectedItem()).equals("Lainnya"))
-                {
-                    A17 = _txtQ17A.getText().toString();
-                }
-                else
-                {
-                    A17 = String.valueOf(_spQ17A.getSelectedItem());
-                }
+                String A17 = String.valueOf(_spQ17A.getSelectedItem());
 
                 String A18 = _txtQ18A.getText().toString();
                 String A19 = _txtQ19A.getText().toString();
                 String A20 = _txtQ20A1.getText().toString() + ";" +_txtQ20A2.getText().toString() + ";" +_txtQ20A3.getText().toString();
                 String A21 = _txtQ21A1.getText().toString() + ";" +_txtQ21A2.getText().toString() + ";" +_txtQ21A3.getText().toString();
 
-                String A22 = "";
-                if(String.valueOf(_spQ22A.getSelectedItem()).equals("Lainnya"))
-                {
-                    A22 = _txtQ22A.getText().toString();
-                }
-                else
-                {
-                    A22 = String.valueOf(_spQ22A.getSelectedItem());
-                }
+                String A22 = String.valueOf(_spQ22A.getSelectedItem());
 
                 String A23 = _txtQ23A.getText().toString();
                 String A24 = _txtQ24A.getText().toString();

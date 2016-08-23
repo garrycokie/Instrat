@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 
@@ -41,6 +43,7 @@ public class Blok5AActivity extends BaseStepsActivity {
     private CheckBox _cbQ56ATidakAda;
     private CheckBox _cbQ56ALainnya;
 
+    private TextView _lblQ53;
     private CheckBox _cbQ53A1;
     private CheckBox _cbQ53A2;
     private CheckBox _cbQ53A3;
@@ -83,6 +86,8 @@ public class Blok5AActivity extends BaseStepsActivity {
         _spQ54A = (Spinner) findViewById(R.id.spQ54A);
         _spQ55A = (Spinner) findViewById(R.id.spQ55A);
 
+        _lblQ53 = (TextView) findViewById(R.id.lblQ53);
+
         _cbQ53A1 = (CheckBox) findViewById(R.id.cbQ53A1);
         _cbQ53A2 = (CheckBox) findViewById(R.id.cbQ53A2);
         _cbQ53A3 = (CheckBox) findViewById(R.id.cbQ53A3);
@@ -113,6 +118,486 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ56ATidakAda = (CheckBox) findViewById(R.id.cbQ56ATidakAda);
         _cbQ56ALainnya = (CheckBox) findViewById(R.id.cbQ56ALainnya);
 
+        _lblQ53.setVisibility(View.GONE);
+        _cbQ53A1.setVisibility(View.GONE);
+        _cbQ53A2.setVisibility(View.GONE);
+        _cbQ53A3.setVisibility(View.GONE);
+        _cbQ53A4.setVisibility(View.GONE);
+        _cbQ53A5.setVisibility(View.GONE);
+        _cbQ53A6.setVisibility(View.GONE);
+        _cbQ53A7.setVisibility(View.GONE);
+        _cbQ53A8.setVisibility(View.GONE);
+        _cbQ53A9.setVisibility(View.GONE);
+        _cbQ53A10.setVisibility(View.GONE);
+
+        _spQ48A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                    )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ49A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ50A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ51A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ52A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ52BA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ52CA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ52DA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
+        _spQ52EA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedItem = parentView.getItemAtPosition(position).toString();
+                if(selectedItem.equals("Tidak ada stok / tidak jual sama sekali"))
+                {
+                    if(
+                            _spQ48A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ49A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ50A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ51A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52A.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52BA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52CA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali") &&
+                                    _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
+                            )
+                    {
+                        _lblQ53.setVisibility(View.VISIBLE);
+                        _cbQ53A1.setVisibility(View.VISIBLE);
+                        _cbQ53A2.setVisibility(View.VISIBLE);
+                        _cbQ53A3.setVisibility(View.VISIBLE);
+                        _cbQ53A4.setVisibility(View.VISIBLE);
+                        _cbQ53A5.setVisibility(View.VISIBLE);
+                        _cbQ53A6.setVisibility(View.VISIBLE);
+                        _cbQ53A7.setVisibility(View.VISIBLE);
+                        _cbQ53A8.setVisibility(View.VISIBLE);
+                        _cbQ53A9.setVisibility(View.VISIBLE);
+                        _cbQ53A10.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    _lblQ53.setVisibility(View.GONE);
+                    _cbQ53A1.setVisibility(View.GONE);
+                    _cbQ53A2.setVisibility(View.GONE);
+                    _cbQ53A3.setVisibility(View.GONE);
+                    _cbQ53A4.setVisibility(View.GONE);
+                    _cbQ53A5.setVisibility(View.GONE);
+                    _cbQ53A6.setVisibility(View.GONE);
+                    _cbQ53A7.setVisibility(View.GONE);
+                    _cbQ53A8.setVisibility(View.GONE);
+                    _cbQ53A9.setVisibility(View.GONE);
+                    _cbQ53A10.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+
         _cbQ53A10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
@@ -125,6 +610,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                 else
                 {
                     _txtQ53A.setVisibility(View.GONE);
+                    _txtQ53A.setText("");
                 }
 
             }
@@ -142,6 +628,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                 else
                 {
                     _txtQ56A.setVisibility(View.GONE);
+                    _txtQ56A.setText("");
                 }
 
             }
@@ -164,6 +651,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                     _cbQ53A7.setChecked(false);
                     _cbQ53A8.setChecked(false);
                     _cbQ53A10.setChecked(false);
+                    _txtQ53A.setText("");
                 }
             }
         });
@@ -186,6 +674,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                     _cbQ56ASamsung.setChecked(false);
                     _cbQ56ASony.setChecked(false);
                     _cbQ56ALainnya.setChecked(false);
+                    _txtQ56A.setText("");
                 }
             }
         });

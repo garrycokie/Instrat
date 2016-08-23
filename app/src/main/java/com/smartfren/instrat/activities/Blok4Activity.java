@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -348,7 +349,375 @@ public class Blok4Activity extends BaseStepsActivity {
 
         _txtQ46A = (EditText) findViewById(R.id.txtQ46A);
 
+        _txtQ38A.setVisibility(View.GONE);
+        _txtQ39A.setVisibility(View.GONE);
+        _txtQ40A.setVisibility(View.GONE);
+        _txtQ41A.setVisibility(View.GONE);
+        _txtQ42A.setVisibility(View.GONE);
+        _txtQ43A.setVisibility(View.GONE);
+        _txtQ44A.setVisibility(View.GONE);
+        _txtQ45A.setVisibility(View.GONE);
         _txtQ46A.setVisibility(View.GONE);
+
+        _cbQ38ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ38A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ38A.setVisibility(View.GONE);
+                    _txtQ38A.setText("");
+                }
+            }
+        });
+
+        _cbQ39ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ39A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ39A.setVisibility(View.GONE);
+                    _txtQ39A.setText("");
+                }
+            }
+        });
+
+        _cbQ40ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ40A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ40A.setVisibility(View.GONE);
+                    _txtQ40A.setText("");
+                }
+            }
+        });
+
+        _cbQ41ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ41A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ41A.setVisibility(View.GONE);
+                    _txtQ41A.setText("");
+                }
+            }
+        });
+
+        _cbQ42ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ42A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ42A.setVisibility(View.GONE);
+                    _txtQ42A.setText("");
+                }
+            }
+        });
+
+        _cbQ43ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ43A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ43A.setVisibility(View.GONE);
+                    _txtQ43A.setText("");
+                }
+            }
+        });
+
+        _cbQ44ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ44A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ44A.setVisibility(View.GONE);
+                    _txtQ44A.setText("");
+                }
+            }
+        });
+
+        _cbQ45ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _txtQ45A.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtQ45A.setVisibility(View.GONE);
+                    _txtQ45A.setText("");
+                }
+            }
+        });
+
+        _cbQ38ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ38ASmartfren.setChecked(false);
+                    _cbQ38AAdvan.setChecked(false);
+                    _cbQ38AAsus.setChecked(false);
+                    _cbQ38ABlackberry.setChecked(false);
+                    _cbQ38AEvercoss.setChecked(false);
+                    _cbQ38AIndosat.setChecked(false);
+                    _cbQ38ALenovo.setChecked(false);
+                    _cbQ38AMito.setChecked(false);
+                    _cbQ38ANokia.setChecked(false);
+                    _cbQ38AOppo.setChecked(false);
+                    _cbQ38ASamsung.setChecked(false);
+                    _cbQ38ASony.setChecked(false);
+                    _cbQ38ATelkomsel.setChecked(false);
+                    _cbQ38AXL.setChecked(false);
+                    _cbQ38A3.setChecked(false);
+                    _cbQ38ALainnya.setChecked(false);
+                    _txtQ38A.setText("");
+                }
+            }
+        });
+
+        _cbQ39ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ39ASmartfren.setChecked(false);
+                    _cbQ39AAdvan.setChecked(false);
+                    _cbQ39AAsus.setChecked(false);
+                    _cbQ39ABlackberry.setChecked(false);
+                    _cbQ39AEvercoss.setChecked(false);
+                    _cbQ39AIndosat.setChecked(false);
+                    _cbQ39ALenovo.setChecked(false);
+                    _cbQ39AMito.setChecked(false);
+                    _cbQ39ANokia.setChecked(false);
+                    _cbQ39AOppo.setChecked(false);
+                    _cbQ39ASamsung.setChecked(false);
+                    _cbQ39ASony.setChecked(false);
+                    _cbQ39ATelkomsel.setChecked(false);
+                    _cbQ39AXL.setChecked(false);
+                    _cbQ39A3.setChecked(false);
+                    _cbQ39ALainnya.setChecked(false);
+                    _txtQ39A.setText("");
+                }
+            }
+        });
+
+        _cbQ40ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ40ASmartfren.setChecked(false);
+                    _cbQ40AAdvan.setChecked(false);
+                    _cbQ40AAsus.setChecked(false);
+                    _cbQ40ABlackberry.setChecked(false);
+                    _cbQ40AEvercoss.setChecked(false);
+                    _cbQ40AIndosat.setChecked(false);
+                    _cbQ40ALenovo.setChecked(false);
+                    _cbQ40AMito.setChecked(false);
+                    _cbQ40ANokia.setChecked(false);
+                    _cbQ40AOppo.setChecked(false);
+                    _cbQ40ASamsung.setChecked(false);
+                    _cbQ40ASony.setChecked(false);
+                    _cbQ40ATelkomsel.setChecked(false);
+                    _cbQ40AXL.setChecked(false);
+                    _cbQ40A3.setChecked(false);
+                    _cbQ40ALainnya.setChecked(false);
+                    _txtQ40A.setText("");
+                }
+            }
+        });
+
+        _cbQ41ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ41ASmartfren.setChecked(false);
+                    _cbQ41AAdvan.setChecked(false);
+                    _cbQ41AAsus.setChecked(false);
+                    _cbQ41ABlackberry.setChecked(false);
+                    _cbQ41AEvercoss.setChecked(false);
+                    _cbQ41AIndosat.setChecked(false);
+                    _cbQ41ALenovo.setChecked(false);
+                    _cbQ41AMito.setChecked(false);
+                    _cbQ41ANokia.setChecked(false);
+                    _cbQ41AOppo.setChecked(false);
+                    _cbQ41ASamsung.setChecked(false);
+                    _cbQ41ASony.setChecked(false);
+                    _cbQ41ATelkomsel.setChecked(false);
+                    _cbQ41AXL.setChecked(false);
+                    _cbQ41A3.setChecked(false);
+                    _cbQ41ALainnya.setChecked(false);
+                    _txtQ41A.setText("");
+                }
+            }
+        });
+
+        _cbQ42ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ42ASmartfren.setChecked(false);
+                    _cbQ42AAdvan.setChecked(false);
+                    _cbQ42AAsus.setChecked(false);
+                    _cbQ42ABlackberry.setChecked(false);
+                    _cbQ42AEvercoss.setChecked(false);
+                    _cbQ42AIndosat.setChecked(false);
+                    _cbQ42ALenovo.setChecked(false);
+                    _cbQ42AMito.setChecked(false);
+                    _cbQ42ANokia.setChecked(false);
+                    _cbQ42AOppo.setChecked(false);
+                    _cbQ42ASamsung.setChecked(false);
+                    _cbQ42ASony.setChecked(false);
+                    _cbQ42ATelkomsel.setChecked(false);
+                    _cbQ42AXL.setChecked(false);
+                    _cbQ42A3.setChecked(false);
+                    _cbQ42ALainnya.setChecked(false);
+                    _txtQ42A.setText("");
+                }
+            }
+        });
+
+        _cbQ43ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ43ASmartfren.setChecked(false);
+                    _cbQ43AAdvan.setChecked(false);
+                    _cbQ43AAsus.setChecked(false);
+                    _cbQ43ABlackberry.setChecked(false);
+                    _cbQ43AEvercoss.setChecked(false);
+                    _cbQ43AIndosat.setChecked(false);
+                    _cbQ43ALenovo.setChecked(false);
+                    _cbQ43AMito.setChecked(false);
+                    _cbQ43ANokia.setChecked(false);
+                    _cbQ43AOppo.setChecked(false);
+                    _cbQ43ASamsung.setChecked(false);
+                    _cbQ43ASony.setChecked(false);
+                    _cbQ43ATelkomsel.setChecked(false);
+                    _cbQ43AXL.setChecked(false);
+                    _cbQ43A3.setChecked(false);
+                    _cbQ43ALainnya.setChecked(false);
+                    _txtQ43A.setText("");
+                }
+            }
+        });
+
+        _cbQ44ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ44ASmartfren.setChecked(false);
+                    _cbQ44AAdvan.setChecked(false);
+                    _cbQ44AAsus.setChecked(false);
+                    _cbQ44ABlackberry.setChecked(false);
+                    _cbQ44AEvercoss.setChecked(false);
+                    _cbQ44AIndosat.setChecked(false);
+                    _cbQ44ALenovo.setChecked(false);
+                    _cbQ44AMito.setChecked(false);
+                    _cbQ44ANokia.setChecked(false);
+                    _cbQ44AOppo.setChecked(false);
+                    _cbQ44ASamsung.setChecked(false);
+                    _cbQ44ASony.setChecked(false);
+                    _cbQ44ATelkomsel.setChecked(false);
+                    _cbQ44AXL.setChecked(false);
+                    _cbQ44A3.setChecked(false);
+                    _cbQ44ALainnya.setChecked(false);
+                    _txtQ44A.setText("");
+                }
+            }
+        });
+
+        _cbQ45ATidakAda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)
+                {
+                    _cbQ45ASmartfren.setChecked(false);
+                    _cbQ45AAdvan.setChecked(false);
+                    _cbQ45AAsus.setChecked(false);
+                    _cbQ45ABlackberry.setChecked(false);
+                    _cbQ45AEvercoss.setChecked(false);
+                    _cbQ45AIndosat.setChecked(false);
+                    _cbQ45ALenovo.setChecked(false);
+                    _cbQ45AMito.setChecked(false);
+                    _cbQ45ANokia.setChecked(false);
+                    _cbQ45AOppo.setChecked(false);
+                    _cbQ45ASamsung.setChecked(false);
+                    _cbQ45ASony.setChecked(false);
+                    _cbQ45ATelkomsel.setChecked(false);
+                    _cbQ45AXL.setChecked(false);
+                    _cbQ45A3.setChecked(false);
+                    _cbQ45ALainnya.setChecked(false);
+                    _txtQ45A.setText("");
+                }
+            }
+        });
 
         _spQ46A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -361,6 +730,7 @@ public class Blok4Activity extends BaseStepsActivity {
                 else
                 {
                     _txtQ46A.setVisibility(View.GONE);
+                    _txtQ46A.setText("");
                 }
             }
 

@@ -28,11 +28,6 @@
         android:layout_height="wrap_content"
         android:entries="@array/page_blok3_phone_lower500_list"
         android:layout_marginBottom="30dp"/>
-    <EditText
-        android:id="@+id/txtQ7A"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"/>
 
     <TextView
         android:id="@+id/lblQ8"
@@ -114,11 +109,6 @@
         android:layout_height="wrap_content"
         android:entries="@array/page_blok3_phone_500to1000k_list"
         android:layout_marginBottom="30dp"/>
-        <EditText
-            android:id="@+id/txtQ12A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"/>
 
     <TextView
         android:id="@+id/lblQ13"

@@ -1,3 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="192f479e70af0858b23fb10bc1b12bb19c45687e">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5eac4dd4e632d929c46455fa4eb766783dc9e799\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a65f6329ec33ec34b53e044f211d05126c025c08">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_27ccddf0007b5641f998b723782d9504916b4adf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\1.1.1\8e720b6ccaa30f4201a3f347f8959f620823e848\realm-annotations-1.1.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8e720b6ccaa30f4201a3f347f8959f620823e848">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\realm-annotations-1.1.1_f6b7a557624081bb8901e8289bf7119c953fcc0f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c82387ef0b47739dc3fe7a92d910ad3f0e7cdf01">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.realm-realm-android-library-1.1.1_d97c9daf1785adb214aa3450713b6eae2b498dbc\classes.dex" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_fc18a0fdc80391aaf9a93e629f1a6f03cf6a9cf4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_5a9b4938d53872a5c3e7c67e890942ee76fcef56\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.getkeepsafe.relinker\relinker\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="264f0bc4c0680cfe7a60fea1f12a43f1ab48e7c8">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.getkeepsafe.relinker-relinker-1.2.1_78dc239b8ae0f9305eac0c7933e900de526c9588\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_006070b885c4d054d3f7e691d7c78678203f78ef\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_561a8dfebcc396bf9f511b07089a7dca2f0a7cbe\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_7ecce6bd9c88b390fcac2def13abe498067f34ab\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.async\androidasync\2.1.8\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="210a4042913301c708bd9aeed46e4ebb5d77e462">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.async-androidasync-2.1.8_c9b0281e52f2427cd9acafb8555182fbdbc0cd18\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.volley-volley-1.0.0_19343d5b2b856f19c63f964ac47662140acbc8cf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_3c0bdf745d41d865a10b379d79c774003488950b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_4ad9e7efc02390e1255c2347ce0b00518aa7841f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_fa7a39ab5a87ee5e924bc1a14adcdfa3334a88bd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.ion\ion\2.1.8\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="800456ff7459edf31e780604a318741d0f8ace09">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.ion-ion-2.1.8_9c735bc53927042398fba1b3bfe1cf8c052fa367\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_ccde89303ac32452b4722d8c8e85d307348bd3e1\classes.dex" />
+    </item>
+
+</items>
