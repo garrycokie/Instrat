@@ -14,14 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:padding="16dp">
             <TextView
                 android:id="@+id/lblQ112"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok7_q112_text"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"/>
             <CheckBox android:id="@+id/cbQ112A1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok7_q113_text"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"/>
             <Spinner
                 android:id="@+id/spQ113A"
                 android:layout_width="match_parent"
@@ -66,7 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok7_q114_text"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"/>
             <CheckBox android:id="@+id/cbQ114A1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

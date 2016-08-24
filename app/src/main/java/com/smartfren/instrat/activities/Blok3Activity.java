@@ -27,6 +27,22 @@ public class Blok3Activity extends BaseStepsActivity {
         _rbQ6A2 = (RadioButton) findViewById((R.id.rbQ6A2));
         _rbQ6A3 = (RadioButton) findViewById((R.id.rbQ6A3));
 
+        if(extras.getString("NO_6") != null)
+        {
+            if(extras.getString("NO_6").equals(_rbQ6A1.getText()))
+            {
+                _rbQ6A1.setChecked(true);
+            }
+            else if(extras.getString("NO_6").equals(_rbQ6A2.getText()))
+            {
+                _rbQ6A2.setChecked(true);
+            }
+            else if(extras.getString("NO_6").equals(_rbQ6A3.getText()))
+            {
+                _rbQ6A3.setChecked(true);
+            }
+        }
+
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {

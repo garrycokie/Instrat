@@ -14,14 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:padding="16dp">
     <TextView
         android:id="@+id/lblQ7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q7_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <Spinner
         android:id="@+id/spQ7A"
         android:layout_width="match_parent"
@@ -34,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q8_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ8A"
         android:layout_width="match_parent"
@@ -46,7 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q9_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ9A"
         android:layout_width="match_parent"
@@ -58,7 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q10_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ10A1"
         android:layout_width="match_parent"
@@ -80,7 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q11_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ11A1"
         android:layout_width="match_parent"
@@ -102,7 +106,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q12_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <Spinner
         android:id="@+id/spQ12A"
         android:layout_width="match_parent"
@@ -115,7 +120,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q13_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ13A"
         android:layout_width="match_parent"
@@ -127,7 +133,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q14_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ14A"
         android:layout_width="match_parent"
@@ -139,7 +146,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q15_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ15A1"
         android:layout_width="match_parent"
@@ -161,7 +169,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/page_blok3_q16_text"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/txtQ16A1"
         android:layout_width="match_parent"

@@ -14,15 +14,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/lblQ38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q38_text" />
+                android:text="@string/page_blok4_q38_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ38ASmartfren"
@@ -154,7 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q39_text" />
+                android:text="@string/page_blok4_q39_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ39ASmartfren"
@@ -286,7 +287,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q40_text" />
+                android:text="@string/page_blok4_q40_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ40ASmartfren"
@@ -418,7 +420,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q41_text" />
+                android:text="@string/page_blok4_q41_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ41ASmartfren"
@@ -550,7 +553,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q42_text" />
+                android:text="@string/page_blok4_q42_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ42ASmartfren"
@@ -682,7 +686,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q43_text" />
+                android:text="@string/page_blok4_q43_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ43ASmartfren"
@@ -814,7 +819,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q44_text" />
+                android:text="@string/page_blok4_q44_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ44ASmartfren"
@@ -946,7 +952,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q45_text" />
+                android:text="@string/page_blok4_q45_text"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/cbQ45ASmartfren"
@@ -1079,7 +1086,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q46_text" />
+                android:text="@string/page_blok4_q46_text"
+                android:textSize="20dp" />
 
             <Spinner
                 android:id="@+id/spQ46A"
@@ -1099,7 +1107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/page_blok4_q47_text" />
+                android:text="@string/page_blok4_q47_text"
+                android:textSize="20dp" />
 
             <Spinner
                 android:id="@+id/spQ47A"
