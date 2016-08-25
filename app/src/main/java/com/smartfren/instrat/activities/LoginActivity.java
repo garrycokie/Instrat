@@ -51,13 +51,14 @@ public class LoginActivity extends Activity {
         RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
         if (loginData.size() > 0) {
             Intent i = new Intent(this, MainActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
+            finish();
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
 
         setContentView(R.layout.activity_login);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         final TextInputLayout usernameWrapper = (TextInputLayout) findViewById(R.id.usernameWrapper);
         final TextInputLayout passwordWrapper = (TextInputLayout) findViewById(R.id.passwordWrapper);
@@ -172,7 +173,9 @@ public class LoginActivity extends Activity {
         Intent i = new Intent(this, MainActivity.class);
         i.putExtra("UserID", response.userID);
         i.putExtra("AccessToken", response.accessToken);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
+        finish();
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 

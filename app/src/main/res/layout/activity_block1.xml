@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="com.smartfren.instrat.activities.Block1Activity">
 
     <RelativeLayout
@@ -12,18 +11,18 @@
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
-        <TextView
+
+        <!--<TextView
             android:id="@+id/txtBlock1Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="20dp"
             android:text="Screening"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"/>-->
 
         <TextView
             android:id="@+id/txtStoreType"
-            android:layout_below="@id/txtBlock1Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -33,7 +32,7 @@
         <Spinner
             android:id="@+id/spinStoreType"
             android:layout_below="@id/txtStoreType"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
@@ -51,7 +50,7 @@
         <Spinner
             android:id="@+id/spinStoreTypeExclusive"
             android:layout_below="@id/txtStoreTypeExclusive"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
@@ -60,7 +59,7 @@
         <EditText
             android:id="@+id/txtStoreTypeExclusiveOtherValue"
             android:layout_below="@id/spinStoreTypeExclusive"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="invisible"/>
     </RelativeLayout>

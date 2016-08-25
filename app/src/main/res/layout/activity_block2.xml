@@ -10,18 +10,17 @@
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
-        <TextView
+        <!--<TextView
             android:id="@+id/txtBlock2Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="20dp"
             android:text="Screening"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"/>-->
 
         <TextView
             android:id="@+id/txtOperatorType"
-            android:layout_below="@id/txtBlock2Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -31,7 +30,7 @@
         <Spinner
             android:id="@+id/spinOperatorType"
             android:layout_below="@id/txtOperatorType"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
@@ -49,7 +48,7 @@
         <Spinner
             android:id="@+id/spinOperator4G"
             android:layout_below="@id/txtOperator4G"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
@@ -65,7 +64,7 @@
         <EditText
             android:id="@+id/txtReason4G"
             android:layout_below="@+id/txtquestion4G"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>
 

@@ -4,6 +4,8 @@
     <string name="page_login_username_hint">Username</string>
     <string name="page_login_password_hint">Password</string>
     <string name="page_login_button_text">Login</string>
+    <string name="page_main_button_send">Kirim</string>
+    <string name="page_main_button_new">Buat Survey</string>
     <string name="page_loginprog_title">Logging In</string>
     <string name="title_surveyaction_list">SurveyActions</string>
     <string name="title_surveyaction_detail">SurveyAction Detail</string>

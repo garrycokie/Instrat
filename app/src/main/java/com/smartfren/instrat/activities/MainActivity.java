@@ -1,39 +1,41 @@
 package com.smartfren.instrat.activities;
 
-import android.net.Uri;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 
 import com.smartfren.instrat.R;
-import com.smartfren.instrat.utilities.TabsPagerAdapter;
 
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.util.List;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity
-        implements ListPendingSurveyFragment.OnFragmentInteractionListener,
-        NewSurveyFragment.OnFragmentInteractionListener {
-
-    private TabsPagerAdapter _tabAdapter;
+    private Button _btnSend;
+    private Button _btnNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        ViewPager vpPager = (ViewPager) findViewById(R.id.pager);
-        _tabAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-        vpPager.setAdapter(_tabAdapter);
-    }
+        _btnSend = (Button)findViewById(R.id.btnSend);
+        _btnNew = (Button)findViewById(R.id.btnNew);
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-        //TODO:
+        _btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: send to server
+            }
+        });
+
+        _btnNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Block0Activity.class);
+                startActivity(i);
+            }
+        });
     }
 }
