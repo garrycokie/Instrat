@@ -26,7 +26,6 @@
         android:id="@+id/spQ27A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/page_blok3_phone_2000to3000k_list"
         android:layout_marginBottom="30dp"/>
 
     <TextView
@@ -112,7 +111,6 @@
         android:id="@+id/spQ32A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/page_blok3_modem_list"
         android:layout_marginBottom="30dp"/>
 
     <TextView

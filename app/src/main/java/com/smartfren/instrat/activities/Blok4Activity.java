@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -176,11 +177,30 @@ public class Blok4Activity extends BaseStepsActivity {
     private TextView _txtQ46A;
     private Bundle extras;
 
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (!value.equals(null)) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
         if(cb.isChecked())
         {
-            result = result + ";"+ cb.getText().toString();
+            if(result.isEmpty() || result.equals(""))
+            {
+                result = cb.getText().toString();
+            }
+            else
+            {
+                result = result + ";"+ cb.getText().toString();
+            }
         }
         return result;
     }
@@ -358,6 +378,844 @@ public class Blok4Activity extends BaseStepsActivity {
         _txtQ44A.setVisibility(View.GONE);
         _txtQ45A.setVisibility(View.GONE);
         _txtQ46A.setVisibility(View.GONE);
+
+        if(extras.getString("NO_38") != null)
+        {
+            if(extras.getString("NO_38").contains("Smartfren"))
+            {
+                _cbQ38ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Advan"))
+            {
+                _cbQ38AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Asus"))
+            {
+                _cbQ38AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Blackberry"))
+            {
+                _cbQ38ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Evercoss"))
+            {
+                _cbQ38AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Indosat"))
+            {
+                _cbQ38AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Lenovo"))
+            {
+                _cbQ38ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Mito"))
+            {
+                _cbQ38AMito.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Nokia"))
+            {
+                _cbQ38ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Oppo"))
+            {
+                _cbQ38AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Samsung"))
+            {
+                _cbQ38ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Sony"))
+            {
+                _cbQ38ASony.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Telkomsel"))
+            {
+                _cbQ38ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Tri"))
+            {
+                _cbQ38A3.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("XL"))
+            {
+                _cbQ38AXL.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Tidak Ada"))
+            {
+                _cbQ38ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_38").contains("Lainnya"))
+            {
+                _cbQ38ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_38").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                        !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                        !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                        !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ38ALainnya.setChecked(true);
+                        _txtQ38A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_39") != null)
+        {
+            if(extras.getString("NO_39").contains("Smartfren"))
+            {
+                _cbQ39ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Advan"))
+            {
+                _cbQ39AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Asus"))
+            {
+                _cbQ39AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Blackberry"))
+            {
+                _cbQ39ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Evercoss"))
+            {
+                _cbQ39AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Indosat"))
+            {
+                _cbQ39AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Lenovo"))
+            {
+                _cbQ39ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Mito"))
+            {
+                _cbQ39AMito.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Nokia"))
+            {
+                _cbQ39ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Oppo"))
+            {
+                _cbQ39AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Samsung"))
+            {
+                _cbQ39ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Sony"))
+            {
+                _cbQ39ASony.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Telkomsel"))
+            {
+                _cbQ39ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Tri"))
+            {
+                _cbQ39A3.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("XL"))
+            {
+                _cbQ39AXL.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Tidak Ada"))
+            {
+                _cbQ39ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Lainnya"))
+            {
+                _cbQ39ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_39").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ39ALainnya.setChecked(true);
+                        _txtQ39A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_39") != null)
+        {
+            if(extras.getString("NO_39").contains("Smartfren"))
+            {
+                _cbQ39ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Advan"))
+            {
+                _cbQ39AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Asus"))
+            {
+                _cbQ39AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Blackberry"))
+            {
+                _cbQ39ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Evercoss"))
+            {
+                _cbQ39AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Indosat"))
+            {
+                _cbQ39AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Lenovo"))
+            {
+                _cbQ39ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Mito"))
+            {
+                _cbQ39AMito.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Nokia"))
+            {
+                _cbQ39ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Oppo"))
+            {
+                _cbQ39AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Samsung"))
+            {
+                _cbQ39ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Sony"))
+            {
+                _cbQ39ASony.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Telkomsel"))
+            {
+                _cbQ39ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Tri"))
+            {
+                _cbQ39A3.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("XL"))
+            {
+                _cbQ39AXL.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Tidak Ada"))
+            {
+                _cbQ39ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_39").contains("Lainnya"))
+            {
+                _cbQ39ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_39").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ39ALainnya.setChecked(true);
+                        _txtQ39A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_40") != null)
+        {
+            if(extras.getString("NO_40").contains("Smartfren"))
+            {
+                _cbQ40ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Advan"))
+            {
+                _cbQ40AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Asus"))
+            {
+                _cbQ40AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Blackberry"))
+            {
+                _cbQ40ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Evercoss"))
+            {
+                _cbQ40AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Indosat"))
+            {
+                _cbQ40AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Lenovo"))
+            {
+                _cbQ40ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Mito"))
+            {
+                _cbQ40AMito.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Nokia"))
+            {
+                _cbQ40ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Oppo"))
+            {
+                _cbQ40AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Samsung"))
+            {
+                _cbQ40ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Sony"))
+            {
+                _cbQ40ASony.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Telkomsel"))
+            {
+                _cbQ40ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Tri"))
+            {
+                _cbQ40A3.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("XL"))
+            {
+                _cbQ40AXL.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Tidak Ada"))
+            {
+                _cbQ40ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_40").contains("Lainnya"))
+            {
+                _cbQ40ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_40").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ40ALainnya.setChecked(true);
+                        _txtQ40A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_41") != null)
+        {
+            if(extras.getString("NO_41").contains("Smartfren"))
+            {
+                _cbQ41ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Advan"))
+            {
+                _cbQ41AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Asus"))
+            {
+                _cbQ41AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Blackberry"))
+            {
+                _cbQ41ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Evercoss"))
+            {
+                _cbQ41AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Indosat"))
+            {
+                _cbQ41AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Lenovo"))
+            {
+                _cbQ41ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Mito"))
+            {
+                _cbQ41AMito.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Nokia"))
+            {
+                _cbQ41ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Oppo"))
+            {
+                _cbQ41AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Samsung"))
+            {
+                _cbQ41ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Sony"))
+            {
+                _cbQ41ASony.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Telkomsel"))
+            {
+                _cbQ41ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Tri"))
+            {
+                _cbQ41A3.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("XL"))
+            {
+                _cbQ41AXL.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Tidak Ada"))
+            {
+                _cbQ41ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_41").contains("Lainnya"))
+            {
+                _cbQ41ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_41").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ41ALainnya.setChecked(true);
+                        _txtQ41A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_42") != null)
+        {
+            if(extras.getString("NO_42").contains("Smartfren"))
+            {
+                _cbQ42ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Advan"))
+            {
+                _cbQ42AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Asus"))
+            {
+                _cbQ42AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Blackberry"))
+            {
+                _cbQ42ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Evercoss"))
+            {
+                _cbQ42AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Indosat"))
+            {
+                _cbQ42AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Lenovo"))
+            {
+                _cbQ42ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Mito"))
+            {
+                _cbQ42AMito.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Nokia"))
+            {
+                _cbQ42ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Oppo"))
+            {
+                _cbQ42AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Samsung"))
+            {
+                _cbQ42ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Sony"))
+            {
+                _cbQ42ASony.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Telkomsel"))
+            {
+                _cbQ42ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Tri"))
+            {
+                _cbQ42A3.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("XL"))
+            {
+                _cbQ42AXL.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Tidak Ada"))
+            {
+                _cbQ42ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_42").contains("Lainnya"))
+            {
+                _cbQ42ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_42").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ42ALainnya.setChecked(true);
+                        _txtQ42A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_43") != null)
+        {
+            if(extras.getString("NO_43").contains("Smartfren"))
+            {
+                _cbQ43ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Advan"))
+            {
+                _cbQ43AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Asus"))
+            {
+                _cbQ43AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Blackberry"))
+            {
+                _cbQ43ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Evercoss"))
+            {
+                _cbQ43AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Indosat"))
+            {
+                _cbQ43AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Lenovo"))
+            {
+                _cbQ43ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Mito"))
+            {
+                _cbQ43AMito.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Nokia"))
+            {
+                _cbQ43ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Oppo"))
+            {
+                _cbQ43AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Samsung"))
+            {
+                _cbQ43ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Sony"))
+            {
+                _cbQ43ASony.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Telkomsel"))
+            {
+                _cbQ43ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Tri"))
+            {
+                _cbQ43A3.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("XL"))
+            {
+                _cbQ43AXL.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Tidak Ada"))
+            {
+                _cbQ43ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_43").contains("Lainnya"))
+            {
+                _cbQ43ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_43").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ43ALainnya.setChecked(true);
+                        _txtQ43A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_44") != null)
+        {
+            if(extras.getString("NO_44").contains("Smartfren"))
+            {
+                _cbQ44ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Advan"))
+            {
+                _cbQ44AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Asus"))
+            {
+                _cbQ44AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Blackberry"))
+            {
+                _cbQ44ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Evercoss"))
+            {
+                _cbQ44AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Indosat"))
+            {
+                _cbQ44AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Lenovo"))
+            {
+                _cbQ44ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Mito"))
+            {
+                _cbQ44AMito.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Nokia"))
+            {
+                _cbQ44ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Oppo"))
+            {
+                _cbQ44AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Samsung"))
+            {
+                _cbQ44ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Sony"))
+            {
+                _cbQ44ASony.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Telkomsel"))
+            {
+                _cbQ44ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Tri"))
+            {
+                _cbQ44A3.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("XL"))
+            {
+                _cbQ44AXL.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Tidak Ada"))
+            {
+                _cbQ44ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_44").contains("Lainnya"))
+            {
+                _cbQ44ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_44").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ44ALainnya.setChecked(true);
+                        _txtQ44A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        if(extras.getString("NO_45") != null)
+        {
+            if(extras.getString("NO_45").contains("Smartfren"))
+            {
+                _cbQ45ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Advan"))
+            {
+                _cbQ45AAdvan.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Asus"))
+            {
+                _cbQ45AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Blackberry"))
+            {
+                _cbQ45ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Evercoss"))
+            {
+                _cbQ45AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Indosat"))
+            {
+                _cbQ45AIndosat.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Lenovo"))
+            {
+                _cbQ45ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Mito"))
+            {
+                _cbQ45AMito.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Nokia"))
+            {
+                _cbQ45ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Oppo"))
+            {
+                _cbQ45AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Samsung"))
+            {
+                _cbQ45ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Sony"))
+            {
+                _cbQ45ASony.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Telkomsel"))
+            {
+                _cbQ45ATelkomsel.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Tri"))
+            {
+                _cbQ45A3.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("XL"))
+            {
+                _cbQ45AXL.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Tidak Ada"))
+            {
+                _cbQ45ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_45").contains("Lainnya"))
+            {
+                _cbQ45ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_45").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Indosat") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony") &&
+                            !lastAnswer.equals("Telkomsel") && !lastAnswer.equals("Tri") && !lastAnswer.equals("XL")  && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ45ALainnya.setChecked(true);
+                        _txtQ45A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        ArrayAdapter<CharSequence> adapterQ46 = ArrayAdapter.createFromResource(this, R.array.page_blok4_poster_list, android.R.layout.simple_spinner_item);
+        adapterQ46.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ46A.setAdapter(adapterQ46);
+
+        if(extras.getString("NO_46") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ46, extras.getString("NO_46"));
+            if(position > 0) {
+                _spQ46A.setSelection(position);
+            }
+            else
+            {
+                _txtQ46A.setText(extras.getString("NO_46"));
+            }
+        }
+
+        ArrayAdapter<CharSequence> adapterQ47 = ArrayAdapter.createFromResource(this, R.array.page_blok4_dominasibranding_list, android.R.layout.simple_spinner_item);
+        adapterQ47.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ47A.setAdapter(adapterQ47);
+
+        if(extras.getString("NO_47") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ47, extras.getString("NO_47"));
+            if(position > 0) {
+                _spQ47A.setSelection(position);
+            }
+        }
 
         _cbQ38ALainnya.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
@@ -743,7 +1601,141 @@ public class Blok4Activity extends BaseStepsActivity {
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
-                // TODO: back;
+                if(extras.getString("NO_7") != null && !extras.getString("NO_7").isEmpty() && !extras.getString("NO_7").equals("null"))
+                {
+                    Intent intent = new Intent(Blok4Activity.this, Blok3AActivity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    startActivity(intent);
+                }
+                else if(extras.getString("NO_17") != null && !extras.getString("NO_17").isEmpty() && !extras.getString("NO_17").equals("null"))
+                {
+                    Intent intent = new Intent(Blok4Activity.this, Blok3BActivity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    startActivity(intent);
+                }
+                else if(extras.getString("NO_27") != null && !extras.getString("NO_27").isEmpty() && !extras.getString("NO_27").equals("null"))
+                {
+                    Intent intent = new Intent(Blok4Activity.this, Blok3CActivity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    startActivity(intent);
+                }
             }
 
             @Override

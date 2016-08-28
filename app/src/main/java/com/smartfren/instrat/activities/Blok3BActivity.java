@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -41,7 +42,17 @@ public class Blok3BActivity extends BaseStepsActivity {
     private TextView _lblQ26;
 
     private Bundle extras;
-
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (!value.equals(null)) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +98,130 @@ public class Blok3BActivity extends BaseStepsActivity {
         _txtQ26A2.setVisibility(View.GONE);
         _txtQ26A3.setVisibility(View.GONE);
         _lblQ26.setVisibility(View.GONE);
+
+        ArrayAdapter<CharSequence> adapterQ17 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1000to1500k_list, android.R.layout.simple_spinner_item);
+        adapterQ17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ17A.setAdapter(adapterQ17);
+
+        if(extras.getString("NO_17") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ17, extras.getString("NO_17"));
+            if(position > 0) {
+                _spQ17A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_18") != null)
+        {
+            _txtQ18A.setText(extras.getString("NO_18"));
+        }
+
+        if(extras.getString("NO_19") != null)
+        {
+            _txtQ19A.setText(extras.getString("NO_19"));
+        }
+
+        if(extras.getString("NO_20") != null)
+        {
+            String[] splitAnswer = extras.getString("NO_20").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                if(splitAnswer.length >= 1)
+                {
+                    _txtQ20A1.setText(splitAnswer[0]);
+                }
+                if(splitAnswer.length >= 2)
+                {
+                    _txtQ20A2.setText(splitAnswer[1]);
+                }
+                if(splitAnswer.length >= 3)
+                {
+                    _txtQ20A3.setText(splitAnswer[2]);
+                }
+            }
+        }
+
+        if(extras.getString("NO_21") != null)
+        {
+            String[] splitAnswer = extras.getString("NO_21").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                if(splitAnswer.length >= 1)
+                {
+                    _txtQ21A1.setText(splitAnswer[0]);
+                }
+                if(splitAnswer.length >= 2)
+                {
+                    _txtQ21A2.setText(splitAnswer[1]);
+                }
+                if(splitAnswer.length >= 3)
+                {
+                    _txtQ21A3.setText(splitAnswer[2]);
+                }
+            }
+        }
+
+        ArrayAdapter<CharSequence> adapterQ22 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1500to2000k_list, android.R.layout.simple_spinner_item);
+        adapterQ22.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ22A.setAdapter(adapterQ22);
+
+        if(extras.getString("NO_22") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ22, extras.getString("NO_22"));
+            if(position > 0) {
+                _spQ22A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_23") != null)
+        {
+            _txtQ23A.setText(extras.getString("NO_23"));
+        }
+
+        if(extras.getString("NO_24") != null)
+        {
+            _txtQ24A.setText(extras.getString("NO_24"));
+        }
+
+        if(extras.getString("NO_25") != null)
+        {
+            String[] splitAnswer = extras.getString("NO_25").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                if(splitAnswer.length >= 1)
+                {
+                    _txtQ25A1.setText(splitAnswer[0]);
+                }
+                if(splitAnswer.length >= 2)
+                {
+                    _txtQ25A2.setText(splitAnswer[1]);
+                }
+                if(splitAnswer.length >= 3)
+                {
+                    _txtQ25A3.setText(splitAnswer[2]);
+                }
+            }
+        }
+
+        if(extras.getString("NO_26") != null)
+        {
+            String[] splitAnswer = extras.getString("NO_26").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                if(splitAnswer.length >= 1)
+                {
+                    _txtQ26A1.setText(splitAnswer[0]);
+                }
+                if(splitAnswer.length >= 2)
+                {
+                    _txtQ26A2.setText(splitAnswer[1]);
+                }
+                if(splitAnswer.length >= 3)
+                {
+                    _txtQ26A3.setText(splitAnswer[2]);
+                }
+            }
+        }
 
         _spQ17A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

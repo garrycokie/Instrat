@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -33,7 +34,7 @@ public class Blok5AActivity extends BaseStepsActivity {
     private CheckBox _cbQ56ASmartfren;
     private CheckBox _cbQ56AAsus;
     private CheckBox _cbQ56ABlackberry;
-    private CheckBox _cbQ56AEcercoss;
+    private CheckBox _cbQ56AEvercoss;
     private CheckBox _cbQ56ALenovo;
     private CheckBox _cbQ56AMito;
     private CheckBox _cbQ56ANokia;
@@ -58,6 +59,18 @@ public class Blok5AActivity extends BaseStepsActivity {
     private EditText _txtQ53A;
     private EditText _txtQ56A;
     private Bundle extras;
+
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (!value.equals(null)) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 
     protected String GetCheckBoxValue(CheckBox cb, String result)
     {
@@ -108,7 +121,7 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ56ASmartfren = (CheckBox) findViewById(R.id.cbQ56ASmartfren);
         _cbQ56AAsus = (CheckBox) findViewById(R.id.cbQ56AAsus);
         _cbQ56ABlackberry = (CheckBox) findViewById(R.id.cbQ56ABlackberry);
-        _cbQ56AEcercoss = (CheckBox) findViewById(R.id.cbQ56AEvercoss);
+        _cbQ56AEvercoss = (CheckBox) findViewById(R.id.cbQ56AEvercoss);
         _cbQ56ALenovo = (CheckBox) findViewById(R.id.cbQ56ALenovo);
         _cbQ56AMito = (CheckBox) findViewById(R.id.cbQ56AMito);
         _cbQ56ANokia = (CheckBox) findViewById(R.id.cbQ56ANokia);
@@ -129,6 +142,261 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ53A8.setVisibility(View.GONE);
         _cbQ53A9.setVisibility(View.GONE);
         _cbQ53A10.setVisibility(View.GONE);
+
+        ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, android.R.layout.simple_spinner_item);
+        adapterQBlok5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ48A.setAdapter(adapterQBlok5);
+        _spQ49A.setAdapter(adapterQBlok5);
+        _spQ50A.setAdapter(adapterQBlok5);
+        _spQ50A.setAdapter(adapterQBlok5);
+        _spQ51A.setAdapter(adapterQBlok5);
+        _spQ52A.setAdapter(adapterQBlok5);
+        _spQ52BA.setAdapter(adapterQBlok5);
+        _spQ52CA.setAdapter(adapterQBlok5);
+        _spQ52DA.setAdapter(adapterQBlok5);
+        _spQ52EA.setAdapter(adapterQBlok5);
+
+        if(extras.getString("NO_48") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_48"));
+            if(position > 0) {
+                _spQ48A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_49") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_49"));
+            if(position > 0) {
+                _spQ49A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_50") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_50"));
+            if(position > 0) {
+                _spQ50A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_51") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_51"));
+            if(position > 0) {
+                _spQ51A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52"));
+            if(position > 0) {
+                _spQ52A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52B") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52B"));
+            if(position > 0) {
+                _spQ52BA.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52C") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52C"));
+            if(position > 0) {
+                _spQ52CA.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52D") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52D"));
+            if(position > 0) {
+                _spQ52DA.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52E") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52E"));
+            if(position > 0) {
+                _spQ52EA.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_52E") != null)
+        {
+            int position = SetSelectedSpinner(adapterQBlok5, extras.getString("NO_52E"));
+            if(position > 0) {
+                _spQ52EA.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_53") != null)
+        {
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a1_text)))
+            {
+                _cbQ53A1.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a2_text)))
+            {
+                _cbQ53A2.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a3_text)))
+            {
+                _cbQ53A3.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a4_text)))
+            {
+                _cbQ53A4.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a5_text)))
+            {
+                _cbQ53A5.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a6_text)))
+            {
+                _cbQ53A6.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a7_text)))
+            {
+                _cbQ53A7.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a8_text)))
+            {
+                _cbQ53A8.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a9_text)))
+            {
+                _cbQ53A9.setChecked(true);
+            }
+            if(extras.getString("NO_53").contains(getResources().getString(R.string.page_checkbox_blok5_q53_a10_text)))
+            {
+                _cbQ53A10.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_53").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a1_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a2_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a3_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a4_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a5_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a6_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a7_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a8_text))
+                            && !lastAnswer.equals(getResources().getString(R.string.page_checkbox_blok5_q53_a9_text))
+                            )
+                    {
+                        _cbQ53A10.setChecked(true);
+                        _txtQ53A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
+        ArrayAdapter<CharSequence> adapterQ54 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q54A_list, android.R.layout.simple_spinner_item);
+        adapterQ54.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ54A.setAdapter(adapterQ54);
+
+        if(extras.getString("NO_54") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ54, extras.getString("NO_54"));
+            if(position > 0) {
+                _spQ54A.setSelection(position);
+            }
+        }
+
+        ArrayAdapter<CharSequence> adapterQ55 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q55A_list, android.R.layout.simple_spinner_item);
+        adapterQ55.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ55A.setAdapter(adapterQ55);
+
+        if(extras.getString("NO_55") != null)
+        {
+            int position = SetSelectedSpinner(adapterQ55, extras.getString("NO_55"));
+            if(position > 0) {
+                _spQ55A.setSelection(position);
+            }
+        }
+
+        if(extras.getString("NO_56") != null)
+        {
+            if(extras.getString("NO_56").contains("Smartfren"))
+            {
+                _cbQ56ASmartfren.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Asus"))
+            {
+                _cbQ56AAsus.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Blackberry"))
+            {
+                _cbQ56ABlackberry.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Evercoss"))
+            {
+                _cbQ56AEvercoss.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Lenovo"))
+            {
+                _cbQ56ALenovo.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Mito"))
+            {
+                _cbQ56AMito.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Nokia"))
+            {
+                _cbQ56ANokia.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Oppo"))
+            {
+                _cbQ56AOppo.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Samsung"))
+            {
+                _cbQ56ASamsung.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Sony"))
+            {
+                _cbQ56ASony.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Tidak Ada"))
+            {
+                _cbQ56ATidakAda.setChecked(true);
+            }
+            if(extras.getString("NO_56").contains("Lainnya"))
+            {
+                _cbQ56ALainnya.setChecked(true);
+            }
+
+            String[] splitAnswer = extras.getString("NO_56").split(";");
+            if(splitAnswer != null && splitAnswer.length > 0)
+            {
+                String lastAnswer = splitAnswer[splitAnswer.length - 1];
+                if(lastAnswer != null && !lastAnswer.isEmpty())
+                {
+                    if(!lastAnswer.equals("Smartfren") && !lastAnswer.equals("Advan") && !lastAnswer.equals("Blackberry") &&
+                            !lastAnswer.equals("Evercoss / Cross") && !lastAnswer.equals("Lenovo") && !lastAnswer.equals("Mito") &&
+                            !lastAnswer.equals("Nokia / Microsoft") && !lastAnswer.equals("Oppo") && !lastAnswer.equals("Samsung") && !lastAnswer.equals("Sony")
+                            && !lastAnswer.equals("Tidak Ada")
+                            )
+                    {
+                        _cbQ56ALainnya.setChecked(true);
+                        _txtQ56A.setText(lastAnswer);
+                    }
+                }
+            }
+        }
+
 
         _spQ48A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -666,7 +934,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                     _cbQ56ASmartfren.setChecked(false);
                     _cbQ56AAsus.setChecked(false);
                     _cbQ56ABlackberry.setChecked(false);
-                    _cbQ56AEcercoss.setChecked(false);
+                    _cbQ56AEvercoss.setChecked(false);
                     _cbQ56ALenovo.setChecked(false);
                     _cbQ56AMito.setChecked(false);
                     _cbQ56ANokia.setChecked(false);
@@ -682,7 +950,58 @@ public class Blok5AActivity extends BaseStepsActivity {
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
-                // TODO: back;
+                Intent intent = new Intent(Blok5AActivity.this, Blok4Activity.class);
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
+                intent.putExtra("NO_3", extras.getString("NO_3"));
+                intent.putExtra("NO_4", extras.getString("NO_4"));
+                intent.putExtra("NO_5", extras.getString("NO_5"));
+                intent.putExtra("NO_6", extras.getString("NO_6"));
+                intent.putExtra("NO_7", extras.getString("NO_7"));
+                intent.putExtra("NO_8", extras.getString("NO_8"));
+                intent.putExtra("NO_9", extras.getString("NO_9"));
+                intent.putExtra("NO_10", extras.getString("NO_10"));
+                intent.putExtra("NO_11", extras.getString("NO_11"));
+                intent.putExtra("NO_12", extras.getString("NO_12"));
+                intent.putExtra("NO_13", extras.getString("NO_13"));
+                intent.putExtra("NO_14", extras.getString("NO_14"));
+                intent.putExtra("NO_15", extras.getString("NO_15"));
+                intent.putExtra("NO_16", extras.getString("NO_16"));
+                intent.putExtra("NO_17", extras.getString("NO_17"));
+                intent.putExtra("NO_18", extras.getString("NO_18"));
+                intent.putExtra("NO_19", extras.getString("NO_19"));
+                intent.putExtra("NO_20", extras.getString("NO_20"));
+                intent.putExtra("NO_21", extras.getString("NO_21"));
+                intent.putExtra("NO_22", extras.getString("NO_22"));
+                intent.putExtra("NO_23", extras.getString("NO_23"));
+                intent.putExtra("NO_24", extras.getString("NO_24"));
+                intent.putExtra("NO_25", extras.getString("NO_25"));
+                intent.putExtra("NO_26", extras.getString("NO_26"));
+                intent.putExtra("NO_27", extras.getString("NO_27"));
+                intent.putExtra("NO_28", extras.getString("NO_28"));
+                intent.putExtra("NO_29", extras.getString("NO_29"));
+                intent.putExtra("NO_30", extras.getString("NO_30"));
+                intent.putExtra("NO_31", extras.getString("NO_31"));
+                intent.putExtra("NO_32", extras.getString("NO_32"));
+                intent.putExtra("NO_33", extras.getString("NO_33"));
+                intent.putExtra("NO_34", extras.getString("NO_34"));
+                intent.putExtra("NO_35", extras.getString("NO_35"));
+                intent.putExtra("NO_36", extras.getString("NO_36"));
+                intent.putExtra("NO_38", extras.getString("NO_38"));
+                intent.putExtra("NO_39", extras.getString("NO_39"));
+                intent.putExtra("NO_40", extras.getString("NO_40"));
+                intent.putExtra("NO_41", extras.getString("NO_41"));
+                intent.putExtra("NO_42", extras.getString("NO_42"));
+                intent.putExtra("NO_43", extras.getString("NO_43"));
+                intent.putExtra("NO_44", extras.getString("NO_44"));
+                intent.putExtra("NO_45", extras.getString("NO_45"));
+                intent.putExtra("NO_46", extras.getString("NO_46"));
+                intent.putExtra("NO_47", extras.getString("NO_47"));
+                startActivity(intent);
             }
 
             @Override
@@ -723,7 +1042,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                 A56 = GetCheckBoxValue(_cbQ56ASmartfren, A56);
                 A56 = GetCheckBoxValue(_cbQ56AAsus, A56);
                 A56 = GetCheckBoxValue(_cbQ56ABlackberry, A56);
-                A56 = GetCheckBoxValue(_cbQ56AEcercoss, A56);
+                A56 = GetCheckBoxValue(_cbQ56AEvercoss, A56);
                 A56 = GetCheckBoxValue(_cbQ56ALenovo, A56);
                 A56 = GetCheckBoxValue(_cbQ56AMito, A56);
                 A56 = GetCheckBoxValue(_cbQ56ANokia, A56);
