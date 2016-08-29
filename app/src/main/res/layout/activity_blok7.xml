@@ -26,7 +26,6 @@
                 android:id="@+id/spQ101A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/page_blok7_q101A_list"
                 android:layout_marginBottom="30dp"/>
 
             <TextView

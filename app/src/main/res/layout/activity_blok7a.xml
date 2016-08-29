@@ -59,7 +59,6 @@
                 android:id="@+id/spQ104A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/page_blok7_nextorder_list"
                 android:layout_marginBottom="30dp"/>
 
             <TextView
