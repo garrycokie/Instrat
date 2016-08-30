@@ -128,6 +128,13 @@ public class Block1Activity extends BaseStepsActivity {
             public void onBackClicked() {
                 Log.d(TAG, "Back clicked");
                 // TODO: handle back
+
+                Intent intent = new Intent(Block1Activity.this, Block0Activity.class);
+                intent.putExtra("DeviceSurveyID", _paramDeviceSurveyID);
+                intent.putExtra("TipeSurvey", _paramTipeSurvey);
+                intent.putExtra("UserID", _paramUserID);
+                intent.putExtra("AccessToken", _paramAccessToken);
+                startActivity(intent);
             }
 
             @Override

@@ -91,6 +91,16 @@ public class Block2Activity extends BaseStepsActivity {
             @Override
             public void onBackClicked() {
 
+                Intent intent = new Intent(Block2Activity.this, Block1Activity.class);
+
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
+
+                startActivity(intent);
             }
 
             @Override

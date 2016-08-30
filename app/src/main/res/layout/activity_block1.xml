@@ -55,13 +55,21 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"/>
-
-        <EditText
-            android:id="@+id/txtStoreTypeExclusiveOtherValue"
-            android:layout_below="@id/spinStoreTypeExclusive"
+        
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtStoreTypeExclusiveOtherValueWrapper"
+            android:layout_below="@+id/txtStoreTypeExclusive"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"/>
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txtStoreTypeExclusiveOtherValue"
+                android:layout_below="@id/spinStoreTypeExclusive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+        </android.support.design.widget.TextInputLayout>
+
     </RelativeLayout>
     <include
         layout="@layout/bottom_step_button_layout" />
