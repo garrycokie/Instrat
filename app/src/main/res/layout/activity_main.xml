@@ -33,6 +33,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/titleSurveyList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rlActionButton"
@@ -42,5 +43,15 @@
         android:text="Daftar Survey"
         android:textColor="#ffffff"
         android:textSize="24dp" />
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/viewSurveyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleSurveyList"
+        tools:context=".MainActivity"
+        />
 
 </RelativeLayout>
