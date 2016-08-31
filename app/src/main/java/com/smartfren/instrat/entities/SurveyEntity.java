@@ -152,4 +152,5 @@ public class SurveyEntity extends RealmObject {
     public String b11no133;
     public String b12no134;
     public String b12no135;
+    public String status;
 }
