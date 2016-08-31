@@ -47,6 +47,17 @@ public class Blok3Activity extends BaseStepsActivity {
             @Override
             public void onBackClicked() {
                 // TODO: back;
+                Intent intent = new Intent(Blok3Activity.this, Block2Activity.class);
+                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                intent.putExtra("UserID", extras.getString("UserID"));
+                intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                intent.putExtra("NO_1", extras.getString("NO_1"));
+                intent.putExtra("NO_2", extras.getString("NO_2"));
+                intent.putExtra("NO_3", extras.getString("NO_3"));
+                intent.putExtra("NO_4", extras.getString("NO_4"));
+                intent.putExtra("NO_5", extras.getString("NO_5"));
+                startActivity(intent);
             }
 
             @Override

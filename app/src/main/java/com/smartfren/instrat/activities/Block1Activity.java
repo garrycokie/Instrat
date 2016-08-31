@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 
@@ -25,6 +26,7 @@ public class Block1Activity extends BaseStepsActivity {
     private Spinner _spStoreType;
     private Spinner _spStoreTypeExclusive;
     private EditText _txtStoreTypeExlusiveOtherText;
+    private TextView _txtStoreTypeExlusiveLabel;
 
     private String _storeTypeValue;
     private String _storeTypeExclusiveValue;
@@ -42,6 +44,8 @@ public class Block1Activity extends BaseStepsActivity {
 
         // Get Extra Parameters from previous activity
         Bundle extras = getIntent().getExtras();
+
+
         if (extras != null) {
             _paramDeviceSurveyID = extras.getString("DeviceSurveyID");
             _paramTipeSurvey = extras.getString("TipeSurvey");
@@ -76,12 +80,39 @@ public class Block1Activity extends BaseStepsActivity {
                 "Lainnya, Sebutkan",
         };
 
+        _txtStoreTypeExlusiveLabel = (TextView) findViewById(R.id.txtStoreTypeExclusive);
+        _txtStoreTypeExlusiveOtherText = (EditText) findViewById(R.id.txtStoreTypeExclusiveOtherValue);
+
         _spStoreTypeExclusive = (Spinner) findViewById(R.id.spinStoreTypeExclusive);
         ArrayAdapter<String> adapterExclusive = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, this._storeTypeExclusiveSpinnerItems);
         _spStoreTypeExclusive.setAdapter(adapterExclusive);
-        _txtStoreTypeExlusiveOtherText = (EditText) findViewById(R.id.txtStoreTypeExclusiveOtherValue);
+
+        _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);
         _spStoreTypeExclusive.setVisibility(View.GONE);
+
+        _storeTypeValue =  extras.getString("NO_1");
+        _storeTypeExclusiveValue = extras.getString("NO_2");
+
+        int indexStoreType = 0;
+
+        for (String s : _storeTypeSpinnerItems) {
+            int i = s.indexOf(_storeTypeValue);
+            if (i >= 0) {
+               indexStoreType = i;
+            }
+        }
+        _spStoreType.setSelection(indexStoreType);
+
+        int indexStoreTypeExc = 0;
+
+        for (String s : _storeTypeExclusiveSpinnerItems) {
+            int i = s.indexOf(_storeTypeExclusiveValue);
+            if (i >= 0) {
+                indexStoreTypeExc = i;
+            }
+        }
+        _spStoreTypeExclusive.setSelection(indexStoreTypeExc);
 
         _spStoreType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -90,8 +121,10 @@ public class Block1Activity extends BaseStepsActivity {
 
                 if (selectedItem.equals("EXCLUSIVE SMARTFREN") || selectedItem.equals("EXCLUSIVE MEREK LAINNYA")) {
                     _spStoreTypeExclusive.setVisibility(View.VISIBLE);
+                    _txtStoreTypeExlusiveLabel.setVisibility(View.VISIBLE);
                 } else {
                     _spStoreTypeExclusive.setVisibility(View.GONE);
+                    _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);
                 }
 
                 _storeTypeValue = selectedItem;

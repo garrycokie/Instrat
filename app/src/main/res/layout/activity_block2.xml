@@ -59,7 +59,7 @@
             android:layout_below="@+id/spinOperator4G"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mengapa Anda bilang ____________ itu bagus untuk operator 4G? "/>
+            android:text="Mengapa Anda bilang itu bagus untuk operator 4G? "/>
 
         <EditText
             android:id="@+id/txtReason4G"

@@ -1049,6 +1049,29 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/txtIsBoltExist"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apakah ada Modem: Bolt (PILIH HANYA 1 JAWABAN)"/>
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/radGrIsBoltExist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radIsBoltExistTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ada"/>
+                <RadioButton
+                    android:id="@+id/radIsBoltExistFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Ada"/>
+            </RadioGroup>
+
+            <TextView
                 android:id="@+id/txtIsZTEExist"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
@@ -1071,28 +1094,7 @@
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/txtIsBoltExist"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Apakah ada Modem: Bolt (PILIH HANYA 1 JAWABAN)"/>
-            <RadioGroup
-                android:orientation="horizontal"
-                android:id="@+id/radGrIsBoltExist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/radIsBoltExistTrue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ada"/>
-                <RadioButton
-                    android:id="@+id/radIsBoltExistFalse"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tidak Ada"/>
-            </RadioGroup>
+
 
         </LinearLayout>
     </ScrollView>

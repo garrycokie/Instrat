@@ -9,7 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
 import com.smartfren.instrat.R;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by FluffyBunny on 8/7/2016.
@@ -24,7 +28,10 @@ public class Block2Activity extends BaseStepsActivity {
     private String _spOperator4GValue;
     private EditText _txt4GReason;
     private String _4GReasonValue;
+    private TextView _txt4GQuestionLabel;
+
     private Bundle extras;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +58,10 @@ public class Block2Activity extends BaseStepsActivity {
         ArrayAdapter<String> adapter4G = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
         _spOperator4G.setAdapter(adapter4G);
+        _txt4GQuestionLabel = (TextView) findViewById(R.id.txtquestion4G);
         _txt4GReason = (EditText) findViewById(R.id.txtReason4G);
+        _txt4GQuestionLabel.setVisibility(View.GONE);
+        _txt4GReason.setVisibility(View.GONE);
 
         //_spOperator4G.setVisibility(View.GONE);
 
@@ -75,13 +85,23 @@ public class Block2Activity extends BaseStepsActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = parent.getItemAtPosition(position).toString();
+                if(selectedItem != "Tidak tahu"){
+                    _txt4GQuestionLabel.setVisibility(View.VISIBLE);
+                    _txt4GReason.setVisibility(View.VISIBLE);
+                    _txt4GQuestionLabel.setText("Mengapa Anda bilang "+ selectedItem +" itu bagus untuk operator 4G?");
+                    _spOperator4GValue = selectedItem;
+                }
+                else
+                {
+                    _txt4GQuestionLabel.setVisibility(View.GONE);
+                    _txt4GReason.setVisibility(View.GONE);
+                }
 
-                _spOperator4GValue = selectedItem;
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                _txt4GQuestionLabel.setText("Mengapa Anda bilang ________ itu bagus untuk operator 4G?");
             }
         });
 
