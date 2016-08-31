@@ -65,6 +65,30 @@ public class Block2Activity extends BaseStepsActivity {
 
         //_spOperator4G.setVisibility(View.GONE);
 
+
+        _spOperatorValue =  extras.getString("NO_3");
+        _spOperator4GValue = extras.getString("NO_4");
+
+        int indexOperator = 0;
+
+        for (String s : _operatorSpinnerItems) {
+            int i = s.indexOf(_spOperatorValue);
+            if (i >= 0) {
+                indexOperator = i;
+            }
+        }
+        _spOperator.setSelection(indexOperator);
+
+        int indexOperator4G = 0;
+
+        for (String s : _operatorSpinnerItems) {
+            int i = s.indexOf(_spOperator4GValue);
+            if (i >= 0) {
+                indexOperator4G = i;
+            }
+        }
+        _spOperator4G.setSelection(indexOperator4G);
+
         _spOperator.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
