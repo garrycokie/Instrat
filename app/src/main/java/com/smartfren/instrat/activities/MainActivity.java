@@ -1,6 +1,7 @@
 package com.smartfren.instrat.activities;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,7 +38,7 @@ public class MainActivity extends Activity {
 
     private Button _btnSend;
     private Button _btnNew;
-    private List<SurveyEntity> _suveyList;
+    private RealmResults<SurveyEntity> _surveyData;
     private RecyclerView _viewSurveyList;
 
     @Override
@@ -51,9 +52,9 @@ public class MainActivity extends Activity {
         _viewSurveyList = (RecyclerView) findViewById(R.id.viewSurveyList);
 
         Realm realm = Realm.getDefaultInstance();
-        RealmResults<SurveyEntity> surveyData = realm.where(SurveyEntity.class).findAll();
-        SurveyEntity[] arraySurvey = new SurveyEntity[surveyData.size()];
-        SurveyListAdapter adapter = new SurveyListAdapter(surveyData.toArray(arraySurvey));
+        _surveyData = realm.where(SurveyEntity.class).findAll();
+        SurveyEntity[] arraySurvey = new SurveyEntity[_surveyData.size()];
+        SurveyListAdapter adapter = new SurveyListAdapter(_surveyData.toArray(arraySurvey));
 
         _viewSurveyList.setLayoutManager(new LinearLayoutManager(this));
         _viewSurveyList.setAdapter(adapter);
@@ -61,6 +62,13 @@ public class MainActivity extends Activity {
         _btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ProgressDialog dialog = ProgressDialog.show(getApplicationContext(), "Loading", "Sending data, please wait...", true);
+
+                for (SurveyEntity surveyItem : _surveyData) {
+                    //TODO: send survey item
+                }
+
+                dialog.dismiss();
                 /*
                 final SurveyResponse[] result = new SurveyResponse[1];
 
