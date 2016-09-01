@@ -680,6 +680,10 @@ public class Block12Activity extends BaseStepsActivity {
                 realm.copyToRealm(surveyEntity);
                 realm.commitTransaction();
 
+                Toast.makeText(getApplicationContext(), "Survey Successfully saved", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Block12Activity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
