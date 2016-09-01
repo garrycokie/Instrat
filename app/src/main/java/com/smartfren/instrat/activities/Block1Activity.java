@@ -37,6 +37,18 @@ public class Block1Activity extends BaseStepsActivity {
     private String _paramUserID;
     private String _paramAccessToken;
 
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (value != null) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +70,9 @@ public class Block1Activity extends BaseStepsActivity {
         };
 
         _spStoreType = (Spinner) findViewById(R.id.spinStoreType);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<CharSequence> storeTypeAdapter = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, this._storeTypeSpinnerItems);
-        _spStoreType.setAdapter(adapter);
+        _spStoreType.setAdapter(storeTypeAdapter);
 
         this._storeTypeExclusiveSpinnerItems = new String[]{
                 "Smartfren (khusus Premium Store, Gallery Smartfren dan SMILE)",
@@ -84,9 +96,9 @@ public class Block1Activity extends BaseStepsActivity {
         _txtStoreTypeExlusiveOtherText = (EditText) findViewById(R.id.txtStoreTypeExclusiveOtherValue);
 
         _spStoreTypeExclusive = (Spinner) findViewById(R.id.spinStoreTypeExclusive);
-        ArrayAdapter<String> adapterExclusive = new ArrayAdapter<String>(this,
+        ArrayAdapter<CharSequence> storeTypeExclusiveAdapter = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, this._storeTypeExclusiveSpinnerItems);
-        _spStoreTypeExclusive.setAdapter(adapterExclusive);
+        _spStoreTypeExclusive.setAdapter(storeTypeExclusiveAdapter);
 
         _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);
         _spStoreTypeExclusive.setVisibility(View.GONE);
@@ -94,25 +106,8 @@ public class Block1Activity extends BaseStepsActivity {
         _storeTypeValue =  extras.getString("NO_1");
         _storeTypeExclusiveValue = extras.getString("NO_2");
 
-        int indexStoreType = 0;
-
-        for (String s : _storeTypeSpinnerItems) {
-            int i = s.indexOf(_storeTypeValue);
-            if (i >= 0) {
-               indexStoreType = i;
-            }
-        }
-        _spStoreType.setSelection(indexStoreType);
-
-        int indexStoreTypeExc = 0;
-
-        for (String s : _storeTypeExclusiveSpinnerItems) {
-            int i = s.indexOf(_storeTypeExclusiveValue);
-            if (i >= 0) {
-                indexStoreTypeExc = i;
-            }
-        }
-        _spStoreTypeExclusive.setSelection(indexStoreTypeExc);
+        _spStoreType.setSelection(SetSelectedSpinner(storeTypeAdapter, _storeTypeValue));
+        _spStoreTypeExclusive.setSelection(SetSelectedSpinner(storeTypeExclusiveAdapter, _storeTypeExclusiveValue));
 
         _spStoreType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

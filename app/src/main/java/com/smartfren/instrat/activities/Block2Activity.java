@@ -32,6 +32,19 @@ public class Block2Activity extends BaseStepsActivity {
 
     private Bundle extras;
 
+
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (value != null) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +63,12 @@ public class Block2Activity extends BaseStepsActivity {
         };
 
         _spOperator= (Spinner) findViewById(R.id.spinOperatorType);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
         _spOperator.setAdapter(adapter);
 
         _spOperator4G= (Spinner) findViewById(R.id.spinOperator4G);
-        ArrayAdapter<String> adapter4G = new ArrayAdapter<String>(this,
+        ArrayAdapter<CharSequence> adapter4G = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
         _spOperator4G.setAdapter(adapter4G);
         _txt4GQuestionLabel = (TextView) findViewById(R.id.txtquestion4G);
@@ -65,29 +78,15 @@ public class Block2Activity extends BaseStepsActivity {
 
         //_spOperator4G.setVisibility(View.GONE);
 
-
         _spOperatorValue =  extras.getString("NO_3");
         _spOperator4GValue = extras.getString("NO_4");
-
-        int indexOperator = 0;
-
-        for (String s : _operatorSpinnerItems) {
-            int i = s.indexOf(_spOperatorValue);
-            if (i >= 0) {
-                indexOperator = i;
-            }
+        _4GReasonValue = extras.getString("NO_5");
+        if(_4GReasonValue != null){
+            _txt4GReason.setText(_4GReasonValue);
         }
-        _spOperator.setSelection(indexOperator);
 
-        int indexOperator4G = 0;
-
-        for (String s : _operatorSpinnerItems) {
-            int i = s.indexOf(_spOperator4GValue);
-            if (i >= 0) {
-                indexOperator4G = i;
-            }
-        }
-        _spOperator4G.setSelection(indexOperator4G);
+        _spOperator.setSelection(SetSelectedSpinner(adapter, _spOperatorValue));
+        _spOperator4G.setSelection(SetSelectedSpinner(adapter, _spOperator4GValue));
 
         _spOperator.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
