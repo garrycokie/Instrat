@@ -17,6 +17,7 @@
         <TextView
             android:id="@+id/lblQ128"
             android:layout_marginTop="20dp"
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/page_blok9_q128_text"
@@ -24,6 +25,7 @@
         <Spinner
             android:id="@+id/spQ128A"
             android:layout_below="@+id/lblQ128"
+            android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/page_blok9_kategoritoko_list"

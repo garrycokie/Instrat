@@ -18,40 +18,47 @@
                 android:id="@+id/lblQ121"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:text="@string/page_blok8_q121_text"
                 android:layout_marginBottom="10dp"/>
             <Spinner
                 android:id="@+id/spQ121A"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
 
             <TextView
                 android:id="@+id/lblQ122"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q122_text"
                 android:layout_marginBottom="10dp"/>
             <EditText
                 android:id="@+id/txtQ122A"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
 
             <TextView
                 android:id="@+id/lblQ123"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q123_text"
                 android:layout_marginBottom="10dp"/>
             <EditText
                 android:id="@+id/txtQ123A"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
 
             <TextView
                 android:id="@+id/lblQ124"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q124_text"
@@ -64,18 +71,21 @@
 
             <TextView
                 android:id="@+id/lblQ125"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q125_text"
                 android:layout_marginBottom="10dp"/>
             <EditText
                 android:id="@+id/txtQ125A"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
 
             <TextView
                 android:id="@+id/lblQ126"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q126_text"
@@ -88,12 +98,14 @@
 
             <TextView
                 android:id="@+id/lblQ127"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q127_text"
                 android:layout_marginBottom="10dp"/>
             <Spinner
                 android:id="@+id/spQ127A"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/page_blok8_tipetoko_list"
