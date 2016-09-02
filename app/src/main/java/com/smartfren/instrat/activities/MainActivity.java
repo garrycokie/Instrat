@@ -64,20 +64,170 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 ProgressDialog dialog = ProgressDialog.show(getApplicationContext(), "Loading", "Sending data, please wait...", true);
 
-                for (SurveyEntity surveyItem : _surveyData) {
+                for (final SurveyEntity surveyItem : _surveyData) {
                     //TODO: send survey item
-                }
 
-                dialog.dismiss();
-                /*
+                    final Realm realm = Realm.getDefaultInstance();
+                    RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
+                    LoginEntity loginEntity = loginData.first();
+
+                    String userID = loginEntity.userID ;
+                    String accessToken = loginEntity.accessToken;
+                    String kota = loginEntity.namaKota;
+                    String tipeSurvey = surveyItem.tipeSurvey;
+                    String deviceSurveyID = surveyItem.deviceSurveyID;
+
+                    String NO_1 = surveyItem.b1no1 ;
+                    String NO_2 = surveyItem.b1no2 ;
+                    String NO_3 = surveyItem.b2no3 ;
+                    String NO_4 = surveyItem.b2no4 ;
+                    String NO_5 = surveyItem.b2no5 ;
+                    String NO_6 = surveyItem.b3no6 ;
+                    String NO_7 = surveyItem.b3no7 ;
+                    String NO_8 = surveyItem.b3no8 ;
+                    String NO_9 = surveyItem.b3no9 ;
+                    String NO_10 =surveyItem.b3no10 ;
+                    String NO_11 =surveyItem.b3no11 ;
+                    String NO_12 =surveyItem.b3no12 ;
+                    String NO_13 =surveyItem.b3no13 ;
+                    String NO_14 =surveyItem.b3no14 ;
+                    String NO_15 =surveyItem.b3no15 ;
+                    String NO_16 =surveyItem.b3no16 ;
+                    String NO_17 =surveyItem.b3no17 ;
+                    String NO_18 =surveyItem.b3no18 ;
+                    String NO_19 =surveyItem.b3no19 ;
+                    String NO_20 =surveyItem.b3no20 ;
+                    String NO_21 =surveyItem.b3no21 ;
+                    String NO_22 =surveyItem.b3no22 ;
+                    String NO_23 =surveyItem.b3no23 ;
+                    String NO_24 =surveyItem.b3no24 ;
+                    String NO_25 =surveyItem.b3no25 ;
+                    String NO_26 =surveyItem.b3no26 ;
+                    String NO_27 =surveyItem.b3no27 ;
+                    String NO_28 =surveyItem.b3no28 ;
+                    String NO_29 =surveyItem.b3no29 ;
+                    String NO_30 =surveyItem.b3no30 ;
+                    String NO_31 =surveyItem.b3no31 ;
+                    String NO_32 =surveyItem.b3no32 ;
+                    String NO_33 =surveyItem.b3no33 ;
+                    String NO_34 =surveyItem.b3no34 ;
+                    String NO_35 =surveyItem.b3no35 ;
+                    String NO_36 =surveyItem.b3no36 ;
+                    String NO_38 =surveyItem.b4no38 ;
+                    String NO_39 =surveyItem.b4no39 ;
+                    String NO_40 =surveyItem.b4no40 ;
+                    String NO_41 =surveyItem.b4no41 ;
+                    String NO_42 =surveyItem.b4no42 ;
+                    String NO_43 =surveyItem.b4no43 ;
+                    String NO_44 =surveyItem.b4no44 ;
+                    String NO_45 =surveyItem.b4no45 ;
+                    String NO_46 =surveyItem.b4no46 ;
+                    String NO_47 =surveyItem.b4no47 ;
+                    String NO_48 =surveyItem.b5no48 ;
+                    String NO_49 =surveyItem.b5no49 ;
+                    String NO_50 =surveyItem.b5no50 ;
+                    String NO_51 =surveyItem.b5no51 ;
+                    String NO_52 =surveyItem.b5no52 ;
+                    String NO_52B = surveyItem.b5no52B;
+                    String NO_52C = surveyItem.b5no52C;
+                    String NO_52D = surveyItem.b5no52D;
+                    String NO_52E = surveyItem.b5no52E;
+                    String NO_53 =surveyItem.b5no53 ;
+                    String NO_54 =surveyItem.b5no54 ;
+                    String NO_55 =surveyItem.b5no55 ;
+                    String NO_56 =surveyItem.b5no56 ;
+                    String NO_57 =surveyItem.b5no57 ;
+                    String NO_58 =surveyItem.b5no58 ;
+                    String NO_59 =surveyItem.b5no59 ;
+                    String NO_60 =surveyItem.b5no60 ;
+                    String NO_60B = surveyItem.b5no60B ;
+                    String NO_60C  = surveyItem.b5no60C ;
+                    String NO_61 = surveyItem.b5no61;
+                    String NO_61B = surveyItem.b6no61B ;
+                    String NO_61C = surveyItem.b6no61C ;
+                    String NO_62 =surveyItem.b6no62 ;
+                    String NO_63 =surveyItem.b6no63 ;
+                    String NO_64 =surveyItem.b6no64 ;
+                    String NO_65 =surveyItem.b6no65 ;
+                    String NO_66 =surveyItem.b6no66 ;
+                    String NO_67 =surveyItem.b6no67 ;
+                    String NO_68 =surveyItem.b6no68 ;
+                    String NO_69 =surveyItem.b6no69 ;
+                    String NO_70 =surveyItem.b6no70 ;
+                    String NO_71 =surveyItem.b6no71 ;
+                    String NO_72 =surveyItem.b6no72 ;
+                    String NO_73 =surveyItem.b6no73 ;
+                    String NO_74 =surveyItem.b6no74 ;
+                    String NO_75 =surveyItem.b6no75 ;
+                    String NO_76 =surveyItem.b6no76 ;
+                    String NO_77 =surveyItem.b6no77 ;
+                    String NO_78 =surveyItem.b6no78 ;
+                    String NO_79 =surveyItem.b6no79 ;
+                    String NO_80 =surveyItem.b6no80 ;
+                    String NO_81 =surveyItem.b6no81 ;
+                    String NO_82 =surveyItem.b6no82 ;
+                    String NO_83 =surveyItem.b6no83 ;
+                    String NO_84 =surveyItem.b6no84 ;
+                    String NO_85 =surveyItem.b6no85 ;
+                    String NO_86 =surveyItem.b6no86 ;
+                    String NO_87 =surveyItem.b6no87 ;
+                    String NO_88 =surveyItem.b6no88 ;
+                    String NO_89 =surveyItem.b6no89 ;
+                    String NO_90 =surveyItem.b6no90 ;
+                    String NO_91 =surveyItem.b6no91 ;
+                    String NO_92 =surveyItem.b6no92 ;
+                    String NO_93 =surveyItem.b6no93 ;
+                    String NO_94 =surveyItem.b6no94 ;
+                    String NO_95 =surveyItem.b6no95 ;
+                    String NO_96 =surveyItem.b6no96 ;
+                    String NO_97 =surveyItem.b6no97 ;
+                    String NO_98 =surveyItem.b6no98 ;
+                    String NO_99 =surveyItem.b6no99 ;
+                    String NO_100 = surveyItem.b6no100;
+                    String NO_101 = surveyItem.b7no101;
+                    String NO_102 = surveyItem.b7no102;
+                    String NO_103 = surveyItem.b7no103;
+                    String NO_104 = surveyItem.b7no104;
+                    String NO_105 = surveyItem.b7no105;
+                    String NO_106 = surveyItem.b7no106;
+                    String NO_107 = surveyItem.b7no107;
+                    String NO_108 = surveyItem.b7no108;
+                    String NO_109 = surveyItem.b7no109;
+                    String NO_110 = surveyItem.b7no110;
+                    String NO_111 = surveyItem.b7no111;
+                    String NO_112 = surveyItem.b7no112;
+                    String NO_113 = surveyItem.b7no113;
+                    String NO_114 = surveyItem.b7no114;
+                    String NO_115 = surveyItem.b7no115;
+                    String NO_116 = surveyItem.b7no116;
+                    String NO_117 = surveyItem.b7no117;
+                    String NO_118 = surveyItem.b7no118;
+                    String NO_119 = surveyItem.b7no119;
+                    String NO_120 = surveyItem.b7no120;
+                    String NO_121 = surveyItem.b8no121;
+                    String NO_122 = surveyItem.b8no122;
+                    String NO_123 = surveyItem.b8no123;
+                    String NO_124 = surveyItem.b8no124;
+                    String NO_125 = surveyItem.b8no125;
+                    String NO_126 = surveyItem.b8no126;
+                    String NO_127 = surveyItem.b8no127;
+                    String NO_128 = surveyItem.b9no128;
+                    String NO_129 = surveyItem.b10no129;
+                    String NO_130 = surveyItem.b11no130;
+                    String NO_131 = surveyItem.b11no131;
+                    String NO_132 = surveyItem.b11no132;
+                    String NO_133 = surveyItem.b11no133;
+                    String NO_134 = surveyItem.b12no134;
+                    String NO_135 = surveyItem.b12no135;
+
                 final SurveyResponse[] result = new SurveyResponse[1];
 
                 SurveyRequest surveyRequest = new SurveyRequest();
-                surveyRequest.userID = loginEntity.userID;
-                surveyRequest.accessToken = loginEntity.accessToken;
-                surveyRequest.kota = loginEntity.namaKota ;
-                surveyRequest.tipeSurvey = extras.getString("TipeSurvey") ;
-                surveyRequest.deviceSurveyID = extras.getString("DeviceSurveyID") ;
+                surveyRequest.userID = userID;
+                surveyRequest.accessToken = accessToken;
+                surveyRequest.kota = kota ;
+                surveyRequest.tipeSurvey = tipeSurvey ;
+                surveyRequest.deviceSurveyID = deviceSurveyID ;
                 surveyRequest.b1no1 = NO_1;
                 surveyRequest.b1no2 = NO_2;
                 surveyRequest.b2no3 = NO_3;
@@ -245,11 +395,10 @@ public class MainActivity extends Activity {
                                     result[0].status = status;
 
                                     if(status.equals("OK")) {
-                                        Toast.makeText(getApplicationContext(), "Survey Successfully SENT", Toast.LENGTH_SHORT).show();
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(getApplicationContext(), "Survey SENT FAILED", Toast.LENGTH_SHORT).show();
+                                        SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", surveyItem.deviceSurveyID).findFirst();
+                                        realm.beginTransaction();
+                                        deletedSurvey.deleteFromRealm();
+                                        realm.commitTransaction();
                                     }
 
                                 } catch (JSONException e) {
@@ -264,7 +413,11 @@ public class MainActivity extends Activity {
                         });
 
                 Volley.newRequestQueue(getApplicationContext()).add(jsonRequest2);
-                */
+
+                }
+
+                dialog.dismiss();
+
             }
         });
 
