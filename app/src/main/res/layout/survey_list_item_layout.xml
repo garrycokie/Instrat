@@ -3,13 +3,23 @@
     android:layout_width="fill_parent"
     android:layout_height="80dp">
     <TextView
-        android:id="@+id/itemDeviceSurveyID"
+    android:id="@+id/itemOutletID"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/darker_gray"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:textSize="15dp" />
+    <TextView
+        android:id="@+id/itemStatus"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="@android:color/darker_gray"
-        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/itemOutletID"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:textSize="22dp" />
+        android:textSize="25dp" />
 
 </RelativeLayout>

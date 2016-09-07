@@ -52,9 +52,11 @@ public class MainActivity extends Activity {
         _viewSurveyList = (RecyclerView) findViewById(R.id.viewSurveyList);
 
         Realm realm = Realm.getDefaultInstance();
-        _surveyData = realm.where(SurveyEntity.class).findAll();
+        _surveyData = realm.where(SurveyEntity.class).equalTo("status", "Pending").findAll();
         SurveyEntity[] arraySurvey = new SurveyEntity[_surveyData.size()];
         SurveyListAdapter adapter = new SurveyListAdapter(_surveyData.toArray(arraySurvey));
+
+        final SurveyEntity[] arraySurveyTemp = _surveyData.toArray(arraySurvey);
 
         _viewSurveyList.setLayoutManager(new LinearLayoutManager(this));
         _viewSurveyList.setAdapter(adapter);
@@ -62,11 +64,12 @@ public class MainActivity extends Activity {
         _btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProgressDialog dialog = ProgressDialog.show(getApplicationContext(), "Loading", "Sending data, please wait...", true);
+                ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "Loading", "Sending data, please wait...", true);
 
-                for (final SurveyEntity surveyItem : _surveyData) {
+                for (final SurveyEntity surveyItem : arraySurveyTemp) {
                     //TODO: send survey item
 
+                    /*
                     final Realm realm = Realm.getDefaultInstance();
                     RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
                     LoginEntity loginEntity = loginData.first();
@@ -395,10 +398,12 @@ public class MainActivity extends Activity {
                                     result[0].status = status;
 
                                     if(status.equals("OK")) {
-                                        SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", surveyItem.deviceSurveyID).findFirst();
-                                        realm.beginTransaction();
-                                        deletedSurvey.deleteFromRealm();
-                                        realm.commitTransaction();
+
+                                        //SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", surveyItem.deviceSurveyID).findFirst();
+                                        //realm.beginTransaction();
+                                        //surveyItem.status = "Sent";
+                                        //realm.copyToRealmOrUpdate(surveyItem);
+                                        //realm.commitTransaction();
                                     }
 
                                 } catch (JSONException e) {
@@ -413,10 +418,12 @@ public class MainActivity extends Activity {
                         });
 
                 Volley.newRequestQueue(getApplicationContext()).add(jsonRequest2);
-
+*/
                 }
 
                 dialog.dismiss();
+                //finish();
+                //startActivity(getIntent());
 
             }
         });
