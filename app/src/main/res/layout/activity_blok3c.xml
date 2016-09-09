@@ -15,6 +15,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtBlock3Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 3C : ADVOKASI MEREK SMARTPHONE"
+                android:gravity="center_horizontal"/>
     <TextView
         android:id="@+id/lblQ27"
         android:layout_width="wrap_content"

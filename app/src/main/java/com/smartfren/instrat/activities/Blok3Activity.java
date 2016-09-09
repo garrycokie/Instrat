@@ -21,8 +21,6 @@ public class Blok3Activity extends BaseStepsActivity {
     private RadioButton _rbQ6A2;
     private RadioButton _rbQ6A3;
 
-    private TextView _errorQ6A;
-
     private Bundle extras;
 
     @Override
@@ -36,7 +34,7 @@ public class Blok3Activity extends BaseStepsActivity {
         _rbQ6A2 = (RadioButton) findViewById((R.id.rbQ6A2));
         _rbQ6A3 = (RadioButton) findViewById((R.id.rbQ6A3));
 
-        _errorQ6A = (TextView) findViewById((R.id.errorQ6A));
+        _rbgQ6.check(R.id.rbQ6A1);
 
         if(extras.getString("NO_6") != null)
         {
@@ -73,15 +71,6 @@ public class Blok3Activity extends BaseStepsActivity {
 
             @Override
             public void onContinueClicked() {
-                if (_rbgQ6.getCheckedRadioButtonId() == -1)
-                {
-                    _errorQ6A.setError("error");
-                    _errorQ6A.setText("Pilih salah satu skenario");
-                }
-                else
-                {
-                    _errorQ6A.setError(null);
-                    _errorQ6A.setText("");
 
                     if(_rbQ6A1.isChecked())
                     {
@@ -128,8 +117,6 @@ public class Blok3Activity extends BaseStepsActivity {
                         intent.putExtra("NO_6", _rbQ6A3.getText().toString());
                         startActivity(intent);
                     }
-                }
-
 
             }
         });

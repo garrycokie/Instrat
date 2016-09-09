@@ -17,6 +17,16 @@
             android:padding="16dp">
 
             <TextView
+            android:id="@+id/txtBlock3Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"
+            android:text="BLOK 3 : ADVOKASI MEREK SMARTPHONE"
+            android:gravity="center_horizontal"/>
+
+            <TextView
                 android:id="@+id/lblQ6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -35,30 +45,26 @@
                     android:id="@+id/rbQ6A1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20dp"
                     android:text="@string/page_blok3_q6_a1_text" />
 
                 <RadioButton
                     android:id="@+id/rbQ6A2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20dp"
                     android:text="@string/page_blok3_q6_a2_text" />
 
                 <RadioButton
                     android:id="@+id/rbQ6A3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="20dp"
                     android:text="@string/page_blok3_q6_a3_text" />
             </RadioGroup>
-            <TextView
-                android:id="@+id/errorQ6A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
         </LinearLayout>
     </ScrollView>
 
