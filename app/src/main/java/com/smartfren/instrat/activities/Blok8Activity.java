@@ -47,6 +47,17 @@ public class Blok8Activity extends BaseStepsActivity {
     private String _Q127AValue;
     private Bundle extras;
 
+    public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
+    {
+        if (value != null) {
+            int spinnerPosition = adapter.getPosition(value);
+            return spinnerPosition;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +71,7 @@ public class Blok8Activity extends BaseStepsActivity {
 
         _spQ121A = (Spinner) findViewById(R.id.spQ121A);
 
-        List<String> list = new ArrayList<String>();
+        List<CharSequence> list = new ArrayList<CharSequence>();
         if(loginEntity.namaKota.toLowerCase().equals("bandung"))
         {
             list.add("BEC BANDUNG");
@@ -145,7 +156,7 @@ public class Blok8Activity extends BaseStepsActivity {
             list.add("PHPC JOGJATRONIK");
         }
 
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _spQ121A.setAdapter(dataAdapter);
@@ -188,6 +199,45 @@ public class Blok8Activity extends BaseStepsActivity {
 
             }
         });
+
+        //set value from extras
+
+        _Q121AValue = extras.getString("NO_121");
+        _Q122AValue = extras.getString("NO_122");
+        _Q123AValue = extras.getString("NO_123");
+        _Q1224Value = extras.getString("NO_124");
+        _Q125AValue = extras.getString("NO_125");
+        _Q126AValue = extras.getString("NO_126");
+        _Q127AValue = extras.getString("NO_127");
+
+        ArrayAdapter<CharSequence> adapter127 = ArrayAdapter.createFromResource(this, R.array.page_blok8_tipetoko_list, android.R.layout.simple_spinner_item);
+        adapter127.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ127A.setAdapter(adapter127);
+
+        _spQ121A.setSelection(SetSelectedSpinner(dataAdapter, _Q121AValue));
+        _spQ127A.setSelection(SetSelectedSpinner(adapter127, _Q127AValue));
+
+        if(_Q122AValue !=null)
+        {
+            _txtQ122A.setText(_Q122AValue);
+        }
+        if(_Q123AValue !=null)
+        {
+            _txtQ123A.setText(_Q123AValue);
+        }
+        if(_Q1224Value !=null)
+        {
+            _txtQ1224.setText(_Q1224Value);
+        }
+        if(_Q125AValue !=null)
+        {
+            _txtQ125A.setText(_Q125AValue);
+        }
+        if(_Q126AValue !=null)
+        {
+            _txtQ126A.setText(_Q126AValue);
+        }
+
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override
