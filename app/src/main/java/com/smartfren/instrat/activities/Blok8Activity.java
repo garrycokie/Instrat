@@ -1165,7 +1165,7 @@ public class Blok8Activity extends BaseStepsActivity {
                 if (_Q122AValue == null || _Q122AValue.equals("") || _Q122AValue.isEmpty()) {
                     _errorQ122A.setError("error");
                     _errorQ122A.setText("Nama toko harus diisi");
-                } else if (_Q122AValue != null && !_Q122AValue.equals("") && !_Q122AValue.isEmpty() && _Q122AValue.length() > 500) {
+                } else if (_Q122AValue != null && !_Q122AValue.equals("") && !_Q122AValue.isEmpty() && _Q122AValue.length() > 50) {
                     _errorQ122A.setError("error");
                     _errorQ122A.setText("Nama Toko tidak boleh lebih dari 50 karakter");
                 } else {
@@ -1177,7 +1177,7 @@ public class Blok8Activity extends BaseStepsActivity {
                 if (_Q123AValue == null || _Q123AValue.equals("") || _Q123AValue.isEmpty()) {
                     _errorQ123A.setError("error");
                     _errorQ123A.setText("Lantai harus diisi");
-                } else if (_Q123AValue != null && !_Q123AValue.equals("") && !_Q123AValue.isEmpty() && _Q123AValue.length() > 500) {
+                } else if (_Q123AValue != null && !_Q123AValue.equals("") && !_Q123AValue.isEmpty() && _Q123AValue.length() > 50) {
                     _errorQ123A.setError("error");
                     _errorQ123A.setText("Lantai tidak boleh lebih dari 50 karakter");
                 } else {
@@ -1204,10 +1204,10 @@ public class Blok8Activity extends BaseStepsActivity {
 
                 if (_Q126AValue == null || _Q126AValue.equals("") || _Q126AValue.isEmpty()) {
                     _errorQ126A.setError("error");
-                    _errorQ126A.setText("Lantai harus diisi");
-                } else if (_Q126AValue != null && !_Q126AValue.equals("") && !_Q126AValue.isEmpty() && _Q126AValue.length() > 500) {
+                    _errorQ126A.setText("Nomor telepon harus diisi");
+                } else if (_Q126AValue != null && !_Q126AValue.equals("") && !_Q126AValue.isEmpty() && _Q126AValue.length() > 50) {
                     _errorQ126A.setError("error");
-                    _errorQ126A.setText("Lantai tidak boleh lebih dari 50 karakter");
+                    _errorQ126A.setText("Nomor telepon tidak boleh lebih dari 50 karakter");
                 } else {
                     _errorQ126A.setError(null);
                     _errorQ126A.setText("");
