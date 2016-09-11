@@ -15,6 +15,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtBlock5BTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 5B : VISIBILITY AND AVAILABILITY MODEM SMARTFREN"
+                android:gravity="center_horizontal"/>
+
         <TextView
             android:id="@+id/lblQ57"
             android:layout_width="wrap_content"

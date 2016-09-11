@@ -175,6 +175,17 @@ public class Blok4Activity extends BaseStepsActivity {
     private Spinner _spQ47A;
 
     private TextView _txtQ46A;
+
+    private TextView _errorQ38A;
+    private TextView _errorQ39A;
+    private TextView _errorQ40A;
+    private TextView _errorQ41A;
+    private TextView _errorQ42A;
+    private TextView _errorQ43A;
+    private TextView _errorQ44A;
+    private TextView _errorQ45A;
+    private TextView _errorQ46A;
+
     private Bundle extras;
 
     public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
@@ -368,6 +379,16 @@ public class Blok4Activity extends BaseStepsActivity {
         _spQ47A = (Spinner) findViewById(R.id.spQ47A);
 
         _txtQ46A = (EditText) findViewById(R.id.txtQ46A);
+
+        _errorQ38A = (TextView) findViewById(R.id.errorQ38A);
+        _errorQ39A = (TextView) findViewById(R.id.errorQ39A);
+        _errorQ40A = (TextView) findViewById(R.id.errorQ40A);
+        _errorQ41A = (TextView) findViewById(R.id.errorQ41A);
+        _errorQ42A = (TextView) findViewById(R.id.errorQ42A);
+        _errorQ43A = (TextView) findViewById(R.id.errorQ43A);
+        _errorQ44A = (TextView) findViewById(R.id.errorQ44A);
+        _errorQ45A = (TextView) findViewById(R.id.errorQ45A);
+        _errorQ46A = (TextView) findViewById(R.id.errorQ46A);
 
         _txtQ38A.setVisibility(View.GONE);
         _txtQ39A.setVisibility(View.GONE);
@@ -1960,58 +1981,260 @@ public class Blok4Activity extends BaseStepsActivity {
 
                 String A47 = String.valueOf(_spQ47A.getSelectedItem());
 
-                Intent intent = new Intent(Blok4Activity.this, Blok5AActivity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                intent.putExtra("NO_7", extras.getString("NO_7"));
-                intent.putExtra("NO_8", extras.getString("NO_8"));
-                intent.putExtra("NO_9", extras.getString("NO_9"));
-                intent.putExtra("NO_10", extras.getString("NO_10"));
-                intent.putExtra("NO_11", extras.getString("NO_11"));
-                intent.putExtra("NO_12", extras.getString("NO_12"));
-                intent.putExtra("NO_13", extras.getString("NO_13"));
-                intent.putExtra("NO_14", extras.getString("NO_14"));
-                intent.putExtra("NO_15", extras.getString("NO_15"));
-                intent.putExtra("NO_16", extras.getString("NO_16"));
-                intent.putExtra("NO_17", extras.getString("NO_17"));
-                intent.putExtra("NO_18", extras.getString("NO_18"));
-                intent.putExtra("NO_19", extras.getString("NO_19"));
-                intent.putExtra("NO_20", extras.getString("NO_20"));
-                intent.putExtra("NO_21", extras.getString("NO_21"));
-                intent.putExtra("NO_22", extras.getString("NO_22"));
-                intent.putExtra("NO_23", extras.getString("NO_23"));
-                intent.putExtra("NO_24", extras.getString("NO_24"));
-                intent.putExtra("NO_25", extras.getString("NO_25"));
-                intent.putExtra("NO_26", extras.getString("NO_26"));
-                intent.putExtra("NO_27", extras.getString("NO_27"));
-                intent.putExtra("NO_28", extras.getString("NO_28"));
-                intent.putExtra("NO_29", extras.getString("NO_29"));
-                intent.putExtra("NO_30", extras.getString("NO_30"));
-                intent.putExtra("NO_31", extras.getString("NO_31"));
-                intent.putExtra("NO_32", extras.getString("NO_32"));
-                intent.putExtra("NO_33", extras.getString("NO_33"));
-                intent.putExtra("NO_34", extras.getString("NO_34"));
-                intent.putExtra("NO_35", extras.getString("NO_35"));
-                intent.putExtra("NO_36", extras.getString("NO_36"));
-                intent.putExtra("NO_38", A38);
-                intent.putExtra("NO_39", A39);
-                intent.putExtra("NO_40", A40);
-                intent.putExtra("NO_41", A41);
-                intent.putExtra("NO_42", A42);
-                intent.putExtra("NO_43", A43);
-                intent.putExtra("NO_44", A44);
-                intent.putExtra("NO_45", A45);
-                intent.putExtra("NO_46", A46);
-                intent.putExtra("NO_47", A47);
-                startActivity(intent);
+                int validatedAnswer = 0;
+
+                if(!_cbQ38ATidakAda.isChecked() && (A38 == null || A38.equals("") || A38.isEmpty()))
+                {
+                    _errorQ38A.setError("error");
+                    _errorQ38A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ38ALainnya.isChecked() && A38 != null && !A38.equals("") && !A38.isEmpty() && (_txtQ38A.getText() == null || _txtQ38A.getText().toString().equals("")) )
+                {
+                    _errorQ38A.setError("error");
+                    _errorQ38A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ38ALainnya.isChecked() && A38 != null && !A38.equals("") && !A38.isEmpty() && _txtQ38A.getText().toString().length() > 50)
+                {
+                    _errorQ38A.setError("error");
+                    _errorQ38A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ38A.setError(null);
+                    _errorQ38A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ39ATidakAda.isChecked() && (A39 == null || A39.equals("") || A39.isEmpty()))
+                {
+                    _errorQ39A.setError("error");
+                    _errorQ39A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ39ALainnya.isChecked() && A39 != null && !A39.equals("") && !A39.isEmpty() && (_txtQ39A.getText() == null || _txtQ39A.getText().toString().equals("")) )
+                {
+                    _errorQ39A.setError("error");
+                    _errorQ39A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ39ALainnya.isChecked() && A39 != null && !A39.equals("") && !A39.isEmpty() && _txtQ39A.getText().toString().length() > 50)
+                {
+                    _errorQ39A.setError("error");
+                    _errorQ39A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ39A.setError(null);
+                    _errorQ39A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ40ATidakAda.isChecked() && (A40 == null || A40.equals("") || A40.isEmpty()))
+                {
+                    _errorQ40A.setError("error");
+                    _errorQ40A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ40ALainnya.isChecked() && A40 != null && !A40.equals("") && !A40.isEmpty() && (_txtQ40A.getText() == null || _txtQ40A.getText().toString().equals("")) )
+                {
+                    _errorQ40A.setError("error");
+                    _errorQ40A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ40ALainnya.isChecked() && A40 != null && !A40.equals("") && !A40.isEmpty() && _txtQ40A.getText().toString().length() > 50)
+                {
+                    _errorQ40A.setError("error");
+                    _errorQ40A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ40A.setError(null);
+                    _errorQ40A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ41ATidakAda.isChecked() && (A41 == null || A41.equals("") || A41.isEmpty()))
+                {
+                    _errorQ41A.setError("error");
+                    _errorQ41A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ41ALainnya.isChecked() && A41 != null && !A41.equals("") && !A41.isEmpty() && (_txtQ41A.getText() == null || _txtQ41A.getText().toString().equals("")) )
+                {
+                    _errorQ41A.setError("error");
+                    _errorQ41A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ41ALainnya.isChecked() && A41 != null && !A41.equals("") && !A41.isEmpty() && _txtQ41A.getText().toString().length() > 50)
+                {
+                    _errorQ41A.setError("error");
+                    _errorQ41A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ41A.setError(null);
+                    _errorQ41A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ42ATidakAda.isChecked() && (A42 == null || A42.equals("") || A42.isEmpty()))
+                {
+                    _errorQ42A.setError("error");
+                    _errorQ42A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ42ALainnya.isChecked() && A42 != null && !A42.equals("") && !A42.isEmpty() && (_txtQ42A.getText() == null || _txtQ42A.getText().toString().equals("")) )
+                {
+                    _errorQ42A.setError("error");
+                    _errorQ42A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ42ALainnya.isChecked() && A42 != null && !A42.equals("") && !A42.isEmpty() && _txtQ42A.getText().toString().length() > 50)
+                {
+                    _errorQ42A.setError("error");
+                    _errorQ42A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ42A.setError(null);
+                    _errorQ42A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ43ATidakAda.isChecked() && (A43 == null || A43.equals("") || A43.isEmpty()))
+                {
+                    _errorQ43A.setError("error");
+                    _errorQ43A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ43ALainnya.isChecked() && A43 != null && !A43.equals("") && !A43.isEmpty() && (_txtQ43A.getText() == null || _txtQ43A.getText().toString().equals("")) )
+                {
+                    _errorQ43A.setError("error");
+                    _errorQ43A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ43ALainnya.isChecked() && A43 != null && !A43.equals("") && !A43.isEmpty() && _txtQ43A.getText().toString().length() > 50)
+                {
+                    _errorQ43A.setError("error");
+                    _errorQ43A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ43A.setError(null);
+                    _errorQ43A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ44ATidakAda.isChecked() && (A44 == null || A44.equals("") || A44.isEmpty()))
+                {
+                    _errorQ44A.setError("error");
+                    _errorQ44A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ44ALainnya.isChecked() && A44 != null && !A44.equals("") && !A44.isEmpty() && (_txtQ44A.getText() == null || _txtQ44A.getText().toString().equals("")) )
+                {
+                    _errorQ44A.setError("error");
+                    _errorQ44A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ44ALainnya.isChecked() && A44 != null && !A44.equals("") && !A44.isEmpty() && _txtQ44A.getText().toString().length() > 50)
+                {
+                    _errorQ44A.setError("error");
+                    _errorQ44A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ44A.setError(null);
+                    _errorQ44A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ45ATidakAda.isChecked() && (A45 == null || A45.equals("") || A45.isEmpty()))
+                {
+                    _errorQ45A.setError("error");
+                    _errorQ45A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ45ALainnya.isChecked() && A45 != null && !A45.equals("") && !A45.isEmpty() && (_txtQ45A.getText() == null || _txtQ45A.getText().toString().equals("")) )
+                {
+                    _errorQ45A.setError("error");
+                    _errorQ45A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ45ALainnya.isChecked() && A45 != null && !A45.equals("") && !A45.isEmpty() && _txtQ45A.getText().toString().length() > 50)
+                {
+                    _errorQ45A.setError("error");
+                    _errorQ45A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ45A.setError(null);
+                    _errorQ45A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(_spQ46A.getSelectedItem().toString().equals("Lainnya") && (_txtQ46A.getText() == null || _txtQ46A.getText().toString().equals("")) )
+                {
+                    _errorQ46A.setError("error");
+                    _errorQ46A.setText("combobox lainnya terpilih, textbox harus terisi");
+                }
+                else if(_spQ46A.getSelectedItem().toString().equals("Lainnya") && _txtQ46A.getText().toString().length() > 50)
+                {
+                    _errorQ46A.setError("error");
+                    _errorQ46A.setText("combobox lainnya terpilih, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ46A.setError(null);
+                    _errorQ46A.setText("");
+                    validatedAnswer++;
+                }
+
+                validatedAnswer++; //no 47 always validated cause of spinner
+
+                if(validatedAnswer == 10)
+                {
+                    Intent intent = new Intent(Blok4Activity.this, Blok5AActivity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    intent.putExtra("NO_38", A38);
+                    intent.putExtra("NO_39", A39);
+                    intent.putExtra("NO_40", A40);
+                    intent.putExtra("NO_41", A41);
+                    intent.putExtra("NO_42", A42);
+                    intent.putExtra("NO_43", A43);
+                    intent.putExtra("NO_44", A44);
+                    intent.putExtra("NO_45", A45);
+                    intent.putExtra("NO_46", A46);
+                    intent.putExtra("NO_47", A47);
+                    startActivity(intent);
+                }
+
+
             }
         });
     }

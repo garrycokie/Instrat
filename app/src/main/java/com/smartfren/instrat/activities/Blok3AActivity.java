@@ -394,7 +394,6 @@ public class Blok3AActivity extends BaseStepsActivity {
                 {
                     _errorQ8A.setError("error");
                     _errorQ8A.setText("merk smartphone lainnya harus terisi");
-                    validatedAnswer++;
                 }
                 else if(A7.equals("Lainnya") && A8 != null && !A8.equals("") && !A8.isEmpty() && A8.length() > 50)
                 {
@@ -471,7 +470,6 @@ public class Blok3AActivity extends BaseStepsActivity {
                 {
                     _errorQ13A.setError("error");
                     _errorQ13A.setText("merk smartphone lainnya harus terisi");
-                    validatedAnswer++;
                 }
                 else if(A12.equals("Lainnya") && A13 != null && !A13.equals("") && !A13.isEmpty() && A13.length() > 50)
                 {
