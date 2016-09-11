@@ -1,17 +1,14 @@
 package com.smartfren.instrat.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 
@@ -59,6 +56,25 @@ public class Blok6Activity extends BaseStepsActivity {
     private CheckBox _cbxAcer;
     private CheckBox _cbxXiaomi;
     private CheckBox _cbxHiSense;
+
+    // cbx labels
+    private TextView _txtSamsungLabel;
+    private TextView _txtBlackBerryLabel;
+    private TextView _txtNokiaLabel;
+    private TextView _txtLenovoLabel;
+    private TextView _txtAdvanLabel;
+    private TextView _txtSonyLabel;
+    private TextView _txtIphoneLabel;
+    private TextView _txtMitoLabel;
+    private TextView _txtLGLabel;
+    private TextView _txtHTCLabel;
+    private TextView _txtPolytronLabel;
+    private TextView _txtOppoLabel;
+    private TextView _txtEvercrossLabel;
+    private TextView _txtAsusLabel;
+    private TextView _txtAcerLabel;
+    private TextView _txtXiaomiLabel;
+    private TextView _txtHiSenseLabel;
 
     //63 Samsung
     private CheckBox _cbxSamsungGalaxyYoung2;
@@ -161,7 +177,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private CheckBox _cbxXiaomiMi4I;
     private CheckBox _cbxXiaomiOther;
 
-    private EditText _txtXiaomiValue;
+    private EditText _txtXiaomiOtherValue;
 
     //96
     private CheckBox _cbxHiSensePureShot;
@@ -200,6 +216,44 @@ public class Blok6Activity extends BaseStepsActivity {
     private EditText _txtTotalTypeAcer;
     private EditText _txtTotalTypeXiaomi;
     private EditText _txtTotalTypeHiSense;
+
+    //Total count label
+    private TextView _txtTotalTypeSamsungLabel;
+    private TextView _txtTotalTypeBlackBerryLabel;
+    private TextView _txtTotalTypeNokiaLabel;
+    private TextView _txtTotalTypeLenovoLabel;
+    private TextView _txtTotalTypeAdvanLabel;
+    private TextView _txtTotalTypeSonyLabel;
+    private TextView _txtTotalTypeIphoneLabel;
+    private TextView _txtTotalTypeMitoLabel;
+    private TextView _txtTotalTypeLGLabel;
+    private TextView _txtTotalTypeHTCLabel;
+    private TextView _txtTotalTypePolytronLabel;
+    private TextView _txtTotalTypeOppoLabel;
+    private TextView _txtTotalTypeEvercrossLabel;
+    private TextView _txtTotalTypeAsusLabel;
+    private TextView _txtTotalTypeAcerLabel;
+    private TextView _txtTotalTypeXiaomiLabel;
+    private TextView _txtTotalTypeHiSenseLabel;
+
+    // error text count
+    private TextView _errorTotalTypeSamsung;
+    private TextView _errorTotalTypeBlackBerry;
+    private TextView _errorTotalTypeNokia;
+    private TextView _errorTotalTypeLenovo;
+    private TextView _errorTotalTypeAdvan;
+    private TextView _errorTotalTypeSony;
+    private TextView _errorTotalTypeIphone;
+    private TextView _errorTotalTypeMito;
+    private TextView _errorTotalTypeLG;
+    private TextView _errorTotalTypeHTC;
+    private TextView _errorTotalTypePolytron;
+    private TextView _errorTotalTypeOppo;
+    private TextView _errorTotalTypeEvercross;
+    private TextView _errorTotalTypeAsus;
+    private TextView _errorTotalTypeAcer;
+    private TextView _errorTotalTypeXiaomi;
+    private TextView _errorTotalTypeHiSense;
 
 
     private String _no_61BValue;
@@ -421,7 +475,7 @@ public class Blok6Activity extends BaseStepsActivity {
         _cbxXiaomiMi4I = (CheckBox) findViewById(R.id.cbxXiaomiMi4I);
         _cbxXiaomiOther = (CheckBox) findViewById(R.id.cbxXiaomiOther);
 
-        _txtXiaomiValue = (EditText) findViewById(R.id.txtXiaomiOterValue);
+        _txtXiaomiOtherValue = (EditText) findViewById(R.id.txtXiaomiOterValue);
 
 
         _cbxHiSensePureShot = (CheckBox) findViewById(R.id.cbxHiSensePure);
@@ -443,6 +497,19 @@ public class Blok6Activity extends BaseStepsActivity {
         _rdgZTEExist = (RadioGroup) findViewById(R.id.radGrIsZTEExist);
         _rdgBoltExist = (RadioGroup) findViewById(R.id.radGrIsBoltExist);
 
+
+        // radio default value
+        _rdgNokiaExist.check(R.id.radIsNokiaExistTrue);
+        _rdgBlackBerryExist.check(R.id.radIsBlackBerryExistTrue);
+        _rdgIphoneExist.check(R.id.radIsIphoneExistTrue);
+        _rdgMitoExist.check(R.id.radIsMitoExistTrue);
+        _rdgHTCExist.check(R.id.radIsHTCExistTrue);
+        _rdgPolytronExist.check(R.id.radIsPolytronExistTrue);
+        _rdgTelFlashExist.check(R.id.radIsTelkomselFlashExistFalse);
+        _rdgHuwaweiExist.check(R.id.radIsHuaweiExistFalse);
+        _rdgZTEExist.check(R.id.radIsZTEExistFalse);
+        _rdgBoltExist.check(R.id.radIsBoltExistFalse);
+
         //Total count
         _txtTotalTypeSamsung= (EditText) findViewById(R.id.txtTotalSamsungTypeValue);
         _txtTotalTypeBlackBerry = (EditText) findViewById(R.id.txtTotalBlackBerryTypeValue);
@@ -462,6 +529,368 @@ public class Blok6Activity extends BaseStepsActivity {
         _txtTotalTypeXiaomi = (EditText) findViewById(R.id.txtTotalXiaomiTypeValue);
         _txtTotalTypeHiSense = (EditText) findViewById(R.id.txtTotalHiSenseTypeValue);
 
+        //Total count label
+        _txtTotalTypeSamsungLabel = (TextView) findViewById(R.id.txtTotalSamsungType);
+        _txtTotalTypeBlackBerryLabel = (TextView) findViewById(R.id.txtTotalBlackBerryType);
+        _txtTotalTypeNokiaLabel = (TextView) findViewById(R.id.txtTotalNokiaType);
+        _txtTotalTypeLenovoLabel = (TextView) findViewById(R.id.txtTotalLenovoType);
+        _txtTotalTypeAdvanLabel = (TextView) findViewById(R.id.txtTotalAdvanType);
+        _txtTotalTypeSonyLabel = (TextView) findViewById(R.id.txtTotalSonyType);
+        _txtTotalTypeIphoneLabel = (TextView) findViewById(R.id.txtTotalIphoneType);
+        _txtTotalTypeMitoLabel = (TextView) findViewById(R.id.txtTotalMitoType);
+        _txtTotalTypeLGLabel = (TextView) findViewById(R.id.txtTotalLGType);
+        _txtTotalTypeHTCLabel = (TextView) findViewById(R.id.txtTotalHTCType);
+        _txtTotalTypePolytronLabel = (TextView) findViewById(R.id.txtTotalPolytronType);
+        _txtTotalTypeOppoLabel = (TextView) findViewById(R.id.txtTotalOppoType);
+        _txtTotalTypeEvercrossLabel = (TextView) findViewById(R.id.txtTotalEvercrossType);
+        _txtTotalTypeAsusLabel = (TextView) findViewById(R.id.txtTotalAsusType);
+        _txtTotalTypeAcerLabel = (TextView) findViewById(R.id.txtTotalAcerType);
+        _txtTotalTypeXiaomiLabel = (TextView) findViewById(R.id.txtTotalXiaomiType);
+        _txtTotalTypeHiSenseLabel = (TextView) findViewById(R.id.txtTotalHiSenseType);
+
+        //Total count error
+        _errorTotalTypeSamsung = (TextView) findViewById(R.id.errorTotalSamsungTypeValue);
+        _errorTotalTypeBlackBerry = (TextView) findViewById(R.id.errorTotalBlackBerryTypeValue);
+        _errorTotalTypeNokia = (TextView) findViewById(R.id.errorTotalNokiaTypeValue);
+        _errorTotalTypeLenovo = (TextView) findViewById(R.id.errorTotalLenovoTypeValue);
+        _errorTotalTypeAdvan = (TextView) findViewById(R.id.errorTotalAdvanTypeValue);
+        _errorTotalTypeSony = (TextView) findViewById(R.id.errorTotalSonyTypeValue);
+        _errorTotalTypeIphone = (TextView) findViewById(R.id.errorTotalIphoneTypeValue);
+        _errorTotalTypeMito = (TextView) findViewById(R.id.errorTotalMitoTypeValue);
+        _errorTotalTypeLG = (TextView) findViewById(R.id.errorTotalLGTypeValue);
+        _errorTotalTypeHTC = (TextView) findViewById(R.id.errorTotalHTCTypeValue);
+        _errorTotalTypePolytron = (TextView) findViewById(R.id.errorTotalPolytronTypeValue);
+        _errorTotalTypeOppo = (TextView) findViewById(R.id.errorTotalOppoTypeValue);
+        _errorTotalTypeEvercross = (TextView) findViewById(R.id.errorTotalEvercrossTypeValue);
+        _errorTotalTypeAsus = (TextView) findViewById(R.id.errorTotalAsusTypeValue);
+        _errorTotalTypeAcer = (TextView) findViewById(R.id.errorTotalAcerTypeValue);
+        _errorTotalTypeXiaomi = (TextView) findViewById(R.id.errorTotalXiaomiTypeValue);
+        _errorTotalTypeHiSense = (TextView) findViewById(R.id.errorTotalHiSenseTypeValue);
+
+        //cbx labels
+
+        _txtSamsungLabel = (TextView) findViewById(R.id.txtSmartphoneSamsung);
+        _txtBlackBerryLabel = (TextView) findViewById(R.id.txtIsBlackberryExsist);
+        _txtNokiaLabel = (TextView) findViewById(R.id.txtIsNokiaExist);
+        _txtLenovoLabel = (TextView) findViewById(R.id.txtLenovoSell);
+        _txtAdvanLabel = (TextView) findViewById(R.id.txtAdvanSell);
+        _txtSonyLabel = (TextView) findViewById(R.id.txtSonySell);
+        _txtIphoneLabel = (TextView) findViewById(R.id.txtIsIphoneExist);
+        _txtMitoLabel = (TextView) findViewById(R.id.txtIsMitoExist);
+        _txtLGLabel = (TextView) findViewById(R.id.txtLGSell);
+        _txtHTCLabel = (TextView) findViewById(R.id.txtIsHTCExist);
+        _txtPolytronLabel = (TextView) findViewById(R.id.txtIsPolytronExist);
+        _txtOppoLabel = (TextView) findViewById(R.id.txtOppoSell);
+        _txtEvercrossLabel = (TextView) findViewById(R.id.txtEvercrossSell);
+        _txtAsusLabel = (TextView) findViewById(R.id.txtAsusSell);
+        _txtAcerLabel = (TextView) findViewById(R.id.txtAcerSell);
+        _txtXiaomiLabel = (TextView) findViewById(R.id.txtXiaomiSell);
+        _txtHiSenseLabel = (TextView) findViewById(R.id.txtHiSenseSell);
+
+        //everything is gone on the beginning
+        _cbxSamsungGalaxyYoung2.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ1.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ2.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ3.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ5.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ7.setVisibility(View.GONE);
+        _cbxSamsungGalaxyJ1Ace.setVisibility(View.GONE);
+        _cbxSamsungGalaxyA3.setVisibility(View.GONE);
+        _cbxSamsungGalaxyA5.setVisibility(View.GONE);
+        _cbxSamsungGalaxyA7.setVisibility(View.GONE);
+        _cbxSamsungGalaxyVPlus.setVisibility(View.GONE);
+        _cbxSamsungGalaxyNote5.setVisibility(View.GONE);
+        _cbxSamsungGalaxyS6.setVisibility(View.GONE);
+        _cbxSamsungGalaxyS7.setVisibility(View.GONE);
+        _cbxSamsungGalaxyS7Edge.setVisibility(View.GONE);
+        _cbxSamsungOther.setVisibility(View.GONE);
+
+        _cbxLenovoA6000.setVisibility(View.GONE);
+        _cbxLenovoA6000Plus.setVisibility(View.GONE);
+        _cbxLenovoA7000.setVisibility(View.GONE);
+        _cbxLenovoP70.setVisibility(View.GONE);
+        _cbxLenovoOther.setVisibility(View.GONE);
+
+        _cbxAdvanS35H.setVisibility(View.GONE);
+        _cbxAdvanS35D.setVisibility(View.GONE);
+        _cbxAdvanS35E.setVisibility(View.GONE);
+        _cbxAdvanOther.setVisibility(View.GONE);
+
+        _cbxXperiaC5.setVisibility(View.GONE);
+        _cbxXperiaE4.setVisibility(View.GONE);
+        _cbxXperiaM5.setVisibility(View.GONE);
+        _cbxXperiaM4.setVisibility(View.GONE);
+        _cbxXperiaOther.setVisibility(View.GONE);
+
+        _cbxLGG4Dual.setVisibility(View.GONE);
+        _cbxLGMagna.setVisibility(View.GONE);
+        _cbxLGG4Stylus.setVisibility(View.GONE);
+        _cbxLGOther.setVisibility(View.GONE);
+
+        _cbxOPPOMirror5.setVisibility(View.GONE);
+        _cbxOPPOJoy3.setVisibility(View.GONE);
+        _cbxOPPOJoyPlus.setVisibility(View.GONE);
+        _cbxOPPONeo3.setVisibility(View.GONE);
+        _cbxOPPONeo5.setVisibility(View.GONE);
+        _cbxOPPOOther.setVisibility(View.GONE);
+
+        _cbxEvercrossA33A.setVisibility(View.GONE);
+        _cbxEvercrossA5P.setVisibility(View.GONE);
+        _cbxEvercrossA21B.setVisibility(View.GONE);
+        _cbxEvercrossA35B.setVisibility(View.GONE);
+        _cbxEvercrossWinner.setVisibility(View.GONE);
+        _cbxEvercrossA54.setVisibility(View.GONE);
+        _cbxEvercrossOther.setVisibility(View.GONE);
+
+        _cbxAsusZenfone2Laser8.setVisibility(View.GONE);
+        _cbxAsusZenfone2Laser16.setVisibility(View.GONE);
+        _cbxAsusZenfoneGO.setVisibility(View.GONE);
+        _cbxAsusZenfone4S.setVisibility(View.GONE);
+        _cbxAsusNewZenfone4S.setVisibility(View.GONE);
+        _cbxAsusZenfone2ZE551ML.setVisibility(View.GONE);
+        _cbxAsusOther.setVisibility(View.GONE);
+
+        _cbxAcerZ220.setVisibility(View.GONE);
+        _cbxAcerZ520.setVisibility(View.GONE);
+        _cbxAcerOther.setVisibility(View.GONE);
+
+        _cbxXiaomiREDMI2Prime.setVisibility(View.GONE);
+        _cbxXiaomiREDMI28GB.setVisibility(View.GONE);
+        _cbxXiaomiREDMI216GB.setVisibility(View.GONE);
+        _cbxXiaomiMi4I.setVisibility(View.GONE);
+        _cbxXiaomiOther.setVisibility(View.GONE);
+
+        _cbxHiSensePureShot.setVisibility(View.GONE);
+        _cbxHiSensePureShotPlus.setVisibility(View.GONE);
+        _cbxHiSenseOther.setVisibility(View.GONE);
+
+        _txtTotalTypeSamsung.setVisibility(View.GONE);
+        _txtTotalTypeBlackBerry.setVisibility(View.GONE);
+        _txtTotalTypeNokia.setVisibility(View.GONE);
+        _txtTotalTypeLenovo.setVisibility(View.GONE);
+        _txtTotalTypeAdvan.setVisibility(View.GONE);
+        _txtTotalTypeSony.setVisibility(View.GONE);
+        _txtTotalTypeIphone.setVisibility(View.GONE);
+        _txtTotalTypeMito.setVisibility(View.GONE);
+        _txtTotalTypeLG.setVisibility(View.GONE);
+        _txtTotalTypeHTC.setVisibility(View.GONE);
+        _txtTotalTypePolytron.setVisibility(View.GONE);
+        _txtTotalTypeOppo.setVisibility(View.GONE);
+        _txtTotalTypeEvercross.setVisibility(View.GONE);
+        _txtTotalTypeAsus.setVisibility(View.GONE);
+        _txtTotalTypeAcer.setVisibility(View.GONE);
+        _txtTotalTypeXiaomi.setVisibility(View.GONE);
+        _txtTotalTypeHiSense.setVisibility(View.GONE);
+
+        _txtTotalTypeSamsungLabel.setVisibility(View.GONE);
+        _txtTotalTypeBlackBerryLabel.setVisibility(View.GONE);
+        _txtTotalTypeNokiaLabel.setVisibility(View.GONE);
+        _txtTotalTypeLenovoLabel.setVisibility(View.GONE);
+        _txtTotalTypeAdvanLabel.setVisibility(View.GONE);
+        _txtTotalTypeSonyLabel.setVisibility(View.GONE);
+        _txtTotalTypeIphoneLabel.setVisibility(View.GONE);
+        _txtTotalTypeMitoLabel.setVisibility(View.GONE);
+        _txtTotalTypeLGLabel.setVisibility(View.GONE);
+        _txtTotalTypeHTCLabel.setVisibility(View.GONE);
+        _txtTotalTypePolytronLabel.setVisibility(View.GONE);
+        _txtTotalTypeOppoLabel.setVisibility(View.GONE);
+        _txtTotalTypeEvercrossLabel.setVisibility(View.GONE);
+        _txtTotalTypeAsusLabel.setVisibility(View.GONE);
+        _txtTotalTypeAcerLabel.setVisibility(View.GONE);
+        _txtTotalTypeXiaomiLabel.setVisibility(View.GONE);
+        _txtTotalTypeHiSenseLabel.setVisibility(View.GONE);
+
+        _rdgBlackBerryExist.setVisibility(View.GONE);
+        _rdgNokiaExist.setVisibility(View.GONE);
+        _rdgIphoneExist.setVisibility(View.GONE);
+        _rdgMitoExist.setVisibility(View.GONE);
+        _rdgHTCExist.setVisibility(View.GONE);
+        _rdgPolytronExist.setVisibility(View.GONE);
+
+        _txtSamsungOtherValue.setVisibility(View.GONE);
+        _txtAdvanOtherValue.setVisibility(View.GONE);
+        _txtLenovoOtherValue.setVisibility(View.GONE);
+        _txtXperiaOtherValue.setVisibility(View.GONE);
+        _txtLGOtherValue.setVisibility(View.GONE);
+        _txtOPPOOtherValue.setVisibility(View.GONE);
+        _txtEvercrossOtherValue.setVisibility(View.GONE);
+        _txtAsusOtherValue.setVisibility(View.GONE);
+        _txtAcerOtherValue.setVisibility(View.GONE);
+        _txtXiaomiOtherValue.setVisibility(View.GONE);
+        _txtHiSenseOtherValue.setVisibility(View.GONE);
+
+        _txtSamsungLabel.setVisibility(View.GONE);
+        _txtBlackBerryLabel.setVisibility(View.GONE);
+        _txtNokiaLabel.setVisibility(View.GONE);
+        _txtLenovoLabel.setVisibility(View.GONE);
+        _txtAdvanLabel.setVisibility(View.GONE);
+        _txtSonyLabel.setVisibility(View.GONE);
+        _txtIphoneLabel.setVisibility(View.GONE);
+        _txtMitoLabel.setVisibility(View.GONE);
+        _txtLGLabel.setVisibility(View.GONE);
+        _txtHTCLabel.setVisibility(View.GONE);
+        _txtPolytronLabel.setVisibility(View.GONE);
+        _txtOppoLabel.setVisibility(View.GONE);
+        _txtEvercrossLabel.setVisibility(View.GONE);
+        _txtAsusLabel.setVisibility(View.GONE);
+        _txtAcerLabel.setVisibility(View.GONE);
+        _txtXiaomiLabel.setVisibility(View.GONE);
+        _txtHiSenseLabel.setVisibility(View.GONE);
+
+        _cbxSamsungOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtSamsungOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtSamsungOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxLenovoOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtLenovoOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtLenovoOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxAdvanOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtAdvanOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtAdvanOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxXperiaOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtXperiaOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtXperiaOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        _cbxLGOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtLGOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtLGOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxOPPOOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtOPPOOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtOPPOOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxEvercrossOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtEvercrossOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtEvercrossOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxAsusOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtAsusOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtAsusOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxAcerOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtAcerOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtAcerOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxXiaomiOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtXiaomiOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtXiaomiOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxHiSenseOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    _txtHiSenseOtherValue.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    _txtHiSenseOtherValue.setVisibility(View.GONE);
+                }
+            }
+        });
 
         _cbxSamsung.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -483,6 +912,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxSamsungGalaxyS7.setVisibility(View.VISIBLE);
                     _cbxSamsungGalaxyS7Edge.setVisibility(View.VISIBLE);
                     _cbxSamsungOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeSamsungLabel.setVisibility(View.VISIBLE);
+                    _txtTotalTypeSamsung.setVisibility(View.VISIBLE);
+                    _txtSamsungLabel.setVisibility(View.VISIBLE);
                 }
                 else
                 {
@@ -502,6 +934,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxSamsungGalaxyS7.setVisibility(View.GONE);
                     _cbxSamsungGalaxyS7Edge.setVisibility(View.GONE);
                     _cbxSamsungOther.setVisibility(View.GONE);
+                    _txtTotalTypeSamsungLabel.setVisibility(View.GONE);
+                    _txtTotalTypeSamsung.setVisibility(View.GONE);
+                    _txtSamsungLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -516,12 +951,18 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxLenovoA7000.setVisibility(View.VISIBLE);
                     _cbxLenovoP70.setVisibility(View.VISIBLE);
                     _cbxLenovoOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeLenovo.setVisibility(View.VISIBLE);
+                    _txtTotalTypeLenovoLabel.setVisibility(View.VISIBLE);
+                    _txtLenovoLabel.setVisibility(View.VISIBLE);
                 }else {
                     _cbxLenovoA6000.setVisibility(View.GONE);
                     _cbxLenovoA6000Plus.setVisibility(View.GONE);
                     _cbxLenovoA7000.setVisibility(View.GONE);
                     _cbxLenovoP70.setVisibility(View.GONE);
                     _cbxLenovoOther.setVisibility(View.GONE);
+                    _txtTotalTypeLenovo.setVisibility(View.GONE);
+                    _txtTotalTypeLenovoLabel.setVisibility(View.GONE);
+                    _txtLenovoLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -535,11 +976,17 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxAdvanS35D.setVisibility(View.VISIBLE);
                     _cbxAdvanS35E.setVisibility(View.VISIBLE);
                     _cbxAdvanOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAdvan.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAdvanLabel.setVisibility(View.VISIBLE);
+                    _txtAdvanLabel.setVisibility(View.VISIBLE);
                 }else {
                     _cbxAdvanS35H.setVisibility(View.GONE);
                     _cbxAdvanS35D.setVisibility(View.GONE);
                     _cbxAdvanS35E.setVisibility(View.GONE);
                     _cbxAdvanOther.setVisibility(View.GONE);
+                    _txtTotalTypeAdvan.setVisibility(View.GONE);
+                    _txtTotalTypeAdvanLabel.setVisibility(View.GONE);
+                    _txtAdvanLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -554,12 +1001,18 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxXperiaM5.setVisibility(View.VISIBLE);
                     _cbxXperiaM4.setVisibility(View.VISIBLE);
                     _cbxXperiaOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeSony.setVisibility(View.VISIBLE);
+                    _txtTotalTypeSonyLabel.setVisibility(View.VISIBLE);
+                    _txtSonyLabel.setVisibility(View.VISIBLE);
                 } else {
                     _cbxXperiaC5.setVisibility(View.GONE);
                     _cbxXperiaE4.setVisibility(View.GONE);
                     _cbxXperiaM5.setVisibility(View.GONE);
                     _cbxXperiaM4.setVisibility(View.GONE);
                     _cbxXperiaOther.setVisibility(View.GONE);
+                    _txtTotalTypeSony.setVisibility(View.GONE);
+                    _txtTotalTypeSonyLabel.setVisibility(View.GONE);
+                    _txtSonyLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -573,11 +1026,17 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxLGMagna.setVisibility(View.VISIBLE);
                     _cbxLGG4Stylus.setVisibility(View.VISIBLE);
                     _cbxLGOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeLG.setVisibility(View.VISIBLE);
+                    _txtTotalTypeLGLabel.setVisibility(View.VISIBLE);
+                    _txtLGLabel.setVisibility(View.VISIBLE);
                 } else {
                     _cbxLGG4Dual.setVisibility(View.GONE);
                     _cbxLGMagna.setVisibility(View.GONE);
                     _cbxLGG4Stylus.setVisibility(View.GONE);
                     _cbxLGOther.setVisibility(View.GONE);
+                    _txtTotalTypeLG.setVisibility(View.GONE);
+                    _txtTotalTypeLGLabel.setVisibility(View.GONE);
+                    _txtLGLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -593,6 +1052,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxOPPONeo3.setVisibility(View.VISIBLE);
                     _cbxOPPONeo5.setVisibility(View.VISIBLE);
                     _cbxOPPOOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeOppo.setVisibility(View.VISIBLE);
+                    _txtTotalTypeOppoLabel.setVisibility(View.VISIBLE);
+                    _txtOppoLabel.setVisibility(View.VISIBLE);
 
                 }else {
                     _cbxOPPOMirror5.setVisibility(View.GONE);
@@ -601,6 +1063,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxOPPONeo3.setVisibility(View.GONE);
                     _cbxOPPONeo5.setVisibility(View.GONE);
                     _cbxOPPOOther.setVisibility(View.GONE);
+                    _txtTotalTypeOppo.setVisibility(View.GONE);
+                    _txtTotalTypeOppoLabel.setVisibility(View.GONE);
+                    _txtOppoLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -617,6 +1082,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxEvercrossWinner.setVisibility(View.VISIBLE);
                     _cbxEvercrossA54.setVisibility(View.VISIBLE);
                     _cbxEvercrossOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeEvercross.setVisibility(View.VISIBLE);
+                    _txtTotalTypeEvercrossLabel.setVisibility(View.VISIBLE);
+                    _txtEvercrossLabel.setVisibility(View.VISIBLE);
 
                 }else {
                     _cbxEvercrossA33A.setVisibility(View.GONE);
@@ -626,6 +1094,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxEvercrossWinner.setVisibility(View.GONE);
                     _cbxEvercrossA54.setVisibility(View.GONE);
                     _cbxEvercrossOther.setVisibility(View.GONE);
+                    _txtTotalTypeEvercross.setVisibility(View.GONE);
+                    _txtTotalTypeEvercrossLabel.setVisibility(View.GONE);
+                    _txtEvercrossLabel.setVisibility(View.GONE);
 
                 }
             }
@@ -643,6 +1114,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxAsusNewZenfone4S.setVisibility(View.VISIBLE);
                     _cbxAsusZenfone2ZE551ML.setVisibility(View.VISIBLE);
                     _cbxAsusOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAsus.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAsusLabel.setVisibility(View.VISIBLE);
+                    _txtAsusLabel.setVisibility(View.VISIBLE);
                 }else {
                     _cbxAsusZenfone2Laser8.setVisibility(View.GONE);
                     _cbxAsusZenfone2Laser16.setVisibility(View.GONE);
@@ -651,6 +1125,9 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxAsusNewZenfone4S.setVisibility(View.GONE);
                     _cbxAsusZenfone2ZE551ML.setVisibility(View.GONE);
                     _cbxAsusOther.setVisibility(View.GONE);
+                    _txtTotalTypeAsus.setVisibility(View.GONE);
+                    _txtTotalTypeAsusLabel.setVisibility(View.GONE);
+                    _txtAsusLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -663,10 +1140,16 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxAcerZ220.setVisibility(View.VISIBLE);
                     _cbxAcerZ520.setVisibility(View.VISIBLE);
                     _cbxAcerOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAcer.setVisibility(View.VISIBLE);
+                    _txtTotalTypeAcerLabel.setVisibility(View.VISIBLE);
+                    _txtAcerLabel.setVisibility(View.VISIBLE);
                 }else {
                     _cbxAcerZ220.setVisibility(View.GONE);
                     _cbxAcerZ520.setVisibility(View.GONE);
                     _cbxAcerOther.setVisibility(View.GONE);
+                    _txtTotalTypeAcer.setVisibility(View.GONE);
+                    _txtTotalTypeAcerLabel.setVisibility(View.GONE);
+                    _txtAcerLabel.setVisibility(View.GONE);
                 }
             }
         });
@@ -680,15 +1163,124 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxXiaomiREDMI216GB.setVisibility(View.VISIBLE);
                     _cbxXiaomiMi4I.setVisibility(View.VISIBLE);
                     _cbxXiaomiOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeXiaomi.setVisibility(View.VISIBLE);
+                    _txtTotalTypeXiaomiLabel.setVisibility(View.VISIBLE);
+                    _txtXiaomiLabel.setVisibility(View.VISIBLE);
                 }else {
                     _cbxXiaomiREDMI2Prime.setVisibility(View.GONE);
                     _cbxXiaomiREDMI28GB.setVisibility(View.GONE);
                     _cbxXiaomiREDMI216GB.setVisibility(View.GONE);
                     _cbxXiaomiMi4I.setVisibility(View.GONE);
                     _cbxXiaomiOther.setVisibility(View.GONE);
+                    _txtTotalTypeXiaomi.setVisibility(View.GONE);
+                    _txtTotalTypeXiaomiLabel.setVisibility(View.GONE);
+                    _txtXiaomiLabel.setVisibility(View.VISIBLE);
                 }
             }
         });
+
+        _cbxBlackBerry.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgBlackBerryExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypeBlackBerry.setVisibility(View.VISIBLE);
+                    _txtTotalTypeBlackBerryLabel.setVisibility(View.VISIBLE);
+                    _txtBlackBerryLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgBlackBerryExist.setVisibility(View.GONE);
+                    _txtTotalTypeBlackBerry.setVisibility(View.GONE);
+                    _txtTotalTypeBlackBerryLabel.setVisibility(View.GONE);
+                    _txtBlackBerryLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxNokia.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgNokiaExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypeNokia.setVisibility(View.VISIBLE);
+                    _txtTotalTypeNokiaLabel.setVisibility(View.VISIBLE);
+                    _txtNokiaLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgNokiaExist.setVisibility(View.GONE);
+                    _txtTotalTypeNokia.setVisibility(View.GONE);
+                    _txtTotalTypeNokiaLabel.setVisibility(View.GONE);
+                    _txtNokiaLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxIphone.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgIphoneExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypeIphone.setVisibility(View.VISIBLE);
+                    _txtTotalTypeIphoneLabel.setVisibility(View.VISIBLE);
+                    _txtIphoneLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgIphoneExist.setVisibility(View.GONE);
+                    _txtTotalTypeIphone.setVisibility(View.GONE);
+                    _txtTotalTypeIphoneLabel.setVisibility(View.GONE);
+                    _txtIphoneLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxMito.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgMitoExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypeMito.setVisibility(View.VISIBLE);
+                    _txtTotalTypeMitoLabel.setVisibility(View.VISIBLE);
+                    _txtMitoLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgMitoExist.setVisibility(View.GONE);
+                    _txtTotalTypeMito.setVisibility(View.GONE);
+                    _txtTotalTypeMitoLabel.setVisibility(View.GONE);
+                    _txtMitoLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxHTC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgHTCExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypeHTC.setVisibility(View.VISIBLE);
+                    _txtTotalTypeHTCLabel.setVisibility(View.VISIBLE);
+                    _txtHTCLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgHTCExist.setVisibility(View.GONE);
+                    _txtTotalTypeHTC.setVisibility(View.GONE);
+                    _txtTotalTypeHTCLabel.setVisibility(View.GONE);
+                    _txtHTCLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        _cbxPolytron.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    _rdgPolytronExist.setVisibility(View.VISIBLE);
+                    _txtTotalTypePolytron.setVisibility(View.VISIBLE);
+                    _txtTotalTypePolytronLabel.setVisibility(View.VISIBLE);
+                    _txtPolytronLabel.setVisibility(View.VISIBLE);
+                }else {
+                    _rdgPolytronExist.setVisibility(View.GONE);
+                    _txtTotalTypePolytron.setVisibility(View.GONE);
+                    _txtTotalTypePolytronLabel.setVisibility(View.GONE);
+                    _txtPolytronLabel.setVisibility(View.GONE);
+                }
+            }
+        });
+
 
         _cbxHiSense.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -698,14 +1290,21 @@ public class Blok6Activity extends BaseStepsActivity {
                     _cbxHiSensePureShot.setVisibility(View.VISIBLE);
                     _cbxHiSensePureShotPlus.setVisibility(View.VISIBLE);
                     _cbxHiSenseOther.setVisibility(View.VISIBLE);
+                    _txtTotalTypeHiSense.setVisibility(View.VISIBLE);
+                    _txtTotalTypeHiSenseLabel.setVisibility(View.VISIBLE);
+                    _txtHiSenseLabel.setVisibility(View.VISIBLE);
                 }else {
+
                     _cbxHiSensePureShot.setVisibility(View.GONE);
                     _cbxHiSensePureShotPlus.setVisibility(View.GONE);
                     _cbxHiSenseOther.setVisibility(View.GONE);
+                    _txtHiSenseLabel.setVisibility(View.GONE);
                 }
             }
         });
 
+
+        int validateCount = 0;
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override
@@ -1015,7 +1614,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                 if(_cbxXiaomiOther.isChecked())
                 {
-                    _no_93Value = GetEditTextValue(_txtXiaomiValue,_no_93Value);
+                    _no_93Value = GetEditTextValue(_txtXiaomiOtherValue,_no_93Value);
                 }
 
                 //94

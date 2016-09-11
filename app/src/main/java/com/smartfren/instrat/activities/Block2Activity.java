@@ -29,6 +29,7 @@ public class Block2Activity extends BaseStepsActivity {
     private EditText _txt4GReason;
     private String _4GReasonValue;
     private TextView _txt4GQuestionLabel;
+    private TextView _error4GReason;
 
     private Bundle extras;
 
@@ -75,6 +76,7 @@ public class Block2Activity extends BaseStepsActivity {
         _txt4GReason = (EditText) findViewById(R.id.txtReason4G);
         _txt4GQuestionLabel.setVisibility(View.GONE);
         _txt4GReason.setVisibility(View.GONE);
+        _error4GReason = (TextView) findViewById(R.id.errorReason4G);
 
         //_spOperator4G.setVisibility(View.GONE);
 
@@ -112,13 +114,13 @@ public class Block2Activity extends BaseStepsActivity {
                     _txt4GQuestionLabel.setVisibility(View.VISIBLE);
                     _txt4GReason.setVisibility(View.VISIBLE);
                     _txt4GQuestionLabel.setText("Mengapa Anda bilang "+ selectedItem +" itu bagus untuk operator 4G?");
-                    _spOperator4GValue = selectedItem;
                 }
                 else
                 {
                     _txt4GQuestionLabel.setVisibility(View.GONE);
                     _txt4GReason.setVisibility(View.GONE);
                 }
+                _spOperator4GValue = selectedItem;
 
             }
 
@@ -148,20 +150,49 @@ public class Block2Activity extends BaseStepsActivity {
 
             @Override
             public void onContinueClicked() {
-                _4GReasonValue = _txt4GReason.getText().toString();
-                Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
 
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", _spOperatorValue);
-                intent.putExtra("NO_4", _spOperator4GValue);
-                intent.putExtra("NO_5", _4GReasonValue);
+                int validatedAnswer = 0;
 
-                startActivity(intent);
+                if(_spOperator4GValue == "Tidak tahu") {
+                    _error4GReason.setError(null);
+                    _error4GReason.setText("");
+                    _4GReasonValue = "";
+                    validatedAnswer ++;
+                }
+                else
+                {
+                    _4GReasonValue = _txt4GReason.getText().toString();
+
+                    if (_4GReasonValue == null || _4GReasonValue.equals("") || _4GReasonValue.isEmpty()) {
+                        _error4GReason.setError("error");
+                        _error4GReason.setText("Alasan harus diisi");
+                    } else if (_4GReasonValue != null && !_4GReasonValue.equals("") && !_4GReasonValue.isEmpty() && _4GReasonValue.length() > 500) {
+                        _error4GReason.setError("error");
+                        _error4GReason.setText("Alasan tidak boleh lebih dari 50 karakter");
+                    } else {
+                        _error4GReason.setError(null);
+                        _error4GReason.setText("");
+                        validatedAnswer++;
+                    }
+                }
+
+
+                if(validatedAnswer ==1)
+                {
+                    Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
+
+                    intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", _spOperatorValue);
+                    intent.putExtra("NO_4", _spOperator4GValue);
+                    intent.putExtra("NO_5", _4GReasonValue);
+
+                    startActivity(intent);
+                }
             }
         });
     }

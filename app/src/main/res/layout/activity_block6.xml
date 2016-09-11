@@ -18,6 +18,16 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
             <TextView
+                android:id="@+id/txtBlock6Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 6 : BENCHMARKING COMPETITOR"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
                 android:id="@+id/txtNonLteSell"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"  android:layout_width="wrap_content"
@@ -77,7 +87,7 @@
 
             <TextView
                 android:id="@+id/txtLteSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apakah kartu SIM Card 4G LTE berikut ini ADA dan DIJUAL di toko ini?
@@ -137,6 +147,7 @@
                 android:id="@+id/txtSmartphone"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="Apakah merek smartphone berikut ini ADA dan DIJUAL di toko ini?
             (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
@@ -227,7 +238,7 @@
 
             <TextView
                 android:id="@+id/txtSmartphoneSamsung"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Samsung (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -311,18 +322,22 @@
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Samsung TIpe Lainnya, Sebutkan"/>
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/txtSamsungOtherValueWrapper"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/txtSamsungOtherValue"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/errorSamsungOtherValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:digits="@string/alfanumerik"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
+
             <TextView
                 android:id="@+id/txtTotalSamsungType"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Samsung yang tersedia?"/>
@@ -334,12 +349,19 @@
                     android:id="@+id/txtTotalSamsungTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalSamsungTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtIsBlackberryExsist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Blackberry (PILIH HANYA 1 JAWABAN)"/>
@@ -362,7 +384,7 @@
 
             <TextView
                 android:id="@+id/txtTotalBlackBerryType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone BlackBerry yang tersedia?"/>
@@ -374,12 +396,19 @@
                     android:id="@+id/txtTotalBlackBerryTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalBlackBerryTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtIsNokiaExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Nokia (PILIH HANYA 1 JAWABAN)"/>
@@ -401,7 +430,7 @@
             </RadioGroup>
             <TextView
                 android:id="@+id/txtTotalNokiaType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Nokia yang tersedia?"/>
@@ -413,12 +442,19 @@
                     android:id="@+id/txtTotalNokiaTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalNokiaTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtLenovoSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Lenovo (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -455,12 +491,19 @@
                     android:id="@+id/txtLenovoOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorLenovoOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtTotalLenovoType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Lenovo yang tersedia?"/>
@@ -472,13 +515,20 @@
                     android:id="@+id/txtTotalLenovoTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalLenovoTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
 
             <TextView
                 android:id="@+id/txtAdvanSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Advan (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -510,12 +560,19 @@
                     android:id="@+id/txtAdvanOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorAdvanOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtTotalAdvanType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Advan yang tersedia?"/>
@@ -527,12 +584,19 @@
                     android:id="@+id/txtTotalAdvanTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalAdvanTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtSonySell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: SONY (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -569,12 +633,19 @@
                     android:id="@+id/txtSonyOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorSonyOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtTotalSonyType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone SONY yang tersedia?"/>
@@ -586,12 +657,19 @@
                     android:id="@+id/txtTotalSonyTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalSonyTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtIsIphoneExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: iPhone (PILIH HANYA 1 JAWABAN)"/>
@@ -613,7 +691,7 @@
             </RadioGroup>
             <TextView
                 android:id="@+id/txtTotalIphoneType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Iphone yang tersedia?"/>
@@ -625,13 +703,20 @@
                     android:id="@+id/txtTotalIphoneTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalIphoneTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
 
             <TextView
                 android:id="@+id/txtIsMitoExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Mito (PILIH HANYA 1 JAWABAN)"/>
@@ -653,7 +738,7 @@
             </RadioGroup>
             <TextView
                 android:id="@+id/txtTotalMitoType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Mito yang tersedia?"/>
@@ -665,13 +750,19 @@
                     android:id="@+id/txtTotalMitoTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalMitoTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtLGSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: LG (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -703,11 +794,18 @@
                     android:id="@+id/txtLGOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorLGOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalLGType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone LG yang tersedia?"/>
@@ -719,13 +817,20 @@
                     android:id="@+id/txtTotalLGTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalLGTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
 
             <TextView
                 android:id="@+id/txtIsHTCExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: HTC (PILIH HANYA 1 JAWABAN)"/>
@@ -747,7 +852,7 @@
             </RadioGroup>
             <TextView
                 android:id="@+id/txtTotalHTCType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone HTC yang tersedia?"/>
@@ -759,13 +864,20 @@
                     android:id="@+id/txtTotalHTCTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalHTCTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
 
             <TextView
                 android:id="@+id/txtIsPolytronExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Polytron (PILIH HANYA 1 JAWABAN)"/>
@@ -787,7 +899,7 @@
             </RadioGroup>
             <TextView
                 android:id="@+id/txtTotalPolytronType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Polytron yang tersedia?"/>
@@ -799,13 +911,20 @@
                     android:id="@+id/txtTotalPolytronTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalPolytronTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
 
             <TextView
                 android:id="@+id/txtOppoSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Oppo (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -847,11 +966,18 @@
                     android:id="@+id/txtOppoOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorOppoOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalOppoType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Oppo yang tersedia?"/>
@@ -863,6 +989,13 @@
                     android:id="@+id/txtTotalOppoTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalOppoTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
@@ -870,7 +1003,7 @@
 
             <TextView
                 android:id="@+id/txtEvercrossSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Evercross (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -917,11 +1050,18 @@
                     android:id="@+id/txtEvercrossOtherValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorEvercrossOtherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalEvercrossType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Evercross yang tersedia?"/>
@@ -933,6 +1073,13 @@
                     android:id="@+id/txtTotalEvercrossTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalEvercrossTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
@@ -940,7 +1087,7 @@
 
             <TextView
                 android:id="@+id/txtAsusSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Asus (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -987,11 +1134,18 @@
                     android:id="@+id/txtAsusOterValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorAsusOterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalAsusType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Asus yang tersedia?"/>
@@ -1003,6 +1157,13 @@
                     android:id="@+id/txtTotalAsusTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalAsusTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
@@ -1010,7 +1171,7 @@
 
             <TextView
                 android:id="@+id/txtAcerSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Acer (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -1037,11 +1198,18 @@
                     android:id="@+id/txtAcerOterValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorAcerOterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalAcerType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Acer yang tersedia?"/>
@@ -1053,12 +1221,19 @@
                     android:id="@+id/txtTotalAcerTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalAcerTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/txtXiaomiSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Xiaomi (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -1095,11 +1270,18 @@
                     android:id="@+id/txtXiaomiOterValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorXiaomiOterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalXiaomiType"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Xiaomi yang tersedia?"/>
@@ -1111,14 +1293,19 @@
                     android:id="@+id/txtTotalXiaomiTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalXiaomiTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
-
-
 
 
             <TextView
                 android:id="@+id/txtHiSenseSell"
-                android:layout_marginTop="40dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smartphone: Hi Sense (BISA LEBIH DARI 1 JAWABAN)"/>
@@ -1126,12 +1313,12 @@
                 android:id="@+id/cbxHiSensePure"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="XPeria C5 Ultra Dual E5563"/>
+                android:text="Hi Sense Pure"/>
             <CheckBox
                 android:id="@+id/cbxHiSensePurePlus"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="XPeria E4 DUAL"/>
+                android:text="Hi Sense Pure plus"/>
 
             <CheckBox
                 android:id="@+id/cbxHiSenseOther"
@@ -1146,11 +1333,17 @@
                     android:id="@+id/txtHiSenseOterValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorHiSenseOterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtTotalHiSenseType"
-                android:layout_marginTop="10dp"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Hi Sense yang tersedia?"/>
@@ -1162,6 +1355,12 @@
                     android:id="@+id/txtTotalHiSenseTypeValue"
                     android:textSize="20dp"  android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/errorTotalHiSenseTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorError"/>
             </android.support.design.widget.TextInputLayout>
 
 
@@ -1169,7 +1368,7 @@
 
             <TextView
                 android:id="@+id/txtIsTelkomselFlashExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apakah ada Modem: Telkomsel Flash (PILIH HANYA 1 JAWABAN)"/>
@@ -1192,7 +1391,7 @@
 
             <TextView
                 android:id="@+id/txtIsHuaweiExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apakah ada Modem: Huawei (PILIH HANYA 1 JAWABAN)"/>
@@ -1215,7 +1414,7 @@
 
             <TextView
                 android:id="@+id/txtIsZTEExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apakah ada Modem: ZTE (PILIH HANYA 1 JAWABAN)"/>
@@ -1238,7 +1437,7 @@
 
             <TextView
                 android:id="@+id/txtIsBoltExist"
-                android:layout_marginTop="10dp"
+
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apakah ada Modem: Bolt (PILIH HANYA 1 JAWABAN)"/>

@@ -15,6 +15,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/txtBlok10Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 8 : TAXONOMY"
+                android:layout_centerHorizontal="true"/>
+            <TextView
                 android:id="@+id/lblQ129"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"

@@ -15,6 +15,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/txtBlok8Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 8 : IDENTITAS TOKO"
+                android:layout_centerHorizontal="true"/>
+            <TextView
                 android:id="@+id/lblQ121"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +49,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
-
+            <TextView
+                android:id="@+id/errorQ122A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <TextView
                 android:id="@+id/lblQ123"
                 android:textSize="20dp"
@@ -55,7 +69,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
-
+            <TextView
+                android:id="@+id/errorQ123A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <TextView
                 android:id="@+id/lblQ124"
                 android:textSize="20dp"
@@ -68,7 +88,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
-
+            <TextView
+                android:id="@+id/errorQ1224"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <TextView
                 android:id="@+id/lblQ125"
                 android:textSize="20dp"
@@ -76,13 +102,27 @@
                 android:layout_height="wrap_content"
                 android:text="@string/page_blok8_q125_text"
                 android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/errorQ125"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <EditText
                 android:id="@+id/txtQ125A"
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:layout_marginBottom="30dp"/>
-
+            <TextView
+                android:id="@+id/errorQ125A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <TextView
                 android:id="@+id/lblQ126"
                 android:textSize="20dp"
@@ -95,7 +135,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"/>
-
+            <TextView
+                android:id="@+id/errorQ126A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
             <TextView
                 android:id="@+id/lblQ127"
                 android:textSize="20dp"
