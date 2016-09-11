@@ -10,19 +10,20 @@
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
-        <!--<TextView
+        <TextView
             android:id="@+id/txtBlock2Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="20dp"
-            android:text="Screening"
-            android:layout_centerHorizontal="true"/>-->
+            android:text="BLOK 2 : ADVOCACY OPERATOR"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:id="@+id/txtOperatorType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txtBlock2Title"
             android:layout_marginTop="30dp"
             android:textSize="20dp"
             android:text="Kartu yang bagus untuk internet-an / data apa ya (SEBUT PERTAMA)? (PILIH HANYA 1 JAWABAN)"
@@ -68,7 +69,16 @@
             android:layout_below="@+id/txtquestion4G"
             android:layout_width="match_parent"
             android:textSize="20dp"
+            android:digits="@string/alfanumerik"
             android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/errorReason4G"
+            android:layout_below="@+id/txtReason4G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorError"/>
     </RelativeLayout>
 
     <include
