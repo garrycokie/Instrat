@@ -15,6 +15,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtBlock5ATitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:text="BLOK 5A : VISIBILITY AND AVAILABILITY SMARTPHONE SMARTFREN"
+                android:gravity="center_horizontal"/>
+
             <TextView
                 android:id="@+id/lblQ48"
                 android:layout_width="wrap_content"
@@ -142,58 +153,77 @@
             <CheckBox android:id="@+id/cbQ53A1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:text="@string/page_checkbox_blok5_q53_a1_text"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a2_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a3_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a4_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a5_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a6_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a7_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a8_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a9_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ53A10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok5_q53_a10_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <EditText
                 android:id="@+id/txtQ53A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/errorQ53A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ54"
@@ -232,67 +262,88 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_smartfren_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56AAsus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_asus_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ABlackberry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blackberry_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56AEvercoss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_evercoss_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ALenovo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_lenovo_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56AMito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_mito_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ANokia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_nokia_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56AOppo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_oppo_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ASamsung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_samsung_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ASony"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_sony_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ATidakAda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_tidakada_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="10dp"/>
             <CheckBox android:id="@+id/cbQ56ALainnya"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_lainnya_text"
+                android:textSize="20dp"
                 android:layout_marginBottom="30dp"/>
             <EditText
                 android:id="@+id/txtQ56A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/errorQ56A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
         </LinearLayout>
     </ScrollView>
 

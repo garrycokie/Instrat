@@ -58,6 +58,10 @@ public class Blok5AActivity extends BaseStepsActivity {
 
     private EditText _txtQ53A;
     private EditText _txtQ56A;
+
+    private TextView _errorQ53A;
+    private TextView _errorQ56A;
+
     private Bundle extras;
 
     public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
@@ -130,6 +134,9 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ56ASony = (CheckBox) findViewById(R.id.cbQ56ASony);
         _cbQ56ATidakAda = (CheckBox) findViewById(R.id.cbQ56ATidakAda);
         _cbQ56ALainnya = (CheckBox) findViewById(R.id.cbQ56ALainnya);
+
+        _errorQ53A = (TextView) findViewById(R.id.errorQ53A);
+        _errorQ56A = (TextView) findViewById(R.id.errorQ56A);
 
         _lblQ53.setVisibility(View.GONE);
         _cbQ53A1.setVisibility(View.GONE);
@@ -1059,71 +1066,120 @@ public class Blok5AActivity extends BaseStepsActivity {
                     A56 = "";
                 }
 
-                Intent intent = new Intent(Blok5AActivity.this, Blok5BActivity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                intent.putExtra("NO_7", extras.getString("NO_7"));
-                intent.putExtra("NO_8", extras.getString("NO_8"));
-                intent.putExtra("NO_9", extras.getString("NO_9"));
-                intent.putExtra("NO_10", extras.getString("NO_10"));
-                intent.putExtra("NO_11", extras.getString("NO_11"));
-                intent.putExtra("NO_12", extras.getString("NO_12"));
-                intent.putExtra("NO_13", extras.getString("NO_13"));
-                intent.putExtra("NO_14", extras.getString("NO_14"));
-                intent.putExtra("NO_15", extras.getString("NO_15"));
-                intent.putExtra("NO_16", extras.getString("NO_16"));
-                intent.putExtra("NO_17", extras.getString("NO_17"));
-                intent.putExtra("NO_18", extras.getString("NO_18"));
-                intent.putExtra("NO_19", extras.getString("NO_19"));
-                intent.putExtra("NO_20", extras.getString("NO_20"));
-                intent.putExtra("NO_21", extras.getString("NO_21"));
-                intent.putExtra("NO_22", extras.getString("NO_22"));
-                intent.putExtra("NO_23", extras.getString("NO_23"));
-                intent.putExtra("NO_24", extras.getString("NO_24"));
-                intent.putExtra("NO_25", extras.getString("NO_25"));
-                intent.putExtra("NO_26", extras.getString("NO_26"));
-                intent.putExtra("NO_27", extras.getString("NO_27"));
-                intent.putExtra("NO_28", extras.getString("NO_28"));
-                intent.putExtra("NO_29", extras.getString("NO_29"));
-                intent.putExtra("NO_30", extras.getString("NO_30"));
-                intent.putExtra("NO_31", extras.getString("NO_31"));
-                intent.putExtra("NO_32", extras.getString("NO_32"));
-                intent.putExtra("NO_33", extras.getString("NO_33"));
-                intent.putExtra("NO_34", extras.getString("NO_34"));
-                intent.putExtra("NO_35", extras.getString("NO_35"));
-                intent.putExtra("NO_36", extras.getString("NO_36"));
-                intent.putExtra("NO_38", extras.getString("NO_38"));
-                intent.putExtra("NO_39", extras.getString("NO_39"));
-                intent.putExtra("NO_40", extras.getString("NO_40"));
-                intent.putExtra("NO_41", extras.getString("NO_41"));
-                intent.putExtra("NO_42", extras.getString("NO_42"));
-                intent.putExtra("NO_43", extras.getString("NO_43"));
-                intent.putExtra("NO_44", extras.getString("NO_44"));
-                intent.putExtra("NO_45", extras.getString("NO_45"));
-                intent.putExtra("NO_46", extras.getString("NO_46"));
-                intent.putExtra("NO_47", extras.getString("NO_47"));
-                intent.putExtra("NO_48", A48);
-                intent.putExtra("NO_49", A49);
-                intent.putExtra("NO_50", A50);
-                intent.putExtra("NO_51", A51);
-                intent.putExtra("NO_52", A52);
-                intent.putExtra("NO_52B", A52B);
-                intent.putExtra("NO_52C", A52C);
-                intent.putExtra("NO_52D", A52D);
-                intent.putExtra("NO_52E", A52E);
-                intent.putExtra("NO_53", A53);
-                intent.putExtra("NO_54", A54);
-                intent.putExtra("NO_55", A55);
-                intent.putExtra("NO_56", A56);
-                startActivity(intent);
+                int validatedAnswer = 0;
+
+                if(_lblQ53.isShown() &&  (A53 == null || A53.equals("") || A53.isEmpty()))
+                {
+                    _errorQ53A.setError("error");
+                    _errorQ53A.setText("pilih salah satu checkbox");
+                }
+                else if(_lblQ53.isShown() && _cbQ53A10.isChecked() && A53 != null && !A53.equals("") && !A53.isEmpty() && (_txtQ53A.getText() == null || _txtQ53A.getText().toString().equals("")) )
+                {
+                    _errorQ53A.setError("error");
+                    _errorQ53A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_lblQ53.isShown() && _cbQ53A10.isChecked() && A53 != null && !A53.equals("") && !A53.isEmpty() && _txtQ53A.getText().toString().length() > 50)
+                {
+                    _errorQ53A.setError("error");
+                    _errorQ53A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ53A.setError(null);
+                    _errorQ53A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!_cbQ56ATidakAda.isChecked() && (A56 == null || A56.equals("") || A56.isEmpty()))
+                {
+                    _errorQ56A.setError("error");
+                    _errorQ56A.setText("pilih salah satu checkbox");
+                }
+                else if(_cbQ56ALainnya.isChecked() && A56 != null && !A56.equals("") && !A56.isEmpty() && (_txtQ56A.getText() == null || _txtQ56A.getText().toString().equals("")) )
+                {
+                    _errorQ56A.setError("error");
+                    _errorQ56A.setText("checkbox lainnya tercentang, textbox harus terisi");
+                }
+                else if(_cbQ56ALainnya.isChecked() && A56 != null && !A56.equals("") && !A56.isEmpty() && _txtQ56A.getText().toString().length() > 50)
+                {
+                    _errorQ56A.setError("error");
+                    _errorQ56A.setText("checkbox lainnya tercentang, textbox harus terisi tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ56A.setError(null);
+                    _errorQ56A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(validatedAnswer == 2)
+                {
+                    Intent intent = new Intent(Blok5AActivity.this, Blok5BActivity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    intent.putExtra("NO_38", extras.getString("NO_38"));
+                    intent.putExtra("NO_39", extras.getString("NO_39"));
+                    intent.putExtra("NO_40", extras.getString("NO_40"));
+                    intent.putExtra("NO_41", extras.getString("NO_41"));
+                    intent.putExtra("NO_42", extras.getString("NO_42"));
+                    intent.putExtra("NO_43", extras.getString("NO_43"));
+                    intent.putExtra("NO_44", extras.getString("NO_44"));
+                    intent.putExtra("NO_45", extras.getString("NO_45"));
+                    intent.putExtra("NO_46", extras.getString("NO_46"));
+                    intent.putExtra("NO_47", extras.getString("NO_47"));
+                    intent.putExtra("NO_48", A48);
+                    intent.putExtra("NO_49", A49);
+                    intent.putExtra("NO_50", A50);
+                    intent.putExtra("NO_51", A51);
+                    intent.putExtra("NO_52", A52);
+                    intent.putExtra("NO_52B", A52B);
+                    intent.putExtra("NO_52C", A52C);
+                    intent.putExtra("NO_52D", A52D);
+                    intent.putExtra("NO_52E", A52E);
+                    intent.putExtra("NO_53", A53);
+                    intent.putExtra("NO_54", A54);
+                    intent.putExtra("NO_55", A55);
+                    intent.putExtra("NO_56", A56);
+                    startActivity(intent);
+                }
             }
         });
 

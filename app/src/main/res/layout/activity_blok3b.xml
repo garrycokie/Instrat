@@ -54,7 +54,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ18A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ19"
@@ -68,7 +77,16 @@
                 android:id="@+id/txtQ19A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ19A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ20"
@@ -82,19 +100,30 @@
                 android:id="@+id/txtQ20A1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ20A2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ20A3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ20A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ21"
@@ -108,6 +137,7 @@
                 android:id="@+id/txtQ21A1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
@@ -120,7 +150,16 @@
                 android:id="@+id/txtQ21A3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ21A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ22"
@@ -148,7 +187,16 @@
                 android:id="@+id/txtQ23A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ23A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ24"
@@ -162,7 +210,16 @@
                 android:id="@+id/txtQ24A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ24A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ25"
@@ -176,19 +233,30 @@
                 android:id="@+id/txtQ25A1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ25A2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ25A3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
+                android:digits="@string/alfanumerik"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/errorQ25A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
 
             <TextView
                 android:id="@+id/lblQ26"
@@ -202,19 +270,30 @@
                 android:id="@+id/txtQ26A1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ26A2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="10dp" />
 
             <EditText
                 android:id="@+id/txtQ26A3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfanumerik"
                 android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/errorQ26A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
         </LinearLayout>
     </ScrollView>
 

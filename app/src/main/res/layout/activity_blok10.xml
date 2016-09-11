@@ -19,8 +19,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:textSize="20dp"
-                android:text="BLOK 8 : TAXONOMY"
+                android:text="BLOK 10 : TAXONOMY"
                 android:layout_centerHorizontal="true"/>
             <TextView
                 android:id="@+id/lblQ129"

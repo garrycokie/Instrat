@@ -41,6 +41,15 @@ public class Blok3BActivity extends BaseStepsActivity {
     private TextView _lblQ21;
     private TextView _lblQ26;
 
+    private TextView _errorQ18A;
+    private TextView _errorQ19A;
+    private TextView _errorQ20A;
+    private TextView _errorQ21A;
+    private TextView _errorQ23A;
+    private TextView _errorQ24A;
+    private TextView _errorQ25A;
+    private TextView _errorQ26A;
+
     private Bundle extras;
     public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
     {
@@ -84,6 +93,15 @@ public class Blok3BActivity extends BaseStepsActivity {
 
         _lblQ21 = (TextView) findViewById(R.id.lblQ21);
         _lblQ26 = (TextView) findViewById(R.id.lblQ26);
+
+        _errorQ18A = (TextView) findViewById(R.id.errorQ18A);
+        _errorQ19A = (TextView) findViewById(R.id.errorQ19A);
+        _errorQ20A = (TextView) findViewById(R.id.errorQ20A);
+        _errorQ21A = (TextView) findViewById(R.id.errorQ21A);
+        _errorQ23A = (TextView) findViewById(R.id.errorQ23A);
+        _errorQ24A = (TextView) findViewById(R.id.errorQ24A);
+        _errorQ25A = (TextView) findViewById(R.id.errorQ25A);
+        _errorQ26A = (TextView) findViewById(R.id.errorQ26A);
 
         _lblQ18.setVisibility(View.GONE);
         _txtQ18A.setVisibility(View.GONE);
@@ -341,6 +359,15 @@ public class Blok3BActivity extends BaseStepsActivity {
                 String A20 = _txtQ20A1.getText().toString() + ";" +_txtQ20A2.getText().toString() + ";" +_txtQ20A3.getText().toString();
                 String A21 = _txtQ21A1.getText().toString() + ";" +_txtQ21A2.getText().toString() + ";" +_txtQ21A3.getText().toString();
 
+                if(A20.equals(";;"))
+                {
+                    A20 = "";
+                }
+                if(A21.equals(";;"))
+                {
+                    A21 = "";
+                }
+
                 String A22 = String.valueOf(_spQ22A.getSelectedItem());
 
                 String A23 = _txtQ23A.getText().toString();
@@ -348,48 +375,215 @@ public class Blok3BActivity extends BaseStepsActivity {
                 String A25 = _txtQ25A1.getText().toString() + ";" +_txtQ25A2.getText().toString() + ";" +_txtQ25A3.getText().toString();
                 String A26 = _txtQ26A1.getText().toString() + ";" +_txtQ26A2.getText().toString() + ";" +_txtQ26A3.getText().toString();
 
-                Intent intent = new Intent(Blok3BActivity.this, Blok4Activity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                intent.putExtra("NO_7", "");
-                intent.putExtra("NO_8", "");
-                intent.putExtra("NO_9", "");
-                intent.putExtra("NO_10", "");
-                intent.putExtra("NO_11", "");
-                intent.putExtra("NO_12", "");
-                intent.putExtra("NO_13", "");
-                intent.putExtra("NO_14", "");
-                intent.putExtra("NO_15", "");
-                intent.putExtra("NO_16", "");
-                intent.putExtra("NO_17", A17);
-                intent.putExtra("NO_18", A18);
-                intent.putExtra("NO_19", A19);
-                intent.putExtra("NO_20", A20);
-                intent.putExtra("NO_21", A21);
-                intent.putExtra("NO_22", A22);
-                intent.putExtra("NO_23", A23);
-                intent.putExtra("NO_24", A24);
-                intent.putExtra("NO_25", A25);
-                intent.putExtra("NO_26", A26);
-                intent.putExtra("NO_27", "");
-                intent.putExtra("NO_28", "");
-                intent.putExtra("NO_29", "");
-                intent.putExtra("NO_30", "");
-                intent.putExtra("NO_31", "");
-                intent.putExtra("NO_32", "");
-                intent.putExtra("NO_33", "");
-                intent.putExtra("NO_34", "");
-                intent.putExtra("NO_35", "");
-                intent.putExtra("NO_36", "");
-                startActivity(intent);
+                if(A25.equals(";;"))
+                {
+                    A25 = "";
+                }
+                if(A26.equals(";;"))
+                {
+                    A26 = "";
+                }
+
+                int validatedAnswer = 0;
+                validatedAnswer++; //no 17 always validated cause of spinner
+
+                if(A17.equals("Lainnya") && (A18 == null || A18.equals("") || A18.isEmpty()))
+                {
+                    _errorQ18A.setError("error");
+                    _errorQ18A.setText("merk smartphone lainnya harus terisi");
+                }
+                else if(A17.equals("Lainnya") && A18 != null && !A18.equals("") && !A18.isEmpty() && A18.length() > 50)
+                {
+                    _errorQ18A.setError("error");
+                    _errorQ18A.setText("merk smartphone lainnya tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ18A.setError(null);
+                    _errorQ18A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A19 == null || A19.equals("") || A19.isEmpty())
+                {
+                    _errorQ19A.setError("error");
+                    _errorQ19A.setText("model harus diisi");
+                }
+                else if(A19 != null && !A19.equals("") && !A19.isEmpty() && A19.length() > 50)
+                {
+                    _errorQ19A.setError("error");
+                    _errorQ19A.setText("model tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ19A.setError(null);
+                    _errorQ19A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A20 == null || A20.equals("") || A20.isEmpty())
+                {
+                    _errorQ20A.setError("error");
+                    _errorQ20A.setText("alasan rekomendasi harus diisi");
+                }
+                else if(A20 != null && !A20.equals("") && !A20.isEmpty() &&
+                        (_txtQ20A1.getText() != null && !_txtQ20A1.getText().toString().equals("") &&  _txtQ20A1.getText().toString().length() > 50)
+                        || (_txtQ20A2.getText() != null && !_txtQ20A2.getText().toString().equals("") &&  _txtQ20A2.getText().toString().length() > 50)
+                        || (_txtQ20A3.getText() != null && !_txtQ20A3.getText().toString().equals("") &&  _txtQ20A3.getText().toString().length() > 50))
+                {
+                    _errorQ20A.setError("error");
+                    _errorQ20A.setText("alasan rekomendasi pada tiap text tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ20A.setError(null);
+                    _errorQ20A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!A17.equals("Smartfren") && (A21 == null || A21.equals("") || A21.isEmpty()))
+                {
+                    _errorQ21A.setError("error");
+                    _errorQ21A.setText("alasan tidak rekomendasi smartfren harus diisi");
+                }
+                else if(!A17.equals("Smartfren") && A21 != null && !A21.equals("") && !A21.isEmpty() &&
+                        (_txtQ21A1.getText() != null && !_txtQ21A1.getText().toString().equals("") &&  _txtQ21A1.getText().toString().length() > 50)
+                        || (_txtQ21A2.getText() != null && !_txtQ21A2.getText().toString().equals("") &&  _txtQ21A2.getText().toString().length() > 50)
+                        || (_txtQ21A3.getText() != null && !_txtQ21A3.getText().toString().equals("") &&  _txtQ21A3.getText().toString().length() > 50))
+                {
+                    _errorQ21A.setError("error");
+                    _errorQ21A.setText("alasan tidak rekomendasi smartfren pada tiap text tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ21A.setError(null);
+                    _errorQ21A.setText("");
+                    validatedAnswer++;
+                }
+
+                validatedAnswer++; //no 22 always validated cause of spinner
+
+                if(A22.equals("Lainnya") && (A23 == null || A23.equals("") || A23.isEmpty()))
+                {
+                    _errorQ23A.setError("error");
+                    _errorQ23A.setText("merk smartphone lainnya harus terisi");
+                }
+                else if(A22.equals("Lainnya") && A23 != null && !A23.equals("") && !A23.isEmpty() && A23.length() > 50)
+                {
+                    _errorQ23A.setError("error");
+                    _errorQ23A.setText("merk smartphone lainnya tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ23A.setError(null);
+                    _errorQ23A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A24 == null || A24.equals("") || A24.isEmpty())
+                {
+                    _errorQ24A.setError("error");
+                    _errorQ24A.setText("model harus diisi");
+                }
+                else if(A24 != null && !A24.equals("") && !A24.isEmpty() && A24.length() > 50)
+                {
+                    _errorQ24A.setError("error");
+                    _errorQ24A.setText("model tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ24A.setError(null);
+                    _errorQ24A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A25 == null || A25.equals("") || A25.isEmpty())
+                {
+                    _errorQ25A.setError("error");
+                    _errorQ25A.setText("alasan rekomendasi harus diisi");
+                }
+                else if(A25 != null && !A25.equals("") && !A25.isEmpty() &&
+                        (_txtQ25A1.getText() != null && !_txtQ25A1.getText().toString().equals("") &&  _txtQ25A1.getText().toString().length() > 50)
+                        || (_txtQ25A2.getText() != null && !_txtQ25A2.getText().toString().equals("") &&  _txtQ25A2.getText().toString().length() > 50)
+                        || (_txtQ25A3.getText() != null && !_txtQ25A3.getText().toString().equals("") &&  _txtQ25A3.getText().toString().length() > 50))
+                {
+                    _errorQ25A.setError("error");
+                    _errorQ25A.setText("alasan rekomendasi pada tiap text tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ25A.setError(null);
+                    _errorQ25A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(!A22.equals("Smartfren") && (A26 == null || A26.equals("") || A26.isEmpty()))
+                {
+                    _errorQ26A.setError("error");
+                    _errorQ26A.setText("alasan tidak rekomendasi smartfren harus diisi");
+                }
+                else if(!A22.equals("Smartfren") && A26 != null && !A26.equals("") && !A26.isEmpty() &&
+                        (_txtQ26A1.getText() != null && !_txtQ26A1.getText().toString().equals("") &&  _txtQ26A1.getText().toString().length() > 50)
+                        || (_txtQ26A2.getText() != null && !_txtQ26A2.getText().toString().equals("") &&  _txtQ26A2.getText().toString().length() > 50)
+                        || (_txtQ26A3.getText() != null && !_txtQ26A3.getText().toString().equals("") &&  _txtQ26A3.getText().toString().length() > 50))
+                {
+                    _errorQ26A.setError("error");
+                    _errorQ26A.setText("alasan tidak rekomendasi smartfren pada tiap text tidak boleh lebih dari 50 karakter");
+                }
+                else
+                {
+                    _errorQ26A.setError(null);
+                    _errorQ26A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(validatedAnswer == 10)
+                {
+                    Intent intent = new Intent(Blok3BActivity.this, Blok4Activity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", "");
+                    intent.putExtra("NO_8", "");
+                    intent.putExtra("NO_9", "");
+                    intent.putExtra("NO_10", "");
+                    intent.putExtra("NO_11", "");
+                    intent.putExtra("NO_12", "");
+                    intent.putExtra("NO_13", "");
+                    intent.putExtra("NO_14", "");
+                    intent.putExtra("NO_15", "");
+                    intent.putExtra("NO_16", "");
+                    intent.putExtra("NO_17", A17);
+                    intent.putExtra("NO_18", A18);
+                    intent.putExtra("NO_19", A19);
+                    intent.putExtra("NO_20", A20);
+                    intent.putExtra("NO_21", A21);
+                    intent.putExtra("NO_22", A22);
+                    intent.putExtra("NO_23", A23);
+                    intent.putExtra("NO_24", A24);
+                    intent.putExtra("NO_25", A25);
+                    intent.putExtra("NO_26", A26);
+                    intent.putExtra("NO_27", "");
+                    intent.putExtra("NO_28", "");
+                    intent.putExtra("NO_29", "");
+                    intent.putExtra("NO_30", "");
+                    intent.putExtra("NO_31", "");
+                    intent.putExtra("NO_32", "");
+                    intent.putExtra("NO_33", "");
+                    intent.putExtra("NO_34", "");
+                    intent.putExtra("NO_35", "");
+                    intent.putExtra("NO_36", "");
+                    startActivity(intent);
+                }
+
+
             }
         });
     }
