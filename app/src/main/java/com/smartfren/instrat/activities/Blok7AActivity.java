@@ -98,7 +98,7 @@ public class Blok7AActivity extends BaseStepsActivity {
         _cbQ105A15 = (CheckBox) findViewById(R.id.cbQ105A15);
 
         _errorQ103A = (TextView) findViewById(R.id.errorQ103A);
-        _errorQ105A = (TextView) findViewById(R.id.errorQ106A);
+        _errorQ105A = (TextView) findViewById(R.id.errorQ105A);
 
 
         _cbQ105A1.setVisibility(View.VISIBLE);
