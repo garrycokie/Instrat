@@ -47,8 +47,8 @@ public class Blok5BActivity extends BaseStepsActivity {
         _spQ60CA = (Spinner) findViewById(R.id.spQ60CA);
         _spQ61A = (Spinner) findViewById(R.id.spQ61A);
 
-        ArrayAdapter<CharSequence> adapterQ57 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q57A_list, android.R.layout.simple_spinner_item);
-        adapterQ57.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ57 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q57A_list, R.layout.spinner_item);
+        adapterQ57.setDropDownViewResource(R.layout.spinner_item);
         _spQ57A.setAdapter(adapterQ57);
 
         if(extras.getString("NO_57") != null)
@@ -59,8 +59,8 @@ public class Blok5BActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, android.R.layout.simple_spinner_item);
-        adapterQBlok5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, R.layout.spinner_item);
+        adapterQBlok5.setDropDownViewResource(R.layout.spinner_item);
         _spQ58A.setAdapter(adapterQBlok5);
         _spQ59A.setAdapter(adapterQBlok5);
         _spQ60A.setAdapter(adapterQBlok5);
@@ -107,8 +107,8 @@ public class Blok5BActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ61 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q61A_list, android.R.layout.simple_spinner_item);
-        adapterQ61.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ61 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q61A_list, R.layout.spinner_item);
+        adapterQ61.setDropDownViewResource(R.layout.spinner_item);
         _spQ61A.setAdapter(adapterQ61);
 
         if(extras.getString("NO_61") != null)

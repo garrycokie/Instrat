@@ -1210,8 +1210,8 @@ public class Blok4Activity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ46 = ArrayAdapter.createFromResource(this, R.array.page_blok4_poster_list, android.R.layout.simple_spinner_item);
-        adapterQ46.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ46 = ArrayAdapter.createFromResource(this, R.array.page_blok4_poster_list, R.layout.spinner_item);
+        adapterQ46.setDropDownViewResource(R.layout.spinner_item);
         _spQ46A.setAdapter(adapterQ46);
 
         if(extras.getString("NO_46") != null)
@@ -1226,8 +1226,8 @@ public class Blok4Activity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ47 = ArrayAdapter.createFromResource(this, R.array.page_blok4_dominasibranding_list, android.R.layout.simple_spinner_item);
-        adapterQ47.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ47 = ArrayAdapter.createFromResource(this, R.array.page_blok4_dominasibranding_list, R.layout.spinner_item);
+        adapterQ47.setDropDownViewResource(R.layout.spinner_item);
         _spQ47A.setAdapter(adapterQ47);
 
         if(extras.getString("NO_47") != null)

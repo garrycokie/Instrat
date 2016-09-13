@@ -150,8 +150,8 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ53A9.setVisibility(View.GONE);
         _cbQ53A10.setVisibility(View.GONE);
 
-        ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, android.R.layout.simple_spinner_item);
-        adapterQBlok5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, R.layout.spinner_item);
+        adapterQBlok5.setDropDownViewResource(R.layout.spinner_item);
         _spQ48A.setAdapter(adapterQBlok5);
         _spQ49A.setAdapter(adapterQBlok5);
         _spQ50A.setAdapter(adapterQBlok5);
@@ -310,8 +310,8 @@ public class Blok5AActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ54 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q54A_list, android.R.layout.simple_spinner_item);
-        adapterQ54.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ54 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q54A_list, R.layout.spinner_item);
+        adapterQ54.setDropDownViewResource(R.layout.spinner_item);
         _spQ54A.setAdapter(adapterQ54);
 
         if(extras.getString("NO_54") != null)
@@ -322,8 +322,8 @@ public class Blok5AActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ55 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q55A_list, android.R.layout.simple_spinner_item);
-        adapterQ55.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ55 = ArrayAdapter.createFromResource(this, R.array.page_blok5_q55A_list, R.layout.spinner_item);
+        adapterQ55.setDropDownViewResource(R.layout.spinner_item);
         _spQ55A.setAdapter(adapterQ55);
 
         if(extras.getString("NO_55") != null)

@@ -117,8 +117,8 @@ public class Blok3CActivity extends BaseStepsActivity {
         _txtQ36A3.setVisibility(View.GONE);
         _lblQ36.setVisibility(View.GONE);
 
-        ArrayAdapter<CharSequence> adapterQ27 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_2000to3000k_list, android.R.layout.simple_spinner_item);
-        adapterQ27.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ27 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_2000to3000k_list, R.layout.spinner_item);
+        adapterQ27.setDropDownViewResource(R.layout.spinner_item);
         _spQ27A.setAdapter(adapterQ27);
 
         if(extras.getString("NO_27") != null)
@@ -179,8 +179,8 @@ public class Blok3CActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ32 = ArrayAdapter.createFromResource(this, R.array.page_blok3_modem_list, android.R.layout.simple_spinner_item);
-        adapterQ32.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ32 = ArrayAdapter.createFromResource(this, R.array.page_blok3_modem_list, R.layout.spinner_item);
+        adapterQ32.setDropDownViewResource(R.layout.spinner_item);
         _spQ32A.setAdapter(adapterQ32);
 
         if(extras.getString("NO_32") != null)

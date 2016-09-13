@@ -117,8 +117,8 @@ public class Blok3BActivity extends BaseStepsActivity {
         _txtQ26A3.setVisibility(View.GONE);
         _lblQ26.setVisibility(View.GONE);
 
-        ArrayAdapter<CharSequence> adapterQ17 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1000to1500k_list, android.R.layout.simple_spinner_item);
-        adapterQ17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ17 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1000to1500k_list, R.layout.spinner_item);
+        adapterQ17.setDropDownViewResource(R.layout.spinner_item);
         _spQ17A.setAdapter(adapterQ17);
 
         if(extras.getString("NO_17") != null)
@@ -179,8 +179,8 @@ public class Blok3BActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ22 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1500to2000k_list, android.R.layout.simple_spinner_item);
-        adapterQ22.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ22 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_1500to2000k_list, R.layout.spinner_item);
+        adapterQ22.setDropDownViewResource(R.layout.spinner_item);
         _spQ22A.setAdapter(adapterQ22);
 
         if(extras.getString("NO_22") != null)
