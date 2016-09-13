@@ -40,6 +40,27 @@ public class MainActivity extends Activity {
     private Button _btnNew;
     private RealmResults<SurveyEntity> _surveyData;
     private RecyclerView _viewSurveyList;
+    private ArrayList<String> _successSentData;
+    private int _totalDataProcessed;
+    private int _totalDataPending;
+    private ProgressDialog progressDialog;
+
+    public void DeleteDataSuccess()
+    {
+        if(_totalDataProcessed == _totalDataPending)
+        {
+            for (String deviceSurveyID : _successSentData) {
+                Realm realm = Realm.getDefaultInstance();
+                SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", deviceSurveyID).findFirst();
+                realm.beginTransaction();
+                deletedSurvey.deleteFromRealm();
+                realm.commitTransaction();
+            }
+            progressDialog.dismiss();
+            finish();
+            startActivity(getIntent());
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,24 +82,24 @@ public class MainActivity extends Activity {
         _viewSurveyList.setLayoutManager(new LinearLayoutManager(this));
         _viewSurveyList.setAdapter(adapter);
 
+        _totalDataProcessed = 0;
+        _totalDataPending = _surveyData.size();
+        _successSentData = new ArrayList<String>();
         _btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "Loading", "Sending data, please wait...", true);
+                progressDialog = ProgressDialog.show(MainActivity.this, "Loading", "Sending data, please wait...", true);
+                final Realm realm = Realm.getDefaultInstance();
+                RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
+                LoginEntity loginEntity = loginData.first();
 
-                for (final SurveyEntity surveyItem : arraySurveyTemp) {
+                for (SurveyEntity surveyItem : arraySurveyTemp) {
                     //TODO: send survey item
-
-                    /*
-                    final Realm realm = Realm.getDefaultInstance();
-                    RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
-                    LoginEntity loginEntity = loginData.first();
-
                     String userID = loginEntity.userID ;
                     String accessToken = loginEntity.accessToken;
                     String kota = loginEntity.namaKota;
                     String tipeSurvey = surveyItem.tipeSurvey;
-                    String deviceSurveyID = surveyItem.deviceSurveyID;
+                    final String deviceSurveyID = surveyItem.deviceSurveyID;
 
                     String NO_1 = surveyItem.b1no1 ;
                     String NO_2 = surveyItem.b1no2 ;
@@ -398,14 +419,10 @@ public class MainActivity extends Activity {
                                     result[0].status = status;
 
                                     if(status.equals("OK")) {
-
-                                        //SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", surveyItem.deviceSurveyID).findFirst();
-                                        //realm.beginTransaction();
-                                        //surveyItem.status = "Sent";
-                                        //realm.copyToRealmOrUpdate(surveyItem);
-                                        //realm.commitTransaction();
+                                        _successSentData.add(deviceSurveyID);
                                     }
-
+                                    _totalDataProcessed++;
+                                    DeleteDataSuccess();
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
@@ -418,10 +435,8 @@ public class MainActivity extends Activity {
                         });
 
                 Volley.newRequestQueue(getApplicationContext()).add(jsonRequest2);
-*/
-                }
 
-                dialog.dismiss();
+                }
                 //finish();
                 //startActivity(getIntent());
 
