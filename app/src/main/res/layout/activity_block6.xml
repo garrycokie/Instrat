@@ -324,7 +324,9 @@
                 android:text="Samsung TIpe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtSamsungOtherValue"
-                android:textSize="20dp"  android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:digits="@string/alfanumerik"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/errorSamsungOtherValue"
@@ -337,8 +339,8 @@
 
             <TextView
                 android:id="@+id/txtTotalSamsungType"
-
-                android:textSize="20dp"  android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Samsung yang tersedia?"/>
             <android.support.design.widget.TextInputLayout
@@ -347,7 +349,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalSamsungTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalSamsungTypeValue"
@@ -440,7 +444,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalNokiaTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:inputType="number"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalNokiaTypeValue"
@@ -489,7 +495,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtLenovoOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:digits="@string/alfanumerik"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorLenovoOtherValue"
@@ -558,7 +566,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtAdvanOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:digits="@string/alfanumerik"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorAdvanOtherValue"
@@ -582,7 +592,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalAdvanTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalAdvanTypeValue"
@@ -631,7 +643,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtSonyOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:digits="@string/alfanumerik"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorSonyOtherValue"
@@ -655,7 +669,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalSonyTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalSonyTypeValue"
@@ -701,7 +717,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalIphoneTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalIphoneTypeValue"
@@ -748,7 +766,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalMitoTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalMitoTypeValue"
@@ -792,7 +812,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtLGOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:digits="@string/alfanumerik"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorLGOtherValue"
@@ -815,7 +837,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalLGTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalLGTypeValue"
@@ -862,7 +886,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalHTCTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalHTCTypeValue"
@@ -909,7 +935,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalPolytronTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalPolytronTypeValue"
@@ -964,7 +992,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtOppoOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:digits="@string/alfanumerik"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorOppoOtherValue"
@@ -987,7 +1017,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtTotalOppoTypeValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorTotalOppoTypeValue"
@@ -1048,7 +1080,9 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/txtEvercrossOtherValue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:digits="@string/alfanumerik"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/errorEvercrossOtherValue"

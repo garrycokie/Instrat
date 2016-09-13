@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -23,7 +24,17 @@ public class Blok9Activity extends BaseStepsActivity {
         super.initActivity(R.layout.activity_blok9);
         extras = getIntent().getExtras();
 
+        ArrayAdapter<CharSequence> adapter128 = ArrayAdapter.createFromResource(this, R.array.page_blok8_tipetoko_list, android.R.layout.simple_spinner_item);
+        adapter128.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _spQ128A.setAdapter(adapter128);
+
         _spQ128A = (Spinner) findViewById(R.id.spQ128A);
+        _Q128AValue =  extras.getString("NO_128");
+
+        if (_Q128AValue != null) {
+            int spinnerPosition = adapter128.getPosition(_Q128AValue);
+            _spQ128A.setSelection(spinnerPosition);
+        }
 
         _spQ128A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

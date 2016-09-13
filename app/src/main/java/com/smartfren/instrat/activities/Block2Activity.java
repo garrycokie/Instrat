@@ -166,7 +166,7 @@ public class Block2Activity extends BaseStepsActivity {
                     if (_4GReasonValue == null || _4GReasonValue.equals("") || _4GReasonValue.isEmpty()) {
                         _error4GReason.setError("error");
                         _error4GReason.setText("Alasan harus diisi");
-                    } else if (_4GReasonValue != null && !_4GReasonValue.equals("") && !_4GReasonValue.isEmpty() && _4GReasonValue.length() > 500) {
+                    } else if (_4GReasonValue != null && !_4GReasonValue.equals("") && !_4GReasonValue.isEmpty() && _4GReasonValue.length() > 50) {
                         _error4GReason.setError("error");
                         _error4GReason.setText("Alasan tidak boleh lebih dari 50 karakter");
                     } else {

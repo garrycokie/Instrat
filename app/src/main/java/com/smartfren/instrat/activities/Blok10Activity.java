@@ -56,22 +56,80 @@ public class Blok10Activity extends BaseStepsActivity {
         _cbQ129A11 = (CheckBox) findViewById(R.id.cbQ129A11);
         _cbQ129A12 = (CheckBox) findViewById(R.id.cbQ129A12);
 
-        _Q129Value = GetCheckBoxValue(_cbQ129A1, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A2, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A3, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A4, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A5, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A6, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A7, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A8, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A9, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A10, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A11, _Q129Value);
-        _Q129Value = GetCheckBoxValue(_cbQ129A12, _Q129Value);
+
+        String values  = extras.getString("NO_36");
+
+        if(values != null && !values.isEmpty() && !values.equals(""))
+        {
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_1_text)))
+            {
+                _cbQ129A1.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_2_text)))
+            {
+                _cbQ129A2.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_3_text)))
+            {
+                _cbQ129A3.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_4_text)))
+            {
+                _cbQ129A4.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_5_text)))
+            {
+                _cbQ129A5.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_6_text)))
+            {
+                _cbQ129A6.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_7_text)))
+            {
+                _cbQ129A7.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_8_text)))
+            {
+                _cbQ129A8.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_9_text)))
+            {
+                _cbQ129A9.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_10_text)))
+            {
+                _cbQ129A10.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_11_text)))
+            {
+                _cbQ129A11.setChecked(true);
+            }
+            if(values.contains(getResources().getString(R.string.page_checkbox_blok10_produkjual_12_text)))
+            {
+                _cbQ129A12.setChecked(true);
+            }
+
+        }
+
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
+                _Q129Value = GetCheckBoxValue(_cbQ129A1, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A2, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A3, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A4, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A5, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A6, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A7, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A8, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A9, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A10, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A11, _Q129Value);
+                _Q129Value = GetCheckBoxValue(_cbQ129A12, _Q129Value);
+
+
                 Intent intent = new Intent(Blok10Activity.this, Blok9Activity.class);
 
                 intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
