@@ -102,7 +102,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/page_checkbox_blok10_produkjual_12_text"
                 android:layout_marginBottom="10dp"/>
-
+            <TextView
+                android:id="@+id/error129A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorError"/>
         </LinearLayout>
 
     </ScrollView>

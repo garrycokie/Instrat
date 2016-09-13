@@ -23,12 +23,12 @@ public class Blok9Activity extends BaseStepsActivity {
         super.onCreate(savedInstanceState);
         super.initActivity(R.layout.activity_blok9);
         extras = getIntent().getExtras();
+        
+        _spQ128A = (Spinner) findViewById(R.id.spQ128A);
 
         ArrayAdapter<CharSequence> adapter128 = ArrayAdapter.createFromResource(this, R.array.page_blok8_tipetoko_list, android.R.layout.simple_spinner_item);
         adapter128.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _spQ128A.setAdapter(adapter128);
-
-        _spQ128A = (Spinner) findViewById(R.id.spQ128A);
         _Q128AValue =  extras.getString("NO_128");
 
         if (_Q128AValue != null) {
