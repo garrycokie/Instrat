@@ -71,7 +71,7 @@ public class Block1Activity extends BaseStepsActivity {
 
         _spStoreType = (Spinner) findViewById(R.id.spinStoreType);
         ArrayAdapter<CharSequence> storeTypeAdapter = new ArrayAdapter<CharSequence>(this,
-                android.R.layout.simple_spinner_item, this._storeTypeSpinnerItems);
+                R.layout.spinner_item, this._storeTypeSpinnerItems);
         _spStoreType.setAdapter(storeTypeAdapter);
 
         this._storeTypeExclusiveSpinnerItems = new String[]{
@@ -97,7 +97,7 @@ public class Block1Activity extends BaseStepsActivity {
 
         _spStoreTypeExclusive = (Spinner) findViewById(R.id.spinStoreTypeExclusive);
         ArrayAdapter<CharSequence> storeTypeExclusiveAdapter = new ArrayAdapter<CharSequence>(this,
-                android.R.layout.simple_spinner_item, this._storeTypeExclusiveSpinnerItems);
+                R.layout.spinner_item, this._storeTypeExclusiveSpinnerItems);
         _spStoreTypeExclusive.setAdapter(storeTypeExclusiveAdapter);
 
         _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);

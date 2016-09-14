@@ -65,12 +65,12 @@ public class Block2Activity extends BaseStepsActivity {
 
         _spOperator= (Spinner) findViewById(R.id.spinOperatorType);
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
-                android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
+                R.layout.spinner_item, this._operatorSpinnerItems);
         _spOperator.setAdapter(adapter);
 
         _spOperator4G= (Spinner) findViewById(R.id.spinOperator4G);
         ArrayAdapter<CharSequence> adapter4G = new ArrayAdapter<CharSequence>(this,
-                android.R.layout.simple_spinner_item, this._operatorSpinnerItems);
+                R.layout.spinner_item, this._operatorSpinnerItems);
         _spOperator4G.setAdapter(adapter4G);
         _txt4GQuestionLabel = (TextView) findViewById(R.id.txtquestion4G);
         _txt4GReason = (EditText) findViewById(R.id.txtReason4G);

@@ -53,7 +53,7 @@ public class Block12Activity extends BaseStepsActivity {
         _Q135ItemArray = new String[]{ "Outlet lama (ada dalam list)", "Outlet baru (tidak ada dalam list)" };
         _spQ135 = (Spinner) findViewById(R.id.spQ135);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, this._Q135ItemArray);
+                R.layout.spinner_item, this._Q135ItemArray);
         _spQ135.setAdapter(adapter);
 
         _txtQ134 = (EditText) findViewById(R.id.txtQ134);

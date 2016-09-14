@@ -158,7 +158,7 @@ public class Blok8Activity extends BaseStepsActivity {
 
         ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this,
                 android.R.layout.simple_spinner_item, list);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataAdapter.setDropDownViewResource(R.layout.spinner_item);
         _spQ121A.setAdapter(dataAdapter);
 
         _txtQ122A = (EditText) findViewById(R.id.txtQ122A);
