@@ -568,7 +568,6 @@ public class Blok6Activity extends BaseStepsActivity {
         _errorTotalTypeHiSense = (TextView) findViewById(R.id.errorTotalHiSenseTypeValue);
 
         //cbx labels
-
         _txtSamsungLabel = (TextView) findViewById(R.id.txtSmartphoneSamsung);
         _txtBlackBerryLabel = (TextView) findViewById(R.id.txtIsBlackberryExsist);
         _txtNokiaLabel = (TextView) findViewById(R.id.txtIsNokiaExist);
@@ -1304,7 +1303,881 @@ public class Blok6Activity extends BaseStepsActivity {
         });
 
 
-        int validateCount = 0;
+        // load value back button
+        _no_61BValue = extras.getString("NO_61B");
+        _no_61CValue = extras.getString("NO_61C");
+        _no_62Value = extras.getString("NO_62");
+        _no_63Value = extras.getString("NO_63");
+        _no_64Value = extras.getString("NO_64");
+        _no_65Value = extras.getString("NO_65");
+        _no_66Value = extras.getString("NO_66");
+        _no_67Value = extras.getString("NO_67");
+        _no_68Value = extras.getString("NO_68");
+        _no_69Value = extras.getString("NO_69");
+        _no_70Value = extras.getString("NO_70");
+        _no_71Value = extras.getString("NO_71");
+        _no_72Value = extras.getString("NO_72");
+        _no_73Value = extras.getString("NO_73");
+        _no_74Value = extras.getString("NO_74");
+        _no_75Value = extras.getString("NO_75");
+        _no_76Value = extras.getString("NO_76");
+        _no_77Value = extras.getString("NO_77");
+        _no_78Value = extras.getString("NO_78");
+        _no_79Value = extras.getString("NO_79");
+        _no_80Value = extras.getString("NO_80");
+        _no_81Value = extras.getString("NO_81");
+        _no_82Value = extras.getString("NO_82");
+        _no_83Value = extras.getString("NO_83");
+        _no_84Value = extras.getString("NO_84");
+        _no_85Value = extras.getString("NO_85");
+        _no_86Value = extras.getString("NO_86");
+        _no_87Value = extras.getString("NO_87");
+        _no_88Value = extras.getString("NO_88");
+        _no_89Value = extras.getString("NO_89");
+        _no_90Value = extras.getString("NO_90");
+        _no_91Value = extras.getString("NO_91");
+        _no_92Value = extras.getString("NO_92");
+        _no_93Value = extras.getString("NO_93");
+        _no_94Value = extras.getString("NO_94");
+        _no_95Value = extras.getString("NO_95");
+        _no_96Value = extras.getString("NO_96");
+        _no_97Value = extras.getString("NO_97");
+        _no_98Value = extras.getString("NO_98");
+        _no_99Value = extras.getString("NO_99");
+        _no_100Value = extras.getString("NO_100");
+
+
+        if(_no_61BValue != null && !_no_61BValue.isEmpty() && !_no_61BValue.equals(""))
+        {
+            if(_no_61BValue.contains("SimPATI"))
+            {
+                _cbxBSimpati.setChecked(true);
+            }
+            if(_no_61BValue.contains("Kartu As"))
+            {
+                _cbxBKartuAs.setChecked(true);
+            }
+            if(_no_61BValue.contains("Kartu Loop"))
+            {
+                _cbxBKartuLoop.setChecked(true);
+            }
+            if(_no_61BValue.contains("IM 3"))
+            {
+                _cbxBBIM3.setChecked(true);
+            }
+            if(_no_61BValue.contains("Mentari"))
+            {
+                _cbxBMentari.setChecked(true);
+            }
+            if(_no_61BValue.contains("XL"))
+            {
+                _cbxBXL.setChecked(true);
+            }
+            if(_no_61BValue.contains("Axis"))
+            {
+                _cbxBAxis.setChecked(true);
+            }
+            if(_no_61BValue.contains("3 (tri)"))
+            {
+                _cbxBTri.setChecked(true);
+            }
+            if(_no_61BValue.contains("smartfren (CDMA)"))
+            {
+                _cbxBSmartfren.setChecked(true);
+            }
+            if(_no_61BValue.contains("Esia (CDMA)"))
+            {
+                _cbxBEsia.setChecked(true);
+            }
+
+        }
+
+        if(_no_61CValue != null && !_no_61CValue.isEmpty() && !_no_61CValue.equals(""))
+        {
+            if(_no_61CValue.contains("SimPATI"))
+            {
+                _cbxCSimpati.setChecked(true);
+            }
+            if(_no_61CValue.contains("Kartu As"))
+            {
+                _cbxCKartuAs.setChecked(true);
+            }
+            if(_no_61CValue.contains("Kartu Loop"))
+            {
+                _cbxCKartuLoop.setChecked(true);
+            }
+            if(_no_61CValue.contains("IM 3"))
+            {
+                _cbxCBIM3.setChecked(true);
+            }
+            if(_no_61CValue.contains("Mentari"))
+            {
+                _cbxCMentari.setChecked(true);
+            }
+            if(_no_61CValue.contains("XL"))
+            {
+                _cbxCXL.setChecked(true);
+            }
+            if(_no_61CValue.contains("Axis"))
+            {
+                _cbxCAxis.setChecked(true);
+            }
+            if(_no_61CValue.contains("3 (tri)"))
+            {
+                _cbxCTri.setChecked(true);
+            }
+            if(_no_61CValue.contains("smartfren"))
+            {
+                _cbxCSmartfren.setChecked(true);
+            }
+            if(_no_61CValue.contains("Bolt"))
+            {
+                _cbxCBolt.setChecked(true);
+            }
+        }
+
+
+        if(_no_62Value != null && !_no_62Value.isEmpty() && !_no_62Value.equals(""))
+        {
+            if(_no_62Value.contains("Samsung"))
+            {
+                _cbxSamsung.setChecked(true);
+
+                _cbxSamsungGalaxyYoung2.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ1.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ2.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ3.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ5.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ7.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyJ1Ace.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyA3.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyA5.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyA7.setVisibility(View.VISIBLE);
+                _txtSamsungOtherValue.setVisibility(View.VISIBLE);
+                _cbxSamsungOther.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyS7.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyVPlus.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyNote5.setVisibility(View.VISIBLE);
+                _cbxSamsungGalaxyS6.setVisibility(View.VISIBLE);
+                _txtTotalTypeSamsungLabel.setVisibility(View.VISIBLE);
+                _txtTotalTypeSamsung.setVisibility(View.VISIBLE);
+
+                if(_no_63Value != null && !_no_63Value.isEmpty() && !_no_63Value.equals(""))
+                {
+
+                    if(_no_63Value.contains("Galaxy YOUNG 2 - G130"))
+                    {
+                        _cbxSamsungGalaxyYoung2.setChecked(true);
+                    }
+                    if(_no_63Value.contains("Galaxy J1"))
+                    {
+                        _cbxSamsungGalaxyJ1.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy J2"))
+                    {
+                        _cbxSamsungGalaxyJ2.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy J3"))
+                    {
+                        _cbxSamsungGalaxyJ3.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy J5"))
+                    {
+                        _cbxSamsungGalaxyJ5.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy J7"))
+                    {
+                        _cbxSamsungGalaxyJ7.setChecked(true);
+
+
+                    }
+                    if(_no_63Value.contains("Galaxy J1 Ace"))
+                    {
+                        _cbxSamsungGalaxyJ1Ace.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy A3"))
+                    {
+                        _cbxSamsungGalaxyA3.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy A5"))
+                    {
+                        _cbxSamsungGalaxyA5.setChecked(true);
+                    }
+                    if(_no_63Value.contains("Galaxy A7"))
+                    {
+                        _cbxSamsungGalaxyA7.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy V Plus"))
+                    {
+                        _cbxSamsungGalaxyVPlus.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy Note 5"))
+                    {
+                        _cbxSamsungGalaxyNote5.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy S6"))
+                    {
+                        _cbxSamsungGalaxyS6.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy S7"))
+                    {
+                        _cbxSamsungGalaxyS7.setChecked(true);
+
+                    }
+                    if(_no_63Value.contains("Galaxy S7 Edge"))
+                    {
+                        _cbxSamsungGalaxyS7Edge.setChecked(true);
+                        _cbxSamsungGalaxyS7Edge.setVisibility(View.VISIBLE);
+
+                    }
+                    if(_no_63Value.contains("Samsung Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxSamsungOther.setChecked(true);
+                        _txtSamsungOtherValue.setText(_no_63Value.substring(_no_63Value.lastIndexOf(";") + 1));
+
+                    }
+                }
+
+                if(_no_64Value != null && !_no_64Value.isEmpty() && !_no_64Value.equals(""))
+                {
+                    _txtTotalTypeSamsung.setText(_no_64Value);
+                }
+
+            }
+            if(_no_62Value.contains("Blackberry"))
+            {
+                _cbxBlackBerry.setChecked(true);
+
+                _rdgBlackBerryExist.setVisibility(View.VISIBLE);
+                _txtTotalTypeBlackBerry.setVisibility(View.VISIBLE);
+                _txtTotalTypeBlackBerryLabel.setVisibility(View.VISIBLE);
+
+                if(_no_65Value != null && !_no_65Value.isEmpty() && !_no_65Value.equals(""))
+                {
+                    if(_no_65Value.equals("Ya"))
+                    {
+                        _rdgBlackBerryExist.check(R.id.radIsBlackBerryExistTrue);
+                    }
+                    else
+                    {
+                        _rdgBlackBerryExist.check(R.id.radIsBlackBerryExistFalse);
+                    }
+                }
+
+                if(_no_66Value != null && !_no_66Value.isEmpty() && !_no_66Value.equals(""))
+                {
+                    _txtTotalTypeBlackBerryLabel.setText(_no_66Value);
+                }
+            }
+            if(_no_62Value.contains("Nokia (Microsoft)"))
+            {
+                _cbxNokia.setChecked(true);
+
+                _rdgNokiaExist.setVisibility(View.VISIBLE);
+                _txtTotalTypeNokia.setVisibility(View.VISIBLE);
+                _txtTotalTypeNokiaLabel.setVisibility(View.VISIBLE);
+
+                if(_no_67Value != null && !_no_67Value.isEmpty() && !_no_67Value.equals(""))
+                {
+                    if(_no_67Value.equals("Ya"))
+                    {
+                        _rdgNokiaExist.check(R.id.radIsNokiaExistTrue);
+                    }
+                    else
+                    {
+                        _rdgNokiaExist.check(R.id.radIsNokiaExistFalse);
+                    }
+                }
+
+                if(_no_68Value != null && !_no_68Value.isEmpty() && !_no_68Value.equals(""))
+                {
+                    _txtTotalTypeNokia.setText(_no_66Value);
+                }
+            }
+            if(_no_62Value.contains("Lenovo"))
+            {
+                _cbxLenovo.setChecked(true);
+
+                _cbxLenovoA6000.setVisibility(View.VISIBLE);
+                _cbxLenovoA6000Plus.setVisibility(View.VISIBLE);
+                _cbxLenovoA7000.setVisibility(View.VISIBLE);
+                _cbxLenovoP70.setVisibility(View.VISIBLE);
+                _cbxLenovoOther.setVisibility(View.VISIBLE);
+                _txtLenovoOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeLenovoLabel.setVisibility(View.VISIBLE);
+                _txtTotalTypeLenovo.setVisibility(View.VISIBLE);
+
+                if(_no_69Value != null && !_no_69Value.isEmpty() && !_no_69Value.equals(""))
+                {
+                    if(_no_69Value.contains("Lenovo A6000"))
+                    {
+                        _cbxLenovoA6000.setChecked(true);
+                    }
+                    if(_no_69Value.contains("Lenovo A6000 PLUS"))
+                    {
+                        _cbxLenovoA6000Plus.setChecked(true);
+                    }
+                    if(_no_69Value.contains("Lenovo A7000 LTE"))
+                    {
+                        _cbxLenovoA7000.setChecked(true);
+                    }
+                    if(_no_69Value.contains("Lenovo P70 16GB LTE"))
+                    {
+                        _cbxLenovoP70.setChecked(true);
+                    }
+                    if(_no_69Value.contains("Lenovo Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxLenovoOther.setChecked(true);
+                        _txtLenovoOtherValue.setText(_no_63Value.substring(_no_63Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_70Value != null && !_no_70Value.isEmpty() && !_no_70Value.equals(""))
+                {
+                    _txtTotalTypeLenovo.setText(_no_70Value);
+
+                }
+            }
+            if(_no_62Value.contains("Advan"))
+            {
+                _cbxCMentari.setChecked(true);
+
+                _cbxAdvan.setVisibility(View.VISIBLE);
+                _cbxAdvanS35H.setVisibility(View.VISIBLE);
+                _cbxAdvanS35D.setVisibility(View.VISIBLE);
+                _cbxAdvanS35E.setVisibility(View.VISIBLE);
+                _cbxAdvanOther.setVisibility(View.VISIBLE);
+                _txtLenovoOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeLenovoLabel.setVisibility(View.VISIBLE);
+                _txtTotalTypeLenovo.setVisibility(View.VISIBLE);
+
+                if(_no_71Value != null && !_no_71Value.isEmpty() && !_no_71Value.equals(""))
+                {
+                    if(_no_71Value.contains("Advan VANDROID S35H"))
+                    {
+                        _cbxAdvanS35H.setChecked(true);
+                    }
+                    if(_no_71Value.contains("Advan VANDROID S35D"))
+                    {
+                        _cbxAdvanS35D.setChecked(true);
+                    }
+                    if(_no_71Value.contains("Advan VANDROID S35E")) {
+                        _cbxLenovoA7000.setChecked(true);
+                    }
+                    if(_no_71Value.contains("ADVAN Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxAdvanOther.setChecked(true);
+                        _txtAdvanOtherValue.setText(_no_71Value.substring(_no_71Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_72Value != null && !_no_72Value.isEmpty() && !_no_72Value.equals(""))
+                {
+                    _txtTotalTypeAdvan.setText(_no_72Value);
+
+                }
+            }
+            if(_no_62Value.contains("Sony"))
+            {
+                _cbxSony.setChecked(true);
+
+                _cbxXperiaC5.setVisibility(View.VISIBLE);
+                _cbxXperiaE4.setVisibility(View.VISIBLE);
+                _cbxXperiaM5.setVisibility(View.VISIBLE);
+                _cbxXperiaM4.setVisibility(View.VISIBLE);
+                _cbxXperiaOther.setVisibility(View.VISIBLE);
+                _txtXperiaOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeSony.setVisibility(View.VISIBLE);
+                _txtTotalTypeSonyLabel.setVisibility(View.VISIBLE);
+
+                if(_no_73Value != null && !_no_73Value.isEmpty() && !_no_73Value.equals(""))
+                {
+                    if(_no_73Value.contains("XPeria C5 Ultra Dual E5563"))
+                    {
+                        _cbxXperiaC5.setChecked(true);
+                    }
+                    if(_no_73Value.contains("XPeria E4 DUAL"))
+                    {
+                        _cbxXperiaE4.setChecked(true);
+                    }
+                    if(_no_73Value.contains("XPeria M5 Dual E5663")) {
+                        _cbxXperiaM5.setChecked(true);
+                    }
+                    if(_no_73Value.contains("XPeria M4 AQUA E2353 NFC LTE3")) {
+                        _cbxXperiaM4.setChecked(true);
+                    }
+                    if(_no_73Value.contains("Sony Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxXperiaOther.setChecked(true);
+                        _txtXperiaOtherValue.setText(_no_73Value.substring(_no_73Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_74Value != null && !_no_74Value.isEmpty() && !_no_74Value.equals(""))
+                {
+                    _txtTotalTypeSony.setText(_no_74Value);
+
+                }
+            }
+            if(_no_62Value.contains("iPhone"))
+            {
+                _cbxIphone.setChecked(true);
+
+                _rdgIphoneExist.setVisibility(View.VISIBLE);
+                _txtTotalTypeIphone.setVisibility(View.VISIBLE);
+                _txtTotalTypeIphoneLabel.setVisibility(View.VISIBLE);
+
+                if(_no_75Value != null && !_no_75Value.isEmpty() && !_no_75Value.equals(""))
+                {
+                    if(_no_75Value.equals("Ya"))
+                    {
+                        _rdgIphoneExist.check(R.id.radIsIphoneExistTrue);
+                    }
+                    else
+                    {
+                        _rdgIphoneExist.check(R.id.radIsIphoneExistFalse);
+                    }
+                }
+
+                if(_no_76Value != null && !_no_76Value.isEmpty() && !_no_76Value.equals(""))
+                {
+                    _txtTotalTypeIphone.setText(_no_76Value);
+                }
+            }
+            if(_no_62Value.contains("Mito"))
+            {
+                _cbxMito.setChecked(true);
+
+                _rdgMitoExist.setVisibility(View.VISIBLE);
+                _txtTotalTypeMito.setVisibility(View.VISIBLE);
+                _txtTotalTypeMitoLabel.setVisibility(View.VISIBLE);
+
+                if(_no_77Value != null && !_no_77Value.isEmpty() && !_no_77Value.equals(""))
+                {
+                    if(_no_77Value.equals("Ya"))
+                    {
+                        _rdgMitoExist.check(R.id.radIsNokiaExistTrue);
+                    }
+                    else
+                    {
+                        _rdgNokiaExist.check(R.id.radIsNokiaExistFalse);
+                    }
+                }
+
+                if(_no_78Value != null && !_no_78Value.isEmpty() && !_no_78Value.equals(""))
+                {
+                    _txtTotalTypeMito.setText(_no_78Value);
+                }
+            }
+            if(_no_62Value.contains("LG"))
+            {
+                _cbxLG.setChecked(true);
+
+                _cbxLGG4Dual.setVisibility(View.VISIBLE);
+                _cbxLGMagna.setVisibility(View.VISIBLE);
+                _cbxLGG4Stylus.setVisibility(View.VISIBLE);
+                _cbxLGOther.setVisibility(View.VISIBLE);
+                _txtLGOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeLG.setVisibility(View.VISIBLE);
+                _txtTotalTypeLGLabel.setVisibility(View.VISIBLE);
+                if(_no_79Value != null && !_no_79Value.isEmpty() && !_no_79Value.equals(""))
+                {
+                    if(_no_79Value.contains("LG G4 DUAL H818P NFC LTE 32GB"))
+                    {
+                        _cbxLGG4Dual.setChecked(true);
+                    }
+                    if(_no_79Value.contains("LG Magna H502F"))
+                    {
+                        _cbxLGMagna.setChecked(true);
+                    }
+                    if(_no_79Value.contains("LG G4 STYLUS")) {
+                        _cbxLGG4Stylus.setChecked(true);
+                    }
+                    if(_no_79Value.contains("LG Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxLGOther.setChecked(true);
+                        _txtLGOtherValue.setText(_no_79Value.substring(_no_79Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_80Value != null && !_no_80Value.isEmpty() && !_no_80Value.equals(""))
+                {
+                    _txtTotalTypeLG.setText(_no_80Value);
+                }
+            }
+            if(_no_62Value.contains("HTC"))
+            {
+                _cbxHTC.setChecked(true);
+
+                _rdgHTCExist.setVisibility(View.VISIBLE);
+                _txtTotalTypeHTC.setVisibility(View.VISIBLE);
+                _txtTotalTypeHTCLabel.setVisibility(View.VISIBLE);
+
+                if(_no_81Value != null && !_no_81Value.isEmpty() && !_no_81Value.equals(""))
+                {
+                    if(_no_81Value.equals("Ya"))
+                    {
+                        _rdgHTCExist.check(R.id.radIsNokiaExistTrue);
+                    }
+                    else
+                    {
+                        _rdgHTCExist.check(R.id.radIsNokiaExistFalse);
+                    }
+                }
+
+                if(_no_82Value != null && !_no_82Value.isEmpty() && !_no_82Value.equals(""))
+                {
+                    _txtTotalTypeHTC.setText(_no_82Value);
+                }
+            }
+            if(_no_62Value.contains("Polytron"))
+            {
+                _cbxPolytron.setChecked(true);
+
+                _rdgPolytronExist.setVisibility(View.VISIBLE);
+                _txtTotalTypePolytron.setVisibility(View.VISIBLE);
+                _txtTotalTypePolytronLabel.setVisibility(View.VISIBLE);
+
+                if(_no_83Value != null && !_no_83Value.isEmpty() && !_no_83Value.equals(""))
+                {
+                    if(_no_83Value.equals("Ya"))
+                    {
+                        _rdgHTCExist.check(R.id.radIsNokiaExistTrue);
+                    }
+                    else
+                    {
+                        _rdgHTCExist.check(R.id.radIsNokiaExistFalse);
+                    }
+                }
+
+                if(_no_84Value != null && !_no_84Value.isEmpty() && !_no_84Value.equals(""))
+                {
+                    _txtTotalTypePolytron.setText(_no_84Value);
+                }
+            }
+            if(_no_62Value.contains("Oppo"))
+            {
+                _cbxOppo.setChecked(true);
+
+                _cbxOPPOMirror5.setVisibility(View.VISIBLE);
+                _cbxOPPOJoy3.setVisibility(View.VISIBLE);
+                _cbxOPPOJoyPlus.setVisibility(View.VISIBLE);
+                _cbxOPPONeo3.setVisibility(View.VISIBLE);
+                _cbxOPPONeo5.setVisibility(View.VISIBLE);
+                _cbxOPPOOther.setVisibility(View.VISIBLE);
+                _txtOPPOOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeOppo.setVisibility(View.VISIBLE);
+                _txtTotalTypeOppoLabel.setVisibility(View.VISIBLE);
+
+                if(_no_85Value != null && !_no_85Value.isEmpty() && !_no_85Value.equals(""))
+                {
+                    if(_no_85Value.contains("XOppo Mirror 5 A51W"))
+                    {
+                        _cbxOPPOMirror5.setChecked(true);
+                    }
+                    if(_no_85Value.contains("XOppo JOY 3 A11W"))
+                    {
+                        _cbxOPPOJoy3.setChecked(true);
+                    }
+                    if(_no_85Value.contains("Oppo JOY PLUS R1011")) {
+                        _cbxOPPOJoyPlus.setChecked(true);
+                    }
+                    if(_no_85Value.contains("Oppo NEO 3 R831K")) {
+                        _cbxOPPONeo3.setChecked(true);
+                    }
+                    if(_no_85Value.contains("Oppo NEO 5")) {
+                        _cbxOPPONeo5.setChecked(true);
+                    }
+                    if(_no_85Value.contains("Oppo Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxOPPOOther.setChecked(true);
+                        _txtOPPOOtherValue.setText(_no_85Value.substring(_no_85Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_86Value != null && !_no_86Value.isEmpty() && !_no_86Value.equals(""))
+                {
+                    _txtTotalTypeOppo.setText(_no_86Value);
+
+                }
+            }
+            if(_no_62Value.contains("Evercross"))
+            {
+                _cbxEvercross.setChecked(true);
+
+                _cbxEvercrossA33A.setVisibility(View.VISIBLE);
+                _cbxEvercrossA5P.setVisibility(View.VISIBLE);
+                _cbxEvercrossA21B.setVisibility(View.VISIBLE);
+                _cbxEvercrossA35B.setVisibility(View.VISIBLE);
+                _cbxEvercrossWinner.setVisibility(View.VISIBLE);
+                _cbxEvercrossA54.setVisibility(View.VISIBLE);
+                _cbxEvercrossOther.setVisibility(View.VISIBLE);
+                _txtEvercrossOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeEvercross.setVisibility(View.VISIBLE);
+                _txtTotalTypeEvercrossLabel.setVisibility(View.VISIBLE);
+
+                if(_no_87Value != null && !_no_87Value.isEmpty() && !_no_87Value.equals(""))
+                {
+                    if(_no_87Value.contains("Evercoss / Cross A33A"))
+                    {
+                        _cbxEvercrossA33A.setChecked(true);
+                    }
+                    if(_no_87Value.contains("Evercoss / Cross A5P"))
+                    {
+                        _cbxEvercrossA5P.setChecked(true);
+                    }
+                    if(_no_87Value.contains("Evercoss / Cross A12B Jump Series")) {
+                        _cbxEvercrossA21B.setChecked(true);
+                    }
+                    if(_no_87Value.contains("Evercoss / Cross A53B3")) {
+                        _cbxEvercrossA35B.setChecked(true);
+                    }
+                    if(_no_85Value.contains("Evercoss / Cross Winner T A74A")) {
+                        _cbxEvercrossWinner.setChecked(true);
+                    }
+                    if(_no_87Value.contains("Evercoss / Cross A54 Jump")) {
+                        _cbxEvercrossA54.setChecked(true);
+                    }
+                    if(_no_87Value.contains("Evercoss / Cross Tipe lainnya, Sebutkan"))
+                    {
+                        _cbxEvercrossOther.setChecked(true);
+                        _txtEvercrossOtherValue.setText(_no_87Value.substring(_no_87Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_88Value != null && !_no_88Value.isEmpty() && !_no_88Value.equals(""))
+                {
+                    _txtTotalTypeEvercross.setText(_no_88Value);
+                }
+            }
+            if(_no_62Value.contains("Asus"))
+            {
+                _cbxAsus.setChecked(true);
+
+                _cbxAsusZenfone2Laser8.setVisibility(View.VISIBLE);
+                _cbxAsusZenfone2Laser16.setVisibility(View.VISIBLE);
+                _cbxAsusZenfoneGO.setVisibility(View.VISIBLE);
+                _cbxAsusZenfone4S.setVisibility(View.VISIBLE);
+                _cbxAsusNewZenfone4S.setVisibility(View.VISIBLE);
+                _cbxAsusZenfone2ZE551ML.setVisibility(View.VISIBLE);
+                _cbxAsusOther.setVisibility(View.VISIBLE);
+                _txtAsusOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeAsus.setVisibility(View.VISIBLE);
+                _txtTotalTypeAsusLabel.setVisibility(View.VISIBLE);
+
+                if(_no_89Value != null && !_no_89Value.isEmpty() && !_no_89Value.equals(""))
+                {
+                    if(_no_89Value.contains("Zenfone 2 Laser 2GB/8GB"))
+                    {
+                        _cbxAsusZenfone2Laser8.setChecked(true);
+                    }
+                    if(_no_89Value.contains("Zenfone 2 Laser 2GB/16GB"))
+                    {
+                        _cbxAsusZenfone2Laser16.setChecked(true);
+                    }
+                    if(_no_89Value.contains("Zenfone 2 Laser 2GB/16GB")) {
+                        _cbxAsusZenfoneGO.setChecked(true);
+                    }
+                    if(_no_89Value.contains("Zenfone 4S 1GB/8GB")) {
+                        _cbxAsusZenfone4S.setChecked(true);
+                    }
+                    if(_no_89Value.contains("New Zenfone 4S 2GB/8GB")) {
+                        _cbxAsusNewZenfone4S.setChecked(true);
+                    }
+                    if(_no_89Value.contains("Zenfone 2 ZE551ML 32GB")) {
+                        _cbxAsusZenfone2ZE551ML.setChecked(true);
+                    }
+                    if(_no_89Value.contains("Asus Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxAsusOther.setChecked(true);
+                        _txtAsusOtherValue.setText(_no_89Value.substring(_no_89Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_90Value != null && !_no_90Value.isEmpty() && !_no_90Value.equals(""))
+                {
+                    _txtTotalTypeAsus.setText(_no_90Value);
+                }
+            }
+            if(_no_62Value.contains("Acer"))
+            {
+                _cbxAcer.setChecked(true);
+
+                _cbxAcerZ220.setVisibility(View.VISIBLE);
+                _cbxAcerZ520.setVisibility(View.VISIBLE);
+                _cbxAcerOther.setVisibility(View.VISIBLE);
+                _txtAcerOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeAcer.setVisibility(View.VISIBLE);
+                _txtTotalTypeAcerLabel.setVisibility(View.VISIBLE);
+
+                if(_no_91Value != null && !_no_91Value.isEmpty() && !_no_91Value.equals(""))
+                {
+                    if(_no_91Value.contains("Acer Liquid Z220 Dual"))
+                    {
+                        _cbxAcerZ220.setChecked(true);
+                    }
+                    if(_no_91Value.contains("Acer Liquid Z520 DUAL"))
+                    {
+                        _cbxAcerZ520.setChecked(true);
+                    }
+                    if(_no_91Value.contains("Acer Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxAcerOther.setChecked(true);
+                        _txtAcerOtherValue.setText(_no_91Value.substring(_no_91Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_92Value != null && !_no_92Value.isEmpty() && !_no_92Value.equals(""))
+                {
+                    _txtTotalTypeAcer.setText(_no_92Value);
+                }
+            }
+            if(_no_62Value.contains("Xiaomi"))
+            {
+                _cbxXiaomi.setChecked(true);
+
+                _cbxXiaomiREDMI2Prime.setVisibility(View.VISIBLE);
+                _cbxXiaomiREDMI28GB.setVisibility(View.VISIBLE);
+                _cbxXiaomiREDMI216GB.setVisibility(View.VISIBLE);
+                _cbxXiaomiMi4I.setVisibility(View.VISIBLE);
+                _cbxXiaomiOther.setVisibility(View.VISIBLE);
+                _txtXiaomiOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeXiaomi.setVisibility(View.VISIBLE);
+                _txtTotalTypeXiaomiLabel.setVisibility(View.VISIBLE);
+
+                if(_no_93Value != null && !_no_93Value.isEmpty() && !_no_93Value.equals(""))
+                {
+                    if(_no_93Value.contains("RED MI2 Prime"))
+                    {
+                        _cbxXiaomiREDMI2Prime.setChecked(true);
+                    }
+                    if(_no_93Value.contains("RED MI2 8GB LTE"))
+                    {
+                        _cbxXiaomiREDMI28GB.setChecked(true);
+                    }
+                    if(_no_93Value.contains("RED MI2 16GB LTEL"))
+                    {
+                        _cbxXiaomiREDMI216GB.setChecked(true);
+                    }
+                    if(_no_93Value.contains("Mi4I LTE"))
+                    {
+                        _cbxXiaomiMi4I.setChecked(true);
+                    }
+                    if(_no_93Value.contains("Xiaomi Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxXiaomiOther.setChecked(true);
+                        _txtXiaomiOtherValue.setText(_no_91Value.substring(_no_91Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_94Value != null && !_no_94Value.isEmpty() && !_no_94Value.equals(""))
+                {
+                    _txtTotalTypeXiaomi.setText(_no_94Value);
+                }
+            }
+            if(_no_62Value.contains("Hi Sense"))
+            {
+                _cbxHiSense.setChecked(true);
+
+                _cbxHiSensePureShot.setVisibility(View.VISIBLE);
+                _cbxHiSensePureShotPlus.setVisibility(View.VISIBLE);
+                _cbxHiSenseOther.setVisibility(View.VISIBLE);
+                _txtHiSenseOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeHiSense.setVisibility(View.VISIBLE);
+                _txtTotalTypeHiSenseLabel.setVisibility(View.VISIBLE);
+
+                if(_no_95Value != null && !_no_95Value.isEmpty() && !_no_95Value.equals(""))
+                {
+                    if(_no_95Value.contains("Pure Shot"))
+                    {
+                        _cbxHiSensePureShot.setChecked(true);
+                    }
+                    if(_no_95Value.contains("Pure Shot Plus"))
+                    {
+                        _cbxHiSensePureShotPlus.setChecked(true);
+                    }
+                    if(_no_95Value.contains("Hi Sense Tipe Lainnya, Sebutkan"))
+                    {
+                        _cbxHiSenseOther.setChecked(true);
+                        _txtHiSenseOtherValue.setText(_no_95Value.substring(_no_95Value.lastIndexOf(";") + 1));
+                    }
+                }
+
+                if(_no_96Value != null && !_no_96Value.isEmpty() && !_no_96Value.equals(""))
+                {
+                    _txtTotalTypeHiSense.setText(_no_90Value);
+                }
+            }
+
+
+            _rdgTelFlashExist.setVisibility(View.VISIBLE);
+
+            if(_no_97Value != null && !_no_97Value.isEmpty() && !_no_97Value.equals(""))
+            {
+                if(_no_97Value.equals("Ya"))
+                {
+                    _rdgTelFlashExist.check(R.id.radIsTelkomselFlashExistTrue);
+                }
+                else
+                {
+                    _rdgTelFlashExist.check(R.id.radIsTelkomselFlashExistFalse);
+                }
+            }
+
+            _rdgHuwaweiExist.setVisibility(View.VISIBLE);
+
+            if(_no_98Value != null && !_no_98Value.isEmpty() && !_no_98Value.equals(""))
+            {
+                if(_no_98Value.equals("Ya"))
+                {
+                    _rdgHuwaweiExist.check(R.id.radIsHuaweiExistTrue);
+                }
+                else
+                {
+                    _rdgHuwaweiExist.check(R.id.radIsHuaweiExistFalse);
+                }
+            }
+
+            _rdgZTEExist.setVisibility(View.VISIBLE);
+
+            if(_no_99Value != null && !_no_99Value.isEmpty() && !_no_99Value.equals(""))
+            {
+                if(_no_99Value.equals("Ya"))
+                {
+                    _rdgZTEExist.check(R.id.radIsZTEExistTrue);
+                }
+                else
+                {
+                    _rdgZTEExist.check(R.id.radIsZTEExistFalse);
+                }
+            }
+
+            _rdgBoltExist.setVisibility(View.VISIBLE);
+
+            if(_no_100Value != null && !_no_100Value.isEmpty() && !_no_100Value.equals(""))
+            {
+                if(_no_100Value.equals("Ya"))
+                {
+                    _rdgBoltExist.check(R.id.radIsBoltExistTrue);
+                }
+                else
+                {
+                    _rdgBoltExist.check(R.id.radIsBoltExistFalse);
+                }
+            }
+
+        }
+
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override
@@ -1757,5 +2630,5 @@ public class Blok6Activity extends BaseStepsActivity {
                 startActivity(intent);
             }
         });
-            }
+    }
 }

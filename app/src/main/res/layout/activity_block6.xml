@@ -321,7 +321,7 @@
                 android:id="@+id/cbxSamsungOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Samsung TIpe Lainnya, Sebutkan"/>
+                android:text="Samsung Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtSamsungOtherValue"
                 android:textSize="20dp"
@@ -488,7 +488,7 @@
                 android:id="@+id/cbxLenovoOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lenovo TIpe Lainnya, Sebutkan "/>
+                android:text="Lenovo Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtLenovoOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -559,7 +559,7 @@
                 android:id="@+id/cbxAdvanOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Advan TIpe Lainnya, Sebutkan "/>
+                android:text="Advan Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtAdvanOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -636,7 +636,7 @@
                 android:id="@+id/cbxSonyOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SONY TIpe Lainnya, Sebutkan "/>
+                android:text="SONY Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtSonyOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -805,7 +805,7 @@
                 android:id="@+id/cbxLGOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LG TIpe Lainnya, Sebutkan"/>
+                android:text="LG Tipe Lainnya, Sebutkan"/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtLGOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -985,7 +985,7 @@
                 android:id="@+id/cbxOppoOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Oppo TIpe Lainnya, Sebutkan "/>
+                android:text="Oppo Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtOppoOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -1073,7 +1073,7 @@
                 android:id="@+id/cbxEvercrossOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EverCross TIpe Lainnya, Sebutkan"/>
+                android:text="Evercoss / Cross Tipe lainnya, Sebutkan"/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtEvercrossOtherValueWrapper"
                 android:layout_width="match_parent"
@@ -1159,7 +1159,7 @@
                 android:id="@+id/cbxAsusOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Asus TIpe Lainnya, Sebutkan "/>
+                android:text="Asus Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtAsusOterValueWrapper"
                 android:layout_width="match_parent"
@@ -1223,7 +1223,7 @@
                 android:id="@+id/cbxAcerOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Acer TIpe Lainnya, Sebutkan"/>
+                android:text="Acer Tipe Lainnya, Sebutkan"/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtAcerOterValueWrapper"
                 android:layout_width="match_parent"
@@ -1295,7 +1295,7 @@
                 android:id="@+id/cbxXiaomiOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xiaomi TIpe Lainnya, Sebutkan"/>
+                android:text="Xiaomi Tipe Lainnya, Sebutkan"/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtXiaomiOterValueWrapper"
                 android:layout_width="match_parent"
@@ -1358,7 +1358,7 @@
                 android:id="@+id/cbxHiSenseOther"
                 android:textSize="20dp"  android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hi Sense TIpe Lainnya, Sebutkan "/>
+                android:text="Hi Sense Tipe Lainnya, Sebutkan "/>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/txtHiSenseOterValueWrapper"
                 android:layout_width="match_parent"
