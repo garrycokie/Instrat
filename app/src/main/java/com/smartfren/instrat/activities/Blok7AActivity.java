@@ -143,8 +143,8 @@ public class Blok7AActivity extends BaseStepsActivity {
             }
         }
 
-        ArrayAdapter<CharSequence> adapterQ104 = ArrayAdapter.createFromResource(this, R.array.page_blok7_nextorder_list, android.R.layout.simple_spinner_item);
-        adapterQ104.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterQ104 = ArrayAdapter.createFromResource(this, R.array.page_blok7_nextorder_list, R.layout.spinner_item);
+        adapterQ104.setDropDownViewResource(R.layout.spinner_item);
         _spQ104A.setAdapter(adapterQ104);
 
         if(extras.getString("NO_104") != null && !extras.getString("NO_104").isEmpty() && !extras.getString("NO_104").equals(""))

@@ -121,7 +121,7 @@ public class Blok3AActivity extends BaseStepsActivity {
         _lblQ16.setVisibility(View.GONE);
 
         ArrayAdapter<CharSequence> adapterQ7 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_lower500_list, R.layout.spinner_item);
-        adapterQ7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterQ7.setDropDownViewResource(R.layout.spinner_item);
         _spQ7A.setAdapter(adapterQ7);
 
         if(extras.getString("NO_7") != null)
@@ -183,7 +183,7 @@ public class Blok3AActivity extends BaseStepsActivity {
         }
 
         ArrayAdapter<CharSequence> adapterQ12 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_500to1000k_list, R.layout.spinner_item);
-        adapterQ12.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterQ12.setDropDownViewResource(R.layout.spinner_item);
         _spQ12A.setAdapter(adapterQ12);
 
         if(extras.getString("NO_12") != null)
