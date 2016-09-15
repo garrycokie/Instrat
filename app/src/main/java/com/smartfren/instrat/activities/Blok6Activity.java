@@ -236,6 +236,23 @@ public class Blok6Activity extends BaseStepsActivity {
     private TextView _txtTotalTypeXiaomiLabel;
     private TextView _txtTotalTypeHiSenseLabel;
 
+    // error checkboxes
+    private TextView _error61b;
+    private TextView _error61c;
+    private TextView _error62;
+    private TextView _errorSamsung;
+    private TextView _errorLenovo;
+    private TextView _errorAdvan;
+    private TextView _errorSony;
+    private TextView _errorLG;
+    private TextView _errorOppo;
+    private TextView _errorEvercross;
+    private TextView _errorAsus;
+    private TextView _errorAcer;
+    private TextView _errorXiaomi;
+    private TextView _errorHiSense;
+
+
     // error text count
     private TextView _errorTotalTypeSamsung;
     private TextView _errorTotalTypeBlackBerry;
@@ -547,6 +564,23 @@ public class Blok6Activity extends BaseStepsActivity {
         _txtTotalTypeAcerLabel = (TextView) findViewById(R.id.txtTotalAcerType);
         _txtTotalTypeXiaomiLabel = (TextView) findViewById(R.id.txtTotalXiaomiType);
         _txtTotalTypeHiSenseLabel = (TextView) findViewById(R.id.txtTotalHiSenseType);
+
+
+        //checkboxes error
+        _error61b = (TextView) findViewById(R.id.error61b);
+        _error61c = (TextView) findViewById(R.id.error61c);
+        _error62 = (TextView) findViewById(R.id.error62);
+        _errorSamsung = (TextView) findViewById(R.id.errorSamsung);
+        _errorLenovo = (TextView) findViewById(R.id.errorLenovo);
+        _errorAdvan = (TextView) findViewById(R.id.errorAdvan);
+        _errorSony = (TextView) findViewById(R.id.errorSony);
+        _errorLG = (TextView) findViewById(R.id.errorLG);
+        _errorOppo = (TextView) findViewById(R.id.errorOppo);
+        _errorEvercross = (TextView) findViewById(R.id.errorEvercross);
+        _errorAsus = (TextView) findViewById(R.id.errorAsus);
+        _errorAcer = (TextView) findViewById(R.id.errorAcer);
+        _errorXiaomi = (TextView) findViewById(R.id.errorXiaomi);
+        _errorHiSense = (TextView) findViewById(R.id.errorHiSense);
 
         //Total count error
         _errorTotalTypeSamsung = (TextView) findViewById(R.id.errorTotalSamsungTypeValue);
@@ -2511,123 +2545,495 @@ public class Blok6Activity extends BaseStepsActivity {
                 //99
                 _no_99Value = GetRedioGroupValue(_rdgZTEExist,_no_99Value);
                 //100
-                //_no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
-                _no_100Value = "Ada";
+                _no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
 
-                Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                intent.putExtra("NO_7", extras.getString("NO_7"));
-                intent.putExtra("NO_8", extras.getString("NO_8"));
-                intent.putExtra("NO_9", extras.getString("NO_9"));
-                intent.putExtra("NO_10", extras.getString("NO_10"));
-                intent.putExtra("NO_11", extras.getString("NO_11"));
-                intent.putExtra("NO_12", extras.getString("NO_12"));
-                intent.putExtra("NO_13", extras.getString("NO_13"));
-                intent.putExtra("NO_14", extras.getString("NO_14"));
-                intent.putExtra("NO_15", extras.getString("NO_15"));
-                intent.putExtra("NO_16", extras.getString("NO_16"));
-                intent.putExtra("NO_17", extras.getString("NO_17"));
-                intent.putExtra("NO_18", extras.getString("NO_18"));
-                intent.putExtra("NO_19", extras.getString("NO_19"));
-                intent.putExtra("NO_20", extras.getString("NO_20"));
-                intent.putExtra("NO_21", extras.getString("NO_21"));
-                intent.putExtra("NO_22", extras.getString("NO_22"));
-                intent.putExtra("NO_23", extras.getString("NO_23"));
-                intent.putExtra("NO_24", extras.getString("NO_24"));
-                intent.putExtra("NO_25", extras.getString("NO_25"));
-                intent.putExtra("NO_26", extras.getString("NO_26"));
-                intent.putExtra("NO_27", extras.getString("NO_27"));
-                intent.putExtra("NO_28", extras.getString("NO_28"));
-                intent.putExtra("NO_29", extras.getString("NO_29"));
-                intent.putExtra("NO_30", extras.getString("NO_30"));
-                intent.putExtra("NO_31", extras.getString("NO_31"));
-                intent.putExtra("NO_32", extras.getString("NO_32"));
-                intent.putExtra("NO_33", extras.getString("NO_33"));
-                intent.putExtra("NO_34", extras.getString("NO_34"));
-                intent.putExtra("NO_35", extras.getString("NO_35"));
-                intent.putExtra("NO_36", extras.getString("NO_36"));
-                intent.putExtra("NO_38", extras.getString("NO_38"));
-                intent.putExtra("NO_39", extras.getString("NO_39"));
-                intent.putExtra("NO_40", extras.getString("NO_40"));
-                intent.putExtra("NO_41", extras.getString("NO_41"));
-                intent.putExtra("NO_42", extras.getString("NO_42"));
-                intent.putExtra("NO_43", extras.getString("NO_43"));
-                intent.putExtra("NO_44", extras.getString("NO_44"));
-                intent.putExtra("NO_45", extras.getString("NO_45"));
-                intent.putExtra("NO_46", extras.getString("NO_46"));
-                intent.putExtra("NO_47", extras.getString("NO_47"));
-                intent.putExtra("NO_48", extras.getString("NO_48"));
-                intent.putExtra("NO_49", extras.getString("NO_49"));
-                intent.putExtra("NO_50", extras.getString("NO_50"));
-                intent.putExtra("NO_51", extras.getString("NO_51"));
-                intent.putExtra("NO_52", extras.getString("NO_52"));
-                intent.putExtra("NO_52B", extras.getString("NO_52B"));
-                intent.putExtra("NO_52C", extras.getString("NO_52C"));
-                intent.putExtra("NO_52D", extras.getString("NO_52D"));
-                intent.putExtra("NO_52E", extras.getString("NO_52E"));
-                intent.putExtra("NO_53", extras.getString("NO_53"));
-                intent.putExtra("NO_54", extras.getString("NO_54"));
-                intent.putExtra("NO_55", extras.getString("NO_55"));
-                intent.putExtra("NO_56", extras.getString("NO_56"));
-                intent.putExtra("NO_57", extras.getString("NO_57"));
-                intent.putExtra("NO_58", extras.getString("NO_58"));
-                intent.putExtra("NO_59", extras.getString("NO_59"));
-                intent.putExtra("NO_60", extras.getString("NO_60"));
-                intent.putExtra("NO_60B", extras.getString("NO_60B"));
-                intent.putExtra("NO_60C", extras.getString("NO_60C"));
-                intent.putExtra("NO_61", extras.getString("NO_61"));
-                intent.putExtra("NO_61B", _no_61BValue);
-                intent.putExtra("NO_61C", _no_61CValue);
-                intent.putExtra("NO_62",_no_62Value);
-                intent.putExtra("NO_63",_no_63Value);
-                intent.putExtra("NO_64",_no_64Value);
-                intent.putExtra("NO_65",_no_65Value);
-                intent.putExtra("NO_66",_no_66Value);
-                intent.putExtra("NO_67",_no_67Value);
-                intent.putExtra("NO_68",_no_68Value);
-                intent.putExtra("NO_69",_no_69Value);
-                intent.putExtra("NO_70",_no_70Value);
-                intent.putExtra("NO_71",_no_71Value);
-                intent.putExtra("NO_72",_no_72Value);
-                intent.putExtra("NO_73",_no_73Value);
-                intent.putExtra("NO_74",_no_74Value);
-                intent.putExtra("NO_75",_no_75Value);
-                intent.putExtra("NO_76",_no_76Value);
-                intent.putExtra("NO_77",_no_77Value);
-                intent.putExtra("NO_78",_no_78Value);
-                intent.putExtra("NO_79",_no_79Value);
-                intent.putExtra("NO_80",_no_80Value);
-                intent.putExtra("NO_81",_no_81Value);
-                intent.putExtra("NO_82",_no_82Value);
-                intent.putExtra("NO_83",_no_83Value);
-                intent.putExtra("NO_84",_no_84Value);
-                intent.putExtra("NO_85",_no_85Value);
-                intent.putExtra("NO_86",_no_86Value);
-                intent.putExtra("NO_87",_no_87Value);
-                intent.putExtra("NO_88",_no_88Value);
-                intent.putExtra("NO_89",_no_89Value);
-                intent.putExtra("NO_90",_no_90Value);
-                intent.putExtra("NO_91",_no_91Value);
-                intent.putExtra("NO_92",_no_92Value);
-                intent.putExtra("NO_93",_no_93Value);
-                intent.putExtra("NO_94",_no_94Value);
-                intent.putExtra("NO_95",_no_95Value);
-                intent.putExtra("NO_96",_no_96Value);
-                intent.putExtra("NO_97",_no_97Value);
-                intent.putExtra("NO_98",_no_98Value);
-                intent.putExtra("NO_99",_no_99Value);
-                intent.putExtra("NO_100", _no_100Value);
 
-                startActivity(intent);
+                int isError =0;
+
+                if(_no_61BValue == null || _no_61BValue.isEmpty() || _no_61BValue.equals(""))
+                {
+                    isError ++;
+                    _error61b.setError("error");
+                    _error61b.setText("Minimal satu (1) checkbox harus dipilih");
+                }
+
+                if(_no_61CValue == null || _no_61CValue.isEmpty() || _no_61CValue.equals(""))
+                {
+                    isError ++;
+                    _error61c.setError("error");
+                    _error61c.setText("Minimal satu (1) checkbox harus dipilih");
+                }
+
+
+                if(_no_62Value != null && !_no_62Value.isEmpty() && !_no_62Value.equals("")) {
+                    if (_no_62Value.contains("Samsung")) {
+
+                        if (_no_63Value != null && !_no_63Value.isEmpty() && !_no_63Value.equals("")) {
+
+                            if (_no_63Value.contains("Samsung Tipe Lainnya, Sebutkan")) {
+
+                                String otherValueText =_txtSamsungOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorSamsung.setError("error");
+                                    _errorSamsung.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            isError++;
+                            _errorSamsung.setError("error");
+                            _errorSamsung.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_64Value == null && _no_64Value.isEmpty() && _no_64Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeSamsung.setError("error");
+                            _errorTotalTypeSamsung.setText("Total harus diisi");
+                        }
+
+                    }
+                    if (_no_62Value.contains("Blackberry")) {
+
+                        if (_no_66Value == null && _no_66Value.isEmpty() && _no_66Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeBlackBerry.setError("error");
+                            _errorTotalTypeBlackBerry.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Nokia (Microsoft)")) {
+
+                        if (_no_68Value == null && _no_68Value.isEmpty() && _no_68Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeNokia.setError("error");
+                            _errorTotalTypeNokia.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Lenovo")) {
+
+                        if (_no_69Value != null && !_no_69Value.isEmpty() && !_no_69Value.equals("")) {
+
+                            if (_no_69Value.contains("Lenovo Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtLenovoOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorLenovo.setError("error");
+                                    _errorLenovo.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            isError++;
+                            _errorLenovo.setError("error");
+                            _errorLenovo.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_70Value == null && _no_70Value.isEmpty() && _no_70Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeLenovo.setError("error");
+                            _errorTotalTypeLenovo.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Advan")) {
+
+                        if (_no_71Value != null && !_no_71Value.isEmpty() && !_no_71Value.equals("")) {
+
+                            if (_no_71Value.contains("ADVAN Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtAdvanOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorAdvan.setError("error");
+                                    _errorAdvan.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            isError ++;
+                            _errorAdvan.setError("error");
+                            _errorAdvan.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_72Value == null && _no_72Value.isEmpty() && _no_72Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeAdvan.setError("error");
+                            _errorTotalTypeAdvan.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Sony")) {
+                        _cbxSony.setChecked(true);
+
+                        if (_no_73Value != null && !_no_73Value.isEmpty() && !_no_73Value.equals("")) {
+
+                            if (_no_73Value.contains("Sony Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtXperiaOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorSony.setError("error");
+                                    _errorSony.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            isError ++;
+                            _errorSony.setError("error");
+                            _errorSony.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_74Value == null && _no_74Value.isEmpty() && _no_74Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeSony.setError("error");
+                            _errorTotalTypeSony.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("iPhone")) {
+
+                        if (_no_76Value == null && _no_76Value.isEmpty() && _no_76Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeIphone.setError("error");
+                            _errorTotalTypeIphone.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Mito")) {
+
+                        if (_no_78Value == null && _no_78Value.isEmpty() && _no_78Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeMito.setError("error");
+                            _errorTotalTypeMito.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("LG")) {
+
+                        if (_no_79Value != null && !_no_79Value.isEmpty() && !_no_79Value.equals("")) {
+
+                            if (_no_79Value.contains("LG Tipe Lainnya, Sebutkan")) {
+                                isError ++;
+                                _errorLG.setError("error");
+                                _errorLG.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorLG.setError("error");
+                            _errorLG.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_80Value == null && _no_80Value.isEmpty() && _no_80Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeLG.setError("error");
+                            _errorTotalTypeLG.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("HTC")) {
+
+                        if (_no_82Value == null && _no_82Value.isEmpty() && _no_82Value.equals("")) {
+                            _txtTotalTypeHTC.setText(_no_82Value);
+                        }
+                    }
+                    if (_no_62Value.contains("Polytron")) {
+                        if (_no_84Value != null && _no_84Value.isEmpty() && _no_84Value.equals("")) {
+                            _txtTotalTypePolytron.setText(_no_84Value);
+                        }
+                    }
+                    if (_no_62Value.contains("Oppo")) {
+
+
+                        if (_no_85Value != null && !_no_85Value.isEmpty() && !_no_85Value.equals("")) {
+
+                            if (_no_85Value.contains("Oppo Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtOPPOOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorOppo.setError("error");
+                                    _errorOppo.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorOppo.setError("error");
+                            _errorOppo.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_86Value == null && _no_86Value.isEmpty() && _no_86Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeOppo.setError("error");
+                            _errorTotalTypeOppo.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Evercross")) {
+
+                        if (_no_87Value != null && !_no_87Value.isEmpty() && !_no_87Value.equals("")) {
+
+                            if (_no_87Value.contains("Evercoss / Cross Tipe lainnya, Sebutkan")) {
+                                String otherValueText =_txtEvercrossOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorEvercross.setError("error");
+                                    _errorEvercross.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+
+                        }
+                        else {
+                            isError ++;
+                            _errorEvercross.setError("error");
+                            _errorEvercross.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_88Value == null && _no_88Value.isEmpty() && _no_88Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeEvercross.setError("error");
+                            _errorTotalTypeEvercross.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Asus")) {
+
+                        if (_no_89Value != null && !_no_89Value.isEmpty() && !_no_89Value.equals("")) {
+
+                            if (_no_89Value.contains("Asus Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtAsusOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorAsus.setError("error");
+                                    _errorAsus.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorAsus.setError("error");
+                            _errorAsus.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_90Value == null && _no_90Value.isEmpty() && _no_90Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeAsus.setError("error");
+                            _errorTotalTypeAsus.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Acer")) {
+
+                        if (_no_91Value != null && !_no_91Value.isEmpty() && !_no_91Value.equals("")) {
+
+                            if (_no_91Value.contains("Acer Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtAcerOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorAcer.setError("error");
+                                    _errorAcer.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorAcer.setError("error");
+                            _errorAcer.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_92Value == null && _no_92Value.isEmpty() && _no_92Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeAcer.setError("error");
+                            _errorTotalTypeAcer.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Xiaomi")) {
+
+                        if (_no_93Value != null && !_no_93Value.isEmpty() && !_no_93Value.equals("")) {
+
+                            if (_no_93Value.contains("Xiaomi Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtXiaomiOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorXiaomi.setError("error");
+                                    _errorXiaomi.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorXiaomi.setError("error");
+                            _errorXiaomi.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_94Value == null && _no_94Value.isEmpty() && _no_94Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeXiaomi.setError("error");
+                            _errorTotalTypeXiaomi.setText("Total harus diisi");
+                        }
+                    }
+                    if (_no_62Value.contains("Hi Sense")) {
+
+                        if (_no_95Value != null && !_no_95Value.isEmpty() && !_no_95Value.equals("")) {
+
+                            if (_no_95Value.contains("Hi Sense Tipe Lainnya, Sebutkan")) {
+                                String otherValueText =_txtHiSenseOtherValue.getText().toString();
+
+                                if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
+                                {
+                                    isError ++;
+                                    _errorHiSense.setError("error");
+                                    _errorHiSense.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }
+                            }
+                        }
+                        else {
+                            isError ++;
+                            _errorHiSense.setError("error");
+                            _errorHiSense.setText("Minimal satu (1) checkbox harus dipilih");
+                        }
+
+                        if (_no_96Value == null && _no_96Value.isEmpty() && _no_96Value.equals("")) {
+                            isError++;
+                            _errorTotalTypeXiaomi.setError("error");
+                            _errorTotalTypeXiaomi.setText("Total harus diisi");
+                        }
+                    }
+
+                }
+                else {
+                    isError ++;
+                    _error62.setError("error");
+                    _error62.setText("Minimal satu (1) checkbox harus dipilih");
+                }
+
+                if(isError == 0) {
+                    Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
+                    intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    intent.putExtra("NO_7", extras.getString("NO_7"));
+                    intent.putExtra("NO_8", extras.getString("NO_8"));
+                    intent.putExtra("NO_9", extras.getString("NO_9"));
+                    intent.putExtra("NO_10", extras.getString("NO_10"));
+                    intent.putExtra("NO_11", extras.getString("NO_11"));
+                    intent.putExtra("NO_12", extras.getString("NO_12"));
+                    intent.putExtra("NO_13", extras.getString("NO_13"));
+                    intent.putExtra("NO_14", extras.getString("NO_14"));
+                    intent.putExtra("NO_15", extras.getString("NO_15"));
+                    intent.putExtra("NO_16", extras.getString("NO_16"));
+                    intent.putExtra("NO_17", extras.getString("NO_17"));
+                    intent.putExtra("NO_18", extras.getString("NO_18"));
+                    intent.putExtra("NO_19", extras.getString("NO_19"));
+                    intent.putExtra("NO_20", extras.getString("NO_20"));
+                    intent.putExtra("NO_21", extras.getString("NO_21"));
+                    intent.putExtra("NO_22", extras.getString("NO_22"));
+                    intent.putExtra("NO_23", extras.getString("NO_23"));
+                    intent.putExtra("NO_24", extras.getString("NO_24"));
+                    intent.putExtra("NO_25", extras.getString("NO_25"));
+                    intent.putExtra("NO_26", extras.getString("NO_26"));
+                    intent.putExtra("NO_27", extras.getString("NO_27"));
+                    intent.putExtra("NO_28", extras.getString("NO_28"));
+                    intent.putExtra("NO_29", extras.getString("NO_29"));
+                    intent.putExtra("NO_30", extras.getString("NO_30"));
+                    intent.putExtra("NO_31", extras.getString("NO_31"));
+                    intent.putExtra("NO_32", extras.getString("NO_32"));
+                    intent.putExtra("NO_33", extras.getString("NO_33"));
+                    intent.putExtra("NO_34", extras.getString("NO_34"));
+                    intent.putExtra("NO_35", extras.getString("NO_35"));
+                    intent.putExtra("NO_36", extras.getString("NO_36"));
+                    intent.putExtra("NO_38", extras.getString("NO_38"));
+                    intent.putExtra("NO_39", extras.getString("NO_39"));
+                    intent.putExtra("NO_40", extras.getString("NO_40"));
+                    intent.putExtra("NO_41", extras.getString("NO_41"));
+                    intent.putExtra("NO_42", extras.getString("NO_42"));
+                    intent.putExtra("NO_43", extras.getString("NO_43"));
+                    intent.putExtra("NO_44", extras.getString("NO_44"));
+                    intent.putExtra("NO_45", extras.getString("NO_45"));
+                    intent.putExtra("NO_46", extras.getString("NO_46"));
+                    intent.putExtra("NO_47", extras.getString("NO_47"));
+                    intent.putExtra("NO_48", extras.getString("NO_48"));
+                    intent.putExtra("NO_49", extras.getString("NO_49"));
+                    intent.putExtra("NO_50", extras.getString("NO_50"));
+                    intent.putExtra("NO_51", extras.getString("NO_51"));
+                    intent.putExtra("NO_52", extras.getString("NO_52"));
+                    intent.putExtra("NO_52B", extras.getString("NO_52B"));
+                    intent.putExtra("NO_52C", extras.getString("NO_52C"));
+                    intent.putExtra("NO_52D", extras.getString("NO_52D"));
+                    intent.putExtra("NO_52E", extras.getString("NO_52E"));
+                    intent.putExtra("NO_53", extras.getString("NO_53"));
+                    intent.putExtra("NO_54", extras.getString("NO_54"));
+                    intent.putExtra("NO_55", extras.getString("NO_55"));
+                    intent.putExtra("NO_56", extras.getString("NO_56"));
+                    intent.putExtra("NO_57", extras.getString("NO_57"));
+                    intent.putExtra("NO_58", extras.getString("NO_58"));
+                    intent.putExtra("NO_59", extras.getString("NO_59"));
+                    intent.putExtra("NO_60", extras.getString("NO_60"));
+                    intent.putExtra("NO_60B", extras.getString("NO_60B"));
+                    intent.putExtra("NO_60C", extras.getString("NO_60C"));
+                    intent.putExtra("NO_61", extras.getString("NO_61"));
+                    intent.putExtra("NO_61B", _no_61BValue);
+                    intent.putExtra("NO_61C", _no_61CValue);
+                    intent.putExtra("NO_62", _no_62Value);
+                    intent.putExtra("NO_63", _no_63Value);
+                    intent.putExtra("NO_64", _no_64Value);
+                    intent.putExtra("NO_65", _no_65Value);
+                    intent.putExtra("NO_66", _no_66Value);
+                    intent.putExtra("NO_67", _no_67Value);
+                    intent.putExtra("NO_68", _no_68Value);
+                    intent.putExtra("NO_69", _no_69Value);
+                    intent.putExtra("NO_70", _no_70Value);
+                    intent.putExtra("NO_71", _no_71Value);
+                    intent.putExtra("NO_72", _no_72Value);
+                    intent.putExtra("NO_73", _no_73Value);
+                    intent.putExtra("NO_74", _no_74Value);
+                    intent.putExtra("NO_75", _no_75Value);
+                    intent.putExtra("NO_76", _no_76Value);
+                    intent.putExtra("NO_77", _no_77Value);
+                    intent.putExtra("NO_78", _no_78Value);
+                    intent.putExtra("NO_79", _no_79Value);
+                    intent.putExtra("NO_80", _no_80Value);
+                    intent.putExtra("NO_81", _no_81Value);
+                    intent.putExtra("NO_82", _no_82Value);
+                    intent.putExtra("NO_83", _no_83Value);
+                    intent.putExtra("NO_84", _no_84Value);
+                    intent.putExtra("NO_85", _no_85Value);
+                    intent.putExtra("NO_86", _no_86Value);
+                    intent.putExtra("NO_87", _no_87Value);
+                    intent.putExtra("NO_88", _no_88Value);
+                    intent.putExtra("NO_89", _no_89Value);
+                    intent.putExtra("NO_90", _no_90Value);
+                    intent.putExtra("NO_91", _no_91Value);
+                    intent.putExtra("NO_92", _no_92Value);
+                    intent.putExtra("NO_93", _no_93Value);
+                    intent.putExtra("NO_94", _no_94Value);
+                    intent.putExtra("NO_95", _no_95Value);
+                    intent.putExtra("NO_96", _no_96Value);
+                    intent.putExtra("NO_97", _no_97Value);
+                    intent.putExtra("NO_98", _no_98Value);
+                    intent.putExtra("NO_99", _no_99Value);
+                    intent.putExtra("NO_100", _no_100Value);
+
+                    startActivity(intent);
+                }
             }
         });
     }
