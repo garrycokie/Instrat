@@ -2556,12 +2556,22 @@ public class Blok6Activity extends BaseStepsActivity {
                     _error61b.setError("error");
                     _error61b.setText("Minimal satu (1) checkbox harus dipilih");
                 }
+                else
+                {
+                    _error61b.setError(null);
+                    _error61b.setText("");
+                }
+
 
                 if(_no_61CValue == null || _no_61CValue.isEmpty() || _no_61CValue.equals(""))
                 {
                     isError ++;
                     _error61c.setError("error");
                     _error61c.setText("Minimal satu (1) checkbox harus dipilih");
+                }else
+                {
+                    _error61c.setError(null);
+                    _error61c.setText("");
                 }
 
 
@@ -2579,6 +2589,10 @@ public class Blok6Activity extends BaseStepsActivity {
                                     isError ++;
                                     _errorSamsung.setError("error");
                                     _errorSamsung.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                }else
+                                {
+                                    _errorSamsung.setError(null);
+                                    _errorSamsung.setText("");
                                 }
                             }
                         }
@@ -2593,6 +2607,10 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeSamsung.setError("error");
                             _errorTotalTypeSamsung.setText("Total harus diisi");
+                        }else
+                        {
+                            _errorTotalTypeSamsung.setError(null);
+                            _errorTotalTypeSamsung.setText("");
                         }
 
                     }
@@ -2603,6 +2621,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             _errorTotalTypeBlackBerry.setError("error");
                             _errorTotalTypeBlackBerry.setText("Total harus diisi");
                         }
+                        else
+                        {
+                            _errorTotalTypeBlackBerry.setError(null);
+                            _errorTotalTypeBlackBerry.setText("");
+                        }
                     }
                     if (_no_62Value.contains("Nokia (Microsoft)")) {
 
@@ -2610,6 +2633,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeNokia.setError("error");
                             _errorTotalTypeNokia.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeBlackBerry.setError(null);
+                            _errorTotalTypeBlackBerry.setText("");
                         }
                     }
                     if (_no_62Value.contains("Lenovo")) {
@@ -2625,6 +2653,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorLenovo.setError("error");
                                     _errorLenovo.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorLenovo.setError(null);
+                                    _errorLenovo.setText("");
+                                }
                             }
                         }
                         else
@@ -2638,6 +2671,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeLenovo.setError("error");
                             _errorTotalTypeLenovo.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeLenovo.setError(null);
+                            _errorTotalTypeLenovo.setText("");
                         }
                     }
                     if (_no_62Value.contains("Advan")) {
@@ -2653,6 +2691,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorAdvan.setError("error");
                                     _errorAdvan.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorAdvan.setError(null);
+                                    _errorAdvan.setText("");
+                                }
                             }
                         }
                         else
@@ -2666,6 +2709,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeAdvan.setError("error");
                             _errorTotalTypeAdvan.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeAdvan.setError(null);
+                            _errorTotalTypeAdvan.setText("");
                         }
                     }
                     if (_no_62Value.contains("Sony")) {
@@ -2682,6 +2730,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorSony.setError("error");
                                     _errorSony.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorSony.setError(null);
+                                    _errorSony.setText("");
+                                }
                             }
                         }
                         else
@@ -2696,6 +2749,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             _errorTotalTypeSony.setError("error");
                             _errorTotalTypeSony.setText("Total harus diisi");
                         }
+                        else
+                        {
+                            _errorTotalTypeSony.setError(null);
+                            _errorTotalTypeSony.setText("");
+                        }
                     }
                     if (_no_62Value.contains("iPhone")) {
 
@@ -2704,6 +2762,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             _errorTotalTypeIphone.setError("error");
                             _errorTotalTypeIphone.setText("Total harus diisi");
                         }
+                        else
+                        {
+                            _errorTotalTypeIphone.setError(null);
+                            _errorTotalTypeIphone.setText("");
+                        }
                     }
                     if (_no_62Value.contains("Mito")) {
 
@@ -2711,6 +2774,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeMito.setError("error");
                             _errorTotalTypeMito.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeMito.setError(null);
+                            _errorTotalTypeMito.setText("");
                         }
                     }
                     if (_no_62Value.contains("LG")) {
@@ -2721,6 +2789,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                 isError ++;
                                 _errorLG.setError("error");
                                 _errorLG.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                            }
+                            else
+                            {
+                                _errorLG.setError(null);
+                                _errorLG.setText("");
                             }
                         }
                         else {
@@ -2734,16 +2807,35 @@ public class Blok6Activity extends BaseStepsActivity {
                             _errorTotalTypeLG.setError("error");
                             _errorTotalTypeLG.setText("Total harus diisi");
                         }
+                        else
+                        {
+                            _errorTotalTypeLG.setError(null);
+                            _errorTotalTypeLG.setText("");
+                        }
                     }
                     if (_no_62Value.contains("HTC")) {
 
                         if (_no_82Value == null && _no_82Value.isEmpty() && _no_82Value.equals("")) {
-                            _txtTotalTypeHTC.setText(_no_82Value);
+                            isError++;
+                            _errorTotalTypeHTC.setError("error");
+                            _errorTotalTypeHTC.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeHTC.setError(null);
+                            _errorTotalTypeHTC.setText("");
                         }
                     }
                     if (_no_62Value.contains("Polytron")) {
                         if (_no_84Value != null && _no_84Value.isEmpty() && _no_84Value.equals("")) {
-                            _txtTotalTypePolytron.setText(_no_84Value);
+                            isError++;
+                            _errorTotalTypePolytron.setError("error");
+                            _errorTotalTypePolytron.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypePolytron.setError(null);
+                            _errorTotalTypePolytron.setText("");
                         }
                     }
                     if (_no_62Value.contains("Oppo")) {
@@ -2760,6 +2852,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorOppo.setError("error");
                                     _errorOppo.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorOppo.setError(null);
+                                    _errorOppo.setText("");
+                                }
                             }
                         }
                         else {
@@ -2772,6 +2869,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeOppo.setError("error");
                             _errorTotalTypeOppo.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeOppo.setError(null);
+                            _errorTotalTypeOppo.setText("");
                         }
                     }
                     if (_no_62Value.contains("Evercross")) {
@@ -2787,6 +2889,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorEvercross.setError("error");
                                     _errorEvercross.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorEvercross.setError(null);
+                                    _errorEvercross.setText("");
+                                }
                             }
 
                         }
@@ -2800,6 +2907,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeEvercross.setError("error");
                             _errorTotalTypeEvercross.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeEvercross.setError(null);
+                            _errorTotalTypeEvercross.setText("");
                         }
                     }
                     if (_no_62Value.contains("Asus")) {
@@ -2815,6 +2927,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorAsus.setError("error");
                                     _errorAsus.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorAsus.setError(null);
+                                    _errorAsus.setText("");
+                                }
                             }
                         }
                         else {
@@ -2827,6 +2944,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeAsus.setError("error");
                             _errorTotalTypeAsus.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeAsus.setError(null);
+                            _errorTotalTypeAsus.setText("");
                         }
                     }
                     if (_no_62Value.contains("Acer")) {
@@ -2842,6 +2964,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorAcer.setError("error");
                                     _errorAcer.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorAcer.setError(null);
+                                    _errorAcer.setText("");
+                                }
                             }
                         }
                         else {
@@ -2854,6 +2981,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeAcer.setError("error");
                             _errorTotalTypeAcer.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeAcer.setError(null);
+                            _errorTotalTypeAcer.setText("");
                         }
                     }
                     if (_no_62Value.contains("Xiaomi")) {
@@ -2869,6 +3001,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorXiaomi.setError("error");
                                     _errorXiaomi.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorXiaomi.setError(null);
+                                    _errorXiaomi.setText("");
+                                }
                             }
                         }
                         else {
@@ -2881,6 +3018,11 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeXiaomi.setError("error");
                             _errorTotalTypeXiaomi.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeXiaomi.setError(null);
+                            _errorTotalTypeXiaomi.setText("");
                         }
                     }
                     if (_no_62Value.contains("Hi Sense")) {
@@ -2896,6 +3038,11 @@ public class Blok6Activity extends BaseStepsActivity {
                                     _errorHiSense.setError("error");
                                     _errorHiSense.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
                                 }
+                                else
+                                {
+                                    _errorHiSense.setError(null);
+                                    _errorHiSense.setText("");
+                                }
                             }
                         }
                         else {
@@ -2906,8 +3053,13 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_96Value == null && _no_96Value.isEmpty() && _no_96Value.equals("")) {
                             isError++;
-                            _errorTotalTypeXiaomi.setError("error");
-                            _errorTotalTypeXiaomi.setText("Total harus diisi");
+                            _errorTotalTypeHiSense.setError("error");
+                            _errorTotalTypeHiSense.setText("Total harus diisi");
+                        }
+                        else
+                        {
+                            _errorTotalTypeHiSense.setError(null);
+                            _errorTotalTypeHiSense.setText("");
                         }
                     }
 
