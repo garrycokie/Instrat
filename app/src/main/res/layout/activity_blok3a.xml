@@ -28,289 +28,185 @@
 
             <TextView
                 android:id="@+id/lblQ7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:text="@string/page_blok3_q7_text"
-                android:textSize="20dp" />
+                style="@style/LabelQuestion"
+                />
 
             <Spinner
-                android:id="@+id/spQ7A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/spQ7A"/>
 
             <TextView
+                style="@style/LabelError"
+                android:id="@+id/errorQ7A" />
+
+            <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q8_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q8_text"/>
 
             <EditText
                 android:id="@+id/txtQ8A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ8A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ8A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q9_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q9_text" />
 
             <EditText
                 android:id="@+id/txtQ9A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ9A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ9A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q10_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q10_text" />
 
             <EditText
                 android:id="@+id/txtQ10A1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ10A2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ10A3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ10A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ10A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q11_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q11_text" />
 
             <EditText
                 android:id="@+id/txtQ11A1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ11A2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ11A3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
                 android:id="@+id/errorQ11A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                />
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q12_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q12_text" />
 
             <Spinner
                 android:id="@+id/spQ12A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
+                android:id="@+id/errorQ12A"
+                style="@style/LabelError"
+                />
+
+            <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q13_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q13_text" />
 
             <EditText
                 android:id="@+id/txtQ13A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ13A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ13A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q14_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q14_text" />
 
             <EditText
                 android:id="@+id/txtQ14A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ14A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ14A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q15_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q15_text" />
 
             <EditText
                 android:id="@+id/txtQ15A1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ15A2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ15A3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ15A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ15A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/page_blok3_q16_text"
-                android:textSize="20dp" />
+                android:text="@string/page_blok3_q16_text" />
 
             <EditText
                 android:id="@+id/txtQ16A1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ16A2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="10dp" />
+                style="@style/Answer"
+                />
 
             <EditText
                 android:id="@+id/txtQ16A3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:digits="@string/alfanumerik"
-                android:layout_marginBottom="20dp" />
+                style="@style/Answer"
+                />
 
             <TextView
-                android:id="@+id/errorQ16A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ16A"/>
         </LinearLayout>
     </ScrollView>
 

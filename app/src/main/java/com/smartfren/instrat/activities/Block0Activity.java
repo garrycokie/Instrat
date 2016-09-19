@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -30,6 +31,10 @@ public class Block0Activity extends Activity {
 
         _btnNext = (Button) findViewById(R.id.btnNext);
         _spQTipeSurvey = (Spinner) findViewById(R.id.spQTipeSurvey);
+
+        ArrayAdapter<CharSequence> adapterQ1 = ArrayAdapter.createFromResource(this, R.array.page_blok0_tipe_survey_list, R.layout.spinner_item);
+        adapterQ1.setDropDownViewResource(R.layout.spinner_item);
+        _spQTipeSurvey.setAdapter(adapterQ1);
 
         _btnNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

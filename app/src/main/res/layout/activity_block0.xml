@@ -12,21 +12,16 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/LabelQuestion"
             android:id="@+id/lblQTipeSurvey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:text="@string/page_blok0_tipe_survey_text"
-            android:textSize="20dp" />
+            android:text="@string/page_blok0_tipe_survey_text" />
 
         <Spinner
             android:id="@+id/spQTipeSurvey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:entries="@array/page_blok0_tipe_survey_list" />
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/BaseStepPage"

@@ -156,10 +156,6 @@ public class Blok8Activity extends BaseStepsActivity {
             list.add("PHPC JOGJATRONIK");
         }
 
-        ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this,
-                android.R.layout.simple_spinner_item, list);
-        dataAdapter.setDropDownViewResource(R.layout.spinner_item);
-        _spQ121A.setAdapter(dataAdapter);
 
         _txtQ122A = (EditText) findViewById(R.id.txtQ122A);
         _txtQ123A = (EditText) findViewById(R.id.txtQ123A);
@@ -173,6 +169,15 @@ public class Blok8Activity extends BaseStepsActivity {
         _errorQ1224 = (TextView) findViewById(R.id.errorQ1224);
         _errorQ125A = (TextView) findViewById(R.id.errorQ125A);
         _errorQ126A = (TextView) findViewById(R.id.errorQ126A);
+
+        ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this,
+                R.layout.spinner_item, list);
+        dataAdapter.setDropDownViewResource(R.layout.spinner_item);
+        _spQ121A.setAdapter(dataAdapter);
+
+        ArrayAdapter<CharSequence> adapterQ127 = ArrayAdapter.createFromResource(this, R.array.page_blok8_tipetoko_list, R.layout.spinner_item);
+        adapterQ127.setDropDownViewResource(R.layout.spinner_item);
+        _spQ127A.setAdapter(adapterQ127);
 
         _spQ121A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

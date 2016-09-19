@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 public class Blok3AActivity extends BaseStepsActivity {
 
@@ -105,20 +106,25 @@ public class Blok3AActivity extends BaseStepsActivity {
         _errorQ15A = (TextView) findViewById(R.id.errorQ15A);
         _errorQ16A = (TextView) findViewById(R.id.errorQ16A);
 
+        Helper.Hide(_lblQ8);
+        Helper.Hide(_txtQ8A);
+        //Helper.Hide(_errorQ8A);
 
-        _lblQ8.setVisibility(View.GONE);
-        _txtQ8A.setVisibility(View.GONE);
-        _txtQ11A1.setVisibility(View.GONE);
-        _txtQ11A2.setVisibility(View.GONE);
-        _txtQ11A3.setVisibility(View.GONE);
-        _lblQ11.setVisibility(View.GONE);
+        Helper.Hide(_txtQ11A1);
+        Helper.Hide(_txtQ11A2);
+        Helper.Hide(_txtQ11A3);
+        Helper.Hide(_lblQ11);
+        Helper.Hide(_errorQ11A);
 
-        _lblQ13.setVisibility(View.GONE);
-        _txtQ13A.setVisibility(View.GONE);
-        _txtQ16A1.setVisibility(View.GONE);
-        _txtQ16A2.setVisibility(View.GONE);
-        _txtQ16A3.setVisibility(View.GONE);
-        _lblQ16.setVisibility(View.GONE);
+        Helper.Hide(_lblQ13);
+        Helper.Hide(_txtQ13A);
+        Helper.Hide(_errorQ13A);
+
+        Helper.Hide(_txtQ16A1);
+        Helper.Hide(_txtQ16A2);
+        Helper.Hide(_txtQ16A3);
+        Helper.Hide(_lblQ16);
+        Helper.Hide(_errorQ16A);
 
         ArrayAdapter<CharSequence> adapterQ7 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_lower500_list, R.layout.spinner_item);
         adapterQ7.setDropDownViewResource(R.layout.spinner_item);
@@ -250,21 +256,27 @@ public class Blok3AActivity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Lainnya"))
                 {
-                    _lblQ8.setVisibility(View.VISIBLE);
-                    _txtQ8A.setVisibility(View.VISIBLE);
-                    _txtQ11A1.setVisibility(View.VISIBLE);
-                    _txtQ11A2.setVisibility(View.VISIBLE);
-                    _txtQ11A3.setVisibility(View.VISIBLE);
-                    _lblQ11.setVisibility(View.VISIBLE);
+                    Helper.Show(_lblQ8);
+                    Helper.Show(_txtQ8A);
+                    Helper.Show(_errorQ8A);
+
+                    Helper.Show(_txtQ11A1);
+                    Helper.Show(_txtQ11A2);
+                    Helper.Show(_txtQ11A3);
+                    Helper.Show(_lblQ11);
+                    Helper.Show(_errorQ11A);
                 }
                 else if(selectedItem.equals("Smartfren"))
                 {
-                    _lblQ8.setVisibility(View.GONE);
-                    _txtQ8A.setVisibility(View.GONE);
-                    _txtQ11A1.setVisibility(View.GONE);
-                    _txtQ11A2.setVisibility(View.GONE);
-                    _txtQ11A3.setVisibility(View.GONE);
-                    _lblQ11.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ8);
+                    Helper.Hide(_txtQ8A);
+                    Helper.Hide(_errorQ8A);
+
+                    Helper.Hide(_txtQ11A1);
+                    Helper.Hide(_txtQ11A2);
+                    Helper.Hide(_txtQ11A3);
+                    Helper.Hide(_lblQ11);
+                    Helper.Hide(_errorQ11A);
 
                     _txtQ8A.setText("");
                     _txtQ11A1.setText("");
@@ -273,12 +285,15 @@ public class Blok3AActivity extends BaseStepsActivity {
                 }
                 else
                 {
-                    _lblQ8.setVisibility(View.GONE);
-                    _txtQ8A.setVisibility(View.GONE);
-                    _txtQ11A1.setVisibility(View.VISIBLE);
-                    _txtQ11A2.setVisibility(View.VISIBLE);
-                    _txtQ11A3.setVisibility(View.VISIBLE);
-                    _lblQ11.setVisibility(View.VISIBLE);
+                    Helper.Hide(_lblQ8);
+                    Helper.Hide(_txtQ8A);
+                    Helper.Hide(_errorQ8A);
+
+                    Helper.Show(_txtQ11A1);
+                    Helper.Show(_txtQ11A2);
+                    Helper.Show(_txtQ11A3);
+                    Helper.Show(_lblQ11);
+                    Helper.Show(_errorQ11A);
 
                     _txtQ8A.setText("");
                 }
@@ -296,21 +311,27 @@ public class Blok3AActivity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Lainnya"))
                 {
-                    _lblQ13.setVisibility(View.VISIBLE);
-                    _txtQ13A.setVisibility(View.VISIBLE);
-                    _txtQ16A1.setVisibility(View.VISIBLE);
-                    _txtQ16A2.setVisibility(View.VISIBLE);
-                    _txtQ16A3.setVisibility(View.VISIBLE);
-                    _lblQ16.setVisibility(View.VISIBLE);
+                    Helper.Show(_lblQ13);
+                    Helper.Show(_txtQ13A);
+                    Helper.Show(_errorQ13A);
+
+                    Helper.Show(_txtQ16A1);
+                    Helper.Show(_txtQ16A2);
+                    Helper.Show(_txtQ16A3);
+                    Helper.Show(_lblQ16);
+                    Helper.Show(_errorQ16A);
                 }
                 else if(selectedItem.equals("Smartfren"))
                 {
-                    _lblQ13.setVisibility(View.GONE);
-                    _txtQ13A.setVisibility(View.GONE);
-                    _txtQ16A1.setVisibility(View.GONE);
-                    _txtQ16A2.setVisibility(View.GONE);
-                    _txtQ16A3.setVisibility(View.GONE);
-                    _lblQ16.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ13);
+                    Helper.Hide(_txtQ13A);
+                    Helper.Hide(_errorQ13A);
+
+                    Helper.Hide(_txtQ16A1);
+                    Helper.Hide(_txtQ16A2);
+                    Helper.Hide(_txtQ16A3);
+                    Helper.Hide(_lblQ16);
+                    Helper.Hide(_errorQ16A);
 
                     _txtQ13A.setText("");
                     _txtQ16A1.setText("");
@@ -319,12 +340,15 @@ public class Blok3AActivity extends BaseStepsActivity {
                 }
                 else
                 {
-                    _lblQ13.setVisibility(View.GONE);
-                    _txtQ13A.setVisibility(View.GONE);
-                    _txtQ16A1.setVisibility(View.VISIBLE);
-                    _txtQ16A2.setVisibility(View.VISIBLE);
-                    _txtQ16A3.setVisibility(View.VISIBLE);
-                    _lblQ16.setVisibility(View.VISIBLE);
+                    Helper.Hide(_lblQ13);
+                    Helper.Hide(_txtQ13A);
+                    Helper.Hide(_errorQ13A);
+
+                    Helper.Show(_txtQ16A1);
+                    Helper.Show(_txtQ16A2);
+                    Helper.Show(_txtQ16A3);
+                    Helper.Show(_lblQ16);
+                    Helper.Show(_errorQ16A);
 
                     _txtQ13A.setText("");
                 }

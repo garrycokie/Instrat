@@ -10,7 +10,7 @@
     <string name="title_surveyaction_list">SurveyActions</string>
     <string name="title_surveyaction_detail">SurveyAction Detail</string>
 
-    <string name="alfanumerik">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 </string>
+    <string name="alfanumerik">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890, </string>
 
     <string name="page_blok0_tipe_survey_text">Tipe Survey</string>
 

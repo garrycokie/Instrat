@@ -251,6 +251,8 @@ public class Block11Activity extends BaseStepsActivity {
                 intent.putExtra("NO_127", extras.getString("NO_127"));
                 intent.putExtra("NO_128", extras.getString("NO_128"));
                 intent.putExtra("NO_129", extras.getString("NO_129"));
+
+                startActivity(intent);
             }
 
             @Override
