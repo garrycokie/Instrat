@@ -3,23 +3,25 @@
     android:layout_width="fill_parent"
     android:layout_height="30dp">
     <TextView
-    android:id="@+id/itemOutletID"
-    android:layout_width="fill_parent"
+    android:id="@+id/itemNamaToko"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="@android:color/darker_gray"
+    android:gravity="left"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="8dp"
     android:textSize="15dp" />
     <TextView
-        android:id="@+id/itemStatus"
-        android:layout_width="fill_parent"
+        android:id="@+id/itemKategoriToko"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@android:color/darker_gray"
-        android:layout_toRightOf="@+id/itemOutletID"
-        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/itemNamaToko"
+        android:gravity="right"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:textSize="25dp" />
+        android:textSize="15dp" />
 
 </RelativeLayout>

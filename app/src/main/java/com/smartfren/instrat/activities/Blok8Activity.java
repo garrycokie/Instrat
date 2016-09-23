@@ -32,11 +32,13 @@ public class Blok8Activity extends BaseStepsActivity {
     private EditText _txtQ126A;
     private Spinner _spQ127A;
 
+    private TextView _errorQ121A;
     private TextView _errorQ122A;
     private TextView _errorQ123A;
     private TextView _errorQ1224;
     private TextView _errorQ125A;
     private TextView _errorQ126A;
+    private TextView _errorQ127A;
 
     private String _Q121AValue;
     private String _Q122AValue;
@@ -164,11 +166,13 @@ public class Blok8Activity extends BaseStepsActivity {
         _txtQ126A = (EditText) findViewById(R.id.txtQ126A);
         _spQ127A = (Spinner) findViewById(R.id.spQ127A);
 
+        _errorQ121A = (TextView) findViewById(R.id.errorQ121A);
         _errorQ122A = (TextView) findViewById(R.id.errorQ122A);
         _errorQ123A = (TextView) findViewById(R.id.errorQ123A);
         _errorQ1224 = (TextView) findViewById(R.id.errorQ1224);
         _errorQ125A = (TextView) findViewById(R.id.errorQ125A);
         _errorQ126A = (TextView) findViewById(R.id.errorQ126A);
+        _errorQ127A = (TextView) findViewById(R.id.errorQ127A);
 
         ArrayAdapter<CharSequence> dataAdapter = new ArrayAdapter<CharSequence>(this,
                 R.layout.spinner_item, list);
@@ -1214,8 +1218,17 @@ public class Blok8Activity extends BaseStepsActivity {
 
                 int validatedAnswer = 0;
 
-                //_Q121AValue is sp, skip validation
-                validatedAnswer ++;
+                if(_Q121AValue.equals("--Pilih Jawaban--") || _Q121AValue == null || _Q121AValue.equals("") || _Q121AValue.isEmpty())
+                {
+                    _errorQ121A.setError("error");
+                    _errorQ121A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ121A.setError(null);
+                    _errorQ121A.setText("");
+                    validatedAnswer++;
+                }
 
                 if (_Q122AValue == null || _Q122AValue.equals("") || _Q122AValue.isEmpty()) {
                     _errorQ122A.setError("error");
@@ -1269,8 +1282,17 @@ public class Blok8Activity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                //_Q126AValue is sp, skip validation
-                validatedAnswer ++;
+                if(_Q127AValue.equals("--Pilih Jawaban--") || _Q127AValue == null || _Q127AValue.equals("") || _Q127AValue.isEmpty())
+                {
+                    _errorQ127A.setError("error");
+                    _errorQ127A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ127A.setError(null);
+                    _errorQ127A.setText("");
+                    validatedAnswer++;
+                }
 
                 if(validatedAnswer == 7)
                 {

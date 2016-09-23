@@ -39,6 +39,7 @@ public class Block12Activity extends BaseStepsActivity {
     private String _Q135Value;
 
     private TextView _errorQ134;
+    private TextView _errorQ135;
 
     private String[] _Q135ItemArray;
 
@@ -50,7 +51,7 @@ public class Block12Activity extends BaseStepsActivity {
         super.initActivity(R.layout.activity_block12);
         extras = getIntent().getExtras();
 
-        _Q135ItemArray = new String[]{ "Outlet lama (ada dalam list)", "Outlet baru (tidak ada dalam list)" };
+        _Q135ItemArray = new String[]{ "--Pilih Jawaban--","Outlet lama (ada dalam list)", "Outlet baru (tidak ada dalam list)" };
         _spQ135 = (Spinner) findViewById(R.id.spQ135);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.spinner_item, this._Q135ItemArray);
@@ -58,6 +59,7 @@ public class Block12Activity extends BaseStepsActivity {
 
         _txtQ134 = (EditText) findViewById(R.id.txtQ134);
         _errorQ134 = (TextView) findViewById(R.id.errorQ134);
+        _errorQ135 = (TextView) findViewById(R.id.errorQ135);
 
         _spQ135.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -247,8 +249,17 @@ public class Block12Activity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                // _Q135Value is sp
-                validatedAnswer ++;
+                if(_Q135Value.equals("--Pilih Jawaban--") || _Q135Value == null || _Q135Value.equals("") || _Q135Value.isEmpty())
+                {
+                    _errorQ135.setError("error");
+                    _errorQ135.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ135.setError(null);
+                    _errorQ135.setText("");
+                    validatedAnswer++;
+                }
 
                 /*
                 Intent intent = new Intent(Block12Activity.this, Blok13Activity.class);

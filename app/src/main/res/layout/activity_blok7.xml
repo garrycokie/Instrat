@@ -18,7 +18,7 @@
 
             <TextView
                 android:id="@+id/txtBlock7Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
@@ -27,69 +27,47 @@
                 android:gravity="center_horizontal"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ101"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok7_q101_text"
-                android:layout_marginBottom="10dp"
-                android:textSize="20dp"/>
+                android:text="@string/page_blok7_q101_text"/>
             <Spinner
-                android:id="@+id/spQ101A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/spQ101A"/>
+            <TextView
+                style="@style/LabelError"
+                android:id="@+id/errorQ101A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ102"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok7_q102_text"
-                android:layout_marginBottom="10dp"
-                android:textSize="20dp"/>
-            <CheckBox android:id="@+id/cbQ102ASamsung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_samsung_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ102ASmartfren"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_smartfren_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ102AAdvan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_advan_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ102ALenovo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_lenovo_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ102AOppo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_oppo_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ102AAsus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_asus_text"
-                android:textSize="20dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:text="@string/page_blok7_q102_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102ASamsung"
+                android:text="@string/page_checkbox_samsung_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102ASmartfren"
+                android:text="@string/page_checkbox_smartfren_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102AAdvan"
+                android:text="@string/page_checkbox_advan_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102ALenovo"
+                android:text="@string/page_checkbox_lenovo_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102AOppo"
+                android:text="@string/page_checkbox_oppo_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ102AAsus"
+                android:text="@string/page_checkbox_asus_text"/>
             <TextView
-                android:id="@+id/errorQ102A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ102A"/>
         </LinearLayout>
     </ScrollView>
 

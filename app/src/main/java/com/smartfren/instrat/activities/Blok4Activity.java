@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 public class Blok4Activity extends BaseStepsActivity {
 
@@ -185,6 +186,7 @@ public class Blok4Activity extends BaseStepsActivity {
     private TextView _errorQ44A;
     private TextView _errorQ45A;
     private TextView _errorQ46A;
+    private TextView _errorQ47A;
 
     private Bundle extras;
 
@@ -389,16 +391,17 @@ public class Blok4Activity extends BaseStepsActivity {
         _errorQ44A = (TextView) findViewById(R.id.errorQ44A);
         _errorQ45A = (TextView) findViewById(R.id.errorQ45A);
         _errorQ46A = (TextView) findViewById(R.id.errorQ46A);
+        _errorQ47A = (TextView) findViewById(R.id.errorQ47A);
 
-        _txtQ38A.setVisibility(View.GONE);
-        _txtQ39A.setVisibility(View.GONE);
-        _txtQ40A.setVisibility(View.GONE);
-        _txtQ41A.setVisibility(View.GONE);
-        _txtQ42A.setVisibility(View.GONE);
-        _txtQ43A.setVisibility(View.GONE);
-        _txtQ44A.setVisibility(View.GONE);
-        _txtQ45A.setVisibility(View.GONE);
-        _txtQ46A.setVisibility(View.GONE);
+        Helper.Hide(_txtQ38A);
+        Helper.Hide(_txtQ39A);
+        Helper.Hide(_txtQ40A);
+        Helper.Hide(_txtQ41A);
+        Helper.Hide(_txtQ42A);
+        Helper.Hide(_txtQ43A);
+        Helper.Hide(_txtQ44A);
+        Helper.Hide(_txtQ45A);
+        Helper.Hide(_txtQ46A);
 
         if(extras.getString("NO_38") != null)
         {
@@ -1245,11 +1248,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ38A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ38A);
                 }
                 else
                 {
-                    _txtQ38A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ38A);
                     _txtQ38A.setText("");
                 }
             }
@@ -1262,11 +1265,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ39A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ39A);
                 }
                 else
                 {
-                    _txtQ39A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ39A);
                     _txtQ39A.setText("");
                 }
             }
@@ -1279,11 +1282,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ40A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ40A);
                 }
                 else
                 {
-                    _txtQ40A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ40A);
                     _txtQ40A.setText("");
                 }
             }
@@ -1296,11 +1299,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ41A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ41A);
                 }
                 else
                 {
-                    _txtQ41A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ41A);
                     _txtQ41A.setText("");
                 }
             }
@@ -1313,11 +1316,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ42A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ42A);
                 }
                 else
                 {
-                    _txtQ42A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ42A);
                     _txtQ42A.setText("");
                 }
             }
@@ -1330,11 +1333,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ43A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ43A);
                 }
                 else
                 {
-                    _txtQ43A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ43A);
                     _txtQ43A.setText("");
                 }
             }
@@ -1347,11 +1350,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ44A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ44A);
                 }
                 else
                 {
-                    _txtQ44A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ44A);
                     _txtQ44A.setText("");
                 }
             }
@@ -1364,11 +1367,11 @@ public class Blok4Activity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ45A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ45A);
                 }
                 else
                 {
-                    _txtQ45A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ45A);
                     _txtQ45A.setText("");
                 }
             }
@@ -1604,11 +1607,11 @@ public class Blok4Activity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Lainnya"))
                 {
-                    _txtQ46A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ46A);
                 }
                 else
                 {
-                    _txtQ46A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ46A);
                     _txtQ46A.setText("");
                 }
             }
@@ -2176,7 +2179,17 @@ public class Blok4Activity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                validatedAnswer++; //no 47 always validated cause of spinner
+                if(A47.equals("--Pilih Jawaban--") || A47 == null || A47.equals("") || A47.isEmpty())
+                {
+                    _errorQ47A.setError("error");
+                    _errorQ47A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ47A.setError(null);
+                    _errorQ47A.setText("");
+                    validatedAnswer++;
+                }
 
                 if(validatedAnswer == 10)
                 {

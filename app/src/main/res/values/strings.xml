@@ -15,6 +15,7 @@
     <string name="page_blok0_tipe_survey_text">Tipe Survey</string>
 
     <string-array name="page_blok0_tipe_survey_list">
+        <item>--Pilih Jawaban--</item>
         <item>Full Audit Smartphone</item>
         <item>Full Audit Modem</item>
         <item>Listing</item>
@@ -27,6 +28,7 @@
     <string name="page_blok3_q6_a3_text">SKENARIO ADVOCACY 3 (Harga 2-3 juta dan Modem)</string>
 
     <string-array name="page_blok3_phone_lower500_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Samsung</item>
         <item>Advan</item>
@@ -55,6 +57,7 @@
     </string-array>
 
     <string-array name="page_blok3_phone_500to1000k_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Samsung</item>
         <item>Advan</item>
@@ -83,6 +86,7 @@
     </string-array>
 
     <string-array name="page_blok3_phone_1000to1500k_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Samsung</item>
         <item>Acer</item>
@@ -114,6 +118,7 @@
     </string-array>
 
     <string-array name="page_blok3_phone_1500to2000k_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Samsung</item>
         <item>Acer</item>
@@ -145,6 +150,7 @@
     </string-array>
 
     <string-array name="page_blok3_phone_2000to3000k_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Samsung</item>
         <item>Acer</item>
@@ -177,6 +183,7 @@
     </string-array>
 
     <string-array name="page_blok3_modem_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Telkomsel Flash</item>
         <item>Advan</item>
@@ -236,6 +243,7 @@
     <string name="page_blok3_q36_text">Mengapa Anda tidak merekomendasikan modem Smartfren?</string>
 
     <string-array name="page_blok4_poster_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartfren</item>
         <item>Advan</item>
         <item>Asus</item>
@@ -256,6 +264,7 @@
     </string-array>
 
     <string-array name="page_blok4_dominasibranding_list">
+        <item>--Pilih Jawaban--</item>
         <item>Dominasi Tinggi (3 sisi dinding toko)</item>
         <item>Dominasi Sedang (2 sisi dinding toko)</item>
         <item>Dominasi Rendah ( 1 sisi dinding toko/kurang)</item>
@@ -291,6 +300,7 @@
     <string name="page_blok4_q47_text">OBSERVASI Tingkat dominasi Shop Branding (PILIH HANYA 1 JAWABAN)</string>
 
     <string-array name="page_blok5_produkterlihat_list">
+        <item>--Pilih Jawaban--</item>
         <item>Terlihat dan ada stok</item>
         <item>Tidak terlihat tapi ada stok</item>
         <item>Runner Stock / Ambil dari toko lain</item>
@@ -309,21 +319,25 @@
     <string name="page_checkbox_blok5_q53_a10_text">Lainnya, sebutkan</string>
 
     <string-array name="page_blok5_q54A_list">
+        <item>--Pilih Jawaban--</item>
         <item>Smartphone: Andromax CDMA (apapun)</item>
         <item>Tidak Ada</item>
     </string-array>
 
     <string-array name="page_blok5_q55A_list">
+        <item>--Pilih Jawaban--</item>
         <item>Ecosystem Smartfren (apapun)</item>
         <item>Tidak Ada</item>
     </string-array>
 
     <string-array name="page_blok5_q57A_list">
+        <item>--Pilih Jawaban--</item>
         <item>USB Modem Smartfren CDMA Model Lama (apapun)</item>
         <item>Tidak Ada</item>
     </string-array>
 
     <string-array name="page_blok5_q61A_list">
+        <item>--Pilih Jawaban--</item>
         <item>Router CDMA Model Lama</item>
         <item>Tidak Ada</item>
     </string-array>
@@ -351,18 +365,21 @@
     <string name="page_blok5_q61_text">CATAT BILA TERLIHAT Router CDMA Smartfren MODEL LAMA (PILIH HANYA 1 JAWABAN)</string>
 
     <string-array name="page_blok7_q101A_list">
+        <item>--Pilih Jawaban--</item>
         <item>Pemilik Toko</item>
         <item>Penanggung jawab toko / store manager</item>
         <item>Penjaga toko / frontliner</item>
     </string-array>
 
     <string-array name="page_blok7_samsung_supplier_list">
+        <item>--Pilih Jawaban--</item>
         <item>Pemilik Toko</item>
         <item>Penanggung jawab toko / store manager</item>
         <item>Penjaga toko / frontliner</item>
     </string-array>
 
     <string-array name="page_blok7_nextorder_list">
+        <item>--Pilih Jawaban--</item>
         <item>Akan order lagi</item>
         <item>Lihat-lihat dulu</item>
         <item>Tidak akan order lagi</item>
@@ -418,14 +435,16 @@
 
 
     <string-array name="page_blok8_mall_list">
+        <item>--Pilih Jawaban--</item>
         <item>A</item>
         <item>B</item>
         <item>C</item>
     </string-array>
 
     <string-array name="page_blok8_tipetoko_list">
-        <item>Permanent (ada papan nama, ada tembok ruangan)</item>
-        <item>Non Permanent (tidak ada tembok ruangan, island)</item>
+        <item>--Pilih Jawaban--</item>
+        <item>Permanent</item>
+        <item>Non Permanent</item>
     </string-array>
 
     <string name="page_blok8_q121_text">Nama Mall</string>
@@ -437,6 +456,7 @@
     <string name="page_blok8_q127_text">Tipe Toko (PILIH HANYA 1 JAWABAN)</string>
 
     <string-array name="page_blok9_kategoritoko_list">
+        <item>--Pilih Jawaban--</item>
         <item>Besar (seluas minimal gabungan 3 kios/toko/island)</item>
         <item>Sedang (seluas gabungan 2 kios/toko/island)</item>
         <item>Kecil (1 kios/toko/island)</item>

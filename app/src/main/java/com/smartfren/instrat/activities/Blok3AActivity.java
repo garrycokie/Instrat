@@ -42,14 +42,17 @@ public class Blok3AActivity extends BaseStepsActivity {
     private TextView _lblQ11;
     private TextView _lblQ16;
 
+    private TextView _errorQ7A;
     private TextView _errorQ8A;
     private TextView _errorQ9A;
     private TextView _errorQ10A;
     private TextView _errorQ11A;
+    private TextView _errorQ12A;
     private TextView _errorQ13A;
     private TextView _errorQ14A;
     private TextView _errorQ15A;
     private TextView _errorQ16A;
+
 
     private Bundle extras;
 
@@ -97,10 +100,12 @@ public class Blok3AActivity extends BaseStepsActivity {
         _lblQ11 = (TextView) findViewById(R.id.lblQ11);
         _lblQ16 = (TextView) findViewById(R.id.lblQ16);
 
+        _errorQ7A = (TextView) findViewById(R.id.errorQ7A);
         _errorQ8A = (TextView) findViewById(R.id.errorQ8A);
         _errorQ9A = (TextView) findViewById(R.id.errorQ9A);
         _errorQ10A = (TextView) findViewById(R.id.errorQ10A);
         _errorQ11A = (TextView) findViewById(R.id.errorQ11A);
+        _errorQ12A = (TextView) findViewById(R.id.errorQ12A);
         _errorQ13A = (TextView) findViewById(R.id.errorQ13A);
         _errorQ14A = (TextView) findViewById(R.id.errorQ14A);
         _errorQ15A = (TextView) findViewById(R.id.errorQ15A);
@@ -108,7 +113,7 @@ public class Blok3AActivity extends BaseStepsActivity {
 
         Helper.Hide(_lblQ8);
         Helper.Hide(_txtQ8A);
-        //Helper.Hide(_errorQ8A);
+        Helper.Hide(_errorQ8A);
 
         Helper.Hide(_txtQ11A1);
         Helper.Hide(_txtQ11A2);
@@ -412,7 +417,17 @@ public class Blok3AActivity extends BaseStepsActivity {
                 }
 
                 int validatedAnswer = 0;
-                validatedAnswer++; //no 7 always validated cause of spinner
+                if(A7.equals("--Pilih Jawaban--") || A7 == null || A7.equals("") || A7.isEmpty())
+                {
+                    _errorQ7A.setError("error");
+                    _errorQ7A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ7A.setError(null);
+                    _errorQ7A.setText("");
+                    validatedAnswer++;
+                }
 
                 if(A7.equals("Lainnya") && (A8 == null || A8.equals("") || A8.isEmpty()))
                 {
@@ -488,7 +503,17 @@ public class Blok3AActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                validatedAnswer++; //no 12 always validated cause of spinner
+                if(A12.equals("--Pilih Jawaban--") || A12 == null || A12.equals("") || A12.isEmpty())
+                {
+                    _errorQ12A.setError("error");
+                    _errorQ12A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ12A.setError(null);
+                    _errorQ12A.setText("");
+                    validatedAnswer++;
+                }
 
                 if(A12.equals("Lainnya") && (A13 == null || A13.equals("") || A13.isEmpty()))
                 {

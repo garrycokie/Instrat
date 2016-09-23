@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.smartfren.instrat.R;
 import com.smartfren.instrat.entities.LoginEntity;
@@ -22,6 +23,7 @@ public class Block0Activity extends Activity {
 
     private Button _btnNext;
     private Spinner _spQTipeSurvey;
+    private TextView _errorTipeSurvey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class Block0Activity extends Activity {
 
         _btnNext = (Button) findViewById(R.id.btnNext);
         _spQTipeSurvey = (Spinner) findViewById(R.id.spQTipeSurvey);
+        _errorTipeSurvey = (TextView) findViewById(R.id.errorTipeSurvey);
 
         ArrayAdapter<CharSequence> adapterQ1 = ArrayAdapter.createFromResource(this, R.array.page_blok0_tipe_survey_list, R.layout.spinner_item);
         adapterQ1.setDropDownViewResource(R.layout.spinner_item);
@@ -45,12 +48,29 @@ public class Block0Activity extends Activity {
                 RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
                 LoginEntity loginEntity = loginData.first();
 
-                String deviceSurveyID = UUID.randomUUID().toString();
-                intent.putExtra("DeviceSurveyID",deviceSurveyID);
-                intent.putExtra("TipeSurvey", tipeSurvey);
-                intent.putExtra("UserID", loginEntity.userID);
-                intent.putExtra("AccessToken", loginEntity.accessToken);
-                startActivity(intent);
+                boolean IsValidated = false;
+                if(tipeSurvey.equals("--Pilih Jawaban--") || tipeSurvey == null || tipeSurvey.equals("") || tipeSurvey.isEmpty())
+                {
+                    _errorTipeSurvey.setError("error");
+                    _errorTipeSurvey.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorTipeSurvey.setError(null);
+                    _errorTipeSurvey.setText("");
+                    IsValidated = true;
+                }
+
+                if(IsValidated)
+                {
+                    String deviceSurveyID = UUID.randomUUID().toString();
+                    intent.putExtra("DeviceSurveyID",deviceSurveyID);
+                    intent.putExtra("TipeSurvey", tipeSurvey);
+                    intent.putExtra("UserID", loginEntity.userID);
+                    intent.putExtra("AccessToken", loginEntity.accessToken);
+                    startActivity(intent);
+                }
+
             }
         });
     }

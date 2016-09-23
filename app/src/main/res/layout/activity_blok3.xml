@@ -18,7 +18,7 @@
 
             <TextView
             android:id="@+id/txtBlock3Title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
@@ -28,43 +28,29 @@
 
             <TextView
                 android:id="@+id/lblQ6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:textSize="20dp"
-                android:padding="10dp"
-                android:background="@color/colorPrimary"
+                style="@style/LabelQuestion"
                 android:text="@string/page_blok3_q6_text" />
 
             <RadioGroup
                 android:id="@+id/rbgQ6A"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/rbQ6A1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="20dp"
+                    style="@style/Answer"
                     android:text="@string/page_blok3_q6_a1_text" />
 
                 <RadioButton
                     android:id="@+id/rbQ6A2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="20dp"
+                    style="@style/Answer"
                     android:text="@string/page_blok3_q6_a2_text" />
 
                 <RadioButton
                     android:id="@+id/rbQ6A3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
-                    android:textSize="20dp"
+                    style="@style/Answer"
                     android:text="@string/page_blok3_q6_a3_text" />
             </RadioGroup>
         </LinearLayout>

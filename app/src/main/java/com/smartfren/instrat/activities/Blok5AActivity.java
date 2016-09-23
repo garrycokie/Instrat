@@ -16,6 +16,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 public class Blok5AActivity extends BaseStepsActivity {
 
@@ -59,7 +60,18 @@ public class Blok5AActivity extends BaseStepsActivity {
     private EditText _txtQ53A;
     private EditText _txtQ56A;
 
+    private TextView _errorQ48A;
+    private TextView _errorQ49A;
+    private TextView _errorQ50A;
+    private TextView _errorQ51A;
+    private TextView _errorQ52A;
+    private TextView _errorQ52BA;
+    private TextView _errorQ52CA;
+    private TextView _errorQ52DA;
+    private TextView _errorQ52EA;
     private TextView _errorQ53A;
+    private TextView _errorQ54A;
+    private TextView _errorQ55A;
     private TextView _errorQ56A;
 
     private Bundle extras;
@@ -119,8 +131,8 @@ public class Blok5AActivity extends BaseStepsActivity {
         _txtQ53A = (EditText) findViewById(R.id.txtQ53A);
         _txtQ56A = (EditText) findViewById(R.id.txtQ56A);
 
-        _txtQ53A.setVisibility(View.GONE);
-        _txtQ56A.setVisibility(View.GONE);
+        Helper.Hide(_txtQ53A);
+        Helper.Hide(_txtQ56A);
 
         _cbQ56ASmartfren = (CheckBox) findViewById(R.id.cbQ56ASmartfren);
         _cbQ56AAsus = (CheckBox) findViewById(R.id.cbQ56AAsus);
@@ -135,20 +147,33 @@ public class Blok5AActivity extends BaseStepsActivity {
         _cbQ56ATidakAda = (CheckBox) findViewById(R.id.cbQ56ATidakAda);
         _cbQ56ALainnya = (CheckBox) findViewById(R.id.cbQ56ALainnya);
 
+        _errorQ48A = (TextView) findViewById(R.id.errorQ48A);
+        _errorQ49A = (TextView) findViewById(R.id.errorQ49A);
+        _errorQ50A = (TextView) findViewById(R.id.errorQ50A);
+        _errorQ51A = (TextView) findViewById(R.id.errorQ51A);
+        _errorQ52A = (TextView) findViewById(R.id.errorQ52A);
+        _errorQ52BA = (TextView) findViewById(R.id.errorQ52BA);
+        _errorQ52CA = (TextView) findViewById(R.id.errorQ52CA);
+        _errorQ52DA = (TextView) findViewById(R.id.errorQ52DA);
+        _errorQ52EA = (TextView) findViewById(R.id.errorQ52EA);
+        _errorQ53A = (TextView) findViewById(R.id.errorQ53A);
+        _errorQ54A = (TextView) findViewById(R.id.errorQ54A);
+        _errorQ55A = (TextView) findViewById(R.id.errorQ55A);
         _errorQ53A = (TextView) findViewById(R.id.errorQ53A);
         _errorQ56A = (TextView) findViewById(R.id.errorQ56A);
 
-        _lblQ53.setVisibility(View.GONE);
-        _cbQ53A1.setVisibility(View.GONE);
-        _cbQ53A2.setVisibility(View.GONE);
-        _cbQ53A3.setVisibility(View.GONE);
-        _cbQ53A4.setVisibility(View.GONE);
-        _cbQ53A5.setVisibility(View.GONE);
-        _cbQ53A6.setVisibility(View.GONE);
-        _cbQ53A7.setVisibility(View.GONE);
-        _cbQ53A8.setVisibility(View.GONE);
-        _cbQ53A9.setVisibility(View.GONE);
-        _cbQ53A10.setVisibility(View.GONE);
+        Helper.Hide(_lblQ53);
+        Helper.Hide(_cbQ53A1);
+        Helper.Hide(_cbQ53A2);
+        Helper.Hide(_cbQ53A3);
+        Helper.Hide(_cbQ53A4);
+        Helper.Hide(_cbQ53A5);
+        Helper.Hide(_cbQ53A6);
+        Helper.Hide(_cbQ53A7);
+        Helper.Hide(_cbQ53A8);
+        Helper.Hide(_cbQ53A9);
+        Helper.Hide(_cbQ53A10);
+        Helper.Hide(_errorQ53A);
 
         ArrayAdapter<CharSequence> adapterQBlok5 = ArrayAdapter.createFromResource(this, R.array.page_blok5_produkterlihat_list, R.layout.spinner_item);
         adapterQBlok5.setDropDownViewResource(R.layout.spinner_item);
@@ -422,32 +447,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                     )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -474,32 +501,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -526,32 +555,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -578,32 +609,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -630,32 +663,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -682,32 +717,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -734,32 +771,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -786,32 +825,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52EA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -838,32 +879,34 @@ public class Blok5AActivity extends BaseStepsActivity {
                                     _spQ52DA.getSelectedItem().toString().equals("Tidak ada stok / tidak jual sama sekali")
                             )
                     {
-                        _lblQ53.setVisibility(View.VISIBLE);
-                        _cbQ53A1.setVisibility(View.VISIBLE);
-                        _cbQ53A2.setVisibility(View.VISIBLE);
-                        _cbQ53A3.setVisibility(View.VISIBLE);
-                        _cbQ53A4.setVisibility(View.VISIBLE);
-                        _cbQ53A5.setVisibility(View.VISIBLE);
-                        _cbQ53A6.setVisibility(View.VISIBLE);
-                        _cbQ53A7.setVisibility(View.VISIBLE);
-                        _cbQ53A8.setVisibility(View.VISIBLE);
-                        _cbQ53A9.setVisibility(View.VISIBLE);
-                        _cbQ53A10.setVisibility(View.VISIBLE);
+                        Helper.Show(_lblQ53);
+                        Helper.Show(_cbQ53A1);
+                        Helper.Show(_cbQ53A2);
+                        Helper.Show(_cbQ53A3);
+                        Helper.Show(_cbQ53A4);
+                        Helper.Show(_cbQ53A5);
+                        Helper.Show(_cbQ53A6);
+                        Helper.Show(_cbQ53A7);
+                        Helper.Show(_cbQ53A8);
+                        Helper.Show(_cbQ53A9);
+                        Helper.Show(_cbQ53A10);
+                        Helper.Show(_errorQ53A);
                     }
                 }
                 else
                 {
-                    _lblQ53.setVisibility(View.GONE);
-                    _cbQ53A1.setVisibility(View.GONE);
-                    _cbQ53A2.setVisibility(View.GONE);
-                    _cbQ53A3.setVisibility(View.GONE);
-                    _cbQ53A4.setVisibility(View.GONE);
-                    _cbQ53A5.setVisibility(View.GONE);
-                    _cbQ53A6.setVisibility(View.GONE);
-                    _cbQ53A7.setVisibility(View.GONE);
-                    _cbQ53A8.setVisibility(View.GONE);
-                    _cbQ53A9.setVisibility(View.GONE);
-                    _cbQ53A10.setVisibility(View.GONE);
+                    Helper.Hide(_lblQ53);
+                    Helper.Hide(_cbQ53A1);
+                    Helper.Hide(_cbQ53A2);
+                    Helper.Hide(_cbQ53A3);
+                    Helper.Hide(_cbQ53A4);
+                    Helper.Hide(_cbQ53A5);
+                    Helper.Hide(_cbQ53A6);
+                    Helper.Hide(_cbQ53A7);
+                    Helper.Hide(_cbQ53A8);
+                    Helper.Hide(_cbQ53A9);
+                    Helper.Hide(_cbQ53A10);
+                    Helper.Hide(_errorQ53A);
                 }
             }
 
@@ -880,11 +923,11 @@ public class Blok5AActivity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ53A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ53A);
                 }
                 else
                 {
-                    _txtQ53A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ53A);
                     _txtQ53A.setText("");
                 }
 
@@ -898,11 +941,11 @@ public class Blok5AActivity extends BaseStepsActivity {
             {
                 if (isChecked)
                 {
-                    _txtQ56A.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtQ56A);
                 }
                 else
                 {
-                    _txtQ56A.setVisibility(View.GONE);
+                    Helper.Hide(_txtQ56A);
                     _txtQ56A.setText("");
                 }
 
@@ -1067,6 +1110,137 @@ public class Blok5AActivity extends BaseStepsActivity {
                 }
 
                 int validatedAnswer = 0;
+                if(A48.equals("--Pilih Jawaban--") || A48 == null || A48.equals("") || A48.isEmpty())
+                {
+                    _errorQ48A.setError("error");
+                    _errorQ48A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ48A.setError(null);
+                    _errorQ48A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A49.equals("--Pilih Jawaban--") || A49 == null || A49.equals("") || A49.isEmpty())
+                {
+                    _errorQ49A.setError("error");
+                    _errorQ49A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ49A.setError(null);
+                    _errorQ49A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A50.equals("--Pilih Jawaban--") || A50 == null || A50.equals("") || A50.isEmpty())
+                {
+                    _errorQ50A.setError("error");
+                    _errorQ50A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ50A.setError(null);
+                    _errorQ50A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A51.equals("--Pilih Jawaban--") || A51 == null || A51.equals("") || A51.isEmpty())
+                {
+                    _errorQ51A.setError("error");
+                    _errorQ51A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ51A.setError(null);
+                    _errorQ51A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A52.equals("--Pilih Jawaban--") || A52 == null || A52.equals("") || A52.isEmpty())
+                {
+                    _errorQ52A.setError("error");
+                    _errorQ52A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ52A.setError(null);
+                    _errorQ52A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A52B.equals("--Pilih Jawaban--") || A52B == null || A52B.equals("") || A52B.isEmpty())
+                {
+                    _errorQ52BA.setError("error");
+                    _errorQ52BA.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ52BA.setError(null);
+                    _errorQ52BA.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A52C.equals("--Pilih Jawaban--") || A52C == null || A52C.equals("") || A52C.isEmpty())
+                {
+                    _errorQ52CA.setError("error");
+                    _errorQ52CA.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ52CA.setError(null);
+                    _errorQ52CA.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A52D.equals("--Pilih Jawaban--") || A52D == null || A52D.equals("") || A52D.isEmpty())
+                {
+                    _errorQ52DA.setError("error");
+                    _errorQ52DA.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ52DA.setError(null);
+                    _errorQ52DA.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A52E.equals("--Pilih Jawaban--") || A52E == null || A52E.equals("") || A52E.isEmpty())
+                {
+                    _errorQ52EA.setError("error");
+                    _errorQ52EA.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ52EA.setError(null);
+                    _errorQ52EA.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A54.equals("--Pilih Jawaban--") || A54 == null || A54.equals("") || A54.isEmpty())
+                {
+                    _errorQ54A.setError("error");
+                    _errorQ54A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ54A.setError(null);
+                    _errorQ54A.setText("");
+                    validatedAnswer++;
+                }
+
+                if(A55.equals("--Pilih Jawaban--") || A55 == null || A55.equals("") || A55.isEmpty())
+                {
+                    _errorQ55A.setError("error");
+                    _errorQ55A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ55A.setError(null);
+                    _errorQ55A.setText("");
+                    validatedAnswer++;
+                }
 
                 if(_lblQ53.isShown() &&  (A53 == null || A53.equals("") || A53.isEmpty()))
                 {
@@ -1112,7 +1286,7 @@ public class Blok5AActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(validatedAnswer == 2)
+                if(validatedAnswer == 13)
                 {
                     Intent intent = new Intent(Blok5AActivity.this, Blok5BActivity.class);
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));

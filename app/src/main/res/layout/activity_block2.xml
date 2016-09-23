@@ -4,83 +4,67 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.smartfren.instrat.activities.Block2Activity">
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:layout_marginBottom="40dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
         <TextView
             android:id="@+id/txtBlock2Title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:textSize="20dp"
             android:text="BLOK 2 : ADVOCACY OPERATOR"
-            android:layout_centerHorizontal="true"/>
+            android:gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/txtOperatorType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtBlock2Title"
-            android:layout_marginTop="30dp"
-            android:textSize="20dp"
-            android:text="Kartu yang bagus untuk internet-an / data apa ya (SEBUT PERTAMA)? (PILIH HANYA 1 JAWABAN)"
-            android:layout_centerHorizontal="true"/>
+            style="@style/LabelQuestion"
+            android:text="Kartu yang bagus untuk internet-an / data apa ya (SEBUT PERTAMA)? (PILIH HANYA 1 JAWABAN)"/>
         <Spinner
             android:id="@+id/spinOperatorType"
-            android:layout_below="@id/txtOperatorType"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true"/>
+            style="@style/Answer"
+            />
+
+        <TextView
+            style="@style/LabelError"
+            android:id="@+id/errorOperatorType" />
 
         <TextView
             android:id="@+id/txtOperator4G"
-            android:layout_below="@id/spinOperatorType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textSize="20dp"
             android:text="Operator 4G mana yang bagus ya (SEBUT PERTAMA) (PILIH HANYA 1 JAWABAN)"
-            android:layout_centerHorizontal="true"/>
+            style="@style/LabelQuestion"
+            />
         <Spinner
             android:id="@+id/spinOperator4G"
-            android:layout_below="@id/txtOperator4G"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"/>
+            style="@style/Answer"
+            />
+        <TextView
+            style="@style/LabelError"
+            android:id="@+id/errorOperator4G" />
 
         <TextView
             android:id="@+id/txtquestion4G"
-            android:layout_below="@+id/spinOperator4G"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Mengapa Anda bilang itu bagus untuk operator 4G? "/>
+            android:text="Mengapa Anda bilang itu bagus untuk operator 4G? "
+            style="@style/LabelQuestion"
+            />
 
         <EditText
             android:id="@+id/txtReason4G"
-            android:layout_below="@+id/txtquestion4G"
-            android:layout_width="match_parent"
-            android:textSize="20dp"
-            android:digits="@string/alfanumerik"
-            android:layout_height="wrap_content" />
+            style="@style/Answer"
+            />
         <TextView
             android:id="@+id/errorReason4G"
-            android:layout_below="@+id/txtReason4G"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorError"/>
-    </RelativeLayout>
-
+            style="@style/LabelError"
+            />
+    </LinearLayout>
+    </ScrollView>
     <include
         layout="@layout/bottom_step_button_layout" />
 

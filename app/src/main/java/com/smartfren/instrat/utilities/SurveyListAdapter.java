@@ -34,20 +34,20 @@ public class SurveyListAdapter extends RecyclerView.Adapter<SurveyListAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        viewHolder.txtOutletID.setText(itemsData[position].b12no134);
-        viewHolder.txtStatus.setText(itemsData[position].status);
+        viewHolder.txtNamaToko.setText(itemsData[position].b8no122);
+        viewHolder.txtKategoriToko.setText(itemsData[position].b8no127);
     }
 
     // inner class to hold a reference to each item of RecyclerView
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView txtOutletID;
-        public TextView txtStatus;
+        public TextView txtNamaToko;
+        public TextView txtKategoriToko;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            txtOutletID = (TextView) itemLayoutView.findViewById(R.id.itemOutletID);
-            txtStatus = (TextView) itemLayoutView.findViewById(R.id.itemStatus);
+            txtNamaToko = (TextView) itemLayoutView.findViewById(R.id.itemNamaToko);
+            txtKategoriToko = (TextView) itemLayoutView.findViewById(R.id.itemKategoriToko);
         }
     }
 

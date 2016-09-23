@@ -17,11 +17,13 @@
             android:text="@string/page_blok0_tipe_survey_text" />
 
         <Spinner
-            android:id="@+id/spQTipeSurvey"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"/>
+            style="@style/Answer"
+            android:id="@+id/spQTipeSurvey"/>
+
+        <TextView
+            style="@style/LabelError"
+            android:id="@+id/errorTipeSurvey" />
+
     </LinearLayout>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/BaseStepPage"
@@ -30,7 +32,6 @@
         android:layout_alignParentBottom="true"
         android:background="#efefef"
         android:padding="10dp">
-
         <Button
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"

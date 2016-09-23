@@ -37,6 +37,9 @@ public class Block1Activity extends BaseStepsActivity {
     private String _paramUserID;
     private String _paramAccessToken;
 
+    private TextView _errorStoreType;
+    private TextView _errorStoreTypeExclusive;
+
     public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
     {
         if (value != null) {
@@ -66,7 +69,7 @@ public class Block1Activity extends BaseStepsActivity {
         }
 
         this._storeTypeSpinnerItems = new String[]{
-                "EXCLUSIVE SMARTFREN", "EXCLUSIVE MEREK LAINNYA", "NON EXCLUSIVE SMARTFREN", "NON EXCLUSIVE LAINNYA"
+                "--Pilih Jawaban--","EXCLUSIVE SMARTFREN", "EXCLUSIVE MEREK LAINNYA", "NON EXCLUSIVE SMARTFREN", "NON EXCLUSIVE LAINNYA"
         };
 
         _spStoreType = (Spinner) findViewById(R.id.spinStoreType);
@@ -75,6 +78,7 @@ public class Block1Activity extends BaseStepsActivity {
         _spStoreType.setAdapter(storeTypeAdapter);
 
         this._storeTypeExclusiveSpinnerItems = new String[]{
+                "--Pilih Jawaban--",
                 "Smartfren (khusus Premium Store, Gallery Smartfren dan SMILE)",
                 "Advan",
                 "Asus",
@@ -94,6 +98,10 @@ public class Block1Activity extends BaseStepsActivity {
 
         _txtStoreTypeExlusiveLabel = (TextView) findViewById(R.id.txtStoreTypeExclusive);
         _txtStoreTypeExlusiveOtherText = (EditText) findViewById(R.id.txtStoreTypeExclusiveOtherValue);
+
+        _errorStoreType = (TextView) findViewById(R.id.errorStoreType);
+        _errorStoreTypeExclusive = (TextView) findViewById(R.id.errorStoreTypeExclusive);
+
 
         _spStoreTypeExclusive = (Spinner) findViewById(R.id.spinStoreTypeExclusive);
         ArrayAdapter<CharSequence> storeTypeExclusiveAdapter = new ArrayAdapter<CharSequence>(this,
@@ -172,18 +180,45 @@ public class Block1Activity extends BaseStepsActivity {
                     _storeTypeExclusiveValue = _txtStoreTypeExlusiveOtherText.getText().toString();
                 }
 
-                Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
+                int CountValidated = 0;
+                if(_storeTypeValue.equals("--Pilih Jawaban--") || _storeTypeValue == null || _storeTypeValue.equals("") || _storeTypeValue.isEmpty())
+                {
+                    _errorStoreType.setError("error");
+                    _errorStoreType.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorStoreType.setError(null);
+                    _errorStoreType.setText("");
+                    CountValidated++;
+                }
 
-                intent.putExtra("DeviceSurveyID", _paramDeviceSurveyID);
-                intent.putExtra("TipeSurvey", _paramTipeSurvey);
-                intent.putExtra("UserID", _paramUserID);
-                intent.putExtra("AccessToken", _paramAccessToken);
+                if(_storeTypeExclusiveValue.equals("--Pilih Jawaban--") || _storeTypeExclusiveValue == null || _storeTypeExclusiveValue.equals("") || _storeTypeExclusiveValue.isEmpty())
+                {
+                    _errorStoreTypeExclusive.setError("error");
+                    _errorStoreTypeExclusive.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorStoreTypeExclusive.setError(null);
+                    _errorStoreTypeExclusive.setText("");
+                    CountValidated++;
+                }
 
-                intent.putExtra("NO_1", _storeTypeValue);
-                intent.putExtra("NO_2", _storeTypeExclusiveValue);
+                if(CountValidated == 2) {
+                    Intent intent = new Intent(Block1Activity.this, Block2Activity.class);
 
-                startActivity(intent);
-            }
+                    intent.putExtra("DeviceSurveyID", _paramDeviceSurveyID);
+                    intent.putExtra("TipeSurvey", _paramTipeSurvey);
+                    intent.putExtra("UserID", _paramUserID);
+                    intent.putExtra("AccessToken", _paramAccessToken);
+
+                    intent.putExtra("NO_1", _storeTypeValue);
+                    intent.putExtra("NO_2", _storeTypeExclusiveValue);
+
+                    startActivity(intent);
+                }
+             }
         });
     }
 }

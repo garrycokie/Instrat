@@ -16,99 +16,69 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/txtBlok10Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:textSize="20dp"
                 android:text="BLOK 10 : TAXONOMY"
                 android:layout_centerHorizontal="true"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ129"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok10_q129_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A1"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_1_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A2"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_2_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A3"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_3_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A4"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_4_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A5"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_5_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A6"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_6_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A7"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_7_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A8"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_8_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A9"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_9_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A10"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_10_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A11"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_11_text"
-                android:layout_marginBottom="10dp"/>
-            <CheckBox android:id="@+id/cbQ129A12"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_checkbox_blok10_produkjual_12_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok10_q129_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A1"
+                android:text="@string/page_checkbox_blok10_produkjual_1_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A2"
+                android:text="@string/page_checkbox_blok10_produkjual_2_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A3"
+                android:text="@string/page_checkbox_blok10_produkjual_3_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A4"
+                android:text="@string/page_checkbox_blok10_produkjual_4_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A5"
+                android:text="@string/page_checkbox_blok10_produkjual_5_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A6"
+                android:text="@string/page_checkbox_blok10_produkjual_6_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A7"
+                android:text="@string/page_checkbox_blok10_produkjual_7_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A8"
+                android:text="@string/page_checkbox_blok10_produkjual_8_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A9"
+                android:text="@string/page_checkbox_blok10_produkjual_9_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A10"
+                android:text="@string/page_checkbox_blok10_produkjual_10_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A11"
+                android:text="@string/page_checkbox_blok10_produkjual_11_text"/>
+            <CheckBox
+                style="@style/Answer"
+                android:id="@+id/cbQ129A12"
+                android:text="@string/page_checkbox_blok10_produkjual_12_text"/>
             <TextView
-                android:id="@+id/error129A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/error129A"/>
         </LinearLayout>
 
     </ScrollView>

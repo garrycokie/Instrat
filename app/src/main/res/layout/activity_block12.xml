@@ -17,7 +17,7 @@
 
             <TextView
                 android:id="@+id/txtBlok12Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
@@ -25,43 +25,28 @@
                 android:text="BLOK 12 : WRAP UP"
                 android:layout_centerHorizontal="true"/>
        <TextView
+           style="@style/LabelQuestion"
            android:id="@+id/txtQ134Label"
-           android:layout_marginTop="20dp"
-           android:textSize="20dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="No ID Outlet"/>
+           android:text="No ID Outlet (format XXX-YY-ZZZ)"/>
 
        <EditText
-           android:id="@+id/txtQ134"
-           android:layout_below="@id/txtQ134Label"
-           android:textSize="20dp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content" />
+           style="@style/Answer"
+           android:id="@+id/txtQ134" />
             <TextView
-                android:id="@+id/errorQ134"
-                android:layout_below="@+id/txtQ134"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ134"/>
 
        <TextView
+           style="@style/LabelQuestion"
            android:id="@+id/txtQ135Label"
-           android:layout_below="@id/errorQ134"
-           android:textSize="20dp"
-           android:layout_marginBottom="30dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
            android:text="Status Outlet"/>
        <Spinner
-           android:id="@+id/spQ135"
-           android:layout_below="@id/txtQ135Label"
-           android:textSize="20dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
+           style="@style/Answer"
+           android:id="@+id/spQ135">
        </Spinner>
+            <TextView
+                style="@style/LabelError"
+                android:id="@+id/errorQ135"/>
    </LinearLayout>
 
 </ScrollView>

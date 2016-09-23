@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 public class Blok7FActivity extends BaseStepsActivity {
     private Spinner _spQ119A;
@@ -42,6 +43,7 @@ public class Blok7FActivity extends BaseStepsActivity {
     private EditText _txtQ120A;
 
     private TextView _errorQ118A;
+    private TextView _errorQ119A;
     private TextView _errorQ120A;
 
     private Bundle extras;
@@ -96,23 +98,24 @@ public class Blok7FActivity extends BaseStepsActivity {
         _cbQ120A15 = (CheckBox) findViewById(R.id.cbQ120A15);
 
         _errorQ118A = (TextView) findViewById(R.id.errorQ118A);
+        _errorQ119A = (TextView) findViewById(R.id.errorQ119A);
         _errorQ120A = (TextView) findViewById(R.id.errorQ120A);
 
-        _cbQ120A1.setVisibility(View.VISIBLE);
-        _cbQ120A2.setVisibility(View.VISIBLE);
-        _cbQ120A3.setVisibility(View.VISIBLE);
-        _cbQ120A4.setVisibility(View.VISIBLE);
-        _cbQ120A5.setVisibility(View.VISIBLE);
-        _cbQ120A6.setVisibility(View.VISIBLE);
-        _cbQ120A7.setVisibility(View.VISIBLE);
-        _cbQ120A8.setVisibility(View.VISIBLE);
-        _cbQ120A9.setVisibility(View.VISIBLE);
-        _cbQ120A10.setVisibility(View.VISIBLE);
-        _cbQ120A11.setVisibility(View.VISIBLE);
-        _cbQ120A12.setVisibility(View.VISIBLE);
-        _cbQ120A13.setVisibility(View.VISIBLE);
-        _cbQ120A14.setVisibility(View.VISIBLE);
-        _cbQ120A15.setVisibility(View.VISIBLE);
+        Helper.Show(_cbQ120A1);
+        Helper.Show(_cbQ120A2);
+        Helper.Show(_cbQ120A3);
+        Helper.Show(_cbQ120A4);
+        Helper.Show(_cbQ120A5);
+        Helper.Show(_cbQ120A6);
+        Helper.Show(_cbQ120A7);
+        Helper.Show(_cbQ120A8);
+        Helper.Show(_cbQ120A9);
+        Helper.Show(_cbQ120A10);
+        Helper.Show(_cbQ120A11);
+        Helper.Show(_cbQ120A12);
+        Helper.Show(_cbQ120A13);
+        Helper.Show(_cbQ120A14);
+        Helper.Show(_cbQ120A15);
 
         _txtQ120A = (EditText) findViewById(R.id.txtQ120A);
 
@@ -251,54 +254,54 @@ public class Blok7FActivity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Akan order lagi"))
                 {
-                    _cbQ120A1.setVisibility(View.VISIBLE);
-                    _cbQ120A2.setVisibility(View.VISIBLE);
-                    _cbQ120A3.setVisibility(View.VISIBLE);
-                    _cbQ120A4.setVisibility(View.VISIBLE);
-                    _cbQ120A5.setVisibility(View.VISIBLE);
-                    _cbQ120A6.setVisibility(View.VISIBLE);
-                    _cbQ120A7.setVisibility(View.VISIBLE);
-                    _cbQ120A8.setVisibility(View.GONE);
-                    _cbQ120A9.setVisibility(View.GONE);
-                    _cbQ120A10.setVisibility(View.GONE);
-                    _cbQ120A11.setVisibility(View.GONE);
-                    _cbQ120A12.setVisibility(View.GONE);
-                    _cbQ120A13.setVisibility(View.GONE);
-                    _cbQ120A14.setVisibility(View.GONE);
+                    Helper.Show(_cbQ120A1);
+                    Helper.Show(_cbQ120A2);
+                    Helper.Show(_cbQ120A3);
+                    Helper.Show(_cbQ120A4);
+                    Helper.Show(_cbQ120A5);
+                    Helper.Show(_cbQ120A6);
+                    Helper.Show(_cbQ120A7);
+                    Helper.Hide(_cbQ120A8);
+                    Helper.Hide(_cbQ120A9);
+                    Helper.Hide(_cbQ120A10);
+                    Helper.Hide(_cbQ120A11);
+                    Helper.Hide(_cbQ120A12);
+                    Helper.Hide(_cbQ120A13);
+                    Helper.Hide(_cbQ120A14);
                 }
                 else if(selectedItem.equals("Lihat-lihat dulu"))
                 {
-                    _cbQ120A1.setVisibility(View.VISIBLE);
-                    _cbQ120A2.setVisibility(View.VISIBLE);
-                    _cbQ120A3.setVisibility(View.VISIBLE);
-                    _cbQ120A4.setVisibility(View.VISIBLE);
-                    _cbQ120A5.setVisibility(View.VISIBLE);
-                    _cbQ120A6.setVisibility(View.VISIBLE);
-                    _cbQ120A7.setVisibility(View.VISIBLE);
-                    _cbQ120A8.setVisibility(View.VISIBLE);
-                    _cbQ120A9.setVisibility(View.VISIBLE);
-                    _cbQ120A10.setVisibility(View.VISIBLE);
-                    _cbQ120A11.setVisibility(View.VISIBLE);
-                    _cbQ120A12.setVisibility(View.VISIBLE);
-                    _cbQ120A13.setVisibility(View.VISIBLE);
-                    _cbQ120A14.setVisibility(View.VISIBLE);
+                    Helper.Show(_cbQ120A1);
+                    Helper.Show(_cbQ120A2);
+                    Helper.Show(_cbQ120A3);
+                    Helper.Show(_cbQ120A4);
+                    Helper.Show(_cbQ120A5);
+                    Helper.Show(_cbQ120A6);
+                    Helper.Show(_cbQ120A7);
+                    Helper.Show(_cbQ120A8);
+                    Helper.Show(_cbQ120A9);
+                    Helper.Show(_cbQ120A10);
+                    Helper.Show(_cbQ120A11);
+                    Helper.Show(_cbQ120A12);
+                    Helper.Show(_cbQ120A13);
+                    Helper.Show(_cbQ120A14);
                 }
                 else
                 {
-                    _cbQ120A1.setVisibility(View.GONE);
-                    _cbQ120A2.setVisibility(View.GONE);
-                    _cbQ120A3.setVisibility(View.GONE);
-                    _cbQ120A4.setVisibility(View.GONE);
-                    _cbQ120A5.setVisibility(View.GONE);
-                    _cbQ120A6.setVisibility(View.GONE);
-                    _cbQ120A7.setVisibility(View.GONE);
-                    _cbQ120A8.setVisibility(View.VISIBLE);
-                    _cbQ120A9.setVisibility(View.VISIBLE);
-                    _cbQ120A10.setVisibility(View.VISIBLE);
-                    _cbQ120A11.setVisibility(View.VISIBLE);
-                    _cbQ120A12.setVisibility(View.VISIBLE);
-                    _cbQ120A13.setVisibility(View.VISIBLE);
-                    _cbQ120A14.setVisibility(View.VISIBLE);
+                    Helper.Hide(_cbQ120A1);
+                    Helper.Hide(_cbQ120A2);
+                    Helper.Hide(_cbQ120A3);
+                    Helper.Hide(_cbQ120A4);
+                    Helper.Hide(_cbQ120A5);
+                    Helper.Hide(_cbQ120A6);
+                    Helper.Hide(_cbQ120A7);
+                    Helper.Show(_cbQ120A8);
+                    Helper.Show(_cbQ120A9);
+                    Helper.Show(_cbQ120A10);
+                    Helper.Show(_cbQ120A11);
+                    Helper.Show(_cbQ120A12);
+                    Helper.Show(_cbQ120A13);
+                    Helper.Show(_cbQ120A14);
                 }
             }
 
@@ -1187,6 +1190,17 @@ public class Blok7FActivity extends BaseStepsActivity {
 
                 int validatedAnswer = 0;
 
+                if(A119.equals("--Pilih Jawaban--") || A119 == null || A119.equals("") || A119.isEmpty())
+                {
+                    _errorQ119A.setError("error");
+                    _errorQ119A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ119A.setError(null);
+                    _errorQ119A.setText("");
+                    validatedAnswer++;
+                }
                 if(A118.equals("") || A118.isEmpty())
                 {
                     _errorQ118A.setError("error");
@@ -1221,7 +1235,7 @@ public class Blok7FActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(validatedAnswer == 2)
+                if(validatedAnswer == 3)
                 {
                     Intent intent = new Intent(Blok7FActivity.this, Blok8Activity.class);
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));

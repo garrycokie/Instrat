@@ -22,6 +22,7 @@ public class Blok7Activity extends BaseStepsActivity {
     private CheckBox _cbQ102AOppo;
     private CheckBox _cbQ102AAsus;
 
+    private TextView _errorQ101A;
     private TextView _errorQ102A;
 
     private Bundle extras;
@@ -61,6 +62,7 @@ public class Blok7Activity extends BaseStepsActivity {
         _cbQ102AOppo = (CheckBox) findViewById(R.id.cbQ102AOppo);
         _cbQ102AAsus = (CheckBox) findViewById(R.id.cbQ102AAsus);
 
+        _errorQ101A = (TextView) findViewById(R.id.errorQ101A);
         _errorQ102A = (TextView) findViewById(R.id.errorQ102A);
 
         ArrayAdapter<CharSequence> adapterQ101 = ArrayAdapter.createFromResource(this, R.array.page_blok7_q101A_list, R.layout.spinner_item);
@@ -233,7 +235,18 @@ public class Blok7Activity extends BaseStepsActivity {
                 A102 = GetCheckBoxValue(_cbQ102AOppo, A102);
                 A102 = GetCheckBoxValue(_cbQ102AAsus, A102);
 
-                boolean isValidated = false;
+                int validatedAnswer = 0;
+                if(A101.equals("--Pilih Jawaban--") || A101 == null || A101.equals("") || A101.isEmpty())
+                {
+                    _errorQ101A.setError("error");
+                    _errorQ101A.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorQ101A.setError(null);
+                    _errorQ101A.setText("");
+                    validatedAnswer++;
+                }
                 if(A102.equals("") || A102.isEmpty())
                 {
                     _errorQ102A.setError("error");
@@ -243,10 +256,10 @@ public class Blok7Activity extends BaseStepsActivity {
                 {
                     _errorQ102A.setError(null);
                     _errorQ102A.setText("");
-                    isValidated = true;
+                    validatedAnswer++;
                 }
 
-                if(isValidated)
+                if(validatedAnswer == 2)
                 {
                     if(_cbQ102ASamsung.isChecked())
                     {

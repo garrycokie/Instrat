@@ -16,7 +16,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/txtBlok8Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
@@ -24,140 +24,81 @@
                 android:text="BLOK 8 : IDENTITAS TOKO"
                 android:layout_centerHorizontal="true"/>
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ121"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="@string/page_blok8_q121_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q121_text"/>
             <Spinner
-                android:id="@+id/spQ121A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/spQ121A"/>
+            <TextView
+                style="@style/LabelError"
+                android:id="@+id/errorQ121A"/>
 
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ122"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q122_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q122_text"/>
             <EditText
-                android:id="@+id/txtQ122A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/txtQ122A"/>
             <TextView
-                android:id="@+id/errorQ122A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ122A"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ123"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q123_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q123_text"/>
             <EditText
-                android:id="@+id/txtQ123A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/txtQ123A"/>
             <TextView
-                android:id="@+id/errorQ123A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ123A"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ124"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q124_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q124_text"/>
             <EditText
-                android:id="@+id/txtQ1224"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/txtQ1224"/>
             <TextView
-                android:id="@+id/errorQ1224"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ1224"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ125"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q125_text"
-                android:layout_marginBottom="10dp"/>
-            <TextView
-                android:id="@+id/errorQ125"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                android:text="@string/page_blok8_q125_text"/>
             <EditText
-                android:id="@+id/txtQ125A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/txtQ125A"/>
             <TextView
-                android:id="@+id/errorQ125A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ125A"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ126"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q126_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q126_text"/>
             <EditText
-                android:id="@+id/txtQ126A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/txtQ126A"/>
             <TextView
-                android:id="@+id/errorQ126A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"
+                android:id="@+id/errorQ126A"/>
+
             <TextView
+                style="@style/LabelQuestion"
                 android:id="@+id/lblQ127"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/page_blok8_q127_text"
-                android:layout_marginBottom="10dp"/>
+                android:text="@string/page_blok8_q127_text"/>
             <Spinner
-                android:id="@+id/spQ127A"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"/>
+                style="@style/Answer"
+                android:id="@+id/spQ127A"/>
+            <TextView
+                style="@style/LabelError"
+                android:id="@+id/errorQ127A"/>
         </LinearLayout>
 
     </ScrollView>

@@ -33,6 +33,8 @@ public class Block2Activity extends BaseStepsActivity {
 
     private Bundle extras;
 
+    private TextView _errorOperatorType;
+    private TextView _errorOperator4G;
 
     public int SetSelectedSpinner(ArrayAdapter<CharSequence> adapter, String value)
     {
@@ -53,6 +55,7 @@ public class Block2Activity extends BaseStepsActivity {
         extras = getIntent().getExtras();
 
         this._operatorSpinnerItems = new String[] {
+                "--Pilih Jawaban--",
                 "Smartfren",
                 "Axis",
                 "Bolt",
@@ -62,6 +65,9 @@ public class Block2Activity extends BaseStepsActivity {
                 "XL",
                 "Tidak tahu"
         };
+
+        _errorOperatorType = (TextView) findViewById(R.id.errorOperatorType);
+        _errorOperator4G = (TextView) findViewById(R.id.errorOperator4G);
 
         _spOperator= (Spinner) findViewById(R.id.spinOperatorType);
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
@@ -152,7 +158,29 @@ public class Block2Activity extends BaseStepsActivity {
             public void onContinueClicked() {
 
                 int validatedAnswer = 0;
+                if(_spOperatorValue.equals("--Pilih Jawaban--") || _spOperatorValue == null || _spOperatorValue.equals("") || _spOperatorValue.isEmpty())
+                {
+                    _errorOperatorType.setError("error");
+                    _errorOperatorType.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorOperatorType.setError(null);
+                    _errorOperatorType.setText("");
+                    validatedAnswer++;
+                }
 
+                if(_spOperator4GValue.equals("--Pilih Jawaban--") || _spOperator4GValue == null || _spOperator4GValue.equals("") || _spOperator4GValue.isEmpty())
+                {
+                    _errorOperator4G.setError("error");
+                    _errorOperator4G.setText("Pilih salah satu jawaban");
+                }
+                else
+                {
+                    _errorOperator4G.setError(null);
+                    _errorOperator4G.setText("");
+                    validatedAnswer++;
+                }
                 if(_spOperator4GValue == "Tidak tahu") {
                     _error4GReason.setError(null);
                     _error4GReason.setText("");
@@ -177,7 +205,7 @@ public class Block2Activity extends BaseStepsActivity {
                 }
 
 
-                if(validatedAnswer ==1)
+                if(validatedAnswer == 3)
                 {
                     Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
 

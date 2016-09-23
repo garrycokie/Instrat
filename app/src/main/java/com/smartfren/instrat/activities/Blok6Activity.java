@@ -236,6 +236,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private TextView _txtTotalTypeXiaomiLabel;
     private TextView _txtTotalTypeHiSenseLabel;
 
+    /*
     // error checkboxes
     private TextView _error61b;
     private TextView _error61c;
@@ -271,7 +272,7 @@ public class Blok6Activity extends BaseStepsActivity {
     private TextView _errorTotalTypeAcer;
     private TextView _errorTotalTypeXiaomi;
     private TextView _errorTotalTypeHiSense;
-
+*/
 
     private String _no_61BValue;
     private String _no_61CValue;
@@ -565,7 +566,7 @@ public class Blok6Activity extends BaseStepsActivity {
         _txtTotalTypeXiaomiLabel = (TextView) findViewById(R.id.txtTotalXiaomiType);
         _txtTotalTypeHiSenseLabel = (TextView) findViewById(R.id.txtTotalHiSenseType);
 
-
+/*
         //checkboxes error
         _error61b = (TextView) findViewById(R.id.error61b);
         _error61c = (TextView) findViewById(R.id.error61c);
@@ -600,7 +601,7 @@ public class Blok6Activity extends BaseStepsActivity {
         _errorTotalTypeAcer = (TextView) findViewById(R.id.errorTotalAcerTypeValue);
         _errorTotalTypeXiaomi = (TextView) findViewById(R.id.errorTotalXiaomiTypeValue);
         _errorTotalTypeHiSense = (TextView) findViewById(R.id.errorTotalHiSenseTypeValue);
-
+*/
         //cbx labels
         _txtSamsungLabel = (TextView) findViewById(R.id.txtSmartphoneSamsung);
         _txtBlackBerryLabel = (TextView) findViewById(R.id.txtIsBlackberryExsist);
@@ -2549,7 +2550,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
 
                 int isError =0;
-
+/*
                 if(_no_61BValue == null || _no_61BValue.isEmpty() || _no_61BValue.equals(""))
                 {
                     isError ++;
@@ -3069,7 +3070,7 @@ public class Blok6Activity extends BaseStepsActivity {
                     _error62.setError("error");
                     _error62.setText("Minimal satu (1) checkbox harus dipilih");
                 }
-
+*/
                 if(isError == 0) {
                     Intent intent = new Intent(Blok6Activity.this, Blok7Activity.class);
                     intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
