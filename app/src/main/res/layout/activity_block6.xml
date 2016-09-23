@@ -558,7 +558,7 @@
                 style="@style/Answer" />
             <TextView
                 android:id="@+id/errorSony"
-                style="@style/LabelQuestion"/>
+                style="@style/LabelError"/>
 
 
             <TextView

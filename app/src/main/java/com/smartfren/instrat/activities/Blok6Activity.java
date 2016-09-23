@@ -1600,7 +1600,7 @@ public class Blok6Activity extends BaseStepsActivity {
                 }
 
             }
-            if(_no_62Value.contains("Blackberry"))
+            if(_no_62Value.contains("BlackBerry"))
             {
                 _cbxBlackBerry.setChecked(true);
 
