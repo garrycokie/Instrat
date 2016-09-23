@@ -1502,70 +1502,80 @@ public class Blok6Activity extends BaseStepsActivity {
 
                     if(_no_63Value.contains("Galaxy YOUNG 2 - G130"))
                     {
+                        _no_63Value.replace("Galaxy YOUNG 2 - G130","");
                         _cbxSamsungGalaxyYoung2.setChecked(true);
                     }
                     if(_no_63Value.contains("Galaxy J1"))
                     {
+                        _no_63Value.replace("Galaxy J1","");
                         _cbxSamsungGalaxyJ1.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy J2"))
                     {
+                        _no_63Value.replace("Galaxy J2","");
                         _cbxSamsungGalaxyJ2.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy J3"))
                     {
+                        _no_63Value.replace("Galaxy J3","");
                         _cbxSamsungGalaxyJ3.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy J5"))
                     {
+                        _no_63Value.replace("Galaxy J5","");
                         _cbxSamsungGalaxyJ5.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy J7"))
                     {
+                        _no_63Value.replace("Galaxy J7","");
                         _cbxSamsungGalaxyJ7.setChecked(true);
-
-
                     }
                     if(_no_63Value.contains("Galaxy J1 Ace"))
                     {
+                        _no_63Value.replace("Galaxy J1 Ace","");
                         _cbxSamsungGalaxyJ1Ace.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy A3"))
                     {
+                        _no_63Value.replace("Galaxy A5","");
                         _cbxSamsungGalaxyA3.setChecked(true);
-
                     }
                     if(_no_63Value.contains("Galaxy A5"))
                     {
+                        _no_63Value.replace("Galaxy A5","");
                         _cbxSamsungGalaxyA5.setChecked(true);
                     }
                     if(_no_63Value.contains("Galaxy A7"))
                     {
+                        _no_63Value.replace("Galaxy A7","");
                         _cbxSamsungGalaxyA7.setChecked(true);
-
                     }
                     if(_no_63Value.contains("Galaxy V Plus"))
                     {
+                        _no_63Value.replace("Galaxy V Plus","");
                         _cbxSamsungGalaxyVPlus.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy Note 5"))
                     {
+                        _no_63Value.replace("Galaxy Note 5","");
                         _cbxSamsungGalaxyNote5.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy S6"))
                     {
+                        _no_63Value.replace("Galaxy S6","");
                         _cbxSamsungGalaxyS6.setChecked(true);
 
                     }
                     if(_no_63Value.contains("Galaxy S7"))
                     {
+                        _no_63Value.replace("Galaxy S7","");
                         _cbxSamsungGalaxyS7.setChecked(true);
 
                     }
@@ -1573,13 +1583,15 @@ public class Blok6Activity extends BaseStepsActivity {
                     {
                         _cbxSamsungGalaxyS7Edge.setChecked(true);
                         _cbxSamsungGalaxyS7Edge.setVisibility(View.VISIBLE);
-
                     }
-                    if(_no_63Value.contains("Samsung Tipe Lainnya, Sebutkan"))
-                    {
-                        _cbxSamsungOther.setChecked(true);
-                        _txtSamsungOtherValue.setText(_no_63Value.substring(_no_63Value.lastIndexOf(";") + 1));
 
+
+
+                    if(_no_63Value != null && !_no_63Value.isEmpty() && !_no_63Value.equals(""))
+                    {
+                        _no_63Value.replace(";","");
+                        _cbxSamsungOther.setChecked(true);
+                        _txtSamsungOtherValue.setText(_no_63Value);
                     }
                 }
 
@@ -1589,7 +1601,7 @@ public class Blok6Activity extends BaseStepsActivity {
                 }
 
             }
-            if(_no_62Value.contains("Blackberry"))
+            if(_no_62Value.contains("BlackBerry"))
             {
                 _cbxBlackBerry.setChecked(true);
 
@@ -1656,24 +1668,31 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_69Value.contains("Lenovo A6000"))
                     {
+                        _no_69Value.replace("Lenovo A6000","");
                         _cbxLenovoA6000.setChecked(true);
                     }
                     if(_no_69Value.contains("Lenovo A6000 PLUS"))
                     {
+                        _no_69Value.replace("Lenovo A6000 PLUS","");
                         _cbxLenovoA6000Plus.setChecked(true);
                     }
                     if(_no_69Value.contains("Lenovo A7000 LTE"))
                     {
+                        _no_69Value.replace("Lenovo A7000 LTE","");
                         _cbxLenovoA7000.setChecked(true);
                     }
                     if(_no_69Value.contains("Lenovo P70 16GB LTE"))
                     {
+                        _no_69Value.replace("Lenovo P70 16GB LTE","");
                         _cbxLenovoP70.setChecked(true);
                     }
-                    if(_no_69Value.contains("Lenovo Tipe Lainnya, Sebutkan"))
+
+
+                    if(_no_69Value != null && !_no_69Value.isEmpty() && !_no_69Value.equals(""))
                     {
+                        _no_69Value.replace(";","");
                         _cbxLenovoOther.setChecked(true);
-                        _txtLenovoOtherValue.setText(_no_63Value.substring(_no_63Value.lastIndexOf(";") + 1));
+                        _txtLenovoOtherValue.setText(_no_63Value);
                     }
                 }
 
@@ -1692,27 +1711,32 @@ public class Blok6Activity extends BaseStepsActivity {
                 _cbxAdvanS35D.setVisibility(View.VISIBLE);
                 _cbxAdvanS35E.setVisibility(View.VISIBLE);
                 _cbxAdvanOther.setVisibility(View.VISIBLE);
-                _txtLenovoOtherValue.setVisibility(View.VISIBLE);
-                _txtTotalTypeLenovoLabel.setVisibility(View.VISIBLE);
-                _txtTotalTypeLenovo.setVisibility(View.VISIBLE);
+                _txtAdvanOtherValue.setVisibility(View.VISIBLE);
+                _txtTotalTypeAdvanLabel.setVisibility(View.VISIBLE);
+                _txtTotalTypeAdvan.setVisibility(View.VISIBLE);
 
                 if(_no_71Value != null && !_no_71Value.isEmpty() && !_no_71Value.equals(""))
                 {
                     if(_no_71Value.contains("Advan VANDROID S35H"))
                     {
+                        _no_71Value.replace("Advan VANDROID S35H","");
                         _cbxAdvanS35H.setChecked(true);
                     }
                     if(_no_71Value.contains("Advan VANDROID S35D"))
                     {
+                        _no_71Value.replace("Advan VANDROID S35D","");
                         _cbxAdvanS35D.setChecked(true);
                     }
                     if(_no_71Value.contains("Advan VANDROID S35E")) {
-                        _cbxLenovoA7000.setChecked(true);
+                        _no_71Value.replace("Advan VANDROID S35E","");
+                        _cbxAdvanS35E.setChecked(true);
                     }
-                    if(_no_71Value.contains("ADVAN Tipe Lainnya, Sebutkan"))
+
+                    if(_no_71Value != null && !_no_71Value.isEmpty() && !_no_71Value.equals(""))
                     {
+                        _no_71Value.replace(";","");
                         _cbxAdvanOther.setChecked(true);
-                        _txtAdvanOtherValue.setText(_no_71Value.substring(_no_71Value.lastIndexOf(";") + 1));
+                        _txtAdvanOtherValue.setText(_no_71Value);
                     }
                 }
 
@@ -1739,22 +1763,28 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_73Value.contains("XPeria C5 Ultra Dual E5563"))
                     {
+                        _no_73Value.replace("XPeria C5 Ultra Dual E5563F","");
                         _cbxXperiaC5.setChecked(true);
                     }
                     if(_no_73Value.contains("XPeria E4 DUAL"))
                     {
+                        _no_73Value.replace("XPeria E4 DUAL","");
                         _cbxXperiaE4.setChecked(true);
                     }
                     if(_no_73Value.contains("XPeria M5 Dual E5663")) {
+                        _no_73Value.replace("XPeria M5 Dual E5663","");
                         _cbxXperiaM5.setChecked(true);
                     }
                     if(_no_73Value.contains("XPeria M4 AQUA E2353 NFC LTE3")) {
+                        _no_73Value.replace("XPeria M4 AQUA E2353 NFC LTE3","");
                         _cbxXperiaM4.setChecked(true);
                     }
-                    if(_no_73Value.contains("Sony Tipe Lainnya, Sebutkan"))
+
+                    if(_no_73Value != null && !_no_73Value.isEmpty() && !_no_73Value.equals(""))
                     {
+                        _no_73Value.replace(";","");
                         _cbxXperiaOther.setChecked(true);
-                        _txtXperiaOtherValue.setText(_no_73Value.substring(_no_73Value.lastIndexOf(";") + 1));
+                        _txtXperiaOtherValue.setText(_no_73Value);
                     }
                 }
 
@@ -1801,11 +1831,11 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_77Value.equals("Ya"))
                     {
-                        _rdgMitoExist.check(R.id.radIsNokiaExistTrue);
+                        _rdgMitoExist.check(R.id.radIsMitoExistTrue);
                     }
                     else
                     {
-                        _rdgNokiaExist.check(R.id.radIsNokiaExistFalse);
+                        _rdgNokiaExist.check(R.id.radIsMitoExistTrue);
                     }
                 }
 
@@ -1825,23 +1855,28 @@ public class Blok6Activity extends BaseStepsActivity {
                 _txtLGOtherValue.setVisibility(View.VISIBLE);
                 _txtTotalTypeLG.setVisibility(View.VISIBLE);
                 _txtTotalTypeLGLabel.setVisibility(View.VISIBLE);
+
                 if(_no_79Value != null && !_no_79Value.isEmpty() && !_no_79Value.equals(""))
                 {
                     if(_no_79Value.contains("LG G4 DUAL H818P NFC LTE 32GB"))
                     {
+                        _no_79Value.replace("LG G4 DUAL H818P NFC LTE 32GB","");
                         _cbxLGG4Dual.setChecked(true);
                     }
                     if(_no_79Value.contains("LG Magna H502F"))
                     {
+                        _no_79Value.replace("LG Magna H502F","");
                         _cbxLGMagna.setChecked(true);
                     }
                     if(_no_79Value.contains("LG G4 STYLUS")) {
+                        _no_79Value.replace("LG G4 STYLUS","");
                         _cbxLGG4Stylus.setChecked(true);
                     }
-                    if(_no_79Value.contains("LG Tipe Lainnya, Sebutkan"))
+                    if(_no_79Value != null && !_no_79Value.isEmpty() && !_no_79Value.equals(""))
                     {
+                        _no_79Value.replace(";","");
                         _cbxLGOther.setChecked(true);
-                        _txtLGOtherValue.setText(_no_79Value.substring(_no_79Value.lastIndexOf(";") + 1));
+                        _txtLGOtherValue.setText(_no_79Value);
                     }
                 }
 
@@ -1862,11 +1897,11 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_81Value.equals("Ya"))
                     {
-                        _rdgHTCExist.check(R.id.radIsNokiaExistTrue);
+                        _rdgHTCExist.check(R.id.radIsHTCExistTrue);
                     }
                     else
                     {
-                        _rdgHTCExist.check(R.id.radIsNokiaExistFalse);
+                        _rdgHTCExist.check(R.id.radIsHTCExistFalse);
                     }
                 }
 
@@ -1887,11 +1922,11 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_83Value.equals("Ya"))
                     {
-                        _rdgHTCExist.check(R.id.radIsNokiaExistTrue);
+                        _rdgHTCExist.check(R.id.radIsPolytronExistTrue);
                     }
                     else
                     {
-                        _rdgHTCExist.check(R.id.radIsNokiaExistFalse);
+                        _rdgHTCExist.check(R.id.radIsPolytronExistFalse);
                     }
                 }
 
@@ -1916,27 +1951,34 @@ public class Blok6Activity extends BaseStepsActivity {
 
                 if(_no_85Value != null && !_no_85Value.isEmpty() && !_no_85Value.equals(""))
                 {
-                    if(_no_85Value.contains("XOppo Mirror 5 A51W"))
+                    if(_no_85Value.contains("Oppo Mirror 5 A51W"))
                     {
+                        _no_85Value.replace("Oppo Mirror 5 A51W","");
                         _cbxOPPOMirror5.setChecked(true);
                     }
-                    if(_no_85Value.contains("XOppo JOY 3 A11W"))
+                    if(_no_85Value.contains("Oppo JOY 3 A11W"))
                     {
+                        _no_85Value.replace("Oppo JOY 3 A11W","");
                         _cbxOPPOJoy3.setChecked(true);
                     }
                     if(_no_85Value.contains("Oppo JOY PLUS R1011")) {
+                        _no_85Value.replace("Oppo JOY PLUS R1011","");
                         _cbxOPPOJoyPlus.setChecked(true);
                     }
                     if(_no_85Value.contains("Oppo NEO 3 R831K")) {
+                        _no_85Value.replace("Oppo NEO 3 R831K","");
                         _cbxOPPONeo3.setChecked(true);
                     }
                     if(_no_85Value.contains("Oppo NEO 5")) {
+                        _no_85Value.replace("Oppo NEO 5","");
                         _cbxOPPONeo5.setChecked(true);
                     }
-                    if(_no_85Value.contains("Oppo Tipe Lainnya, Sebutkan"))
+
+                    if(_no_85Value != null && !_no_85Value.isEmpty() && !_no_85Value.equals(""))
                     {
+                        _no_85Value.replace(";","");
                         _cbxOPPOOther.setChecked(true);
-                        _txtOPPOOtherValue.setText(_no_85Value.substring(_no_85Value.lastIndexOf(";") + 1));
+                        _txtOPPOOtherValue.setText(_no_85Value);
                     }
                 }
 
@@ -1965,28 +2007,35 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_87Value.contains("Evercoss / Cross A33A"))
                     {
+                        _no_87Value.replace("Evercoss / Cross A33A","");
                         _cbxEvercrossA33A.setChecked(true);
                     }
                     if(_no_87Value.contains("Evercoss / Cross A5P"))
                     {
+                        _no_87Value.replace("Evercoss / Cross A5P","");
                         _cbxEvercrossA5P.setChecked(true);
                     }
                     if(_no_87Value.contains("Evercoss / Cross A12B Jump Series")) {
+                        _no_87Value.replace("Evercoss / Cross A12B Jump Series","");
                         _cbxEvercrossA21B.setChecked(true);
                     }
                     if(_no_87Value.contains("Evercoss / Cross A53B3")) {
+                        _no_87Value.replace("Evercoss / Cross A53B3","");
                         _cbxEvercrossA35B.setChecked(true);
                     }
                     if(_no_85Value.contains("Evercoss / Cross Winner T A74A")) {
+                        _no_87Value.replace("Evercoss / Cross Winner T A74A","");
                         _cbxEvercrossWinner.setChecked(true);
                     }
                     if(_no_87Value.contains("Evercoss / Cross A54 Jump")) {
+                        _no_87Value.replace("Evercoss / Cross A54 Jump","");
                         _cbxEvercrossA54.setChecked(true);
                     }
-                    if(_no_87Value.contains("Evercoss / Cross Tipe lainnya, Sebutkan"))
+                    if(_no_87Value != null && !_no_87Value.isEmpty() && !_no_87Value.equals(""))
                     {
+                        _no_87Value.replace(";","");
                         _cbxEvercrossOther.setChecked(true);
-                        _txtEvercrossOtherValue.setText(_no_87Value.substring(_no_87Value.lastIndexOf(";") + 1));
+                        _txtEvercrossOtherValue.setText(_no_87Value);
                     }
                 }
 
@@ -2014,28 +2063,40 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_89Value.contains("Zenfone 2 Laser 2GB/8GB"))
                     {
+                        _no_89Value.replace("Zenfone 2 Laser 2GB/8G","");
                         _cbxAsusZenfone2Laser8.setChecked(true);
                     }
                     if(_no_89Value.contains("Zenfone 2 Laser 2GB/16GB"))
                     {
+                        _no_89Value.replace("Zenfone 2 Laser 2GB/16GB","");
                         _cbxAsusZenfone2Laser16.setChecked(true);
                     }
-                    if(_no_89Value.contains("Zenfone 2 Laser 2GB/16GB")) {
+                    if(_no_89Value.contains("Zenfone 2 Laser 2GB/16GB"))
+                    {
+                        _no_89Value.replace("Zenfone 2 Laser 2GB/16GB","");
                         _cbxAsusZenfoneGO.setChecked(true);
                     }
-                    if(_no_89Value.contains("Zenfone 4S 1GB/8GB")) {
+                    if(_no_89Value.contains("Zenfone 4S 1GB/8GB"))
+                    {
+                        _no_89Value.replace("Zenfone 4S 1GB/8GB","");
                         _cbxAsusZenfone4S.setChecked(true);
                     }
-                    if(_no_89Value.contains("New Zenfone 4S 2GB/8GB")) {
+                    if(_no_89Value.contains("New Zenfone 4S 2GB/8GB"))
+                    {
+                        _no_89Value.replace("New Zenfone 4S 2GB/8GB","");
                         _cbxAsusNewZenfone4S.setChecked(true);
                     }
-                    if(_no_89Value.contains("Zenfone 2 ZE551ML 32GB")) {
+                    if(_no_89Value.contains("Zenfone 2 ZE551ML 32GB"))
+                    {
+                        _no_89Value.replace("Zenfone 2 ZE551ML 32GB","");
                         _cbxAsusZenfone2ZE551ML.setChecked(true);
                     }
-                    if(_no_89Value.contains("Asus Tipe Lainnya, Sebutkan"))
+
+                    if(_no_89Value != null && !_no_89Value.isEmpty() && !_no_89Value.equals(""))
                     {
+                        _no_89Value.replace(";","");
                         _cbxAsusOther.setChecked(true);
-                        _txtAsusOtherValue.setText(_no_89Value.substring(_no_89Value.lastIndexOf(";") + 1));
+                        _txtAsusOtherValue.setText(_no_89Value);
                     }
                 }
 
@@ -2059,16 +2120,19 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_91Value.contains("Acer Liquid Z220 Dual"))
                     {
+                        _no_91Value.replace("Acer Liquid Z220 Dual","");
                         _cbxAcerZ220.setChecked(true);
                     }
                     if(_no_91Value.contains("Acer Liquid Z520 DUAL"))
                     {
+                        _no_91Value.replace("Acer Liquid Z520 DUAL","");
                         _cbxAcerZ520.setChecked(true);
                     }
-                    if(_no_91Value.contains("Acer Tipe Lainnya, Sebutkan"))
+                    if(_no_91Value != null && !_no_91Value.isEmpty() && !_no_91Value.equals(""))
                     {
+                        _no_91Value.replace(";","");
                         _cbxAcerOther.setChecked(true);
-                        _txtAcerOtherValue.setText(_no_91Value.substring(_no_91Value.lastIndexOf(";") + 1));
+                        _txtAcerOtherValue.setText(_no_91Value);
                     }
                 }
 
@@ -2094,24 +2158,30 @@ public class Blok6Activity extends BaseStepsActivity {
                 {
                     if(_no_93Value.contains("RED MI2 Prime"))
                     {
+                        _no_93Value.replace("RED MI2 Prime","");
                         _cbxXiaomiREDMI2Prime.setChecked(true);
                     }
                     if(_no_93Value.contains("RED MI2 8GB LTE"))
                     {
+                        _no_93Value.replace("RED MI2 8GB LTE","");
                         _cbxXiaomiREDMI28GB.setChecked(true);
                     }
-                    if(_no_93Value.contains("RED MI2 16GB LTEL"))
+                    if(_no_93Value.contains("RED MI2 16GB LTE"))
                     {
+                        _no_93Value.replace("RED MI2 16GB LTE","");
                         _cbxXiaomiREDMI216GB.setChecked(true);
                     }
                     if(_no_93Value.contains("Mi4I LTE"))
                     {
+                        _no_93Value.replace("Mi4I LTE","");
                         _cbxXiaomiMi4I.setChecked(true);
                     }
-                    if(_no_93Value.contains("Xiaomi Tipe Lainnya, Sebutkan"))
+
+                    if(_no_93Value != null && !_no_93Value.isEmpty() && !_no_93Value.equals(""))
                     {
+                        _no_93Value.replace(";","");
                         _cbxXiaomiOther.setChecked(true);
-                        _txtXiaomiOtherValue.setText(_no_91Value.substring(_no_91Value.lastIndexOf(";") + 1));
+                        _txtXiaomiOtherValue.setText(_no_91Value);
                     }
                 }
 
@@ -2136,15 +2206,18 @@ public class Blok6Activity extends BaseStepsActivity {
                     if(_no_95Value.contains("Pure Shot"))
                     {
                         _cbxHiSensePureShot.setChecked(true);
-                    }
+                        _no_95Value.replace("Pure Shot","");
+                }
                     if(_no_95Value.contains("Pure Shot Plus"))
                     {
                         _cbxHiSensePureShotPlus.setChecked(true);
+                        _no_95Value.replace("Pure Shot Plus","");
                     }
-                    if(_no_95Value.contains("Hi Sense Tipe Lainnya, Sebutkan"))
+                    if(_no_95Value != null && !_no_95Value.isEmpty() && !_no_95Value.equals(""))
                     {
+                        _no_95Value.replace(";","");
                         _cbxHiSenseOther.setChecked(true);
-                        _txtHiSenseOtherValue.setText(_no_95Value.substring(_no_95Value.lastIndexOf(";") + 1));
+                        _txtHiSenseOtherValue.setText(_no_95Value);
                     }
                 }
 
@@ -2581,7 +2654,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_63Value != null && !_no_63Value.isEmpty() && !_no_63Value.equals("")) {
 
-                            if (_no_63Value.contains("Samsung Tipe Lainnya, Sebutkan")) {
+                            if (_cbxSamsungOther.isChecked()) {
 
                                 String otherValueText =_txtSamsungOtherValue.getText().toString();
 
@@ -2645,7 +2718,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_69Value != null && !_no_69Value.isEmpty() && !_no_69Value.equals("")) {
 
-                            if (_no_69Value.contains("Lenovo Tipe Lainnya, Sebutkan")) {
+                            if (_cbxLenovoOther.isChecked()) {
                                 String otherValueText =_txtLenovoOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2683,7 +2756,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_71Value != null && !_no_71Value.isEmpty() && !_no_71Value.equals("")) {
 
-                            if (_no_71Value.contains("ADVAN Tipe Lainnya, Sebutkan")) {
+                            if (_cbxAdvanOther.isChecked()) {
                                 String otherValueText =_txtAdvanOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2722,7 +2795,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_73Value != null && !_no_73Value.isEmpty() && !_no_73Value.equals("")) {
 
-                            if (_no_73Value.contains("Sony Tipe Lainnya, Sebutkan")) {
+                            if (_cbxXperiaOther.isChecked()) {
                                 String otherValueText =_txtXperiaOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2786,7 +2859,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_79Value != null && !_no_79Value.isEmpty() && !_no_79Value.equals("")) {
 
-                            if (_no_79Value.contains("LG Tipe Lainnya, Sebutkan")) {
+                            if (_cbxLGOther.isChecked()) {
                                 isError ++;
                                 _errorLG.setError("error");
                                 _errorLG.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
@@ -2844,7 +2917,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_85Value != null && !_no_85Value.isEmpty() && !_no_85Value.equals("")) {
 
-                            if (_no_85Value.contains("Oppo Tipe Lainnya, Sebutkan")) {
+                            if (_cbxOPPOOther.isChecked()) {
                                 String otherValueText =_txtOPPOOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2881,7 +2954,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_87Value != null && !_no_87Value.isEmpty() && !_no_87Value.equals("")) {
 
-                            if (_no_87Value.contains("Evercoss / Cross Tipe lainnya, Sebutkan")) {
+                            if (_cbxEvercrossOther.isChecked()) {
                                 String otherValueText =_txtEvercrossOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2919,7 +2992,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_89Value != null && !_no_89Value.isEmpty() && !_no_89Value.equals("")) {
 
-                            if (_no_89Value.contains("Asus Tipe Lainnya, Sebutkan")) {
+                            if (_cbxAsusOther.isChecked()) {
                                 String otherValueText =_txtAsusOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2956,7 +3029,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_91Value != null && !_no_91Value.isEmpty() && !_no_91Value.equals("")) {
 
-                            if (_no_91Value.contains("Acer Tipe Lainnya, Sebutkan")) {
+                            if (_cbxAcerOther.isChecked()) {
                                 String otherValueText =_txtAcerOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -2993,7 +3066,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_93Value != null && !_no_93Value.isEmpty() && !_no_93Value.equals("")) {
 
-                            if (_no_93Value.contains("Xiaomi Tipe Lainnya, Sebutkan")) {
+                            if (_cbxXiaomiOther.isChecked()) {
                                 String otherValueText =_txtXiaomiOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
@@ -3030,7 +3103,7 @@ public class Blok6Activity extends BaseStepsActivity {
 
                         if (_no_95Value != null && !_no_95Value.isEmpty() && !_no_95Value.equals("")) {
 
-                            if (_no_95Value.contains("Hi Sense Tipe Lainnya, Sebutkan")) {
+                            if (_cbxHiSenseOther.isChecked()) {
                                 String otherValueText =_txtHiSenseOtherValue.getText().toString();
 
                                 if (otherValueText == null && otherValueText.isEmpty() && otherValueText.equals(""))
