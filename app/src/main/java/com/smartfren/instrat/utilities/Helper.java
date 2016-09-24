@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -74,5 +75,21 @@ public final class Helper {
         params.setMargins(0,0,0,20);
         checkBox.setLayoutParams(params);
         checkBox.setVisibility(View.VISIBLE);
+    }
+
+    public static void Hide(RadioGroup radioGroup) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0,0,0,0);
+        radioGroup.setLayoutParams(params);
+        radioGroup.setVisibility(View.GONE);
+    }
+
+    public static void Show(RadioGroup radioGroup) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0,0,0,20);
+        radioGroup.setLayoutParams(params);
+        radioGroup.setVisibility(View.VISIBLE);
     }
 }

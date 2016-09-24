@@ -20,7 +20,7 @@
             android:paddingRight="16dp">
             <TextView
                 android:id="@+id/txtBlock6Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
@@ -35,70 +35,47 @@
  (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxBSimpati"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="SimPATI"/>
             <CheckBox
                 android:id="@+id/cbxBKartuAS"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Kartu As"/>
             <CheckBox
                 android:id="@+id/cbxBKartuLoop"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Kartu Loop"/>
             <CheckBox
                 android:id="@+id/cbxBIm3"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="IM 3"/>
             <CheckBox
                 android:id="@+id/cbxBMentari"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Mentari"/>
             <CheckBox
                 android:id="@+id/cbxBXL"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XL"/>
             <CheckBox
                 android:id="@+id/cbxBAxis"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Axis"/>
             <CheckBox
                 android:id="@+id/cbxBTri"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="3 (Tri)"/>
             <CheckBox
                 android:id="@+id/cbxBSmartfren"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="smartfren (CDMA)"/>
             <CheckBox
                 android:id="@+id/cbxBEsia"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Esia (CDMA)"/>
             <TextView
                 android:id="@+id/error61b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError"/>
 
             <TextView
                 android:id="@+id/txtLteSell"
@@ -107,53 +84,43 @@
  (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxCSimpati"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="SimPATI"/>
             <CheckBox
                 android:id="@+id/cbxCKartuAS"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Kartu As"/>
             <CheckBox
                 android:id="@+id/cbxCKartuLoop"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Kartu Loop"/>
             <CheckBox
                 android:id="@+id/cbxCIm3"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="IM 3"/>
             <CheckBox
                 android:id="@+id/cbxCMentari"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Mentari"/>
             <CheckBox
                 android:id="@+id/cbxCXL"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XL"/>
             <CheckBox
                 android:id="@+id/cbxCAxis"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Axis"/>
             <CheckBox
                 android:id="@+id/cbxCTri"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="3 (Tri)"/>
             <CheckBox
                 android:id="@+id/cbxCSmartfren"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="smartfren (CDMA)"/>
             <CheckBox
                 android:id="@+id/cbxCBolt"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Bolt"/>
             <TextView
                 android:id="@+id/error61c"
@@ -166,93 +133,75 @@
             (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxSamsung"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Samsung"/>
             <CheckBox
                 android:id="@+id/cbxBlackBerry"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="BlackBerry"/>
             <CheckBox
                 android:id="@+id/cbxNokia"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Nokia (Microsoft)"/>
             <CheckBox
                 android:id="@+id/cbxLenovo"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Lenovo"/>
             <CheckBox
                 android:id="@+id/cbxAdvan"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Advan"/>
             <CheckBox
                 android:id="@+id/cbxSony"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Sony"/>
             <CheckBox
                 android:id="@+id/cbxiPhone"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="iPhone"/>
             <CheckBox
                 android:id="@+id/cbxMito"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Mito"/>
             <CheckBox
                 android:id="@+id/cbxLG"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="LG"/>
             <CheckBox
                 android:id="@+id/cbxHTC"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="HTC"/>
             <CheckBox
                 android:id="@+id/cbxPolytron"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Polytron"/>
             <CheckBox
                 android:id="@+id/cbxOPPO"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="OPPO"/>
             <CheckBox
                 android:id="@+id/cbxEverCross"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Evercross"/>
             <CheckBox
                 android:id="@+id/cbxAsus"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Asus"/>
             <CheckBox
                 android:id="@+id/cbxAcer"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Acer"/>
             <CheckBox
                 android:id="@+id/cbxXiaomi"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Xiaomi"/>
             <CheckBox
                 android:id="@+id/cbxHiSense"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="Hi Sense"/>
             <TextView
                 android:id="@+id/error62"
-                style="@style/LabelError"
-                android:textColor="@color/colorError"/>
+                style="@style/LabelError" />
 
             <TextView
                 android:id="@+id/txtSmartphoneSamsung"
@@ -260,83 +209,83 @@
                 android:text="Smartphone: Samsung (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxGlxYoung2"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy Young 2 - G130"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ1"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J1"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ2"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J2"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ3"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J3"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ5"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J5"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ7"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J7"/>
             <CheckBox
                 android:id="@+id/cbxGlxJ1Ace"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy J 1 Ace"/>
             <CheckBox
                 android:id="@+id/cbxGlxA3"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ga;axy A 3"/>
+                style="@style/Answer"
+
+                android:text="Galaxy A 3"/>
             <CheckBox
                 android:id="@+id/cbxGlxA5"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy A 5"/>
             <CheckBox
                 android:id="@+id/cbxGlxA7"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy A 7"/>
             <CheckBox
                 android:id="@+id/cbxGlxVPlus"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy V plus"/>
             <CheckBox
                 android:id="@+id/cbxGlxNote5"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy Note 5"/>
             <CheckBox
                 android:id="@+id/cbxGlxS6"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy S6"/>
             <CheckBox
                 android:id="@+id/cbxGlxS7"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy S7"/>
             <CheckBox
                 android:id="@+id/cbxGlxS7Edge"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Galaxy S7 Edge"/>
             <CheckBox
                 android:id="@+id/cbxSamsungOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Samsung Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtSamsungOtherValue"
@@ -350,13 +299,13 @@
                 style="@style/LabelQuestion"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL  Smartphone Samsung yang tersedia?"/>
 
-                <EditText
-                    android:id="@+id/txtTotalSamsungTypeValue"
-                    style="@style/Answer"
-                    android:inputType="number"/>
-                <TextView
-                    android:id="@+id/errorTotalSamsungTypeValue"
-                    style="@style/LabelError" />
+            <EditText
+                android:id="@+id/txtTotalSamsungTypeValue"
+                style="@style/Answer"
+                android:inputType="number"/>
+            <TextView
+                android:id="@+id/errorTotalSamsungTypeValue"
+                style="@style/LabelError" />
 
 
             <TextView
@@ -366,18 +315,17 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsBlackBerryExist"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                >
                 <RadioButton
                     android:id="@+id/radIsBlackBerryExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsBlackBerryExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -400,17 +348,17 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsNokiaExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                >
                 <RadioButton
                     android:id="@+id/radIsNokiaExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsNokiaExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -432,28 +380,28 @@
                 android:text="Smartphone: Lenovo (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxLenovoA6000"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo A 6000"/>
             <CheckBox
                 android:id="@+id/cbxLenovoA6000PLUS"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo A 6000 Plus"/>
             <CheckBox
                 android:id="@+id/cbxLenovoA7000"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo A 7000"/>
             <CheckBox
                 android:id="@+id/cbxLenovoP7016GBLTE"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo P70 16GB LTE"/>
             <CheckBox
                 android:id="@+id/cbxLenovoOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo Tipe Lainnya, Sebutkan "/>
             <EditText
                 android:id="@+id/txtLenovoOtherValue"
@@ -480,23 +428,23 @@
                 android:text="Smartphone: Advan (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxAdvanVANDROIDS35H"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo A 6000 Plus"/>
             <CheckBox
                 android:id="@+id/cbxAdvanVANDROIDS35D"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo A 7000"/>
             <CheckBox
                 android:id="@+id/cbxAdvanVANDROIDS35E"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Lenovo P70 16GB LTE"/>
             <CheckBox
                 android:id="@+id/cbxAdvanOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Advan Tipe Lainnya, Sebutkan "/>
             <EditText
                 android:id="@+id/txtAdvanOtherValue"
@@ -524,33 +472,23 @@
                 android:text="Smartphone: SONY (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxSonyXperiaC5"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XPeria C5 Ultra Dual E5563"/>
             <CheckBox
                 android:id="@+id/cbxSonyXperiaE4"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XPeria E4 DUAL"/>
             <CheckBox
                 android:id="@+id/cbxSonyXpreiaM5Dual"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XPeria M5 Dual E5663"/>
             <CheckBox
                 android:id="@+id/cbxSonyXperiaAQUA"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="XPeria M4 AQUA E2353 NFC LTE"/>
             <CheckBox
                 android:id="@+id/cbxSonyOther"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="SONY Tipe Lainnya, Sebutkan "/>
 
             <EditText
@@ -580,17 +518,14 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsIphoneExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsIphoneExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsIphoneExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -612,17 +547,14 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsMitoExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsMitoExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsMitoExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -643,23 +575,22 @@
                 android:text="Smartphone: LG (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxLGG4Dual"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
                 android:text="LG G4 DUAL H818P NFC LTE 32GB"/>
             <CheckBox
                 android:id="@+id/cbxLGMagna"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="LG Magna H502F"/>
             <CheckBox
                 android:id="@+id/cbxLGG4Stylus"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="LG G4 STYLUS"/>
             <CheckBox
                 android:id="@+id/cbxLGOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="LG Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtLGOtherValue"
@@ -688,21 +619,15 @@
                 android:text="Smartphone: HTC (PILIH HANYA 1 JAWABAN)"/>
             <RadioGroup
                 android:orientation="horizontal"
-                android:id="@+id/radGrIsHTCExist"
-                android:textSize="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                android:id="@+id/radGrIsHTCExist">
                 <RadioButton
                     android:id="@+id/radIsHTCExistTrue"
-                    android:textSize="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsHTCExistFalse"
-                    android:textSize="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -718,7 +643,6 @@
                 style="@style/LabelError"/>
 
 
-
             <TextView
                 android:id="@+id/txtIsPolytronExist"
                 style="@style/LabelQuestion"
@@ -726,17 +650,17 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsPolytronExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                >
                 <RadioButton
                     android:id="@+id/radIsPolytronExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsPolytronExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -758,34 +682,34 @@
                 android:text="Smartphone: Oppo (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxOppoMirror5"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Oppo Mirror 5 A51W"/>
             <CheckBox
                 android:id="@+id/cbxOppoJoy3"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Oppo JOY 3 A11W"/>
             <CheckBox
                 android:id="@+id/cbxOppoJoyPlus"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Oppo JOY PLUS R1011"/>
             <CheckBox
                 android:id="@+id/cbxOppoNeo3"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Oppo NEO 3 R831K"/>
             <CheckBox
                 android:id="@+id/cbxOppoNeo5"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Oppo NEO 5"/>
             <CheckBox
                 android:id="@+id/cbxOppoOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Oppo Tipe Lainnya, Sebutkan "/>
+                style="@style/Answer"
+
+                android:text="Oppo Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtOppoOtherValue"
                 style="@style/Answer" />
@@ -813,38 +737,38 @@
                 android:text="Smartphone: Evercross (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossA33a"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross A33A"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossA5p"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross A5P"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossA12B"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross A12B Jump Series"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossA53b"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross A53B"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossWinner"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross Winner T A74A"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossA54Jump"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross A54 Jump"/>
             <CheckBox
                 android:id="@+id/cbxEvercrossOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Evercoss / Cross Tipe lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtEvercrossOtherValue"
@@ -873,38 +797,38 @@
                 android:text="Smartphone: Asus (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxAsusZen2S8"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Zenfone 2 Laser 2GB/8GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusZen2S16"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Zenfone 2 Laser 2GB/16GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusZenGo"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Zenfone GO 2GB/8GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusZen4S"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Zenfone 4S 1GB/8GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusNewZen4S"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="New Zenfone 4S 2GB/8GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusZen2ZE551"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Zenfone 2 ZE551ML 32GB"/>
             <CheckBox
                 android:id="@+id/cbxAsusOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Asus Tipe Lainnya, Sebutkan "/>
             <EditText
                 android:id="@+id/txtAsusOterValue"
@@ -933,18 +857,18 @@
                 android:text="Smartphone: Acer (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxAcerLiqZ220"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Acer Liquid Z220 Dual"/>
             <CheckBox
                 android:id="@+id/cbxAcerLiqZ520"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Acer Liquid Z520 DUAL"/>
             <CheckBox
                 android:id="@+id/cbxAcerOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Acer Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtAcerOterValue"
@@ -957,13 +881,13 @@
                 android:id="@+id/txtTotalAcerType"
                 style="@style/LabelQuestion"
                 android:text="Berapa jumlah TOTAL TIPE / MODEL Smartphone Acer yang tersedia?"/>
-                <EditText
-                    android:id="@+id/txtTotalAcerTypeValue"
-                    style="@style/Answer"
-                    android:inputType="number"/>
-                <TextView
-                    android:id="@+id/errorTotalAcerTypeValue"
-                    style="@style/LabelError"/>
+            <EditText
+                android:id="@+id/txtTotalAcerTypeValue"
+                style="@style/Answer"
+                android:inputType="number"/>
+            <TextView
+                android:id="@+id/errorTotalAcerTypeValue"
+                style="@style/LabelError"/>
 
             <TextView
                 android:id="@+id/txtXiaomiSell"
@@ -971,28 +895,28 @@
                 android:text="Smartphone: Xiaomi (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxXiaomiMI2Prime"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="RED MI2 Prime"/>
             <CheckBox
                 android:id="@+id/cbxXiaomiMI28"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="RED MI2 8GB LTE"/>
             <CheckBox
                 android:id="@+id/cbxXiaomiMi216"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="RED MI2 16GB LTE"/>
             <CheckBox
                 android:id="@+id/cbxXiaomiMi4I"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Mi4I LTE"/>
             <CheckBox
                 android:id="@+id/cbxXiaomiOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Xiaomi Tipe Lainnya, Sebutkan"/>
             <EditText
                 android:id="@+id/txtXiaomiOterValue"
@@ -1020,19 +944,19 @@
                 android:text="Smartphone: Hi Sense (BISA LEBIH DARI 1 JAWABAN)"/>
             <CheckBox
                 android:id="@+id/cbxHiSensePure"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Hi Sense Pure"/>
             <CheckBox
                 android:id="@+id/cbxHiSensePurePlus"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Hi Sense Pure plus"/>
 
             <CheckBox
                 android:id="@+id/cbxHiSenseOther"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Answer"
+
                 android:text="Hi Sense Tipe Lainnya, Sebutkan "/>
             <EditText
                 android:id="@+id/txtHiSenseOterValue"
@@ -1062,17 +986,17 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsTelkomselFlashExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                >
                 <RadioButton
                     android:id="@+id/radIsTelkomselFlashExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsTelkomselFlashExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1083,17 +1007,16 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsHuaweiExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsHuaweiExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsHuaweiExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1104,17 +1027,17 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsZTEExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer"
+                >
                 <RadioButton
                     android:id="@+id/radIsZTEExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsZTEExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1125,17 +1048,16 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsBoltExist"
-                android:textSize="20dp"  android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsBoltExistTrue"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsBoltExistFalse"
-                    android:textSize="20dp"  android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/Answer"
+
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
