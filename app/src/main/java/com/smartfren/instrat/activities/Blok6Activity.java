@@ -2782,12 +2782,12 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeSamsung.setError("error");
                             _errorTotalTypeSamsung.setText("Total harus diisi");
-                            Helper.Show(_errorTotalTypeSamsung;
+                            Helper.Show(_errorTotalTypeSamsung);
                         }else
                         {
                             _errorTotalTypeSamsung.setError(null);
                             _errorTotalTypeSamsung.setText("");
-                            Helper.Hide(_errorTotalTypeSamsung;
+                            Helper.Hide(_errorTotalTypeSamsung);
                         }
 
                     }
@@ -2797,13 +2797,13 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeBlackBerry.setError("error");
                             _errorTotalTypeBlackBerry.setText("Total harus diisi");
-                            Helper.Show(_errorTotalTypeBlackBerry;
+                            Helper.Show(_errorTotalTypeBlackBerry);
                         }
                         else
                         {
                             _errorTotalTypeBlackBerry.setError(null);
                             _errorTotalTypeBlackBerry.setText("");
-                            Helper.Hide();_errorTotalTypeBlackBerry;
+                            Helper.Hide(_errorTotalTypeBlackBerry);
                         }
                     }
                     if (_no_62Value.contains("Nokia (Microsoft)")) {
@@ -2812,11 +2812,13 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeNokia.setError("error");
                             _errorTotalTypeNokia.setText("Total harus diisi");
+                            Helper.Show(_errorTotalTypeNokia);
                         }
                         else
                         {
                             _errorTotalTypeBlackBerry.setError(null);
                             _errorTotalTypeBlackBerry.setText("");
+                            Helper.Hide(_errorTotalTypeNokia);
                         }
                     }
                     if (_no_62Value.contains("Lenovo")) {
@@ -2831,11 +2833,13 @@ public class Blok6Activity extends BaseStepsActivity {
                                     isError ++;
                                     _errorLenovo.setError("error");
                                     _errorLenovo.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                    Helper.Show(_errorLenovo);
                                 }
                                 else
                                 {
                                     _errorLenovo.setError(null);
                                     _errorLenovo.setText("");
+                                    Helper.Hide(_errorLenovo);
                                 }
                             }
                         }
@@ -2850,11 +2854,13 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeLenovo.setError("error");
                             _errorTotalTypeLenovo.setText("Total harus diisi");
+                            Helper.Show(_errorTotalTypeLenovo);
                         }
                         else
                         {
                             _errorTotalTypeLenovo.setError(null);
                             _errorTotalTypeLenovo.setText("");
+                            Helper.Hide(_errorTotalTypeLenovo);
                         }
                     }
                     if (_no_62Value.contains("Advan")) {
