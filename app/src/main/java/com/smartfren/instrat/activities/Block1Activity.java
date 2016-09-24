@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 /**
  * Created by FluffyBunny on 8/7/2016.
@@ -108,8 +109,9 @@ public class Block1Activity extends BaseStepsActivity {
                 R.layout.spinner_item, this._storeTypeExclusiveSpinnerItems);
         _spStoreTypeExclusive.setAdapter(storeTypeExclusiveAdapter);
 
-        _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);
-        _spStoreTypeExclusive.setVisibility(View.GONE);
+        Helper.Hide(_spStoreTypeExclusive);
+        Helper.Hide(_txtStoreTypeExlusiveLabel);
+        Helper.Hide(_errorStoreTypeExclusive);
 
         _storeTypeValue =  extras.getString("NO_1");
         _storeTypeExclusiveValue = extras.getString("NO_2");
@@ -123,11 +125,13 @@ public class Block1Activity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
 
                 if (selectedItem.equals("EXCLUSIVE SMARTFREN") || selectedItem.equals("EXCLUSIVE MEREK LAINNYA")) {
-                    _spStoreTypeExclusive.setVisibility(View.VISIBLE);
-                    _txtStoreTypeExlusiveLabel.setVisibility(View.VISIBLE);
+                    Helper.Show(_spStoreTypeExclusive);
+                    Helper.Show(_txtStoreTypeExlusiveLabel);
+                    Helper.Show(_errorStoreTypeExclusive);
                 } else {
-                    _spStoreTypeExclusive.setVisibility(View.GONE);
-                    _txtStoreTypeExlusiveLabel.setVisibility(View.GONE);
+                    Helper.Hide(_spStoreTypeExclusive);
+                    Helper.Hide(_txtStoreTypeExlusiveLabel);
+                    Helper.Hide(_errorStoreTypeExclusive);
                 }
 
                 _storeTypeValue = selectedItem;
@@ -145,9 +149,9 @@ public class Block1Activity extends BaseStepsActivity {
                 String selectedItem = parentView.getItemAtPosition(position).toString();
 
                 if (selectedItem.equals("Lainnya, Sebutkan")) {
-                    _txtStoreTypeExlusiveOtherText.setVisibility(View.VISIBLE);
+                    Helper.Show(_txtStoreTypeExlusiveOtherText);
                 } else {
-                    _txtStoreTypeExlusiveOtherText.setVisibility(View.GONE);
+                    Helper.Hide(_txtStoreTypeExlusiveOtherText);
                 }
 
                 _storeTypeExclusiveValue = selectedItem;
@@ -193,7 +197,7 @@ public class Block1Activity extends BaseStepsActivity {
                     CountValidated++;
                 }
 
-                if(_storeTypeExclusiveValue.equals("--Pilih Jawaban--") || _storeTypeExclusiveValue == null || _storeTypeExclusiveValue.equals("") || _storeTypeExclusiveValue.isEmpty())
+                if((_storeTypeValue.equals("EXCLUSIVE SMARTFREN") || _storeTypeValue.equals("EXCLUSIVE SMARTFREN")) &&   (_storeTypeExclusiveValue.equals("--Pilih Jawaban--") || _storeTypeExclusiveValue == null || _storeTypeExclusiveValue.equals("") || _storeTypeExclusiveValue.isEmpty()))
                 {
                     _errorStoreTypeExclusive.setError("error");
                     _errorStoreTypeExclusive.setText("Pilih salah satu jawaban");

@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.smartfren.instrat.R;
+import com.smartfren.instrat.utilities.Helper;
 
 import org.w3c.dom.Text;
 
@@ -68,6 +69,7 @@ public class Block2Activity extends BaseStepsActivity {
 
         _errorOperatorType = (TextView) findViewById(R.id.errorOperatorType);
         _errorOperator4G = (TextView) findViewById(R.id.errorOperator4G);
+        _error4GReason = (TextView) findViewById(R.id.errorReason4G);
 
         _spOperator= (Spinner) findViewById(R.id.spinOperatorType);
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
@@ -80,9 +82,10 @@ public class Block2Activity extends BaseStepsActivity {
         _spOperator4G.setAdapter(adapter4G);
         _txt4GQuestionLabel = (TextView) findViewById(R.id.txtquestion4G);
         _txt4GReason = (EditText) findViewById(R.id.txtReason4G);
-        _txt4GQuestionLabel.setVisibility(View.GONE);
-        _txt4GReason.setVisibility(View.GONE);
-        _error4GReason = (TextView) findViewById(R.id.errorReason4G);
+
+        Helper.Hide(_txt4GQuestionLabel);
+        Helper.Hide(_txt4GReason);
+        Helper.Hide(_error4GReason);
 
         //_spOperator4G.setVisibility(View.GONE);
 
@@ -117,14 +120,17 @@ public class Block2Activity extends BaseStepsActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = parent.getItemAtPosition(position).toString();
                 if(selectedItem != "Tidak tahu"){
-                    _txt4GQuestionLabel.setVisibility(View.VISIBLE);
-                    _txt4GReason.setVisibility(View.VISIBLE);
+                    Helper.Show(_txt4GQuestionLabel);
+                    Helper.Show(_txt4GReason);
+                    Helper.Show(_error4GReason);
+
                     _txt4GQuestionLabel.setText("Mengapa Anda bilang "+ selectedItem +" itu bagus untuk operator 4G?");
                 }
                 else
                 {
-                    _txt4GQuestionLabel.setVisibility(View.GONE);
-                    _txt4GReason.setVisibility(View.GONE);
+                    Helper.Hide(_txt4GQuestionLabel);
+                    Helper.Hide(_txt4GReason);
+                    Helper.Hide(_error4GReason);
                 }
                 _spOperator4GValue = selectedItem;
 

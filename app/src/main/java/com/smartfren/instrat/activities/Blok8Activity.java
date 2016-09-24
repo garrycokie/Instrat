@@ -219,12 +219,8 @@ public class Blok8Activity extends BaseStepsActivity {
         _Q126AValue = extras.getString("NO_126");
         _Q127AValue = extras.getString("NO_127");
 
-        ArrayAdapter<CharSequence> adapter127 = ArrayAdapter.createFromResource(this, R.array.page_blok8_tipetoko_list, android.R.layout.simple_spinner_item);
-        adapter127.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        _spQ127A.setAdapter(adapter127);
-
         _spQ121A.setSelection(SetSelectedSpinner(dataAdapter, _Q121AValue));
-        _spQ127A.setSelection(SetSelectedSpinner(adapter127, _Q127AValue));
+        _spQ127A.setSelection(SetSelectedSpinner(adapterQ127, _Q127AValue));
 
         if(_Q122AValue !=null)
         {
