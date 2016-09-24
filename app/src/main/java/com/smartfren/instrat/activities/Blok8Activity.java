@@ -1209,7 +1209,7 @@ public class Blok8Activity extends BaseStepsActivity {
                 _Q122AValue = _txtQ122A.getText().toString();
                 _Q123AValue = _txtQ123A.getText().toString();
                 _Q1224Value = _txtQ1224.getText().toString();
-                _Q125AValue = _txtQ126A.getText().toString();
+                _Q125AValue = _txtQ125A.getText().toString();
                 _Q126AValue = _txtQ126A.getText().toString();
 
                 int validatedAnswer = 0;
@@ -1258,7 +1258,7 @@ public class Blok8Activity extends BaseStepsActivity {
                     _errorQ125A.setText("No harus diisi");
                 } else if (_Q125AValue != null && !_Q125AValue.equals("") && !_Q125AValue.isEmpty() && _Q125AValue.length() > 10) {
                     _errorQ125A.setError("error");
-                    _errorQ125A.setText("Lantai tidak boleh lebih dari 10 karakter");
+                    _errorQ125A.setText("No tidak boleh lebih dari 10 karakter");
                 } else {
                     _errorQ125A.setError(null);
                     _errorQ125A.setText("");
