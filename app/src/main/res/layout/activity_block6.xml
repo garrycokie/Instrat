@@ -315,17 +315,18 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsBlackBerryExist"
-                style="@style/Answer"
-                >
+                style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsBlackBerryExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsBlackBerryExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -352,13 +353,15 @@
                 >
                 <RadioButton
                     android:id="@+id/radIsNokiaExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsNokiaExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -521,11 +524,15 @@
                 style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsIphoneExistTrue"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsIphoneExistFalse"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -550,11 +557,15 @@
                 style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsMitoExistTrue"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsMitoExistFalse"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -623,11 +634,15 @@
                 android:id="@+id/radGrIsHTCExist">
                 <RadioButton
                     android:id="@+id/radIsHTCExistTrue"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsHTCExistFalse"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -654,13 +669,15 @@
                 >
                 <RadioButton
                     android:id="@+id/radIsPolytronExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsPolytronExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
             <TextView
@@ -986,17 +1003,19 @@
             <RadioGroup
                 android:orientation="horizontal"
                 android:id="@+id/radGrIsTelkomselFlashExist"
-                style="@style/Answer"
+               style="@style/Answer"
                 >
                 <RadioButton
                     android:id="@+id/radIsTelkomselFlashExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsTelkomselFlashExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1010,13 +1029,15 @@
                 style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsHuaweiExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsHuaweiExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1031,13 +1052,15 @@
                 >
                 <RadioButton
                     android:id="@+id/radIsZTEExistTrue"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsZTEExistFalse"
-                    style="@style/Answer"
-
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Tidak Ada"/>
             </RadioGroup>
 
@@ -1051,12 +1074,16 @@
                 style="@style/Answer">
                 <RadioButton
                     android:id="@+id/radIsBoltExistTrue"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
                     android:text="Ada"/>
                 <RadioButton
                     android:id="@+id/radIsBoltExistFalse"
-                    style="@style/Answer"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
                     android:text="Tidak Ada"/>
             </RadioGroup>

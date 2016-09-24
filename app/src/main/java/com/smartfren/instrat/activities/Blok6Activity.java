@@ -2,7 +2,6 @@ package com.smartfren.instrat.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -329,14 +328,18 @@ public class Blok6Activity extends BaseStepsActivity {
 
     protected String GetEditTextValue(EditText edtxt, String result)
     {
-        if(!edtxt.equals("") && edtxt!= null)
+        if(edtxt!= null)
         {
-            result = result + ";"+ edtxt.getText().toString();
+            String text = edtxt.getText().toString();
+            if(!text.equals("") && !text.isEmpty()) {
+                result = result + ";" + text;
+            }
         }
+
         return result;
     }
 
-    protected String GetRedioGroupValue(RadioGroup rdg, String result)
+    protected String GetRadioGroupValue(RadioGroup rdg, String result)
     {
         int radioButtonID = rdg.getCheckedRadioButtonId();
         RadioButton radioButton = (RadioButton) rdg.findViewById(radioButtonID);
@@ -773,6 +776,40 @@ public class Blok6Activity extends BaseStepsActivity {
         Helper.Hide(_txtXiaomiLabel);
         Helper.Hide(_txtHiSenseLabel);
 
+        Helper.Hide(_error61b);
+        Helper.Hide(_error61c);
+        Helper.Hide(_error62);
+        Helper.Hide(_errorSamsung);
+        Helper.Hide(_errorLenovo);
+        Helper.Hide(_errorAdvan);
+        Helper.Hide(_errorSony);
+        Helper.Hide(_errorLG);
+        Helper.Hide(_errorOppo);
+        Helper.Hide(_errorEvercross);
+        Helper.Hide(_errorAsus);
+        Helper.Hide(_errorAcer);
+        Helper.Hide(_errorXiaomi);
+        Helper.Hide(_errorHiSense);
+        Helper.Hide(_errorTotalTypeSamsung);
+        Helper.Hide(_errorTotalTypeBlackBerry);
+        Helper.Hide(_errorTotalTypeNokia);
+        Helper.Hide(_errorTotalTypeLenovo);
+        Helper.Hide(_errorTotalTypeAdvan);
+        Helper.Hide(_errorTotalTypeSony);
+        Helper.Hide(_errorTotalTypeIphone);
+        Helper.Hide(_errorTotalTypeMito);
+        Helper.Hide(_errorTotalTypeLG);
+        Helper.Hide(_errorTotalTypeHTC);
+        Helper.Hide(_errorTotalTypePolytron);
+        Helper.Hide(_errorTotalTypeOppo);
+        Helper.Hide(_errorTotalTypeEvercross);
+        Helper.Hide(_errorTotalTypeAsus);
+        Helper.Hide(_errorTotalTypeAcer);
+        Helper.Hide(_errorTotalTypeXiaomi);
+        Helper.Hide(_errorTotalTypeHiSense);
+
+
+
         _cbxSamsungOther.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -951,6 +988,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeSamsungLabel);
                     Helper.Show(_txtTotalTypeSamsung);
                     Helper.Show(_txtSamsungLabel);
+                    Helper.Show(_errorSamsung);
+                    Helper.Show(_errorTotalTypeSamsung);
                 }
                 else
                 {
@@ -973,6 +1012,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeSamsungLabel);
                     Helper.Hide(_txtTotalTypeSamsung);
                     Helper.Hide(_txtSamsungLabel);
+                    Helper.Hide(_errorSamsung);
+                    Helper.Hide(_errorTotalTypeSamsung);
                 }
             }
         });
@@ -990,6 +1031,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeLenovo);
                     Helper.Show(_txtTotalTypeLenovoLabel);
                     Helper.Show(_txtLenovoLabel);
+                    Helper.Show(_errorLenovo);
+                    Helper.Show(_errorTotalTypeLenovo);
                 }else {
                     Helper.Hide(_cbxLenovoA6000);
                     Helper.Hide(_cbxLenovoA6000Plus);
@@ -999,6 +1042,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeLenovo);
                     Helper.Hide(_txtTotalTypeLenovoLabel);
                     Helper.Hide(_txtLenovoLabel);
+                    Helper.Hide(_errorLenovo);
+                    Helper.Hide(_errorTotalTypeLenovo);
                 }
             }
         });
@@ -1015,6 +1060,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeAdvan);
                     Helper.Show(_txtTotalTypeAdvanLabel);
                     Helper.Show(_txtAdvanLabel);
+                    Helper.Show(_errorAdvan);
+                    Helper.Show(_errorTotalTypeAdvan);
                 }else {
                     Helper.Hide(_cbxAdvanS35H);
                     Helper.Hide(_cbxAdvanS35D);
@@ -1023,6 +1070,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeAdvan);
                     Helper.Hide(_txtTotalTypeAdvanLabel);
                     Helper.Hide(_txtAdvanLabel);
+                    Helper.Hide(_errorAdvan);
+                    Helper.Hide(_errorTotalTypeAdvan);
                 }
             }
         });
@@ -1040,6 +1089,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeSony);
                     Helper.Show(_txtTotalTypeSonyLabel);
                     Helper.Show(_txtSonyLabel);
+                    Helper.Show(_errorSony);
+                    Helper.Show(_errorTotalTypeSony);
                 } else {
                     Helper.Hide(_cbxXperiaC5);
                     Helper.Hide(_cbxXperiaE4);
@@ -1049,6 +1100,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeSony);
                     Helper.Hide(_txtTotalTypeSonyLabel);
                     Helper.Hide(_txtSonyLabel);
+                    Helper.Hide(_errorSony);
+                    Helper.Hide(_errorTotalTypeSony);
                 }
             }
         });
@@ -1065,6 +1118,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeLG);
                     Helper.Show(_txtTotalTypeLGLabel);
                     Helper.Show(_txtLGLabel);
+                    Helper.Show(_errorLG);
+                    Helper.Show(_errorTotalTypeLG);
                 } else {
                     Helper.Hide(_cbxLGG4Dual);
                     Helper.Hide(_cbxLGMagna);
@@ -1073,6 +1128,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeLG);
                     Helper.Hide(_txtTotalTypeLGLabel);
                     Helper.Hide(_txtLGLabel);
+                    Helper.Hide(_errorLG);
+                    Helper.Hide(_errorTotalTypeLG);
                 }
             }
         });
@@ -1091,17 +1148,20 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeOppo);
                     Helper.Show(_txtTotalTypeOppoLabel);
                     Helper.Show(_txtOppoLabel);
-
+                    Helper.Show(_errorOppo);
+                    Helper.Show(_errorTotalTypeOppo);
                 }else {
-                   Helper.Hide(_cbxOPPOMirror5);
-                   Helper.Hide(_cbxOPPOJoy3);
-                   Helper.Hide(_cbxOPPOJoyPlus);
-                   Helper.Hide(_cbxOPPONeo3);
-                   Helper.Hide(_cbxOPPONeo5);
-                   Helper.Hide(_cbxOPPOOther);
-                   Helper.Hide(_txtTotalTypeOppo);
-                   Helper.Hide(_txtTotalTypeOppoLabel);
-                   Helper.Hide(_txtOppoLabel);
+                    Helper.Hide(_cbxOPPOMirror5);
+                    Helper.Hide(_cbxOPPOJoy3);
+                    Helper.Hide(_cbxOPPOJoyPlus);
+                    Helper.Hide(_cbxOPPONeo3);
+                    Helper.Hide(_cbxOPPONeo5);
+                    Helper.Hide(_cbxOPPOOther);
+                    Helper.Hide(_txtTotalTypeOppo);
+                    Helper.Hide(_txtTotalTypeOppoLabel);
+                    Helper.Hide(_txtOppoLabel);
+                    Helper.Hide(_errorOppo);
+                    Helper.Hide(_errorTotalTypeOppo);
                 }
             }
         });
@@ -1121,19 +1181,22 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeEvercross);
                     Helper.Show(_txtTotalTypeEvercrossLabel);
                     Helper.Show(_txtEvercrossLabel);
+                    Helper.Show(_errorEvercross);
+                    Helper.Show(_errorTotalTypeEvercross);
 
                 }else {
-                   Helper.Hide(_cbxEvercrossA33A);
-                   Helper.Hide(_cbxEvercrossA5P);
-                   Helper.Hide(_cbxEvercrossA21B);
-                   Helper.Hide(_cbxEvercrossA35B);
-                   Helper.Hide(_cbxEvercrossWinner);
-                   Helper.Hide(_cbxEvercrossA54);
-                   Helper.Hide(_cbxEvercrossOther);
-                   Helper.Hide(_txtTotalTypeEvercross);
-                   Helper.Hide(_txtTotalTypeEvercrossLabel);
-                   Helper.Hide(_txtEvercrossLabel);
-
+                    Helper.Hide(_cbxEvercrossA33A);
+                    Helper.Hide(_cbxEvercrossA5P);
+                    Helper.Hide(_cbxEvercrossA21B);
+                    Helper.Hide(_cbxEvercrossA35B);
+                    Helper.Hide(_cbxEvercrossWinner);
+                    Helper.Hide(_cbxEvercrossA54);
+                    Helper.Hide(_cbxEvercrossOther);
+                    Helper.Hide(_txtTotalTypeEvercross);
+                    Helper.Hide(_txtTotalTypeEvercrossLabel);
+                    Helper.Hide(_txtEvercrossLabel);
+                    Helper.Hide(_errorEvercross);
+                    Helper.Hide(_errorTotalTypeEvercross);
                 }
             }
         });
@@ -1153,6 +1216,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeAsus);
                     Helper.Show(_txtTotalTypeAsusLabel);
                     Helper.Show(_txtAsusLabel);
+                    Helper.Show(_errorAsus);
+                    Helper.Show(_errorTotalTypeAsus);
                 }else {
                     Helper.Hide(_cbxAsusZenfone2Laser8);
                     Helper.Hide(_cbxAsusZenfone2Laser16);
@@ -1164,6 +1229,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeAsus);
                     Helper.Hide(_txtTotalTypeAsusLabel);
                     Helper.Hide(_txtAsusLabel);
+                    Helper.Hide(_errorAsus);
+                    Helper.Hide(_errorTotalTypeAsus);
                 }
             }
         });
@@ -1179,6 +1246,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeAcer);
                     Helper.Show(_txtTotalTypeAcerLabel);
                     Helper.Show(_txtAcerLabel);
+                    Helper.Show(_errorAcer);
+                    Helper.Show(_errorTotalTypeAcer);
                 }else {
                     Helper.Hide(_cbxAcerZ220);
                     Helper.Hide(_cbxAcerZ520);
@@ -1186,6 +1255,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeAcer);
                     Helper.Hide(_txtTotalTypeAcerLabel);
                     Helper.Hide(_txtAcerLabel);
+                    Helper.Hide(_errorAcer);
+                    Helper.Hide(_errorTotalTypeAcer);
                 }
             }
         });
@@ -1202,6 +1273,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeXiaomi);
                     Helper.Show(_txtTotalTypeXiaomiLabel);
                     Helper.Show(_txtXiaomiLabel);
+                    Helper.Show(_errorXiaomi);
+                    Helper.Show(_errorTotalTypeXiaomi);
                 }else {
                     Helper.Hide(_cbxXiaomiREDMI2Prime);
                     Helper.Hide(_cbxXiaomiREDMI28GB);
@@ -1211,6 +1284,8 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Hide(_txtTotalTypeXiaomi);
                     Helper.Hide(_txtTotalTypeXiaomiLabel);
                     Helper.Hide(_txtXiaomiLabel);
+                    Helper.Hide(_errorXiaomi);
+                    Helper.Hide(_errorTotalTypeLG);
                 }
             }
         });
@@ -1223,11 +1298,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeBlackBerry);
                     Helper.Show(_txtTotalTypeBlackBerryLabel);
                     Helper.Show(_txtBlackBerryLabel);
+                    Helper.Show(_errorTotalTypeBlackBerry);
                 }else {
                     Helper.Hide(_rdgBlackBerryExist);
                     Helper.Hide(_txtTotalTypeBlackBerry);
                     Helper.Hide(_txtTotalTypeBlackBerryLabel);
                     Helper.Hide(_txtBlackBerryLabel);
+                    Helper.Hide(_errorTotalTypeBlackBerry);
                 }
             }
         });
@@ -1240,11 +1317,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeNokia);
                     Helper.Show(_txtTotalTypeNokiaLabel);
                     Helper.Show(_txtNokiaLabel);
+                    Helper.Show(_errorTotalTypeNokia);
                 }else {
                     Helper.Hide(_rdgNokiaExist);
                     Helper.Hide(_txtTotalTypeNokia);
                     Helper.Hide(_txtTotalTypeNokiaLabel);
                     Helper.Hide(_txtNokiaLabel);
+                    Helper.Hide(_errorTotalTypeNokia);
                 }
             }
         });
@@ -1257,11 +1336,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeIphone);
                     Helper.Show(_txtTotalTypeIphoneLabel);
                     Helper.Show(_txtIphoneLabel);
+                    Helper.Show(_errorTotalTypeIphone);
                 }else {
                     Helper.Hide(_rdgIphoneExist);
                     Helper.Hide(_txtTotalTypeIphone);
                     Helper.Hide(_txtTotalTypeIphoneLabel);
                     Helper.Hide(_txtIphoneLabel);
+                    Helper.Hide(_errorTotalTypeIphone);
                 }
             }
         });
@@ -1274,11 +1355,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeMito);
                     Helper.Show(_txtTotalTypeMitoLabel);
                     Helper.Show(_txtMitoLabel);
+                    Helper.Show(_errorTotalTypeMito);
                 }else {
                     Helper.Hide(_rdgMitoExist);
                     Helper.Hide(_txtTotalTypeMito);
                     Helper.Hide(_txtTotalTypeMitoLabel);
                     Helper.Hide(_txtMitoLabel);
+                    Helper.Hide(_errorTotalTypeMito);
                 }
             }
         });
@@ -1287,15 +1370,17 @@ public class Blok6Activity extends BaseStepsActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                   Helper.Show(_rdgHTCExist);
-                   Helper.Show(_txtTotalTypeHTC);
-                   Helper.Show(_txtTotalTypeHTCLabel);
-                   Helper.Show(_txtHTCLabel);
+                    Helper.Show(_rdgHTCExist);
+                    Helper.Show(_txtTotalTypeHTC);
+                    Helper.Show(_txtTotalTypeHTCLabel);
+                    Helper.Show(_txtHTCLabel);
+                    Helper.Show(_errorTotalTypeHTC);
                 }else {
                     Helper.Hide(_rdgHTCExist);
                     Helper.Hide(_txtTotalTypeHTC);
                     Helper.Hide(_txtTotalTypeHTCLabel);
                     Helper.Hide(_txtHTCLabel);
+                    Helper.Hide(_errorTotalTypeHTC);
                 }
             }
         });
@@ -1308,11 +1393,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypePolytron);
                     Helper.Show(_txtTotalTypePolytronLabel);
                     Helper.Show(_txtPolytronLabel);
+                    Helper.Show(_errorTotalTypePolytron);
                 }else {
                     Helper.Hide(_rdgPolytronExist);
                     Helper.Hide(_txtTotalTypePolytron);
                     Helper.Hide(_txtTotalTypePolytronLabel);
                     Helper.Hide(_txtPolytronLabel);
+                    Helper.Hide(_errorTotalTypePolytron);
                 }
             }
         });
@@ -1329,12 +1416,19 @@ public class Blok6Activity extends BaseStepsActivity {
                     Helper.Show(_txtTotalTypeHiSense);
                     Helper.Show(_txtTotalTypeHiSenseLabel);
                     Helper.Show(_txtHiSenseLabel);
+                    Helper.Show(_errorHiSense);
+                    Helper.Show(_errorTotalTypeHiSense);
                 }else {
 
-                   Helper.Hide(_cbxHiSensePureShot);
-                   Helper.Hide(_cbxHiSensePureShotPlus);
-                   Helper.Hide(_cbxHiSenseOther);
-                   Helper.Hide(_txtHiSenseLabel);
+                    Helper.Hide(_cbxHiSensePureShot);
+                    Helper.Hide(_cbxHiSensePureShotPlus);
+                    Helper.Hide(_cbxHiSenseOther);
+                    Helper.Hide(_txtHiSenseLabel);
+                    Helper.Hide(_txtTotalTypeHiSense);
+                    Helper.Hide(_txtTotalTypeHiSenseLabel);
+                    Helper.Hide(_txtHiSenseLabel);
+                    Helper.Hide(_errorHiSense);
+                    Helper.Hide(_errorTotalTypeHiSense);
                 }
             }
         });
@@ -2440,13 +2534,13 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_64Value = GetEditTextValue(_txtTotalTypeSamsung,_no_64Value);
 
                 //65
-                _no_65Value = GetRedioGroupValue(_rdgBlackBerryExist, _no_65Value);
+                _no_65Value = GetRadioGroupValue(_rdgBlackBerryExist, _no_65Value);
 
                 //66
                 _no_66Value = GetEditTextValue(_txtTotalTypeBlackBerry,_no_66Value);
 
                 //67
-                _no_67Value = GetRedioGroupValue(_rdgNokiaExist, _no_67Value);
+                _no_67Value = GetRadioGroupValue(_rdgNokiaExist, _no_67Value);
 
                 //68
                 _no_68Value = GetEditTextValue(_txtTotalTypeNokia,_no_68Value);
@@ -2493,13 +2587,13 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_74Value = GetEditTextValue(_txtTotalTypeSony,_no_74Value);
 
                 //75
-                _no_75Value = GetRedioGroupValue(_rdgIphoneExist, _no_75Value);
+                _no_75Value = GetRadioGroupValue(_rdgIphoneExist, _no_75Value);
 
                 //76
                 _no_76Value = GetEditTextValue(_txtTotalTypeIphone,_no_76Value);
 
                 //77
-                _no_77Value = GetRedioGroupValue(_rdgMitoExist, _no_77Value);
+                _no_77Value = GetRadioGroupValue(_rdgMitoExist, _no_77Value);
 
                 //78
                 _no_78Value = GetEditTextValue(_txtTotalTypeMito,_no_78Value);
@@ -2518,13 +2612,13 @@ public class Blok6Activity extends BaseStepsActivity {
                 _no_80Value = GetEditTextValue(_txtTotalTypeLG,_no_80Value);
 
                 //81
-                _no_81Value = GetRedioGroupValue(_rdgHTCExist, _no_81Value);
+                _no_81Value = GetRadioGroupValue(_rdgHTCExist, _no_81Value);
 
                 //82
                 _no_82Value = GetEditTextValue(_txtTotalTypeHTC,_no_82Value);
 
                 //83
-                _no_83Value = GetRedioGroupValue(_rdgPolytronExist, _no_83Value);
+                _no_83Value = GetRadioGroupValue(_rdgPolytronExist, _no_83Value);
 
                 //84
                 _no_84Value = GetEditTextValue(_txtTotalTypePolytron,_no_84Value);
@@ -2614,13 +2708,13 @@ public class Blok6Activity extends BaseStepsActivity {
                 //96
                 _no_96Value = GetEditTextValue(_txtTotalTypeHiSense,_no_96Value);
                 //97
-                _no_97Value = GetRedioGroupValue(_rdgTelFlashExist,_no_97Value);
+                _no_97Value = GetRadioGroupValue(_rdgTelFlashExist,_no_97Value);
                 //98
-                _no_98Value = GetRedioGroupValue(_rdgHuwaweiExist,_no_98Value);
+                _no_98Value = GetRadioGroupValue(_rdgHuwaweiExist,_no_98Value);
                 //99
-                _no_99Value = GetRedioGroupValue(_rdgZTEExist,_no_99Value);
+                _no_99Value = GetRadioGroupValue(_rdgZTEExist,_no_99Value);
                 //100
-                _no_100Value = GetRedioGroupValue(_rdgBoltExist,_no_100Value);
+                _no_100Value = GetRadioGroupValue(_rdgBoltExist,_no_100Value);
 
 
                 int isError =0;
@@ -2630,11 +2724,13 @@ public class Blok6Activity extends BaseStepsActivity {
                     isError ++;
                     _error61b.setError("error");
                     _error61b.setText("Minimal satu (1) checkbox harus dipilih");
+                    Helper.Show(_error61b);
                 }
                 else
                 {
                     _error61b.setError(null);
                     _error61b.setText("");
+                    Helper.Hide(_error61b);
                 }
 
 
@@ -2643,10 +2739,12 @@ public class Blok6Activity extends BaseStepsActivity {
                     isError ++;
                     _error61c.setError("error");
                     _error61c.setText("Minimal satu (1) checkbox harus dipilih");
+                    Helper.Show(_error61c);
                 }else
                 {
                     _error61c.setError(null);
                     _error61c.setText("");
+                    Helper.Hide(_error61c);
                 }
 
 
@@ -2664,10 +2762,12 @@ public class Blok6Activity extends BaseStepsActivity {
                                     isError ++;
                                     _errorSamsung.setError("error");
                                     _errorSamsung.setText("Lengkapi keterangan jika pilih \"Lainnya\"");
+                                    Helper.Show(_errorSamsung);
                                 }else
                                 {
                                     _errorSamsung.setError(null);
                                     _errorSamsung.setText("");
+                                    Helper.Hide(_errorSamsung);
                                 }
                             }
                         }
@@ -2682,10 +2782,12 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeSamsung.setError("error");
                             _errorTotalTypeSamsung.setText("Total harus diisi");
+                            Helper.Show(_errorTotalTypeSamsung;
                         }else
                         {
                             _errorTotalTypeSamsung.setError(null);
                             _errorTotalTypeSamsung.setText("");
+                            Helper.Hide(_errorTotalTypeSamsung;
                         }
 
                     }
@@ -2695,11 +2797,13 @@ public class Blok6Activity extends BaseStepsActivity {
                             isError++;
                             _errorTotalTypeBlackBerry.setError("error");
                             _errorTotalTypeBlackBerry.setText("Total harus diisi");
+                            Helper.Show(_errorTotalTypeBlackBerry;
                         }
                         else
                         {
                             _errorTotalTypeBlackBerry.setError(null);
                             _errorTotalTypeBlackBerry.setText("");
+                            Helper.Hide();_errorTotalTypeBlackBerry;
                         }
                     }
                     if (_no_62Value.contains("Nokia (Microsoft)")) {
