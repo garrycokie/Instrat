@@ -180,8 +180,11 @@ public class Block1Activity extends BaseStepsActivity {
             @Override
             public void onContinueClicked() {
 
-                if (_storeTypeExclusiveValue.equals("Lainnya, Sebutkan")) {
-                    _storeTypeExclusiveValue = _txtStoreTypeExlusiveOtherText.getText().toString();
+                if(_storeTypeExclusiveValue != null)
+                {
+                    if (_storeTypeExclusiveValue.equals("Lainnya, Sebutkan")) {
+                        _storeTypeExclusiveValue = _txtStoreTypeExlusiveOtherText.getText().toString();
+                    }
                 }
 
                 int CountValidated = 0;
@@ -197,7 +200,7 @@ public class Block1Activity extends BaseStepsActivity {
                     CountValidated++;
                 }
 
-                if((_storeTypeValue.equals("EXCLUSIVE SMARTFREN") || _storeTypeValue.equals("EXCLUSIVE SMARTFREN")) &&   (_storeTypeExclusiveValue.equals("--Pilih Jawaban--") || _storeTypeExclusiveValue == null || _storeTypeExclusiveValue.equals("") || _storeTypeExclusiveValue.isEmpty()))
+                if((_storeTypeValue.equals("EXCLUSIVE SMARTFREN") || _storeTypeValue.equals("EXCLUSIVE MEREK LAINNYA")) &&   (_storeTypeExclusiveValue.equals("--Pilih Jawaban--") || _storeTypeExclusiveValue == null || _storeTypeExclusiveValue.equals("") || _storeTypeExclusiveValue.isEmpty()))
                 {
                     _errorStoreTypeExclusive.setError("error");
                     _errorStoreTypeExclusive.setText("Pilih salah satu jawaban");
