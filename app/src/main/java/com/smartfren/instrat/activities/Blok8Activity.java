@@ -74,6 +74,7 @@ public class Blok8Activity extends BaseStepsActivity {
         _spQ121A = (Spinner) findViewById(R.id.spQ121A);
 
         List<CharSequence> list = new ArrayList<CharSequence>();
+        list.add("--Pilih Jawaban--");
         if(loginEntity.namaKota.toLowerCase().equals("bandung"))
         {
             list.add("BEC BANDUNG");

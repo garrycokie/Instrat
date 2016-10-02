@@ -137,7 +137,14 @@ public class LoginActivity extends Activity {
                             result[0].accessToken = accessToken;
                             result[0].idKota = idKota;
                             result[0].namaKota = namaKota;
-                            OnLoginSuccess(result[0]);
+
+                            if(status.equals("OK")) {
+                                OnLoginSuccess(result[0]);
+                            }
+                            else
+                            {
+                                OnLoginFailed();
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
