@@ -3,11 +3,16 @@ package com.smartfren.instrat.activities;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +32,8 @@ import com.smartfren.instrat.entities.SurveyResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -44,6 +51,16 @@ public class Block12Activity extends BaseStepsActivity {
     private String[] _Q135ItemArray;
 
     private Bundle extras;
+
+    protected String GetBase64(BitmapDrawable drawable)
+    {
+        Bitmap bitmap = drawable.getBitmap();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
+        byte[] b = baos.toByteArray();
+        String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+        return encodedImage;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -701,10 +718,10 @@ public class Block12Activity extends BaseStepsActivity {
                     surveyEntity.b8no127 = NO_127;
                     surveyEntity.b9no128 = NO_128;
                     surveyEntity.b10no129 = NO_129;
-                    surveyEntity.b11no130 = NO_130;
-                    surveyEntity.b11no131 = NO_131;
-                    surveyEntity.b11no132 = NO_132;
-                    surveyEntity.b11no133 = NO_133;
+                    surveyEntity.b11no130 = GetBase64((BitmapDrawable)Drawable.createFromPath(NO_130));
+                    surveyEntity.b11no131 = GetBase64((BitmapDrawable)Drawable.createFromPath(NO_131));
+                    surveyEntity.b11no132 = GetBase64((BitmapDrawable)Drawable.createFromPath(NO_132));
+                    surveyEntity.b11no133 = GetBase64((BitmapDrawable)Drawable.createFromPath(NO_133));
                     surveyEntity.b12no134 = NO_134;
                     surveyEntity.b12no135 = NO_135;
                     surveyEntity.status = "Pending";

@@ -37,7 +37,7 @@ public class Block11Activity extends BaseStepsActivity {
     private ImageView _pic4;
     private Bundle extras;
 
-    protected String GetBase64(ImageView view)
+    /*protected String GetBase64(ImageView view)
     {
         BitmapDrawable drawable = (BitmapDrawable) view.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
@@ -46,7 +46,7 @@ public class Block11Activity extends BaseStepsActivity {
         byte[] b = baos.toByteArray();
         String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
         return encodedImage;
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -260,7 +260,7 @@ public class Block11Activity extends BaseStepsActivity {
                 // TODO: continue;
 
 
-                String A130 = GetBase64(_pic1);
+                /*String A130 = GetBase64(_pic1);
                 String A131 = GetBase64(_pic2);
                 String A132 = GetBase64(_pic3);
                 String A133 = GetBase64(_pic4);
@@ -268,7 +268,7 @@ public class Block11Activity extends BaseStepsActivity {
                 Log.d("ImageView", "A130: " + A130);
                 Log.d("ImageView", "A131: " + A131);
                 Log.d("ImageView", "A132: " + A132);
-                Log.d("ImageView", "A133: " + A133);
+                Log.d("ImageView", "A133: " + A133);*/
 
                 /*
                 String A130 = "testpict";
@@ -418,10 +418,10 @@ public class Block11Activity extends BaseStepsActivity {
                 intent.putExtra("NO_127", extras.getString("NO_127"));
                 intent.putExtra("NO_128", extras.getString("NO_128"));
                 intent.putExtra("NO_129", extras.getString("NO_129"));
-                intent.putExtra("NO_130", A130);
-                intent.putExtra("NO_131", A131);
-                intent.putExtra("NO_132", A132);
-                intent.putExtra("NO_133", A133);
+                intent.putExtra("NO_130", imagePath1);
+                intent.putExtra("NO_131", imagePath2);
+                intent.putExtra("NO_132", imagePath3);
+                intent.putExtra("NO_133", imagePath4);
                 startActivity(intent);
             }
         });
