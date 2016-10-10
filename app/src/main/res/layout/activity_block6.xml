@@ -434,17 +434,17 @@
                 android:id="@+id/cbxAdvanVANDROIDS35H"
                 style="@style/Answer"
 
-                android:text="Lenovo A 6000 Plus"/>
+                android:text="Advan VANDROID S35H"/>
             <CheckBox
                 android:id="@+id/cbxAdvanVANDROIDS35D"
                 style="@style/Answer"
 
-                android:text="Lenovo A 7000"/>
+                android:text="Advan VANDROID S35D"/>
             <CheckBox
                 android:id="@+id/cbxAdvanVANDROIDS35E"
                 style="@style/Answer"
 
-                android:text="Lenovo P70 16GB LTE"/>
+                android:text="Advan VANDROID S35E"/>
             <CheckBox
                 android:id="@+id/cbxAdvanOther"
                 style="@style/Answer"

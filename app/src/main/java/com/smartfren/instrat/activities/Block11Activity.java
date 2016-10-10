@@ -92,6 +92,7 @@ public class Block11Activity extends BaseStepsActivity {
             }
         });
 
+        /*
         if(!imagePath1.equals("")) {
             _pic1.setImageDrawable(Drawable.createFromPath(imagePath1));
         }
@@ -104,6 +105,7 @@ public class Block11Activity extends BaseStepsActivity {
         if(!imagePath4.equals("")) {
             _pic4.setImageDrawable(Drawable.createFromPath(imagePath4));
         }
+        */
 
         super.setStepEventListener(new OnStepEventListener() {
             @Override

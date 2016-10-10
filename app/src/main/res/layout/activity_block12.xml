@@ -27,7 +27,7 @@
        <TextView
            style="@style/LabelQuestion"
            android:id="@+id/txtQ134Label"
-           android:text="No ID Outlet (format XXX-YY-ZZZ)"/>
+           android:text="No ID Outlet (format XXX-YY-ZZZZ)"/>
 
        <EditText
            style="@style/Answer"

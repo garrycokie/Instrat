@@ -365,18 +365,37 @@ public class Blok3BActivity extends BaseStepsActivity {
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
-                Intent intent = new Intent(Blok3BActivity.this, Blok3Activity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                startActivity(intent);
+                String surveyType = extras.getString("TipeSurvey");
+
+                if(surveyType.equals("Full Audit Modem"))
+                {
+                    Intent intent = new Intent(Blok3BActivity.this, Block2Activity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(Blok3BActivity.this, Blok3Activity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    startActivity(intent);
+                }
             }
 
             @Override
@@ -588,48 +607,191 @@ public class Blok3BActivity extends BaseStepsActivity {
 
                 if(validatedAnswer == 10)
                 {
-                    Intent intent = new Intent(Blok3BActivity.this, Blok4Activity.class);
-                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                    intent.putExtra("UserID", extras.getString("UserID"));
-                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                    intent.putExtra("NO_1", extras.getString("NO_1"));
-                    intent.putExtra("NO_2", extras.getString("NO_2"));
-                    intent.putExtra("NO_3", extras.getString("NO_3"));
-                    intent.putExtra("NO_4", extras.getString("NO_4"));
-                    intent.putExtra("NO_5", extras.getString("NO_5"));
-                    intent.putExtra("NO_6", extras.getString("NO_6"));
-                    intent.putExtra("NO_7", "");
-                    intent.putExtra("NO_8", "");
-                    intent.putExtra("NO_9", "");
-                    intent.putExtra("NO_10", "");
-                    intent.putExtra("NO_11", "");
-                    intent.putExtra("NO_12", "");
-                    intent.putExtra("NO_13", "");
-                    intent.putExtra("NO_14", "");
-                    intent.putExtra("NO_15", "");
-                    intent.putExtra("NO_16", "");
-                    intent.putExtra("NO_17", A17);
-                    intent.putExtra("NO_18", A18);
-                    intent.putExtra("NO_19", A19);
-                    intent.putExtra("NO_20", A20);
-                    intent.putExtra("NO_21", A21);
-                    intent.putExtra("NO_22", A22);
-                    intent.putExtra("NO_23", A23);
-                    intent.putExtra("NO_24", A24);
-                    intent.putExtra("NO_25", A25);
-                    intent.putExtra("NO_26", A26);
-                    intent.putExtra("NO_27", "");
-                    intent.putExtra("NO_28", "");
-                    intent.putExtra("NO_29", "");
-                    intent.putExtra("NO_30", "");
-                    intent.putExtra("NO_31", "");
-                    intent.putExtra("NO_32", "");
-                    intent.putExtra("NO_33", "");
-                    intent.putExtra("NO_34", "");
-                    intent.putExtra("NO_35", "");
-                    intent.putExtra("NO_36", "");
-                    startActivity(intent);
+                    String surveyType = extras.getString("TipeSurvey");
+
+                    if(surveyType.equals("Advocacy Harga"))
+                    {
+                        Intent intent = new Intent(Blok3BActivity.this, Blok8Activity.class);
+                        intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                        intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                        intent.putExtra("UserID", extras.getString("UserID"));
+                        intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                        intent.putExtra("NO_1", extras.getString("NO_1"));
+                        intent.putExtra("NO_2", extras.getString("NO_2"));
+                        intent.putExtra("NO_3", extras.getString("NO_3"));
+                        intent.putExtra("NO_4", extras.getString("NO_4"));
+                        intent.putExtra("NO_5", extras.getString("NO_5"));
+                        intent.putExtra("NO_6", extras.getString("NO_6"));
+                        intent.putExtra("NO_7", "");
+                        intent.putExtra("NO_8", "");
+                        intent.putExtra("NO_9", "");
+                        intent.putExtra("NO_10", "");
+                        intent.putExtra("NO_11", "");
+                        intent.putExtra("NO_12", "");
+                        intent.putExtra("NO_13", "");
+                        intent.putExtra("NO_14", "");
+                        intent.putExtra("NO_15", "");
+                        intent.putExtra("NO_16", "");
+                        intent.putExtra("NO_17", A17);
+                        intent.putExtra("NO_18", A18);
+                        intent.putExtra("NO_19", A19);
+                        intent.putExtra("NO_20", A20);
+                        intent.putExtra("NO_21", A21);
+                        intent.putExtra("NO_22", A22);
+                        intent.putExtra("NO_23", A23);
+                        intent.putExtra("NO_24", A24);
+                        intent.putExtra("NO_25", A25);
+                        intent.putExtra("NO_26", A26);
+                        intent.putExtra("NO_27", "");
+                        intent.putExtra("NO_28", "");
+                        intent.putExtra("NO_29", "");
+                        intent.putExtra("NO_30", "");
+                        intent.putExtra("NO_31", "");
+                        intent.putExtra("NO_32", "");
+                        intent.putExtra("NO_33", "");
+                        intent.putExtra("NO_34", "");
+                        intent.putExtra("NO_35", "");
+                        intent.putExtra("NO_36", "");
+                        intent.putExtra("NO_38", "");
+                        intent.putExtra("NO_39", "");
+                        intent.putExtra("NO_40", "");
+                        intent.putExtra("NO_41", "");
+                        intent.putExtra("NO_42", "");
+                        intent.putExtra("NO_43", "");
+                        intent.putExtra("NO_44", "");
+                        intent.putExtra("NO_45", "");
+                        intent.putExtra("NO_46", "");
+                        intent.putExtra("NO_47", "");
+                        intent.putExtra("NO_48", "");
+                        intent.putExtra("NO_49", "");
+                        intent.putExtra("NO_50", "");
+                        intent.putExtra("NO_51", "");
+                        intent.putExtra("NO_52", "");
+                        intent.putExtra("NO_52B", "");
+                        intent.putExtra("NO_52C", "");
+                        intent.putExtra("NO_52D", "");
+                        intent.putExtra("NO_52E", "");
+                        intent.putExtra("NO_53", "");
+                        intent.putExtra("NO_54", "");
+                        intent.putExtra("NO_55", "");
+                        intent.putExtra("NO_56", "");
+                        intent.putExtra("NO_57", "");
+                        intent.putExtra("NO_58", "");
+                        intent.putExtra("NO_59", "");
+                        intent.putExtra("NO_60", "");
+                        intent.putExtra("NO_60B", "");
+                        intent.putExtra("NO_60C", "");
+                        intent.putExtra("NO_61", "");
+                        intent.putExtra("NO_61B", "");
+                        intent.putExtra("NO_61C", "");
+                        intent.putExtra("NO_62", "");
+                        intent.putExtra("NO_63", "");
+                        intent.putExtra("NO_64", "");
+                        intent.putExtra("NO_65", "");
+                        intent.putExtra("NO_66", "");
+                        intent.putExtra("NO_67", "");
+                        intent.putExtra("NO_68", "");
+                        intent.putExtra("NO_69", "");
+                        intent.putExtra("NO_70", "");
+                        intent.putExtra("NO_71", "");
+                        intent.putExtra("NO_72", "");
+                        intent.putExtra("NO_73", "");
+                        intent.putExtra("NO_74", "");
+                        intent.putExtra("NO_75", "");
+                        intent.putExtra("NO_76", "");
+                        intent.putExtra("NO_77", "");
+                        intent.putExtra("NO_78", "");
+                        intent.putExtra("NO_79", "");
+                        intent.putExtra("NO_80", "");
+                        intent.putExtra("NO_81", "");
+                        intent.putExtra("NO_82", "");
+                        intent.putExtra("NO_83", "");
+                        intent.putExtra("NO_84", "");
+                        intent.putExtra("NO_85", "");
+                        intent.putExtra("NO_86", "");
+                        intent.putExtra("NO_87", "");
+                        intent.putExtra("NO_88", "");
+                        intent.putExtra("NO_89", "");
+                        intent.putExtra("NO_90", "");
+                        intent.putExtra("NO_91", "");
+                        intent.putExtra("NO_92", "");
+                        intent.putExtra("NO_93", "");
+                        intent.putExtra("NO_94", "");
+                        intent.putExtra("NO_95", "");
+                        intent.putExtra("NO_96", "");
+                        intent.putExtra("NO_97", "");
+                        intent.putExtra("NO_98", "");
+                        intent.putExtra("NO_99", "");
+                        intent.putExtra("NO_100", "");
+                        intent.putExtra("NO_101", "");
+                        intent.putExtra("NO_102", "");
+                        intent.putExtra("NO_103", "");
+                        intent.putExtra("NO_104", "");
+                        intent.putExtra("NO_105", "");
+                        intent.putExtra("NO_106", "");
+                        intent.putExtra("NO_107", "");
+                        intent.putExtra("NO_108", "");
+                        intent.putExtra("NO_109", "");
+                        intent.putExtra("NO_110", "");
+                        intent.putExtra("NO_111", "");
+                        intent.putExtra("NO_112", "");
+                        intent.putExtra("NO_113", "");
+                        intent.putExtra("NO_114", "");
+                        intent.putExtra("NO_115", "");
+                        intent.putExtra("NO_116", "");
+                        intent.putExtra("NO_117", "");
+                        intent.putExtra("NO_118", "");
+                        intent.putExtra("NO_119", "");
+                        intent.putExtra("NO_120", "");
+                        startActivity(intent);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(Blok3BActivity.this, Blok4Activity.class);
+                        intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                        intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                        intent.putExtra("UserID", extras.getString("UserID"));
+                        intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                        intent.putExtra("NO_1", extras.getString("NO_1"));
+                        intent.putExtra("NO_2", extras.getString("NO_2"));
+                        intent.putExtra("NO_3", extras.getString("NO_3"));
+                        intent.putExtra("NO_4", extras.getString("NO_4"));
+                        intent.putExtra("NO_5", extras.getString("NO_5"));
+                        intent.putExtra("NO_6", extras.getString("NO_6"));
+                        intent.putExtra("NO_7", "");
+                        intent.putExtra("NO_8", "");
+                        intent.putExtra("NO_9", "");
+                        intent.putExtra("NO_10", "");
+                        intent.putExtra("NO_11", "");
+                        intent.putExtra("NO_12", "");
+                        intent.putExtra("NO_13", "");
+                        intent.putExtra("NO_14", "");
+                        intent.putExtra("NO_15", "");
+                        intent.putExtra("NO_16", "");
+                        intent.putExtra("NO_17", A17);
+                        intent.putExtra("NO_18", A18);
+                        intent.putExtra("NO_19", A19);
+                        intent.putExtra("NO_20", A20);
+                        intent.putExtra("NO_21", A21);
+                        intent.putExtra("NO_22", A22);
+                        intent.putExtra("NO_23", A23);
+                        intent.putExtra("NO_24", A24);
+                        intent.putExtra("NO_25", A25);
+                        intent.putExtra("NO_26", A26);
+                        intent.putExtra("NO_27", "");
+                        intent.putExtra("NO_28", "");
+                        intent.putExtra("NO_29", "");
+                        intent.putExtra("NO_30", "");
+                        intent.putExtra("NO_31", "");
+                        intent.putExtra("NO_32", "");
+                        intent.putExtra("NO_33", "");
+                        intent.putExtra("NO_34", "");
+                        intent.putExtra("NO_35", "");
+                        intent.putExtra("NO_36", "");
+                        startActivity(intent);
+                    }
+
                 }
 
 

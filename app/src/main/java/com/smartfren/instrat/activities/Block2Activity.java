@@ -213,19 +213,42 @@ public class Block2Activity extends BaseStepsActivity {
 
                 if(validatedAnswer == 3)
                 {
-                    Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
 
-                    intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
-                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                    intent.putExtra("UserID", extras.getString("UserID"));
-                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                    intent.putExtra("NO_1", extras.getString("NO_1"));
-                    intent.putExtra("NO_2", extras.getString("NO_2"));
-                    intent.putExtra("NO_3", _spOperatorValue);
-                    intent.putExtra("NO_4", _spOperator4GValue);
-                    intent.putExtra("NO_5", _4GReasonValue);
+                    String surveyType = extras.getString("TipeSurvey");
 
-                    startActivity(intent);
+                    if(surveyType.equals("Full Audit Modem"))
+                    {
+                        Intent intent = new Intent(Block2Activity.this, Blok3BActivity.class);
+
+                        intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
+                        intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                        intent.putExtra("UserID", extras.getString("UserID"));
+                        intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                        intent.putExtra("NO_1", extras.getString("NO_1"));
+                        intent.putExtra("NO_2", extras.getString("NO_2"));
+                        intent.putExtra("NO_3", _spOperatorValue);
+                        intent.putExtra("NO_4", _spOperator4GValue);
+                        intent.putExtra("NO_5", _4GReasonValue);
+                        intent.putExtra("NO_6", "SKENARIO ADVOCACY 2 (Harga Rp 1-1.5 juta dan Rp 1.5-2 juta)");
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(Block2Activity.this, Blok3Activity.class);
+
+                        intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
+                        intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                        intent.putExtra("UserID", extras.getString("UserID"));
+                        intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                        intent.putExtra("NO_1", extras.getString("NO_1"));
+                        intent.putExtra("NO_2", extras.getString("NO_2"));
+                        intent.putExtra("NO_3", _spOperatorValue);
+                        intent.putExtra("NO_4", _spOperator4GValue);
+                        intent.putExtra("NO_5", _4GReasonValue);
+
+                        startActivity(intent);
+                    }
+
                 }
             }
         });
