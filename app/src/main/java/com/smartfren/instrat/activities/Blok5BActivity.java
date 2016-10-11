@@ -372,7 +372,7 @@ public class Blok5BActivity extends BaseStepsActivity {
 
                     if(surveyType.equals("Full Audit Modem"))
                     {
-                        Intent intent = new Intent(Blok5BActivity.this, Blok7AActivity.class);
+                        Intent intent = new Intent(Blok5BActivity.this, Blok8Activity.class);
                         intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                         intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                         intent.putExtra("UserID", extras.getString("UserID"));
@@ -485,7 +485,7 @@ public class Blok5BActivity extends BaseStepsActivity {
                         intent.putExtra("NO_99", "");
                         intent.putExtra("NO_100", "");
                         intent.putExtra("NO_101", "");
-                        intent.putExtra("NO_102", "Samsung");
+                        intent.putExtra("NO_102", "");
                         intent.putExtra("NO_103", "");
                         intent.putExtra("NO_104", "");
                         intent.putExtra("NO_105", "");
@@ -504,7 +504,6 @@ public class Blok5BActivity extends BaseStepsActivity {
                         intent.putExtra("NO_118", "");
                         intent.putExtra("NO_119", "");
                         intent.putExtra("NO_120", "");
-
                         startActivity(intent);
                     }
                     else if(surveyType.equals("Full Audit Smartphone") && storeType.equals("EXCLUSIVE SMARTFREN"))

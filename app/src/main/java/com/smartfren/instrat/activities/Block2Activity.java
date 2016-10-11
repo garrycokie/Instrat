@@ -218,7 +218,7 @@ public class Block2Activity extends BaseStepsActivity {
 
                     if(surveyType.equals("Full Audit Modem"))
                     {
-                        Intent intent = new Intent(Block2Activity.this, Blok3BActivity.class);
+                        Intent intent = new Intent(Block2Activity.this, Blok3CActivity.class);
 
                         intent.putExtra("DeviceSurveyID", extras.getString("DeviceSurveyID"));
                         intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));

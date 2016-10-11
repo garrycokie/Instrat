@@ -1156,7 +1156,7 @@ public class Blok8Activity extends BaseStepsActivity {
                 }
                 else if(surveyType.equals("Full Audit Modem"))
                 {
-                    Intent intent = new Intent(Blok8Activity.this, Blok7AActivity.class);
+                    Intent intent = new Intent(Blok8Activity.this, Blok5BActivity.class);
                     intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
                     intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
                     intent.putExtra("UserID", extras.getString("UserID"));
@@ -1227,67 +1227,7 @@ public class Blok8Activity extends BaseStepsActivity {
                     intent.putExtra("NO_60B", extras.getString("NO_60B"));
                     intent.putExtra("NO_60C", extras.getString("NO_60C"));
                     intent.putExtra("NO_61", extras.getString("NO_61"));
-                    intent.putExtra("NO_61B", extras.getString("NO_61B"));
-                    intent.putExtra("NO_61C", extras.getString("NO_61C"));
-                    intent.putExtra("NO_62", extras.getString("NO_62"));
-                    intent.putExtra("NO_63", extras.getString("NO_63"));
-                    intent.putExtra("NO_64", extras.getString("NO_64"));
-                    intent.putExtra("NO_65", extras.getString("NO_65"));
-                    intent.putExtra("NO_66", extras.getString("NO_66"));
-                    intent.putExtra("NO_67", extras.getString("NO_67"));
-                    intent.putExtra("NO_68", extras.getString("NO_68"));
-                    intent.putExtra("NO_69", extras.getString("NO_69"));
-                    intent.putExtra("NO_70", extras.getString("NO_70"));
-                    intent.putExtra("NO_71", extras.getString("NO_71"));
-                    intent.putExtra("NO_72", extras.getString("NO_72"));
-                    intent.putExtra("NO_73", extras.getString("NO_73"));
-                    intent.putExtra("NO_74", extras.getString("NO_74"));
-                    intent.putExtra("NO_75", extras.getString("NO_75"));
-                    intent.putExtra("NO_76", extras.getString("NO_76"));
-                    intent.putExtra("NO_77", extras.getString("NO_77"));
-                    intent.putExtra("NO_78", extras.getString("NO_78"));
-                    intent.putExtra("NO_79", extras.getString("NO_79"));
-                    intent.putExtra("NO_80", extras.getString("NO_80"));
-                    intent.putExtra("NO_81", extras.getString("NO_81"));
-                    intent.putExtra("NO_82", extras.getString("NO_82"));
-                    intent.putExtra("NO_83", extras.getString("NO_83"));
-                    intent.putExtra("NO_84", extras.getString("NO_84"));
-                    intent.putExtra("NO_85", extras.getString("NO_85"));
-                    intent.putExtra("NO_86", extras.getString("NO_86"));
-                    intent.putExtra("NO_87", extras.getString("NO_87"));
-                    intent.putExtra("NO_88", extras.getString("NO_88"));
-                    intent.putExtra("NO_89", extras.getString("NO_89"));
-                    intent.putExtra("NO_90", extras.getString("NO_90"));
-                    intent.putExtra("NO_91", extras.getString("NO_91"));
-                    intent.putExtra("NO_92", extras.getString("NO_92"));
-                    intent.putExtra("NO_93", extras.getString("NO_93"));
-                    intent.putExtra("NO_94", extras.getString("NO_94"));
-                    intent.putExtra("NO_95", extras.getString("NO_95"));
-                    intent.putExtra("NO_96", extras.getString("NO_96"));
-                    intent.putExtra("NO_97", extras.getString("NO_97"));
-                    intent.putExtra("NO_98", extras.getString("NO_98"));
-                    intent.putExtra("NO_99", extras.getString("NO_99"));
-                    intent.putExtra("NO_100", extras.getString("NO_100"));
-                    intent.putExtra("NO_101", extras.getString("NO_101"));
-                    intent.putExtra("NO_102", extras.getString("NO_102"));
-                    intent.putExtra("NO_103", extras.getString("NO_103"));
-                    intent.putExtra("NO_104", extras.getString("NO_104"));
-                    intent.putExtra("NO_105", extras.getString("NO_105"));
-                    intent.putExtra("NO_106", extras.getString("NO_106"));
-                    intent.putExtra("NO_107", extras.getString("NO_107"));
-                    intent.putExtra("NO_108", extras.getString("NO_108"));
-                    intent.putExtra("NO_109", extras.getString("NO_109"));
-                    intent.putExtra("NO_110", extras.getString("NO_110"));
-                    intent.putExtra("NO_111", extras.getString("NO_111"));
-                    intent.putExtra("NO_112", extras.getString("NO_112"));
-                    intent.putExtra("NO_113", extras.getString("NO_113"));
-                    intent.putExtra("NO_114", extras.getString("NO_114"));
-                    intent.putExtra("NO_115", extras.getString("NO_115"));
-                    intent.putExtra("NO_116", extras.getString("NO_116"));
-                    intent.putExtra("NO_117", extras.getString("NO_117"));
-                    intent.putExtra("NO_118", extras.getString("NO_118"));
-                    intent.putExtra("NO_119", extras.getString("NO_119"));
-                    intent.putExtra("NO_120", extras.getString("NO_120"));
+
                     startActivity(intent);
                 }
                 else if(surveyType.equals("Listing"))

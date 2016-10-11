@@ -15,6 +15,9 @@ import com.smartfren.instrat.R;
 import com.smartfren.instrat.utilities.Helper;
 
 public class Blok3CActivity extends BaseStepsActivity {
+    private TextView _lblQ27;
+    private TextView _lblQ29;
+    private TextView _lblQ30;
 
     private Spinner _spQ27A;
     private Spinner _spQ32A;
@@ -70,6 +73,10 @@ public class Blok3CActivity extends BaseStepsActivity {
         super.onCreate(savedInstanceState);
         super.initActivity(R.layout.activity_blok3c);
         extras = getIntent().getExtras();
+
+        _lblQ27 = (TextView) findViewById(R.id.lblQ27);
+        _lblQ29 = (TextView) findViewById(R.id.lblQ29);
+        _lblQ30 = (TextView) findViewById(R.id.lblQ30);
 
         _spQ27A = (Spinner) findViewById(R.id.spQ27A);
         _spQ32A = (Spinner) findViewById(R.id.spQ32A);
@@ -127,6 +134,40 @@ public class Blok3CActivity extends BaseStepsActivity {
         Helper.Hide(_txtQ36A3);
         Helper.Hide(_lblQ36);
         Helper.Hide(_errorQ36A);
+
+        String surveyType = extras.getString("TipeSurvey");
+        if(surveyType.equals("Full Audit Modem"))
+        {
+            Helper.Hide(_lblQ27);
+            Helper.Hide(_spQ27A);
+            Helper.Hide(_errorQ27A);
+
+            Helper.Hide(_lblQ29);
+            Helper.Hide(_txtQ29A);
+            Helper.Hide(_errorQ29A);
+
+            Helper.Hide(_txtQ30A1);
+            Helper.Hide(_txtQ30A2);
+            Helper.Hide(_txtQ30A3);
+            Helper.Hide(_lblQ30);
+            Helper.Hide(_errorQ30A);
+        }
+        else
+        {
+            Helper.Show(_lblQ27);
+            Helper.Show(_spQ27A);
+            Helper.Show(_errorQ27A);
+
+            Helper.Show(_lblQ29);
+            Helper.Show(_txtQ29A);
+            Helper.Show(_errorQ29A);
+
+            Helper.Show(_txtQ30A1);
+            Helper.Show(_txtQ30A2);
+            Helper.Show(_txtQ30A3);
+            Helper.Show(_lblQ30);
+            Helper.Show(_errorQ30A);
+        }
 
         ArrayAdapter<CharSequence> adapterQ27 = ArrayAdapter.createFromResource(this, R.array.page_blok3_phone_2000to3000k_list, R.layout.spinner_item);
         adapterQ27.setDropDownViewResource(R.layout.spinner_item);
@@ -360,22 +401,42 @@ public class Blok3CActivity extends BaseStepsActivity {
         super.setStepEventListener(new OnStepEventListener() {
             @Override
             public void onBackClicked() {
-                Intent intent = new Intent(Blok3CActivity.this, Blok3Activity.class);
-                intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
-                intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
-                intent.putExtra("UserID", extras.getString("UserID"));
-                intent.putExtra("AccessToken", extras.getString("AccessToken"));
-                intent.putExtra("NO_1", extras.getString("NO_1"));
-                intent.putExtra("NO_2", extras.getString("NO_2"));
-                intent.putExtra("NO_3", extras.getString("NO_3"));
-                intent.putExtra("NO_4", extras.getString("NO_4"));
-                intent.putExtra("NO_5", extras.getString("NO_5"));
-                intent.putExtra("NO_6", extras.getString("NO_6"));
-                startActivity(intent);
+                String surveyType = extras.getString("TipeSurvey");
+                if(surveyType.equals("Full Audit Modem"))
+                {
+                    Intent intent = new Intent(Blok3CActivity.this, Block2Activity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(Blok3CActivity.this, Blok3Activity.class);
+                    intent.putExtra("DeviceSurveyID",extras.getString("DeviceSurveyID"));
+                    intent.putExtra("TipeSurvey", extras.getString("TipeSurvey"));
+                    intent.putExtra("UserID", extras.getString("UserID"));
+                    intent.putExtra("AccessToken", extras.getString("AccessToken"));
+                    intent.putExtra("NO_1", extras.getString("NO_1"));
+                    intent.putExtra("NO_2", extras.getString("NO_2"));
+                    intent.putExtra("NO_3", extras.getString("NO_3"));
+                    intent.putExtra("NO_4", extras.getString("NO_4"));
+                    intent.putExtra("NO_5", extras.getString("NO_5"));
+                    intent.putExtra("NO_6", extras.getString("NO_6"));
+                    startActivity(intent);
+                }
             }
 
             @Override
             public void onContinueClicked() {
+                String surveyType = extras.getString("TipeSurvey");
+
                 String A27 = String.valueOf(_spQ27A.getSelectedItem());
 
                 String A28 = _txtQ28A.getText().toString();
@@ -409,7 +470,7 @@ public class Blok3CActivity extends BaseStepsActivity {
                 }
 
                 int validatedAnswer = 0;
-                if(A27.equals("--Pilih Jawaban--") || A27 == null || A27.equals("") || A27.isEmpty())
+                if( !surveyType.equals("Full Audit Modem") && (A27.equals("--Pilih Jawaban--") || A27 == null || A27.equals("") || A27.isEmpty()))
                 {
                     _errorQ27A.setError("error");
                     _errorQ27A.setText("Pilih salah satu jawaban");
@@ -421,12 +482,12 @@ public class Blok3CActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(A27.equals("Lainnya") && (A28 == null || A28.equals("") || A28.isEmpty()))
+                if(!surveyType.equals("Full Audit Modem") && (A27.equals("Lainnya") && (A28 == null || A28.equals("") || A28.isEmpty())))
                 {
                     _errorQ28A.setError("error");
                     _errorQ28A.setText("merk smartphone lainnya harus terisi");
                 }
-                else if(A27.equals("Lainnya") && A28 != null && !A28.equals("") && !A28.isEmpty() && A28.length() > 50)
+                else if(!surveyType.equals("Full Audit Modem") && (A27.equals("Lainnya") && A28 != null && !A28.equals("") && !A28.isEmpty() && A28.length() > 50))
                 {
                     _errorQ28A.setError("error");
                     _errorQ28A.setText("merk smartphone lainnya tidak boleh lebih dari 50 karakter");
@@ -438,12 +499,12 @@ public class Blok3CActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(A29 == null || A29.equals("") || A29.isEmpty())
+                if(!surveyType.equals("Full Audit Modem") && (A29 == null || A29.equals("") || A29.isEmpty()))
                 {
                     _errorQ29A.setError("error");
                     _errorQ29A.setText("model harus diisi");
                 }
-                else if(A29 != null && !A29.equals("") && !A29.isEmpty() && A29.length() > 50)
+                else if(!surveyType.equals("Full Audit Modem") && (A29 != null && !A29.equals("") && !A29.isEmpty() && A29.length() > 50))
                 {
                     _errorQ29A.setError("error");
                     _errorQ29A.setText("model tidak boleh lebih dari 50 karakter");
@@ -455,15 +516,16 @@ public class Blok3CActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(A30 == null || A30.equals("") || A30.isEmpty())
+                if(!surveyType.equals("Full Audit Modem") && (A30 == null || A30.equals("") || A30.isEmpty()))
                 {
                     _errorQ30A.setError("error");
                     _errorQ30A.setText("alasan rekomendasi harus diisi");
                 }
-                else if(A30 != null && !A30.equals("") && !A30.isEmpty() &&
+                else if(!surveyType.equals("Full Audit Modem") && (A30 != null && !A30.equals("") && !A30.isEmpty() &&
                         (_txtQ30A1.getText() != null && !_txtQ30A1.getText().toString().equals("") &&  _txtQ30A1.getText().toString().length() > 50)
                         || (_txtQ30A2.getText() != null && !_txtQ30A2.getText().toString().equals("") &&  _txtQ30A2.getText().toString().length() > 50)
                         || (_txtQ30A3.getText() != null && !_txtQ30A3.getText().toString().equals("") &&  _txtQ30A3.getText().toString().length() > 50))
+                        )
                 {
                     _errorQ30A.setError("error");
                     _errorQ30A.setText("alasan rekomendasi pada tiap text tidak boleh lebih dari 50 karakter");
@@ -475,15 +537,16 @@ public class Blok3CActivity extends BaseStepsActivity {
                     validatedAnswer++;
                 }
 
-                if(!A27.equals("Smartfren") && (A31 == null || A31.equals("") || A31.isEmpty()))
+                if( !surveyType.equals("Full Audit Modem") && (!A27.equals("Smartfren") && (A31 == null || A31.equals("") || A31.isEmpty())) )
                 {
                     _errorQ31A.setError("error");
                     _errorQ31A.setText("alasan tidak rekomendasi smartfren harus diisi");
                 }
-                else if(!A27.equals("Smartfren") && A31 != null && !A31.equals("") && !A31.isEmpty() &&
+                else if(!surveyType.equals("Full Audit Modem") && (!A27.equals("Smartfren") && A31 != null && !A31.equals("") && !A31.isEmpty() &&
                         (_txtQ31A1.getText() != null && !_txtQ31A1.getText().toString().equals("") &&  _txtQ31A1.getText().toString().length() > 50)
                         || (_txtQ31A2.getText() != null && !_txtQ31A2.getText().toString().equals("") &&  _txtQ31A2.getText().toString().length() > 50)
                         || (_txtQ31A3.getText() != null && !_txtQ31A3.getText().toString().equals("") &&  _txtQ31A3.getText().toString().length() > 50))
+                        )
                 {
                     _errorQ31A.setError("error");
                     _errorQ31A.setText("alasan tidak rekomendasi smartfren pada tiap text tidak boleh lebih dari 50 karakter");
@@ -583,7 +646,7 @@ public class Blok3CActivity extends BaseStepsActivity {
 
                 if(validatedAnswer == 10)
                 {
-                    String surveyType = extras.getString("TipeSurvey");
+                    //String surveyType = extras.getString("TipeSurvey");
 
                     if(surveyType.equals("Advocacy Harga"))
                     {
