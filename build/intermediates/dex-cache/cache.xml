@@ -2,123 +2,157 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        is-multidex="true"
+        jar="C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\1.1.1\8e720b6ccaa30f4201a3f347f8959f620823e848\realm-annotations-1.1.1.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="8eb1dedaaf65fb68e93d77a91b212c8856521359">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5eac4dd4e632d929c46455fa4eb766783dc9e799\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="192cbad33598a34802627d6345df43852e074670">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_27ccddf0007b5641f998b723782d9504916b4adf\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\1.1.1\8e720b6ccaa30f4201a3f347f8959f620823e848\realm-annotations-1.1.1.jar"
-        jumboMode="true"
-        revision="23.0.3"
+        optimize="true"
+        revision="24.0.1"
         sha1="8e720b6ccaa30f4201a3f347f8959f620823e848">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\realm-annotations-1.1.1_f6b7a557624081bb8901e8289bf7119c953fcc0f\classes.dex" />
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\realm-annotations-1.1.1_85576d74cfa7908485eb3d499ca22a54f5d18bf5\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.1.1\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="c82387ef0b47739dc3fe7a92d910ad3f0e7cdf01">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.realm-realm-android-library-1.1.1_d97c9daf1785adb214aa3450713b6eae2b498dbc\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="6d7d803871e3203465f71a163e7af104f807b446">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_9544f58a181af12dda067ac74ca81e81169a1a04\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_5a9b4938d53872a5c3e7c67e890942ee76fcef56\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.getkeepsafe.relinker\relinker\1.2.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="264f0bc4c0680cfe7a60fea1f12a43f1ab48e7c8">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.getkeepsafe.relinker-relinker-1.2.1_78dc239b8ae0f9305eac0c7933e900de526c9588\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_006070b885c4d054d3f7e691d7c78678203f78ef\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="787871951412550519b0222aba3c9df4cea49875">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.1.1_3d7cc578fb692b0c068b06c9b7220b134508e4d3\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.1.1\3af19f153122737b372622fa6c81dd11a1c6b999\support-annotations-24.1.1.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_55d98eb3f80e64c95c507344f15b43b2aea1d0f3\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
+        optimize="true"
+        revision="24.0.1"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_7ecce6bd9c88b390fcac2def13abe498067f34ab\classes.dex" />
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_991930ec89d9b9c8aa30b3ad77ef50cea9a62ddf\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.volley-volley-1.0.0_19343d5b2b856f19c63f964ac47662140acbc8cf\classes.dex" />
+        optimize="true"
+        revision="24.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_21d663b2d1fed2d413c9b3c0ddcfbe2689dcd4fb\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.async\androidasync\2.1.9\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="60d0e28fe7ab6da6c03b54cd8ede502284d51a81">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.async-androidasync-2.1.9_6f86a20ff0b3f433adf48e3570fdc478d853d86e\classes.dex" />
+        optimize="true"
+        revision="24.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_64da7661be0961d36b6c3340797a67928091f586\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
+        optimize="true"
+        revision="24.0.1"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_4ad9e7efc02390e1255c2347ce0b00518aa7841f\classes.dex" />
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_843ca9108cc5f243bd6cb5a28da4caeffe072569\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_fa7a39ab5a87ee5e924bc1a14adcdfa3334a88bd\classes.dex" />
+        optimize="true"
+        revision="24.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_c0cfe2afa22f72d0add2573400e43663a667140e\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        is-multidex="true"
+        jar="C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_e676f6af279a635a57dd012d25449124d068c177\classes.dex" />
+        optimize="true"
+        revision="24.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_19af04889beeb4005560d45fa94691efd2aaee83\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.ion\ion\2.1.9\jars\classes.jar"
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.async\androidasync\2.1.9\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.3"
+        optimize="true"
+        revision="24.0.1"
+        sha1="60d0e28fe7ab6da6c03b54cd8ede502284d51a81">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.async-androidasync-2.1.9_762f5933b6069004809608b6048ec454b850841c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.getkeepsafe.relinker\relinker\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="264f0bc4c0680cfe7a60fea1f12a43f1ab48e7c8">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.getkeepsafe.relinker-relinker-1.2.1_71b4dcc153798c7272a5c09cedc4b6b4b7f06806\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.volley-volley-1.0.0_0f3b23c985397f10dffb3645a8dc76db4310f6b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c82387ef0b47739dc3fe7a92d910ad3f0e7cdf01">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.realm-realm-android-library-1.1.1_2c2f1ca63814806e1c4cf0aa3bec82f1d6c31275\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="291656779b6ffae1347d8c6402b453d2065e4dee">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_690a34da9f62fe9c8b90b805a90faed5c05c1eaf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ASUS\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_6cd359cbde43b6a4ab920ac61540941bbde5239d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_730cfb43cafec3f5e133498e48ea28ce31848923\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.koushikdutta.ion\ion\2.1.9\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
         sha1="7e54ea31584406fcc68225a8656f384c333ff2ee">
-        <dex dex="C:\Users\Garry Cokie\Documents\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.ion-ion-2.1.9_170ecc9e31c512355f13fd2ef201c15024d0aeb5\classes.dex" />
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.koushikdutta.ion-ion-2.1.9_3ce13a1341a6a98670053ed9e9739d69ed15fbbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6a3db026ff4589be36af1e832b66b61a20df6131">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8b586a166364ef3cd39f49feba33a0d33eca06af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\ASUS\Projects\GitHub\Instrat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_364f84c170b61ecca3189c19b4062e18c4ff2028\classes.dex" />
     </item>
 
 </items>
