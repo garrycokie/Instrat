@@ -1,16 +1,7 @@
-package com.smartfren.instrat.activities;
+package com.smartfren.instrat.tasks;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.content.Context;
 import android.util.Log;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,230 +11,185 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.smartfren.instrat.R;
 import com.smartfren.instrat.entities.LoginEntity;
 import com.smartfren.instrat.entities.SurveyEntity;
 import com.smartfren.instrat.entities.SurveyRequest;
 import com.smartfren.instrat.entities.SurveyResponse;
-import com.smartfren.instrat.tasks.SendToServerTask;
-import com.smartfren.instrat.utilities.SurveyListAdapter;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class MainActivity extends Activity {
+/**
+ * Created by ASUS on 1/5/2017.
+ */
 
-    private Button _btnSend;
-    private Button _btnNew;
+public class SendToServerWs {
+    private static final String TAG = "SendToServerWs";
+    private static String LOCK_Sync = "LOCK_SYNC";
+
+    private LoginEntity loginEntity;
+
     private RealmResults<SurveyEntity> _surveyData;
-    private RecyclerView _viewSurveyList;
-    private ProgressDialog progressDialog;
-    private MainActivity _currentActivity;
+    private SurveyEntity[] _arrSurveyData;
 
     RequestQueue queue;
-    //int mIndex = 0 ;
-    int totalData = 0 ;
+    int mIndex = 0;
+    int totalData = 0;
 
-    //ArrayList<String> alAvaArr;
-    LoginEntity loginEntity;
-    //SurveyEntity[] arraySurveyTemp;
+    private Context _context;
 
-    /*public void DeleteDataSuccess(String deviceSurveyID)
-    {
+    public SendToServerWs(Context context) {
+        this._context = context;
+    }
+
+    public boolean sendData(SendToServerTask task) {
+        synchronized (LOCK_Sync) {
+            Log.i(TAG, "Send data to server");
+
+            try {
+                Realm realm = Realm.getDefaultInstance();
+                _surveyData = realm.where(SurveyEntity.class).equalTo("status", "Pending").findAll();
+                SurveyEntity[] arrayDestination = new SurveyEntity[_surveyData.size()];
+                _arrSurveyData = _surveyData.toArray(arrayDestination);
+                totalData = _arrSurveyData.length;
+                queue = Volley.newRequestQueue(_context);
+
+                if(_arrSurveyData.length > 0) {
+                    SurveyEntity surveyItem = _arrSurveyData[mIndex];
+                    RequestService(surveyItem);
+                }
+
+                return true;
+            } catch (Exception e) {
+                Log.d(TAG, e.getMessage());
+                e.printStackTrace();
+                Toast.makeText(this._context, "Proses kirim data ke server gagal!", Toast.LENGTH_LONG);
+            }
+
+            return false;
+        }
+    }
+
+    private void RequestService(SurveyEntity surveyItem) {
         Realm realm = Realm.getDefaultInstance();
-        SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", deviceSurveyID).findFirst();
-        realm.beginTransaction();
-        deletedSurvey.deleteFromRealm();
-        realm.commitTransaction();
-    }*/
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        _currentActivity = this;
-
-        _btnSend = (Button)findViewById(R.id.btnSend);
-        _btnNew = (Button)findViewById(R.id.btnNew);
-        _viewSurveyList = (RecyclerView) findViewById(R.id.viewSurveyList);
-
-        Realm realm = Realm.getDefaultInstance();
-        _surveyData = realm.where(SurveyEntity.class).equalTo("status", "Pending").findAll();
-        SurveyEntity[] arraySurvey = new SurveyEntity[_surveyData.size()];
-        SurveyListAdapter adapter = new SurveyListAdapter(_surveyData.toArray(arraySurvey));
-
-        //arraySurveyTemp = _surveyData.toArray(arraySurvey);
-
-        //totalData = arraySurveyTemp.length;
-
-        _viewSurveyList.setLayoutManager(new LinearLayoutManager(this));
-        _viewSurveyList.setAdapter(adapter);
-
         RealmResults<LoginEntity> loginData = realm.where(LoginEntity.class).findAll();
         loginEntity = loginData.first();
 
-        queue = Volley.newRequestQueue(getApplicationContext());
-
-
-        _btnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                _btnSend.setEnabled(false);
-
-                SendToServerTask task = new SendToServerTask(_currentActivity);
-                task.execute();
-            }
-        });
-
-        _btnNew.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Block0Activity.class);
-                startActivity(i);
-            }
-        });
-    }
-
-    public void SendComplete(Boolean result)
-    {
-        Log.i("MainActivity", "Process Result:" + result);
-        if (result) {
-            Toast.makeText(MainActivity.this, "Proses kirim data berhasil", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(MainActivity.this, "Proses kirim data gagal", Toast.LENGTH_LONG).show();
-        }
-        _btnSend.setEnabled(true);
-
-        Realm realm = Realm.getDefaultInstance();
-        _surveyData = realm.where(SurveyEntity.class).equalTo("status", "Pending").findAll();
-        SurveyEntity[] arraySurvey = new SurveyEntity[_surveyData.size()];
-        SurveyListAdapter adapter = new SurveyListAdapter(_surveyData.toArray(arraySurvey));
-        _viewSurveyList.setAdapter(adapter);
-    }
-
-    /*public void RequestService(SurveyEntity surveyItem)
-    {
-        //TODO: send survey item
-        String userID = loginEntity.userID ;
+        String userID = loginEntity.userID;
         String accessToken = loginEntity.accessToken;
         String kota = loginEntity.namaKota;
         String tipeSurvey = surveyItem.tipeSurvey;
         final String deviceSurveyID = surveyItem.deviceSurveyID;
 
-        String NO_1 = surveyItem.b1no1 ;
-        String NO_2 = surveyItem.b1no2 ;
-        String NO_3 = surveyItem.b2no3 ;
-        String NO_4 = surveyItem.b2no4 ;
-        String NO_5 = surveyItem.b2no5 ;
-        String NO_6 = surveyItem.b3no6 ;
-        String NO_7 = surveyItem.b3no7 ;
-        String NO_8 = surveyItem.b3no8 ;
-        String NO_9 = surveyItem.b3no9 ;
-        String NO_10 =surveyItem.b3no10 ;
-        String NO_11 =surveyItem.b3no11 ;
-        String NO_12 =surveyItem.b3no12 ;
-        String NO_13 =surveyItem.b3no13 ;
-        String NO_14 =surveyItem.b3no14 ;
-        String NO_15 =surveyItem.b3no15 ;
-        String NO_16 =surveyItem.b3no16 ;
-        String NO_17 =surveyItem.b3no17 ;
-        String NO_18 =surveyItem.b3no18 ;
-        String NO_19 =surveyItem.b3no19 ;
-        String NO_20 =surveyItem.b3no20 ;
-        String NO_21 =surveyItem.b3no21 ;
-        String NO_22 =surveyItem.b3no22 ;
-        String NO_23 =surveyItem.b3no23 ;
-        String NO_24 =surveyItem.b3no24 ;
-        String NO_25 =surveyItem.b3no25 ;
-        String NO_26 =surveyItem.b3no26 ;
-        String NO_27 =surveyItem.b3no27 ;
-        String NO_28 =surveyItem.b3no28 ;
-        String NO_29 =surveyItem.b3no29 ;
-        String NO_30 =surveyItem.b3no30 ;
-        String NO_31 =surveyItem.b3no31 ;
-        String NO_32 =surveyItem.b3no32 ;
-        String NO_33 =surveyItem.b3no33 ;
-        String NO_34 =surveyItem.b3no34 ;
-        String NO_35 =surveyItem.b3no35 ;
-        String NO_36 =surveyItem.b3no36 ;
-        String NO_38 =surveyItem.b4no38 ;
-        String NO_39 =surveyItem.b4no39 ;
-        String NO_40 =surveyItem.b4no40 ;
-        String NO_41 =surveyItem.b4no41 ;
-        String NO_42 =surveyItem.b4no42 ;
-        String NO_43 =surveyItem.b4no43 ;
-        String NO_44 =surveyItem.b4no44 ;
-        String NO_45 =surveyItem.b4no45 ;
-        String NO_46 =surveyItem.b4no46 ;
-        String NO_47 =surveyItem.b4no47 ;
-        String NO_48 =surveyItem.b5no48 ;
-        String NO_49 =surveyItem.b5no49 ;
-        String NO_50 =surveyItem.b5no50 ;
-        String NO_51 =surveyItem.b5no51 ;
-        String NO_52 =surveyItem.b5no52 ;
+        String NO_1 = surveyItem.b1no1;
+        String NO_2 = surveyItem.b1no2;
+        String NO_3 = surveyItem.b2no3;
+        String NO_4 = surveyItem.b2no4;
+        String NO_5 = surveyItem.b2no5;
+        String NO_6 = surveyItem.b3no6;
+        String NO_7 = surveyItem.b3no7;
+        String NO_8 = surveyItem.b3no8;
+        String NO_9 = surveyItem.b3no9;
+        String NO_10 = surveyItem.b3no10;
+        String NO_11 = surveyItem.b3no11;
+        String NO_12 = surveyItem.b3no12;
+        String NO_13 = surveyItem.b3no13;
+        String NO_14 = surveyItem.b3no14;
+        String NO_15 = surveyItem.b3no15;
+        String NO_16 = surveyItem.b3no16;
+        String NO_17 = surveyItem.b3no17;
+        String NO_18 = surveyItem.b3no18;
+        String NO_19 = surveyItem.b3no19;
+        String NO_20 = surveyItem.b3no20;
+        String NO_21 = surveyItem.b3no21;
+        String NO_22 = surveyItem.b3no22;
+        String NO_23 = surveyItem.b3no23;
+        String NO_24 = surveyItem.b3no24;
+        String NO_25 = surveyItem.b3no25;
+        String NO_26 = surveyItem.b3no26;
+        String NO_27 = surveyItem.b3no27;
+        String NO_28 = surveyItem.b3no28;
+        String NO_29 = surveyItem.b3no29;
+        String NO_30 = surveyItem.b3no30;
+        String NO_31 = surveyItem.b3no31;
+        String NO_32 = surveyItem.b3no32;
+        String NO_33 = surveyItem.b3no33;
+        String NO_34 = surveyItem.b3no34;
+        String NO_35 = surveyItem.b3no35;
+        String NO_36 = surveyItem.b3no36;
+        String NO_38 = surveyItem.b4no38;
+        String NO_39 = surveyItem.b4no39;
+        String NO_40 = surveyItem.b4no40;
+        String NO_41 = surveyItem.b4no41;
+        String NO_42 = surveyItem.b4no42;
+        String NO_43 = surveyItem.b4no43;
+        String NO_44 = surveyItem.b4no44;
+        String NO_45 = surveyItem.b4no45;
+        String NO_46 = surveyItem.b4no46;
+        String NO_47 = surveyItem.b4no47;
+        String NO_48 = surveyItem.b5no48;
+        String NO_49 = surveyItem.b5no49;
+        String NO_50 = surveyItem.b5no50;
+        String NO_51 = surveyItem.b5no51;
+        String NO_52 = surveyItem.b5no52;
         String NO_52B = surveyItem.b5no52B;
         String NO_52C = surveyItem.b5no52C;
         String NO_52D = surveyItem.b5no52D;
         String NO_52E = surveyItem.b5no52E;
-        String NO_53 =surveyItem.b5no53 ;
-        String NO_54 =surveyItem.b5no54 ;
-        String NO_55 =surveyItem.b5no55 ;
-        String NO_56 =surveyItem.b5no56 ;
-        String NO_57 =surveyItem.b5no57 ;
-        String NO_58 =surveyItem.b5no58 ;
-        String NO_59 =surveyItem.b5no59 ;
-        String NO_60 =surveyItem.b5no60 ;
-        String NO_60B = surveyItem.b5no60B ;
-        String NO_60C  = surveyItem.b5no60C ;
+        String NO_53 = surveyItem.b5no53;
+        String NO_54 = surveyItem.b5no54;
+        String NO_55 = surveyItem.b5no55;
+        String NO_56 = surveyItem.b5no56;
+        String NO_57 = surveyItem.b5no57;
+        String NO_58 = surveyItem.b5no58;
+        String NO_59 = surveyItem.b5no59;
+        String NO_60 = surveyItem.b5no60;
+        String NO_60B = surveyItem.b5no60B;
+        String NO_60C = surveyItem.b5no60C;
         String NO_61 = surveyItem.b5no61;
-        String NO_61B = surveyItem.b6no61B ;
-        String NO_61C = surveyItem.b6no61C ;
-        String NO_62 =surveyItem.b6no62 ;
-        String NO_63 =surveyItem.b6no63 ;
-        String NO_64 =surveyItem.b6no64 ;
-        String NO_65 =surveyItem.b6no65 ;
-        String NO_66 =surveyItem.b6no66 ;
-        String NO_67 =surveyItem.b6no67 ;
-        String NO_68 =surveyItem.b6no68 ;
-        String NO_69 =surveyItem.b6no69 ;
-        String NO_70 =surveyItem.b6no70 ;
-        String NO_71 =surveyItem.b6no71 ;
-        String NO_72 =surveyItem.b6no72 ;
-        String NO_73 =surveyItem.b6no73 ;
-        String NO_74 =surveyItem.b6no74 ;
-        String NO_75 =surveyItem.b6no75 ;
-        String NO_76 =surveyItem.b6no76 ;
-        String NO_77 =surveyItem.b6no77 ;
-        String NO_78 =surveyItem.b6no78 ;
-        String NO_79 =surveyItem.b6no79 ;
-        String NO_80 =surveyItem.b6no80 ;
-        String NO_81 =surveyItem.b6no81 ;
-        String NO_82 =surveyItem.b6no82 ;
-        String NO_83 =surveyItem.b6no83 ;
-        String NO_84 =surveyItem.b6no84 ;
-        String NO_85 =surveyItem.b6no85 ;
-        String NO_86 =surveyItem.b6no86 ;
-        String NO_87 =surveyItem.b6no87 ;
-        String NO_88 =surveyItem.b6no88 ;
-        String NO_89 =surveyItem.b6no89 ;
-        String NO_90 =surveyItem.b6no90 ;
-        String NO_91 =surveyItem.b6no91 ;
-        String NO_92 =surveyItem.b6no92 ;
-        String NO_93 =surveyItem.b6no93 ;
-        String NO_94 =surveyItem.b6no94 ;
-        String NO_95 =surveyItem.b6no95 ;
-        String NO_96 =surveyItem.b6no96 ;
-        String NO_97 =surveyItem.b6no97 ;
-        String NO_98 =surveyItem.b6no98 ;
-        String NO_99 =surveyItem.b6no99 ;
+        String NO_61B = surveyItem.b6no61B;
+        String NO_61C = surveyItem.b6no61C;
+        String NO_62 = surveyItem.b6no62;
+        String NO_63 = surveyItem.b6no63;
+        String NO_64 = surveyItem.b6no64;
+        String NO_65 = surveyItem.b6no65;
+        String NO_66 = surveyItem.b6no66;
+        String NO_67 = surveyItem.b6no67;
+        String NO_68 = surveyItem.b6no68;
+        String NO_69 = surveyItem.b6no69;
+        String NO_70 = surveyItem.b6no70;
+        String NO_71 = surveyItem.b6no71;
+        String NO_72 = surveyItem.b6no72;
+        String NO_73 = surveyItem.b6no73;
+        String NO_74 = surveyItem.b6no74;
+        String NO_75 = surveyItem.b6no75;
+        String NO_76 = surveyItem.b6no76;
+        String NO_77 = surveyItem.b6no77;
+        String NO_78 = surveyItem.b6no78;
+        String NO_79 = surveyItem.b6no79;
+        String NO_80 = surveyItem.b6no80;
+        String NO_81 = surveyItem.b6no81;
+        String NO_82 = surveyItem.b6no82;
+        String NO_83 = surveyItem.b6no83;
+        String NO_84 = surveyItem.b6no84;
+        String NO_85 = surveyItem.b6no85;
+        String NO_86 = surveyItem.b6no86;
+        String NO_87 = surveyItem.b6no87;
+        String NO_88 = surveyItem.b6no88;
+        String NO_89 = surveyItem.b6no89;
+        String NO_90 = surveyItem.b6no90;
+        String NO_91 = surveyItem.b6no91;
+        String NO_92 = surveyItem.b6no92;
+        String NO_93 = surveyItem.b6no93;
+        String NO_94 = surveyItem.b6no94;
+        String NO_95 = surveyItem.b6no95;
+        String NO_96 = surveyItem.b6no96;
+        String NO_97 = surveyItem.b6no97;
+        String NO_98 = surveyItem.b6no98;
+        String NO_99 = surveyItem.b6no99;
         String NO_100 = surveyItem.b6no100;
         String NO_101 = surveyItem.b7no101;
         String NO_102 = surveyItem.b7no102;
@@ -286,9 +232,9 @@ public class MainActivity extends Activity {
         SurveyRequest surveyRequest = new SurveyRequest();
         surveyRequest.userID = userID;
         surveyRequest.accessToken = accessToken;
-        surveyRequest.kota = kota ;
-        surveyRequest.tipeSurvey = tipeSurvey ;
-        surveyRequest.deviceSurveyID = deviceSurveyID ;
+        surveyRequest.kota = kota;
+        surveyRequest.tipeSurvey = tipeSurvey;
+        surveyRequest.deviceSurveyID = deviceSurveyID;
         surveyRequest.b1no1 = NO_1;
         surveyRequest.b1no2 = NO_2;
         surveyRequest.b2no3 = NO_3;
@@ -443,6 +389,7 @@ public class MainActivity extends Activity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         final JsonObjectRequest jsonRequest2 = new JsonObjectRequest
                 (Request.Method.POST, url2, param2, new Response.Listener<JSONObject>() {
                     @Override
@@ -456,40 +403,37 @@ public class MainActivity extends Activity {
                             result[0].userID = userID;
                             result[0].status = status;
 
-                            if(status.equals("OK")) {
+                            if (status.equals("OK")) {
                                 DeleteDataSuccess(deviceSurveyID);
                             }
                             mIndex++;
 
-                            if(totalData == mIndex)
-                            {
-                                progressDialog.dismiss();
-                                finish();
-                                startActivity(getIntent());
-                            }
-                            else
-                            {
-                                SurveyEntity surveyItem = arraySurveyTemp[mIndex];
+                            if (totalData == mIndex) {
+                            } else {
+                                SurveyEntity surveyItem = _arrSurveyData[mIndex];
                                 RequestService(surveyItem);
                             }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            progressDialog.dismiss();
-                            finish();
-                            startActivity(getIntent());
                         }
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
-                        progressDialog.dismiss();
-                        finish();
-                        startActivity(getIntent());
                     }
                 });
 
         queue.add(jsonRequest2);
-    }*/
+    }
+
+    private void DeleteDataSuccess(String deviceSurveyID)
+    {
+        Realm realm = Realm.getDefaultInstance();
+        SurveyEntity deletedSurvey = realm.where(SurveyEntity.class).equalTo("deviceSurveyID", deviceSurveyID).findFirst();
+        realm.beginTransaction();
+        deletedSurvey.deleteFromRealm();
+        realm.commitTransaction();
+    }
 }
